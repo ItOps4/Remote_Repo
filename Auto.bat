@@ -1,3 +1,3 @@
-del /q "Report"
+del /q "output\allure"
 timeout 3
-python main.py
+python Access.py

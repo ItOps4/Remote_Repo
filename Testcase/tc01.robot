@@ -3,10 +3,10 @@ Library    SeleniumLibrary
 
 *** Test Cases ***
 Tc01
-    [Tags]    one
+    [Tags]    two
     Open Browser    https://www.saucedemo.com/    Chrome
     Maximize Browser Window
-    Sleep    5
+    Sleep    4
     Close Browser
 
   

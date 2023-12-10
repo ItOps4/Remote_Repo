@@ -13,7 +13,7 @@ def run_test_case(robot_script_path, report_folder, tags=None):
     os.chdir(testcase_folder)
 
     # Build the Robot Framework command with tags and report folder
-    command_parts = ['robot', f'--outputdir {report_folder}']
+    command_parts = ['robot', f'--listener allure_robotframework']
     
     if tags:
         tags_string = ' '.join(tags)
