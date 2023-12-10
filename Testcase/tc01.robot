@@ -7,7 +7,7 @@ Tc01
     Open Browser    https://www.saucedemo.com/    Chrome
     Maximize Browser Window
     Wait Until Page Contains Element    //input[@id="password"]    20
-    Click Element    //input[@id="passwod"]
+    Click Element    //input[@id="passwd"]
 
 
   
