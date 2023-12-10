@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.0 on win32)" generated="20231210 20:00:08.636" rpa="false" schemaversion="3">
+<suite id="s1" name="Testcase" source="C:\Parent\Testcase">
+<suite id="s1-s1" name="Tc02" source="C:\Parent\Testcase\tc02.robot">
+<test id="s1-s1-t1" name="Tc01" line="5">
+<kw name="Log" library="BuiltIn">
+<arg>harishtest</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231210 20:00:08.919" level="INFO">harishtest</msg>
+<status status="PASS" starttime="20231210 20:00:08.919" endtime="20231210 20:00:08.919"/>
+</kw>
+<tag>two</tag>
+<status status="PASS" starttime="20231210 20:00:08.919" endtime="20231210 20:00:08.919"/>
+</test>
+<status status="PASS" starttime="20231210 20:00:08.652" endtime="20231210 20:00:08.919"/>
+</suite>
+<status status="PASS" starttime="20231210 20:00:08.636" endtime="20231210 20:00:08.919"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">two</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Testcase">Testcase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Tc02">Testcase.Tc02</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
