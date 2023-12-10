@@ -37,7 +37,7 @@ if __name__ == "__main__":
     report_folder = ReportPath
     
     # Specify the tags you want to include (e.g., ['one'])
-    tags_to_include = ['two']
+    tags_to_include = ['one']
     
     # Run the test case with the specified Robot Framework script, report folder, and tags
     run_test_case(robot_script_path, report_folder, tags=tags_to_include)
