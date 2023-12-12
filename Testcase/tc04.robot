@@ -21,7 +21,7 @@ Login with invalid credentials should fail
 *** Test Cases ***                USERNAME         PASSWORD
 Invalid User Name                 invalidd          secret_sauce
 Invalid Password                  standard_user    invalid
-Invalid User Name and Password    invalid          invalid
+Invalid User Name and Password    invalidsas          invalid
 Empty User Name                   ${EMPTY}         secret_sauce
 Empty Password                    standard_user    ${EMPTY}
 Empty User Name and Password      ${EMPTY}         ${EMPTY}
