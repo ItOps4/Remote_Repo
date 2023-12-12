@@ -19,7 +19,7 @@ Login with invalid credentials should fail
     Close Browser
 
 *** Test Cases ***                USERNAME         PASSWORD
-Invalid User Name                 invalid          secret_sauce
+Invalid User Name                 invalidd          secret_sauce
 Invalid Password                  standard_user    invalid
 Invalid User Name and Password    invalid          invalid
 Empty User Name                   ${EMPTY}         secret_sauce
