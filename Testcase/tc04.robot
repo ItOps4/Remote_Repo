@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Test Template    Login with invalid credentials should fail
-
+Task Tags    kin
 
 
 *** Keywords ***
