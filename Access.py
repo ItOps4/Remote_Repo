@@ -1,7 +1,7 @@
 import subprocess
 
 def run_robot_command(tag):
-    command = f"robot -d .\\output\\ --listener allure_robotframework -i {tag} ."
+    command = f"pabot -d .\\output\\ --listener allure_robotframework -i {tag} ."
     
     try:
         # Run the command
