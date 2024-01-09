@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Test Cases ***
 Tc01
-    [Tags]    one
+    [Tags]    test
     Open Browser    https://www.saucedemo.com/    Chrome
     Maximize Browser Window
     Wait Until Page Contains Element    //input[@id="password"]    20

@@ -12,7 +12,7 @@ def run_robot_command(tag):
         print(f"An unexpected error occurred: {e}")
 
 # Specify the tag
-tag = "two"
+tag = "test"
 
 # Call the function to execute the command with the specified tag
 run_robot_command(tag)
