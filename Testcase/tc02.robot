@@ -3,5 +3,5 @@ Library    SeleniumLibrary
 
 *** Test Cases ***
 Tc01
-    [Tags]    test
+    [Tags]    v
     Log    testreport
