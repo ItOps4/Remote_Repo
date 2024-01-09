@@ -8,7 +8,7 @@ Task Tags    test
 Login with invalid credentials should fail
     [Arguments]    ${name}    ${password}
     ${chrome_options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Call Method    ${chrome_options}    add_argument    --incognito
+    Call Method    ${chrome_options}    add_argument    --headlesschrome
     Open Browser    https://www.saucedemo.com/    chrome    options=${chrome_options}
     Maximize Browser Window
     Wait Until Page Contains Element    //input[@id="user-name"]    20
