@@ -1,7 +1,7 @@
 import subprocess
 
 def run_robot_command(tag):
-    command = f"robot -d .\\output\\allure\\ --listener allure_robotframework -i {tag} ."
+    command = f"robot -d .\\output\\ --listener allure_robotframework -i {tag} ."
     
     try:
         # Run the command
@@ -12,7 +12,7 @@ def run_robot_command(tag):
         print(f"An unexpected error occurred: {e}")
 
 # Specify the tag
-tag = "kin"
+tag = "two"
 
 # Call the function to execute the command with the specified tag
 run_robot_command(tag)
