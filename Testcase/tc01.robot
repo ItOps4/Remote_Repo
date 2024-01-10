@@ -3,8 +3,11 @@ Library    SeleniumLibrary
 
 *** Test Cases ***
 Tc01
-    [Tags]    test
+    [Tags]    sauce
     Log    testreport
+    Open Browser    https://www.saucedemo.com/    chrome
+    Maximize Browser Window
+    Close Browser
 
 
   
