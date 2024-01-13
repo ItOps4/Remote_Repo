@@ -1,13 +1,10 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library  SeleniumLibrary
+Library    driver123.py
+
 
 *** Test Cases ***
-Tc01
+TC01
     [Tags]    sauce
-    Log    testreport
-    Open Browser    https://www.saucedemo.com/    chrome
-    Maximize Browser Window
-    Close Browser
-
-
-  
+    Launch_Browser
+    
