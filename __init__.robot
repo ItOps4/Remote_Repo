@@ -1,11 +1,12 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    OperatingSystem
-Suite Setup    Start
+Suite Setup    Setup
 
 *** Keywords ***
-Start
+Setup
     Log    start to run
     Empty Directory    ./output/allure
+    
 
     
