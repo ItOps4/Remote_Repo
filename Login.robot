@@ -17,7 +17,6 @@ Login Application
     ${json_data}    Get File    Data/password.json
     ${object}=    Evaluate    json.loads('''${json_data}''')    json
     ${encry}    Set Variable    ${object['${username}']}
-    Log    ${encry}
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys,selenium.webdriver
     Call Method    ${options}    add_argument    incognito
     ${driver}    Create Webdriver    Chrome    options=${options}     
