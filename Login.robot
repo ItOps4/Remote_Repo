@@ -17,7 +17,8 @@ Login Application
     ${json_data}    Get File    Data/password.json
     ${object}=    Evaluate    json.loads('''${json_data}''')    json
     ${encry}    Set Variable    ${object['${username}']}
-    Open Browser      ${Productor_Url}      Chrome     options=addArguments("--incognito")    executable_path=C:/Productor/chromedriver.exe
+    Open Browser    ${Productor_Url}    Chrome    options=add_argument("--incognito")    executable_path=chromedriver.exe
+    #Open Browser      ${Productor_Url}      chrome     options=addArguments("--incognito")    #executable_path=C:/Productor/chromedriver.exe
     Maximize Browser Window
     Wait Until Page Contains Element    ${Input_Username}    50
     Input Text    ${Input_Username}    ${username}

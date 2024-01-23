@@ -1,3 +1,3 @@
-Input_Username = '//input[@id="user-name"]'
-Input_Password = '//input[@id="password"]'
-BTN_Login = '//input[@id="login-button"]'
+Input_Username = '//input[@id="auth-email-id"]'
+Input_Password = '//input[@id="auth-password"]'
+BTN_Login = '//button[@id="sign-in-btn"]'
