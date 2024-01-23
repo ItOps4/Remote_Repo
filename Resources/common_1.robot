@@ -5,6 +5,13 @@ Variables    ../Data/xpath.py
 
 
 *** Keywords ***
+
+
+Wait Until Element is visible then Click Element
+    [Arguments]    ${Element}
+    Wait Until Page Contains Element    ${Element}    50
+    Wait Until Keyword Succeeds    6    7    Click Element    ${Element}
+    
 Enter the Credentials
     [Arguments]    ${username}    ${password} 
     Wait Until Page Contains Element    ${Input_Username}    50
@@ -13,7 +20,4 @@ Enter the Credentials
     Input Password    ${Input_Password}    ${password}
     Wait Until Element is visible then Click Element    ${BTN_Login}
 
-Wait Until Element is visible then Click Element
-    [Arguments]    ${Element}
-    Wait Until Page Contains Element    ${Element}    50
-    Wait Until Keyword Succeeds    6    7    Click Element    ${Element}
+

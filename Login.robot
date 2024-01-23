@@ -17,17 +17,18 @@ Login Application
     ${json_data}    Get File    Data/password.json
     ${object}=    Evaluate    json.loads('''${json_data}''')    json
     ${encry}    Set Variable    ${object['${username}']}
-    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys,selenium.webdriver
-    Call Method    ${options}    add_argument    incognito
-    ${driver}    Create Webdriver    Chrome    options=${options}     
-    Go To    ${Productor_Url}
+    # ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys,selenium.webdriver
+    # Call Method    ${options}    add_argument    incognito
+    # ${driver}    Create Webdriver    Chrome    options=${options}     
+    # Go To    ${Productor_Url}
+    Open Browser    ${Productor_Url}    Chrome    options=add_argument("--incognito")
     Maximize Browser Window
     Wait Until Page Contains Element    ${Input_Username}    50
-    Input Text    ${Input_Username}    ${username}
+    Wait Until Keyword Succeeds    5    4    Input Text    ${Input_Username}    ${username}
     Use Encryption Key    ${public_key}
     ${Decry} =  Decrypt String    ${encry}
     Log    ${Decry}
-    Input Password    ${Input_Password}    ${Decry}
+    Wait Until Keyword Succeeds    5    4     Input Password    ${Input_Password}    ${Decry}
     Wait Until Element is visible then Click Element    ${BTN_Login}
 
 
