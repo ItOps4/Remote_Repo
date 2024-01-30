@@ -1,3 +1,3 @@
 del /q "output\allure"
-timeout 3
+timeout 10
 python Access.py
