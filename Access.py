@@ -17,17 +17,17 @@ def run_robot_command(tag):
 tag = "TC01"
 
 
-def install_requirements(requirements_file):
-    try:
-        # Use subprocess to run the pip install command with the requirements file
-        subprocess.check_call(["pip", "install", "-r", requirements_file])
-        print(f"Successfully installed dependencies from {requirements_file}")
-    except subprocess.CalledProcessError as e:
-        print(f"Failed to install dependencies from {requirements_file}. Error: {e}")
+# def install_requirements(requirements_file):
+#     try:
+#         # Use subprocess to run the pip install command with the requirements file
+#         subprocess.check_call(["pip", "install", "-r", requirements_file])
+#         print(f"Successfully installed dependencies from {requirements_file}")
+#     except subprocess.CalledProcessError as e:
+#         print(f"Failed to install dependencies from {requirements_file}. Error: {e}")
 
 
-# Example: Install dependencies from a requirements.txt file
-install_requirements("requirements.txt")
+# # Example: Install dependencies from a requirements.txt file
+# install_requirements("requirements.txt")
 
 
 
