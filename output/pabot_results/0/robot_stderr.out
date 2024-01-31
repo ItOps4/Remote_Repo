@@ -1,0 +1,62 @@
+[ ERROR ] Error in file 'C:\Productor\Login.robot' on line 4: Importing library 'JSONLibrary' failed: ModuleNotFoundError: No module named 'JSONLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\crazy\python virtual environment\rpavirtualenvironment\Scripts\robot.exe
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310
+  C:\Users\crazy\python virtual environment\rpavirtualenvironment
+  C:\Users\crazy\python virtual environment\rpavirtualenvironment\lib\site-packages
+  C:\Users\crazy\python virtual environment\rpavirtualenvironment\lib\site-packages\win32
+  C:\Users\crazy\python virtual environment\rpavirtualenvironment\lib\site-packages\win32\lib
+  C:\Users\crazy\python virtual environment\rpavirtualenvironment\lib\site-packages\Pythonwin
+2024-01-31 22:00:56,136 - RPA.core.certificates - INFO - Truststore not in use, HTTPS traffic validated against `certifi` package. (requires Python 3.10.12 and 'pip' 23.2.1 at minimum)
+Traceback (most recent call last):
+  File "C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\crazy\python virtual environment\rpavirtualenvironment\Scripts\pabot.exe\__main__.py", line 7, in <module>
+  File "C:\Users\crazy\python virtual environment\rpavirtualenvironment\lib\site-packages\pabot\pabot.py", line 1891, in main
+    return sys.exit(main_program(args))
+  File "C:\Users\crazy\python virtual environment\rpavirtualenvironment\lib\site-packages\pabot\pabot.py", line 1921, in main_program
+    outs_dir = _output_dir(options)
+  File "C:\Users\crazy\python virtual environment\rpavirtualenvironment\lib\site-packages\pabot\pabot.py", line 1366, in _output_dir
+    shutil.rmtree(outpath)
+  File "C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib\shutil.py", line 739, in rmtree
+    return _rmtree_unsafe(path, onerror)
+  File "C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib\shutil.py", line 612, in _rmtree_unsafe
+    _rmtree_unsafe(fullname, onerror)
+  File "C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib\shutil.py", line 617, in _rmtree_unsafe
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib\shutil.py", line 615, in _rmtree_unsafe
+    os.unlink(fullname)
+PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: '.\\output\\pabot_results\\0\\output.xml'
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=121.0.2277.83)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7C8EBAD02+60770]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7C8E484B2+228274]
+	(No symbol) [0x00007FF7C8C5ADBB]
+	(No symbol) [0x00007FF7C8C322BD]
+	(No symbol) [0x00007FF7C8CD3091]
+	(No symbol) [0x00007FF7C8CE8BC3]
+	(No symbol) [0x00007FF7C8CCC143]
+	(No symbol) [0x00007FF7C8C9D4A8]
+	(No symbol) [0x00007FF7C8C9C317]
+	(No symbol) [0x00007FF7C8C9D041]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7C906B47C+1039884]
+	(No symbol) [0x00007FF7C8D20D65]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF7C8DBA82C+36956]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF7C8DB2352+2946]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7C9069EC3+1034323]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7C8E52418+269080]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7C8E4D0F4+247796]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7C8E4D222+248098]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7C8E43911+208913]
+	BaseThreadInitThunk [0x00007FF9A018257D+29]
+	RtlUserThreadStart [0x00007FF9A156AA58+40]
+
