@@ -21,10 +21,10 @@ Then Click on Search bar and search with valid portfolio in the portfolio page
     verify if the search bar should be enabled to search any portfolio and it should display result as per the search input 
 
  
-Then Click on More icon in portfolio name, click on Edit button, Enter the data and click on save button
-    verify it should display a dropdown and it should display portfolio popup window in editable mode and save the changes by clicking save button
 Then Click on More icon in portfolio name, Click on Edit button,Enter Data and click on cancel button
     verify if it display edit and delete button as Dropdown, it should display Edit portfolio popup in editable mode , User to enter the data and It should redirect to the Portfolio page     
+Then Click on More icon in portfolio name, click on Edit button, Enter the data and click on save button
+    verify it should display a dropdown and it should display portfolio popup window in editable mode and save the changes by clicking save button
 
 Then Click on More icon in Portfolio name, click on Delete Button and Click on Cancel Button
     verify if it display edit and delete button as dropdown, It Redirect to the Portfolio Page 
@@ -37,7 +37,7 @@ Verify an application should be opened
     Login Application    ${username001}
 
 Verify a Portfolio Managment Menu should be displayed
-    Wait Until Element is present then click the element    //span[@id="icon-Portfolio Management"]/ancestor::a
+    Wait Until Element is present then click the element    ${BTN_Portfolio_man}
 
 Verify a Save button should be disabled by default and Portfolio shouldn't be created.
     Create Portfolio and cancel    ${TC01_Portfolio_name}     ${TC01_Portfolio_Description1}
