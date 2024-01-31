@@ -32,6 +32,7 @@ Create Portfolio and save
     Capture Page Screenshot
     Wait Until Element is present then click the element    ${BTN_Portfolio_Save}
 
+    
 Create Portfolio and cancel
     [Documentation]    Using this keyword we can create portfolio
     [Arguments]    ${name}    ${description}
