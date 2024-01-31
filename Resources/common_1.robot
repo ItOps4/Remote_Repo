@@ -11,7 +11,7 @@ Wait Until Element is present then click the element
     [Arguments]    ${Element}
     Wait Until Page Contains Element    ${Element}    50
     Wait Until Keyword Succeeds    6    7    Click Element    ${Element}
-
+    
 
 Enter the Credentials
     [Arguments]    ${username}    ${password} 

@@ -18,6 +18,9 @@ Verify an application should be opened
 
 Verify a Portfolio Managment Menu shoduld be displayed
     Wait Until Element is present then click the element    //span[@id="icon-Portfolio Management"]/ancestor::a
-
+    
 verify if user able to enter mandatory details in the fields and click the save button and it should added to the list of existing portfolio
     Create Portfolio     test1     test2
+
+Verify a Tool configuration Menu should be displayed
+    Wait Until Element is present then click the element        
