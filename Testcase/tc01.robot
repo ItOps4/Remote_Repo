@@ -17,7 +17,11 @@ TC01
     Then Click on More icon in portfolio name, click on Edit button, Enter the data and click on save button
     Then Click on More icon in Portfolio name, click on Delete Button and Click on Cancel Button  
     Then Click on More icon in Portfolio name, click on Delete Button and Click on Confirm button    
- 
+    Then Close the Browser
+    
+
+
+
     
 
     
