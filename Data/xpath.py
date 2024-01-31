@@ -22,3 +22,5 @@ BTN_Portfolio_Edit = '//li[@id="edit-{name}"]'
 BTN_Portfolio_edit_save= '//button[@id="portfolio-edit-save-btn"]'
 BTN_Portfolio_edit_cancel = '//button[@id="portfolio-edit-cancel-btn"]'
 Search_Portfolio_name = '//input[@id="portfolio-search-products"]'
+CHBOX_portfolio = '//td[@id="custom-id-{checkbox_name}"]/parent::tr/td[1]/span/input'
+

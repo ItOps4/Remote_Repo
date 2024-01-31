@@ -85,3 +85,8 @@ click on edit button and click on cancel button
     Press Keys    ${INput_Portfolio_Description}    CTRL+A+BACKSPACE
     Input Text    ${INput_Portfolio_Description}    ${description1}
     Wait Until Element is present then click the element    ${BTN_Portfolio_edit_cancel}
+Select the checkbox
+    [Arguments]    ${name}
+    ${ch_portfolio}    Format String    ${CHBOX_portfolio}    checkbox_name=${name}
+    Wait Until Element is present then click the element    ${ch_portfolio}
+

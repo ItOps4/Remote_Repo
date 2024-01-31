@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 6.0.2 (Python 3.10.0 on win32)" generated="20240131 17:46:30.753" rpa="false" schemaversion="3">
+<suite id="s1" name="Productor" source="C:\Users\Gayathri\Productor">
+<kw name="Setup" type="SETUP">
+<kw name="Log" library="BuiltIn">
+<arg>start to run</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240131 17:46:06.387" level="INFO">start to run</msg>
+<status status="PASS" starttime="20240131 17:46:06.387" endtime="20240131 17:46:06.387"/>
+</kw>
+<kw name="Empty Directory" library="OperatingSystem">
+<arg>./output/allure</arg>
+<doc>Deletes all the content from the given directory.</doc>
+<msg timestamp="20240131 17:46:06.387" level="INFO" html="true">Listing contents of directory '&lt;a href="file://C:\Users\Gayathri\Productor\output\allure"&gt;C:\Users\Gayathri\Productor\output\allure&lt;/a&gt;'.</msg>
+<msg timestamp="20240131 17:46:06.388" level="INFO" html="true">Emptied directory '&lt;a href="file://C:\Users\Gayathri\Productor\output\allure"&gt;C:\Users\Gayathri\Productor\output\allure&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20240131 17:46:06.387" endtime="20240131 17:46:06.388"/>
+</kw>
+<status status="PASS" starttime="20240131 17:46:06.386" endtime="20240131 17:46:06.388"/>
+</kw>
+<suite id="s1-s1" name="Testcase" source="C:\Users\Gayathri\Productor\Testcase">
+<suite id="s1-s1-s1" name="TC01" source="C:\Users\Gayathri\Productor\Testcase\TC01.robot">
+<test id="s1-s1-s1-t1" name="TC01" line="9">
+<kw name="Given Login into Productor Application" library="TC01_Support">
+<kw name="Verify an application should be opened" library="TC01_Support">
+<kw name="Login Application" library="Login">
+<arg>${username001}</arg>
+<doc>Using this keyword we can login Productor Application.</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${json_data}</var>
+<arg>Data/password.json</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20240131 17:46:07.271" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\Gayathri\Productor\Data\password.json"&gt;C:\Users\Gayathri\Productor\Data\password.json&lt;/a&gt;'.</msg>
+<msg timestamp="20240131 17:46:07.271" level="INFO">${json_data} = {
+    "Tparthi@valuefactors.io": "gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg=="
+   
+}</msg>
+<status status="PASS" starttime="20240131 17:46:07.271" endtime="20240131 17:46:07.271"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${object}</var>
+<arg>json.loads('''${json_data}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240131 17:46:07.272" level="INFO">${object} = {'Tparthi@valuefactors.io': 'gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg=='}</msg>
+<status status="PASS" starttime="20240131 17:46:07.272" endtime="20240131 17:46:07.272"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${encry}</var>
+<arg>${object['${username}']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240131 17:46:07.273" level="INFO">${encry} = gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==</msg>
+<status status="PASS" starttime="20240131 17:46:07.272" endtime="20240131 17:46:07.273"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
+<arg>sys,selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240131 17:46:07.273" level="INFO">${options} = &lt;selenium.webdriver.edge.options.Options object at 0x0000028ED5536F20&gt;</msg>
+<status status="PASS" starttime="20240131 17:46:07.273" endtime="20240131 17:46:07.273"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>inprivate</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240131 17:46:07.273" endtime="20240131 17:46:07.273"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<var>${driver}</var>
+<arg>Edge</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240131 17:46:07.274" level="INFO">Creating an instance of the Edge WebDriver.</msg>
+<msg timestamp="20240131 17:46:07.280" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<msg timestamp="20240131 17:46:09.119" level="INFO">${driver} = 1</msg>
+<status status="PASS" starttime="20240131 17:46:07.274" endtime="20240131 17:46:09.120"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Productor_Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240131 17:46:09.121" level="INFO">Opening url 'https://predev-productor.valuefactors.io/auth/login/'</msg>
+<status status="PASS" starttime="20240131 17:46:09.120" endtime="20240131 17:46:12.483"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240131 17:46:12.483" endtime="20240131 17:46:12.602"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20240131 17:46:12.602" endtime="20240131 17:46:12.603"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_Username}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240131 17:46:12.603" endtime="20240131 17:46:12.724"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Username}</arg>
+<arg>${username}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240131 17:46:12.726" level="INFO">Sending key(s) ('Tparthi@valuefactors.io',) to //input[@id="auth-email-id"] element.</msg>
+<msg timestamp="20240131 17:46:13.255" level="INFO">Sending keys Tparthi@valuefactors.io</msg>
+<status status="PASS" starttime="20240131 17:46:12.724" endtime="20240131 17:46:13.553"/>
+</kw>
+<kw name="Use Encryption Key" library="RPA.Crypto">
+<arg>${public_key}</arg>
+<doc>Set key for all following encryption/decryption operations.</doc>
+<msg timestamp="20240131 17:46:13.555" level="INFO">Protecting keyword: RPA.Crypto.Use Encryption Key</msg>
+<msg timestamp="20240131 17:46:13.559" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240131 17:46:13.554" endtime="20240131 17:46:13.558"/>
+</kw>
+<kw name="Decrypt String" library="RPA.Crypto">
+<var>${Decry}</var>
+<arg>${encry}</arg>
+<doc>Decrypt a string.</doc>
+<msg timestamp="20240131 17:46:13.568" level="INFO">${Decry} = Productor@01</msg>
+<status status="PASS" starttime="20240131 17:46:13.560" endtime="20240131 17:46:13.568"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Decry}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240131 17:46:13.570" level="INFO">Productor@01</msg>
+<status status="PASS" starttime="20240131 17:46:13.569" endtime="20240131 17:46:13.570"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Password}</arg>
+<arg>${Decry}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240131 17:46:13.572" level="INFO">Sending key(s) ('Productor@01',) to //input[@id="auth-password"] element.</msg>
+<msg timestamp="20240131 17:46:14.095" level="INFO">Sending keys Productor@01</msg>
+<status status="PASS" starttime="20240131 17:46:13.570" endtime="20240131 17:46:14.300"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Login}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240131 17:46:14.300" endtime="20240131 17:46:14.443"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240131 17:46:14.443" level="INFO">Clicking element '//button[@id="sign-in-btn"]'.</msg>
+<status status="PASS" starttime="20240131 17:46:14.443" endtime="20240131 17:46:14.808"/>
+</kw>
+<status status="PASS" starttime="20240131 17:46:14.443" endtime="20240131 17:46:14.808"/>
+</kw>
+<status status="PASS" starttime="20240131 17:46:14.300" endtime="20240131 17:46:14.808"/>
+</kw>
+<status status="PASS" starttime="20240131 17:46:07.271" endtime="20240131 17:46:14.808"/>
+</kw>
+<status status="PASS" starttime="20240131 17:46:07.270" endtime="20240131 17:46:14.808"/>
+</kw>
+<status status="PASS" starttime="20240131 17:46:07.270" endtime="20240131 17:46:14.808"/>
+</kw>
+<kw name="When Navigate to Portfolio Management Menu" library="TC01_Support">
+<kw name="Verify a Portfolio Managment Menu should be displayed" library="TC01_Support">
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Portfolio_man}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240131 17:46:14.808" endtime="20240131 17:46:18.533"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240131 17:46:18.533" level="INFO">Clicking element '//span[@id="icon-Portfolio Management"]/ancestor::a'.</msg>
+<msg timestamp="20240131 17:46:19.957" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="0-selenium-screenshot-1.png"&gt;&lt;img src="0-selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240131 17:46:19.957" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a data-if="/portfolio" class="px-[16px] py-[8px] mb-[9px] !w-full flex items-center border-b-0 border-l-4 border-white-300
+                 false cursor-pointer block hover:border-b-0 hover:border-white-300 hover:!text-primary !text-gray-300" href="/portfolio/"&gt;...&lt;/a&gt; is not clickable at point (32, 151). Other element would receive the click: &lt;div class="fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-[10000] overflow-hidden bg-black bg-opacity-75 flex flex-col items-center justify-center"&gt;...&lt;/div&gt;
+  (Session info: MicrosoftEdge=121.0.2277.83)
+Stacktrace:
+	GetHandleVerifier [0x00007FF78F2EAD02+60770]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F2784B2+228274]
+	(No symbol) [0x00007FF78F08ADBB]
+	(No symbol) [0x00007FF78F0E21E3]
+	(No symbol) [0x00007FF78F0DFCAF]
+	(No symbol) [0x00007FF78F0DD416]
+	(No symbol) [0x00007FF78F0DC5D7]
+	(No symbol) [0x00007FF78F0CE791]
+	(No symbol) [0x00007FF78F0FC4DA]
+	(No symbol) [0x00007FF78F0CE141]
+	(No symbol) [0x00007FF78F0CDFED]
+	(No symbol) [0x00007FF78F0FC7C0]
+	(No symbol) [0x00007FF78F0CE141]
+	(No symbol) [0x00007FF78F119438]
+	(No symbol) [0x00007FF78F0FC143]
+	(No symbol) [0x00007FF78F0CD4A8]
+	(No symbol) [0x00007FF78F0CC317]
+	(No symbol) [0x00007FF78F0CD041]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF78F49B47C+1039884]
+	(No symbol) [0x00007FF78F150D65]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF78F1EA82C+36956]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF78F1E2352+2946]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF78F499EC3+1034323]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F282418+269080]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F27D0F4+247796]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F27D222+248098]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F273911+208913]
+	BaseThreadInitThunk [0x00007FFDA6F6257D+29]
+	RtlUserThreadStart [0x00007FFDA820AA58+40]
+</msg>
+<status status="FAIL" starttime="20240131 17:46:18.533" endtime="20240131 17:46:19.968"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240131 17:46:26.982" level="INFO">Clicking element '//span[@id="icon-Portfolio Management"]/ancestor::a'.</msg>
+<msg timestamp="20240131 17:46:28.387" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="0-selenium-screenshot-2.png"&gt;&lt;img src="0-selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240131 17:46:28.387" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a data-if="/portfolio" class="px-[16px] py-[8px] mb-[9px] !w-full flex items-center border-b-0 border-l-4 border-white-300
+                 false cursor-pointer block hover:border-b-0 hover:border-white-300 hover:!text-primary !text-gray-300" href="/portfolio/"&gt;...&lt;/a&gt; is not clickable at point (32, 151). Other element would receive the click: &lt;div class="fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-[10000] overflow-hidden bg-black bg-opacity-75 flex flex-col items-center justify-center"&gt;...&lt;/div&gt;
+  (Session info: MicrosoftEdge=121.0.2277.83)
+Stacktrace:
+	GetHandleVerifier [0x00007FF78F2EAD02+60770]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F2784B2+228274]
+	(No symbol) [0x00007FF78F08ADBB]
+	(No symbol) [0x00007FF78F0E21E3]
+	(No symbol) [0x00007FF78F0DFCAF]
+	(No symbol) [0x00007FF78F0DD416]
+	(No symbol) [0x00007FF78F0DC5D7]
+	(No symbol) [0x00007FF78F0CE791]
+	(No symbol) [0x00007FF78F0FC4DA]
+	(No symbol) [0x00007FF78F0CE141]
+	(No symbol) [0x00007FF78F0CDFED]
+	(No symbol) [0x00007FF78F0FC7C0]
+	(No symbol) [0x00007FF78F0CE141]
+	(No symbol) [0x00007FF78F119438]
+	(No symbol) [0x00007FF78F0FC143]
+	(No symbol) [0x00007FF78F0CD4A8]
+	(No symbol) [0x00007FF78F0CC317]
+	(No symbol) [0x00007FF78F0CD041]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF78F49B47C+1039884]
+	(No symbol) [0x00007FF78F150D65]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF78F1EA82C+36956]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF78F1E2352+2946]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF78F499EC3+1034323]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F282418+269080]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F27D0F4+247796]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F27D222+248098]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F273911+208913]
+	BaseThreadInitThunk [0x00007FFDA6F6257D+29]
+	RtlUserThreadStart [0x00007FFDA820AA58+40]
+</msg>
+<status status="FAIL" starttime="20240131 17:46:26.982" endtime="20240131 17:46:28.387"/>
+</kw>
+<msg timestamp="20240131 17:46:28.387" level="FAIL">Keyword 'Click Element' failed after retrying for 6 seconds. The last error was: ElementClickInterceptedException: Message: element click intercepted: Element &lt;a data-if="/portfolio" class="px-[16px] py-[8px] mb-[9px] !w-full flex items-center border-b-0 border-l-4 border-white-300
+                 false cursor-pointer block hover:border-b-0 hover:border-white-300 hover:!text-primary !text-gray-300" href="/portfolio/"&gt;...&lt;/a&gt; is not clickable at point (32, 151). Other element would receive the click: &lt;div class="fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-[10000] overflow-hidden bg-black bg-opacity-75 flex flex-col items-center justify-center"&gt;...&lt;/div&gt;
+  (Session info: MicrosoftEdge=121.0.2277.83)
+Stacktrace:
+	GetHandleVerifier [0x00007FF78F2EAD02+60770]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F2784B2+228274]
+	(No symbol) [0x00007FF78F08ADBB]
+	(No symbol) [0x00007FF78F0E21E3]
+	(No symbol) [0x00007FF78F0DFCAF]
+	(No symbol) [0x00007FF78F0DD416]
+	(No symbol) [0x00007FF78F0DC5D7]
+	(No symbol) [0x00007FF78F0CE791]
+	(No symbol) [0x00007FF78F0FC4DA]
+    [ Message content over the limit has been removed. ]
+	(No symbol) [0x00007FF78F0CD041]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF78F49B47C+1039884]
+	(No symbol) [0x00007FF78F150D65]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF78F1EA82C+36956]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF78F1E2352+2946]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF78F499EC3+1034323]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F282418+269080]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F27D0F4+247796]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F27D222+248098]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F273911+208913]
+	BaseThreadInitThunk [0x00007FFDA6F6257D+29]
+	RtlUserThreadStart [0x00007FFDA820AA58+40]</msg>
+<status status="FAIL" starttime="20240131 17:46:18.533" endtime="20240131 17:46:28.387"/>
+</kw>
+<status status="FAIL" starttime="20240131 17:46:14.808" endtime="20240131 17:46:28.387"/>
+</kw>
+<status status="FAIL" starttime="20240131 17:46:14.808" endtime="20240131 17:46:28.387"/>
+</kw>
+<status status="FAIL" starttime="20240131 17:46:14.808" endtime="20240131 17:46:28.387"/>
+</kw>
+<kw name="Then Click on Create portfolio button, Enter the mandatory details and click on cancel button" library="TC01_Support">
+<status status="NOT RUN" starttime="20240131 17:46:28.387" endtime="20240131 17:46:28.387"/>
+</kw>
+<kw name="Then Click on Create portfolio button and Enter the mandatory details and click on Save button" library="TC01_Support">
+<status status="NOT RUN" starttime="20240131 17:46:28.387" endtime="20240131 17:46:28.387"/>
+</kw>
+<kw name="Then select the checkbox of portfolio name" library="TC01_Support">
+<status status="NOT RUN" starttime="20240131 17:46:28.392" endtime="20240131 17:46:28.392"/>
+</kw>
+<kw name="Then Click on Search bar and search with valid portfolio in the portfolio page" library="TC01_Support">
+<status status="NOT RUN" starttime="20240131 17:46:28.392" endtime="20240131 17:46:28.392"/>
+</kw>
+<kw name="Then Click on More icon in portfolio name, Click on Edit button,Enter Data and click on cancel button" library="TC01_Support">
+<status status="NOT RUN" starttime="20240131 17:46:28.392" endtime="20240131 17:46:28.392"/>
+</kw>
+<kw name="Then Click on More icon in portfolio name, click on Edit button, Enter the data and click on save button" library="TC01_Support">
+<status status="NOT RUN" starttime="20240131 17:46:28.392" endtime="20240131 17:46:28.392"/>
+</kw>
+<kw name="Then Click on More icon in Portfolio name, click on Delete Button and Click on Cancel Button" library="TC01_Support">
+<status status="NOT RUN" starttime="20240131 17:46:28.392" endtime="20240131 17:46:28.392"/>
+</kw>
+<kw name="Then Click on More icon in Portfolio name, click on Delete Button and Click on Confirm button" library="TC01_Support">
+<status status="NOT RUN" starttime="20240131 17:46:28.392" endtime="20240131 17:46:28.392"/>
+</kw>
+<tag>TC01</tag>
+<status status="FAIL" starttime="20240131 17:46:07.270" endtime="20240131 17:46:28.392">Keyword 'Click Element' failed after retrying for 6 seconds. The last error was: ElementClickInterceptedException: Message: element click intercepted: Element &lt;a data-if="/portfolio" class="px-[16px] py-[8px] mb-[9px] !w-full flex items-center border-b-0 border-l-4 border-white-300
+                 false cursor-pointer block hover:border-b-0 hover:border-white-300 hover:!text-primary !text-gray-300" href="/portfolio/"&gt;...&lt;/a&gt; is not clickable at point (32, 151). Other element would receive the click: &lt;div class="fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-[10000] overflow-hidden bg-black bg-opacity-75 flex flex-col items-center justify-center"&gt;...&lt;/div&gt;
+  (Session info: MicrosoftEdge=121.0.2277.83)
+Stacktrace:
+	GetHandleVerifier [0x00007FF78F2EAD02+60770]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F2784B2+228274]
+	(No symbol) [0x00007FF78F08ADBB]
+	(No symbol) [0x00007FF78F0E21E3]
+	(No symbol) [0x00007FF78F0DFCAF]
+	(No symbol) [0x00007FF78F0DD416]
+	(No symbol) [0x00007FF78F0DC5D7]
+	(No symbol) [0x00007FF78F0CE791]
+    [ Message content over the limit has been removed. ]
+	(No symbol) [0x00007FF78F0CD041]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF78F49B47C+1039884]
+	(No symbol) [0x00007FF78F150D65]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF78F1EA82C+36956]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF78F1E2352+2946]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF78F499EC3+1034323]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F282418+269080]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F27D0F4+247796]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F27D222+248098]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF78F273911+208913]
+	BaseThreadInitThunk [0x00007FFDA6F6257D+29]
+	RtlUserThreadStart [0x00007FFDA820AA58+40]</status>
+</test>
+<doc>Create,Edit,Delete Portfolio</doc>
+<status status="FAIL" starttime="20240131 17:46:06.390" endtime="20240131 17:46:28.392"/>
+</suite>
+<status status="FAIL" starttime="20240131 17:46:06.388" endtime="20240131 17:46:28.392"/>
+</suite>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 1 executions.</doc>
+<status status="FAIL" starttime="20240131 17:46:06.196" endtime="20240131 17:46:28.397"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">TC01</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Productor">Productor</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Testcase">Productor.Testcase</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="TC01">Productor.Testcase.TC01</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240131 17:46:06.194" level="ERROR">Taking listener 'allure_robotframework' into use failed: Importing listener 'allure_robotframework' failed: ModuleNotFoundError: No module named 'allure_robotframework'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Gayathri\AppData\Local\Programs\Python\Python310\Scripts\robot.exe
+  C:\Users\Gayathri\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\Gayathri\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\Gayathri\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\Gayathri\AppData\Local\Programs\Python\Python310
+  C:\Users\Gayathri\AppData\Local\Programs\Python\Python310\lib\site-packages
+  C:\Users\Gayathri\AppData\Local\Programs\Python\Python310\lib\site-packages\win32
+  C:\Users\Gayathri\AppData\Local\Programs\Python\Python310\lib\site-packages\win32\lib
+  C:\Users\Gayathri\AppData\Local\Programs\Python\Python310\lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>
