@@ -85,3 +85,7 @@ click on edit button and click on cancel button
     Press Keys    ${INput_Portfolio_Description}    CTRL+A+BACKSPACE
     Input Text    ${INput_Portfolio_Description}    ${description1}
     Wait Until Element is present then click the element    ${BTN_Portfolio_edit_cancel}
+
+
+"Close the Browser"
+    Close Browser
