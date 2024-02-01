@@ -40,6 +40,15 @@ Then Close the Browser
 Verify an application should be opened
     Login Application    ${username001}
 
+Verify a Portfolio Managment Menu shoduld be displayed
+    Wait Until Element is present then click the element    //span[@id="icon-Portfolio Management"]/ancestor::a
+    
+verify if user able to enter mandatory details in the fields and click the save button and it should added to the list of existing portfolio
+    Create Portfolio     test1     test2
+
+Verify a Tool configuration Menu should be displayed
+    Wait Until Element is present then click the element        
+    
 Verify a Portfolio Managment Menu should be displayed
     Wait Until Element is present then click the element    ${BTN_Portfolio_man}
 
@@ -79,6 +88,7 @@ verify if it display edit and delete button as dropdown,it Deleted Portfolio sho
     verify if it display a dropdown with edit and delete button
     click on delete icon present in the more options    ${TC01_Portfolio_name}    ${BTN_Portfolio_delete_confirm}
 
+<<<<<<< HEAD
 
 
 verify if checkbox of portfolio selected
@@ -86,3 +96,11 @@ verify if checkbox of portfolio selected
     
 Verify an Application should be closed
     "Close the Browser"
+=======
+     
+verify if checkbox of portfolio selected
+    Select the checkbox    ${TC01_Portfolio_name}
+Verify an Application should be closed
+    "Close the Browser"
+
+>>>>>>> origin/Dev

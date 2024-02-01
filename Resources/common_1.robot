@@ -10,6 +10,7 @@ Wait Until Element is present then click the element
     [Arguments]    ${Element}
     Wait Until Page Contains Element    ${Element}    50
     Wait Until Keyword Succeeds    6    7    Click Element    ${Element}
+    
 
 # Enter the Credentials
 #    [Arguments]    ${username}    ${password}
@@ -94,9 +95,15 @@ Select the checkbox
     ${ch_portfolio}    Format String    ${CHBOX_portfolio}    checkbox_name=${name}
     Wait Until Element is present then click the element    ${ch_portfolio}
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/Dev
 
 
 "Close the Browser"
     Close Browser
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/Dev
