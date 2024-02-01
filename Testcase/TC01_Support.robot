@@ -88,7 +88,6 @@ verify if it display edit and delete button as dropdown,it Deleted Portfolio sho
     verify if it display a dropdown with edit and delete button
     click on delete icon present in the more options    ${TC01_Portfolio_name}    ${BTN_Portfolio_delete_confirm}
 
-<<<<<<< HEAD
 
 
 verify if checkbox of portfolio selected
@@ -96,11 +95,4 @@ verify if checkbox of portfolio selected
     
 Verify an Application should be closed
     "Close the Browser"
-=======
      
-verify if checkbox of portfolio selected
-    Select the checkbox    ${TC01_Portfolio_name}
-Verify an Application should be closed
-    "Close the Browser"
-
->>>>>>> origin/Dev
