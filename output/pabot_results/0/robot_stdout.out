@@ -1,0 +1,52 @@
+==============================================================================
+Productor                                                                     
+==============================================================================
+Productor.Testcase                                                            
+==============================================================================
+[ERROR] EXCEPTION RAISED DURING PABOT EXECUTION
+[ERROR] PLEASE CONSIDER REPORTING THIS ISSUE TO https://github.com/mkorpela/pabot/issues
+Pabot: 2.16.0
+Python: 3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]
+Robot Framework: 6.0.2
+Total testing: 0.0 seconds
+Elapsed time:  0.1 seconds
+Error: Command 'pabot -d .\output\ --listener allure_robotframework -i TC01 .' returned non-zero exit status 1.
+Productor.Testcase.Tc01 :: Create,Edit,Delete Portfolio                       
+==============================================================================
+TC01                                                                  | FAIL |
+Keyword 'Click Element' failed after retrying for 6 seconds. The last error was: ElementClickInterceptedException: Message: element click intercepted: Element <a data-if="/portfolio" class="px-[16px] py-[8px] mb-[9px] !w-full flex items-center border-b-0 border-l-4 border-white-300
+                 false cursor-pointer block hover:border-b-0 hover:border-white-300 hover:!text-primary !text-gray-300" href="/portfolio/">...</a> is not clickable at point (32, 151). Other element would receive the click: <div class="fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-[10000] overflow-hidden bg-black bg-opacity-75 flex flex-col items-center justify-center">...</div>
+  (Session info: MicrosoftEdge=121.0.2277.83)
+Stacktrace:
+	GetHandleVerifier [0x00007FF62EC7AD02+60770]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF62EC084B2+228274]
+	(No symbol) [0x00007FF62EA1ADBB]
+	(No symbol) [0x00007FF62EA721E3]
+	(No symbol) [0x00007FF62EA6FCAF]
+	(No symbol) [0x00007FF62EA6D416]
+	(No symbol) [0x00007FF62EA6C5D7]
+	(No symbol) [0x00007FF62EA5E791]
+    [ Message content over the limit has been removed. ]
+	(No symbol) [0x00007FF62EA5D041]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF62EE2B47C+1039884]
+	(No symbol) [0x00007FF62EAE0D65]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF62EB7A82C+36956]
+	Microsoft::Applications::Events::EventProperty::~EventProperty [0x00007FF62EB72352+2946]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF62EE29EC3+1034323]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF62EC12418+269080]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF62EC0D0F4+247796]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF62EC0D222+248098]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF62EC03911+208913]
+	BaseThreadInitThunk [0x00007FFDA6F6257D+29]
+	RtlUserThreadStart [0x00007FFDA820AA58+40]
+------------------------------------------------------------------------------
+Productor.Testcase.Tc01 :: Create,Edit,Delete Portfolio               | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor.Testcase                                                    | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\Gayathri\Productor\output\pabot_results\0\output.xml

@@ -56,6 +56,10 @@ Search Portfolio
     Wait Until Element is present then click the element    ${Search_Portfolio_name}
     Press Keys    ${Search_Portfolio_name}    ${Name}
 
+search invalid portfolio
+    Wait Until Page Contains    No records to display 
+        
+
 click on portfolio more button
     [Arguments]    ${name}
     ${portfolio_more_option}    Format String    ${BTN_Portfolio_more}    name=${name}
@@ -85,15 +89,14 @@ click on edit button and click on cancel button
     Press Keys    ${INput_Portfolio_Description}    CTRL+A+BACKSPACE
     Input Text    ${INput_Portfolio_Description}    ${description1}
     Wait Until Element is present then click the element    ${BTN_Portfolio_edit_cancel}
-<<<<<<< HEAD
 Select the checkbox
     [Arguments]    ${name}
     ${ch_portfolio}    Format String    ${CHBOX_portfolio}    checkbox_name=${name}
     Wait Until Element is present then click the element    ${ch_portfolio}
 
-=======
+
 
 
 "Close the Browser"
     Close Browser
->>>>>>> origin/Dev
+
