@@ -4,7 +4,7 @@ Resource    ${CURDIR}${/}..\\Login.robot
 Variables    ../Data/data.py
 
 *** Keywords ***
-Login into Productor Application
+Given Login into Productor Application
     Verify an application should be opened
 
 When Navigate to Portfolio Management Menu
@@ -94,7 +94,7 @@ verify if it display edit and delete button as dropdown,it Deleted Portfolio sho
     Delete Potfolio   ${TC02_Portfolio_name}    ${BTN_Portfolio_delete_confirm}
 
      
-
-
+# verify if checkbox of portfolio selected
+#     Select the checkbox    ${TC01_Portfolio_name}
 Verify an Application should be closed
     "Close the Browser"
