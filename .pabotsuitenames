@@ -1,0 +1,9 @@
+datasources:2abe1aaa7e9433f2a92113b8916b370e3a611ab3
+commandlineoptions:b648d9867dca246f95ff2bf2ba34c2b50c263aba
+suitesfrom:da39a3ee5e6b4b0d3255bfef95601890afd80709
+file:64d1d1aff26eed81c4ca36cffc896ce2b8b0fbc7
+--suite Productor.Testcase.Tc01
+--suite Productor.Testcase.TC02
+--suite Productor.Testcase.TC03
+--suite Productor.Testcase.TC04
+--suite Productor.Testcase.TC05
