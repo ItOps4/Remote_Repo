@@ -16,7 +16,7 @@ Then Click on Create portfolio button, Enter the mandatory details and click on 
 Then Click on Create portfolio button and Enter the mandatory details and click on Save button
     Verify a mandatory fields should be entered, a Save should be enabled, a Portfolio should be created
 
-Then select the checkbox of portfolio name
+Then Select the checkbox of portfolio
     verify if checkbox of portfolio selected
 
 Then Click on Search bar and search with valid portfolio in the portfolio page
@@ -38,7 +38,7 @@ Then Close the Browser
     Verify an Application should be closed
 
 Verify an application should be opened
-    Login Application    ${username001}
+    Login Application    ${username002}
 
           
     
@@ -86,11 +86,8 @@ verify if it display edit and delete button as dropdown,it Deleted Portfolio sho
     #verify if it display a dropdown with edit and delete button
     Delete Potfolio   ${TC01_Portfolio_name}    ${BTN_Portfolio_delete_confirm}
 
-
-
+     
 verify if checkbox of portfolio selected
     Select the checkbox    ${TC01_Portfolio_name}
-    
 Verify an Application should be closed
     "Close the Browser"
-     
