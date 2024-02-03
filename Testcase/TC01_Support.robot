@@ -40,6 +40,15 @@ Then Close the Browser
 Verify an application should be opened
     Login Application    ${username002}
 
+Verify a Portfolio Managment Menu shoduld be displayed
+    Wait Until Element is present then click the element    //span[@id="icon-Portfolio Management"]/ancestor::a
+    
+verify if user able to enter mandatory details in the fields and click the save button and it should added to the list of existing portfolio
+    Create Portfolio     test1     test2
+
+Verify a Tool configuration Menu should be displayed
+    Wait Until Element is present then click the element        
+    
 Verify a Portfolio Managment Menu should be displayed
     Wait Until Element is present then click the element    ${BTN_Portfolio_man}
 
@@ -49,6 +58,10 @@ Verify a Save button should be disabled by default and Portfolio shouldn't be cr
 Verify a mandatory fields should be entered, a Save should be enabled, a Portfolio should be created
     Create Portfolio and save    ${TC01_Portfolio_name}     ${TC01_Portfolio_Description1}
    
+verify if it should not display any result , it display message as " No records to display "    
+    Search Portfolio    ${TC01_invalidPortfolio}
+    search invalid portfolio
+
 verify if the search bar should be enabled to search any portfolio and it should display result as per the search input 
     Search Portfolio    ${TC01_Portfolio_name}
 
