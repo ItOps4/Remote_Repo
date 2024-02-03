@@ -55,7 +55,7 @@ verify if it should not display any result , it display message as " No records 
     Search Portfolio    ${TC01_invalidPortfolio}
     Check element is present    ${TXT_Portfolio_No_Data} 
 
-#     search invalid portfolio
+
 
 verify if the search bar should be enabled to search any portfolio and it should display result as per the search input 
     Search Portfolio    ${TC01_Portfolio_name}
@@ -69,25 +69,26 @@ verify if it display a dropdown with edit and delete button
 
 
 verify it should display a dropdown and it should display portfolio popup window in editable mode and save the changes by clicking save button
-    click on portfolio more button    ${TC01_Portfolio_name}
+    Click the Kebab button on portfolio    ${TC01_Portfolio_name}   
     Edit Portfolio    ${TC01_Portfolio_name}    ${TC01_Portfolio_Description2}    ${BTN_Portfolio_edit_save}    
     Capture Page Screenshot
 
 verify if it display edit and delete button as Dropdown, it should display Edit portfolio popup in editable mode , User to enter the data and It should redirect to the Portfolio page     
-    #verify if it display a dropdown with edit and delete button    
+    Click the Kebab button on portfolio    ${TC01_Portfolio_name}    
     Edit Portfolio    ${TC01_Portfolio_name}    ${TC01_Portfolio_Description1}    ${BTN_Portfolio_edit_cancel}    
     Capture Page Screenshot
 
 verify if it display edit and delete button as dropdown, It Redirect to the Portfolio Page 
-    #verify if it display a dropdown with edit and delete button
+    Click the Kebab button on portfolio    ${TC01_Portfolio_name}
     Delete Potfolio    ${TC01_Portfolio_name}    ${BTN_Portfolio_delete_cancel}
 
 verify if it display edit and delete button as dropdown,it Deleted Portfolio should not display in the portfolio page
-    #verify if it display a dropdown with edit and delete button
+    Click the Kebab button on portfolio    ${TC01_Portfolio_name}
     Delete Potfolio   ${TC01_Portfolio_name}    ${BTN_Portfolio_delete_confirm}
 
      
 verify if checkbox of portfolio selected
     Select the checkbox    ${TC01_Portfolio_name}
+
 Verify an Application should be closed
     "Close the Browser"

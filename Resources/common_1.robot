@@ -12,7 +12,7 @@ Wait Until Element is present then click the element
     Wait Until Page Contains Element    ${Element}    50
     Wait Until Keyword Succeeds    6    7    Click Element    ${Element}
 
-# TC01 
+# TC01  portfolio management
 Create Portfolio
     [Documentation]    Using this keyword we can create portfolio
     [Arguments]    ${name}    ${description}    ${Element}
@@ -64,7 +64,7 @@ Check element isn't present
 Verify a Portfolio is displayed
     [Arguments]    ${name}
     ${Portfolio}    Format String    ${Portfolio_Name}    name=${name}
-    Check element is present    ${Portfolio_Name}
+    Check element is present    ${Portfolio}
  
 
 Click the Kebab button on portfolio
