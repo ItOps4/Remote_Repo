@@ -7,21 +7,15 @@ Variables       ../Data/data.py
 
 *** Keywords ***
 Wait Until Element is present then click the element
+    [Documentation]    Using this keyword we can perform click Element
     [Arguments]    ${Element}
     Wait Until Page Contains Element    ${Element}    50
     Wait Until Keyword Succeeds    6    7    Click Element    ${Element}
 
-# Enter the Credentials
-#    [Arguments]    ${username}    ${password}
-#    Wait Until Page Contains Element    ${Input_Username}    50
-#    Input Text    ${Input_Username}    ${username}
-#    Wait Until Page Contains Element    ${Input_Password}    50
-#    Input Password    ${Input_Password}    ${password}
-#    Wait Until Element is present then click the element    ${BTN_Login}
-
-Create Portfolio and save
+# TC01  portfolio management
+Create Portfolio
     [Documentation]    Using this keyword we can create portfolio
-    [Arguments]    ${name}    ${description}
+    [Arguments]    ${name}    ${description}    ${Element}
     Wait Until Element is present then click the element    ${BTN_Create_Portfolio}
     Wait Until Page Contains Element    ${Input_Portfolio_Name}    50
     Input Text    ${Input_Portfolio_Name}    ${name}
@@ -30,21 +24,7 @@ Create Portfolio and save
     Press Keys    ${Input_Search_Manager}    ${TXT_manager_Iyyappan}
     Wait Until Element is present then click the element    ${Drop_Down_Manager}
     Capture Page Screenshot
-    Wait Until Element is present then click the element    ${BTN_Portfolio_Save}
-
-    
-Create Portfolio and cancel
-    [Documentation]    Using this keyword we can create portfolio
-    [Arguments]    ${name}    ${description}
-    Wait Until Element is present then click the element   ${BTN_Create_Portfolio}
-    Wait Until Page Contains Element    ${Input_Portfolio_Name}    50
-    Input Text    ${Input_Portfolio_Name}    ${name}
-    Press Keys    ${INput_Portfolio_Description}    ${description}
-    Wait Until Element is present then click the element    ${Input_Portfolio_Manager}
-    Press Keys    ${Input_Search_Manager}    ${TXT_manager_Iyyappan}
-    Wait Until Element is present then click the element    ${Drop_Down_Manager}
-    Capture Page Screenshot
-    Wait Until Element is present then click the element    ${BTN_portfolio_cancel}
+    Wait Until Element is present then click the element    ${Element}
 
 Navigate to portfolio data
     [Arguments]    ${name}
@@ -52,44 +32,77 @@ Navigate to portfolio data
     Wait Until Element is present then click the element    ${Portfolio}
 
 Search Portfolio
+    [Documentation]    using this keyword we can search portfolio
     [Arguments]    ${Name}
-    Wait Until Element is present then click the element    ${Search_Portfolio_name}
-    Press Keys    ${Search_Portfolio_name}    ${Name}
+    Wait Until Element is present then click the element    ${Input_Portfolio_Search}
+    Press Keys    ${Input_Portfolio_Search}    CTRL+A+BACKSPACE
+    Press Keys    ${Input_Portfolio_Search}    ${Name}
+    
 
-click on portfolio more button
+Check text is present
+    [Arguments]    ${text}
+    Wait Until Page Contains    ${text}    50
+    Page Should Contain    ${text}    
+
+
+check text isn't present
+    [Arguments]    ${text}
+    Wait Until Page Does Not Contain    ${text}    50
+    Page Should Not Contain    ${text}
+
+
+Check element is present
+    [Arguments]    ${element}
+    Wait Until Page Contains Element    ${element}    50
+    Page Should Contain Element    ${element}
+
+
+Check element isn't present
+    [Arguments]    ${element}
+    Wait Until Page Does Not Contain Element    ${element}    50
+    Page Should Not Contain Element    ${element}
+
+search BACKSPACE
+    [Arguments]    ${name}
+    Press Keys    ${name}    CTRL+A+BACKSPACE    
+Verify a Portfolio is displayed
+    [Arguments]    ${name}
+    ${Portfolio}    Format String    ${Portfolio_Name}    name=${name}
+    Check element is present    ${Portfolio}
+ 
+
+Click the Kebab button on portfolio
+    [Documentation]    Using this keywork we can click kebab button 
     [Arguments]    ${name}
     ${portfolio_more_option}    Format String    ${BTN_Portfolio_more}    name=${name}
     Wait Until Element is present then click the element    ${portfolio_more_option}
 
-click on delete icon present in the more options
+Delete Potfolio
+    [Documentation]    Using this keyword delete portfolio
     [Arguments]    ${name}    ${element}
+
     ${Portfolio}    Format String    ${BTN_Portfolio_delete}    name=${name}
     Wait Until Element is present then click the element    ${Portfolio}
     Wait Until Element is present then click the element    ${element}
 
-Click on Edit button and click on save button
-    [Arguments]    ${name}    ${description1}
+Edit Portfolio
+    [Documentation]    Using this keyword Edit portfolio
+    [Arguments]    ${name}    ${name1}    ${description}    ${element}
     ${Portfolio_edit}    Format String    ${BTN_Portfolio_Edit}    name=${name}
     Wait Until Element is present then click the element    ${Portfolio_edit}
     Press Keys    ${INput_Portfolio_name}    CTRL+A+BACKSPACE
-    Input Text    ${Input_Portfolio_Name}    ${TC01_Portfolio_name}
+    Input Text    ${Input_Portfolio_Name}    ${name1}
     Press Keys    ${Input_Portfolio_Description}    CTRL+A+BACKSPACE
-    Input Text    ${INput_Portfolio_Description}    ${description1}
-    Wait Until Element is present then click the element    ${BTN_Portfolio_edit_save}
+    Input Text    ${INput_Portfolio_Description}    ${description}
+    Wait Until Element is present then click the element    ${element}
 
-click on edit button and click on cancel button
-    [Arguments]    ${name}    ${description1}
-    ${Portfolio_edit}    Format String    ${BTN_Portfolio_Edit}    name=${name}
-    Wait Until Element is present then click the element    ${Portfolio_edit}
-    Wait Until Keyword Succeeds    6    7    Clear Element Text    ${INput_Portfolio_Description}
-    Press Keys    ${INput_Portfolio_Description}    CTRL+A+BACKSPACE
-    Input Text    ${INput_Portfolio_Description}    ${description1}
-    Wait Until Element is present then click the element    ${BTN_Portfolio_edit_cancel}
+
+
 Select the checkbox
+    [Documentation]    Using this keyword we can select checkbox
     [Arguments]    ${name}
-    ${ch_portfolio}    Format String    ${CHBOX_portfolio}    checkbox_name=${name}
-    Wait Until Element is present then click the element    ${ch_portfolio}
-
+    ${Checkbox_Portfolio}    Format String    ${CHBOX_portfolio}    checkbox_name=${name}
+    Wait Until Element is present then click the element    ${Checkbox_Portfolio}
 
 
 "Close the Browser"
@@ -105,11 +118,7 @@ Add Category
     Wait Until Page Contains Element    ${Input_Category_Description}    50
     Input Text    ${Input_Category_Description}    ${Description}
 
-# Category Cancel   
-#     Wait Until Element is present then click the element    ${BTN_Category_cancel}
 
-# Category Save
-#     Wait Until Element is present then click the element    ${BTN_Category_save}
 
 
     

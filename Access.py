@@ -3,7 +3,7 @@ import subprocess
 public_key = '58m6kWLkFLw0srrHpI1s_5iNeoD3sGccNsFExGu0zig='
 
 def run_robot_command(tag):
-    command = f"pabot -d .\\output\\Testcase -i {tag} ."
+    command = f"pabot -d .\\output\\Testcase  -i {tag} ."
     
     try:
         # Run the command
