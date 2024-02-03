@@ -35,6 +35,7 @@ Search Portfolio
     [Documentation]    using this keyword we can search portfolio
     [Arguments]    ${Name}
     Wait Until Element is present then click the element    ${Input_Portfolio_Search}
+    Press Keys    ${Input_Portfolio_Search}    CTRL+A+BACKSPACE
     Press Keys    ${Input_Portfolio_Search}    ${Name}
     
 
@@ -61,6 +62,9 @@ Check element isn't present
     Wait Until Page Does Not Contain Element    ${element}    50
     Page Should Not Contain Element    ${element}
 
+search BACKSPACE
+    [Arguments]    ${name}
+    Press Keys    ${name}    CTRL+A+BACKSPACE    
 Verify a Portfolio is displayed
     [Arguments]    ${name}
     ${Portfolio}    Format String    ${Portfolio_Name}    name=${name}
@@ -76,17 +80,18 @@ Click the Kebab button on portfolio
 Delete Potfolio
     [Documentation]    Using this keyword delete portfolio
     [Arguments]    ${name}    ${element}
+
     ${Portfolio}    Format String    ${BTN_Portfolio_delete}    name=${name}
     Wait Until Element is present then click the element    ${Portfolio}
     Wait Until Element is present then click the element    ${element}
 
 Edit Portfolio
     [Documentation]    Using this keyword Edit portfolio
-    [Arguments]    ${name}    ${description}    ${element}
+    [Arguments]    ${name}    ${name1}    ${description}    ${element}
     ${Portfolio_edit}    Format String    ${BTN_Portfolio_Edit}    name=${name}
     Wait Until Element is present then click the element    ${Portfolio_edit}
     Press Keys    ${INput_Portfolio_name}    CTRL+A+BACKSPACE
-    Input Text    ${Input_Portfolio_Name}    ${TC01_Portfolio_name}
+    Input Text    ${Input_Portfolio_Name}    ${name1}
     Press Keys    ${Input_Portfolio_Description}    CTRL+A+BACKSPACE
     Input Text    ${INput_Portfolio_Description}    ${description}
     Wait Until Element is present then click the element    ${element}

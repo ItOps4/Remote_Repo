@@ -11,7 +11,8 @@ TC01
     When Navigate to Portfolio Management Menu
     Then Click on Create portfolio button, Enter the mandatory details and click on cancel button
     Then Click on Create portfolio button and Enter the mandatory details and click on Save button
-    Then Select the checkbox of portfolio
+    Then Click on Search bar and Enter invalid portfolio name
+    # Then Select the checkbox of portfolio
     Then Click on Search bar and search with valid portfolio in the portfolio page
     Then Click on More icon in portfolio name, Click on Edit button,Enter Data and click on cancel button
     Then Click on More icon in portfolio name, click on Edit button, Enter the data and click on save button
