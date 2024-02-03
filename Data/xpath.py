@@ -1,6 +1,8 @@
 Input_Username = '//input[@id="auth-email-id"]'
 Input_Password = '//input[@id="auth-password"]'
 BTN_Login = '//button[@id="sign-in-btn"]'
+BTN_Cancel = '//p[text()="Cancel"]/parent::button'
+BTN_Save = '//p[text()="Save"]/parent::button'
 
 BTN_Create_Portfolio = '//button[@id="portfolio-create-btn"]'
 Input_Portfolio_Name = '//input[@id="portfolio-management-portfolio-name"]'
@@ -24,3 +26,11 @@ BTN_Portfolio_edit_cancel = '//button[@id="portfolio-edit-cancel-btn"]'
 Search_Portfolio_name = '//input[@id="portfolio-search-products"]'
 CHBOX_portfolio = '//td[@id="custom-id-{checkbox_name}"]/parent::tr/td[1]/span/input'
 
+# Adding Category in Finance Configuration
+
+Icon_SystemSettings = '//span[@id="icon-System Settings"]'
+BTN_Add_Category = '//button[@id="finance-add-category"]'
+Input_Category_name = '//input[@id="finance-config-category-name"]'
+Input_Category_Description = '//textarea[@id="finance-config-description"]'
+BTN_Category_cancel = '//button[@id="overall-finance-config-cancel"]'
+BTN_Category_save = '//button[@id="overall-finance-config-save"]'

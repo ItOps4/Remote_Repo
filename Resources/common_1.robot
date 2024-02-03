@@ -36,7 +36,7 @@ Create Portfolio and save
 Create Portfolio and cancel
     [Documentation]    Using this keyword we can create portfolio
     [Arguments]    ${name}    ${description}
-    Wait Until Element is present then click the element    ${BTN_Create_Portfolio}
+    Wait Until Element is present then click the element   ${BTN_Create_Portfolio}
     Wait Until Page Contains Element    ${Input_Portfolio_Name}    50
     Input Text    ${Input_Portfolio_Name}    ${name}
     Press Keys    ${INput_Portfolio_Description}    ${description}
@@ -94,3 +94,22 @@ Select the checkbox
 
 "Close the Browser"
     Close Browser
+
+#Adding Category to Finance Configuration
+Add Category
+    [Documentation]     Adding Category using Keyword
+    [Arguments]    ${name}    ${Description}
+    Wait Until Element is present then click the element    ${BTN_Add_Category}
+    Wait Until Page Contains Element    ${Input_Category_name}    50
+    Input Text    ${Input_Category_name}    ${name}
+    Wait Until Page Contains Element    ${Input_Category_Description}    50
+    Input Text    ${Input_Category_Description}    ${Description}
+
+# Category Cancel   
+#     Wait Until Element is present then click the element    ${BTN_Category_cancel}
+
+# Category Save
+#     Wait Until Element is present then click the element    ${BTN_Category_save}
+
+
+    
