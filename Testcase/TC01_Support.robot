@@ -58,6 +58,10 @@ Verify a Save button should be disabled by default and Portfolio shouldn't be cr
 Verify a mandatory fields should be entered, a Save should be enabled, a Portfolio should be created
     Create Portfolio and save    ${TC01_Portfolio_name}     ${TC01_Portfolio_Description1}
    
+verify if it should not display any result , it display message as " No records to display "    
+    Search Portfolio    ${TC01_invalidPortfolio}
+    search invalid portfolio
+
 verify if the search bar should be enabled to search any portfolio and it should display result as per the search input 
     Search Portfolio    ${TC01_Portfolio_name}
 
@@ -84,9 +88,10 @@ verify if it display edit and delete button as dropdown,it Deleted Portfolio sho
     verify if it display a dropdown with edit and delete button
     click on delete icon present in the more options    ${TC01_Portfolio_name}    ${BTN_Portfolio_delete_confirm}
 
-     
+
+
 verify if checkbox of portfolio selected
-    Select the checkbox    ${TC01_Portfolio_name}                                        
+    Select the checkbox    ${TC01_Portfolio_name}
 Verify an Application should be closed
     "Close the Browser"
-
+     
