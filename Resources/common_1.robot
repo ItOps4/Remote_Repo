@@ -91,6 +91,24 @@ Select the checkbox
     ${ch_portfolio}    Format String    ${CHBOX_portfolio}    checkbox_name=${name}
     Wait Until Element is present then click the element    ${ch_portfolio}
 
+# Edit Portfolio
+#     [Arguments]    ${name}    ${description}    ${TXT_manager}
+#     ${Portfolio_Edit}    Format String    ${BTN_Portfolio_Edit}    name=${name}
+#     Wait Until Element is present then click the element    ${Portfolio_Edit}
+#     Clear Element Text    ${Input_Portfolio_Name} 
+#     Input Text    ${Input_Portfolio_Name}    ${name}
+#     Clear Element Text    ${INput_Portfolio_Description}
+#     Press Keys    ${INput_Portfolio_Description}    ${description} 
+#     Wait Until Element is present then click the element    ${Input_Portfolio_Manager}
+#     Press Keys    ${Input_Search_Manager}    ${TXT_manager}
+#     Wait Until Element is present then click the element    ${Drop_Down_Manager}
+
+
+# Navigate to portfolio data    
+#     [Arguments]    ${name}
+#     ${Portfolio}    Format String    ${BTN_Portfolio_name}    name=${name}
+#     Wait Until Element is present then click the element    ${Portfolio}
+
 
 
 "Close the Browser"
