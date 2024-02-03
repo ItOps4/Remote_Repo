@@ -1,13 +1,13 @@
 Input_Username = '//input[@id="auth-email-id"]'
 Input_Password = '//input[@id="auth-password"]'
-BTN_Login = '//button[@id="sign-in-btn"]'
-
+BTN_Login = '//p[text()="Sign In"]/parent::button'
+#
 BTN_Create_Portfolio = '//button[@id="portfolio-create-btn"]'
 Input_Portfolio_Name = '//input[@id="portfolio-management-portfolio-name"]'
 Input_error_name  = '//p[@id="Name-input-box-name-field-err-msg"]'
 Input_error_description    =  '//div[text()="Description is required"]'
 Input_Portfolio_Description = '//textarea[@id="portfolio-management-portfolio-description"]'
-BTN_portfolio_man='//span[@id="icon-Portfolio Management"]/ancestor::a'
+BTN_Portfolio_Man_Menu='//span[@id="icon-Portfolio Management"]/ancestor::a'
 Input_Portfolio_Manager = '//div[@id="portfolio-management-manager"]'
 Drop_Down_Manager = '//li[text()="Iyyappan"]'
 Input_Search_Manager = '//input[@id="search-field"]'
@@ -21,6 +21,10 @@ BTN_Portfolio_delete_cancel = '//p[text()="Cancel"]/parent::button'
 BTN_Portfolio_Edit = '//li[@id="edit-{name}"]'
 BTN_Portfolio_edit_save= '//button[@id="portfolio-edit-save-btn"]'
 BTN_Portfolio_edit_cancel = '//button[@id="portfolio-edit-cancel-btn"]'
-Search_Portfolio_name = '//input[@id="portfolio-search-products"]'
+Input_Portfolio_Search = '//input[@id="portfolio-search-products"]'
 CHBOX_portfolio = '//td[@id="custom-id-{checkbox_name}"]/parent::tr/td[1]/span/input'
+TXT_Portfolio_No_Data = '//p[text()="No records to display"]'
+Portfolio_Name = '//td[@id="custom-id-{name}"]'
+
+
 

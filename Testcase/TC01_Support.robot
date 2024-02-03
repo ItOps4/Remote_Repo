@@ -40,53 +40,51 @@ Then Close the Browser
 Verify an application should be opened
     Login Application    ${username001}
 
-Verify a Portfolio Managment Menu shoduld be displayed
-    Wait Until Element is present then click the element    //span[@id="icon-Portfolio Management"]/ancestor::a
-    
-verify if user able to enter mandatory details in the fields and click the save button and it should added to the list of existing portfolio
-    Create Portfolio     test1     test2
-
-Verify a Tool configuration Menu should be displayed
-    Wait Until Element is present then click the element        
+          
     
 Verify a Portfolio Managment Menu should be displayed
-    Wait Until Element is present then click the element    ${BTN_Portfolio_man}
+    Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
 
 Verify a Save button should be disabled by default and Portfolio shouldn't be created.
-    Create Portfolio and cancel    ${TC01_Portfolio_name}     ${TC01_Portfolio_Description1}
+    Create Portfolio    ${TC01_Portfolio_name}     ${TC01_Portfolio_Description1}    ${BTN_portfolio_cancel}
 
 Verify a mandatory fields should be entered, a Save should be enabled, a Portfolio should be created
-    Create Portfolio and save    ${TC01_Portfolio_name}     ${TC01_Portfolio_Description1}
+    Create Portfolio    ${TC01_Portfolio_name}     ${TC01_Portfolio_Description1}    ${BTN_Portfolio_Save}
    
 verify if it should not display any result , it display message as " No records to display "    
     Search Portfolio    ${TC01_invalidPortfolio}
-    search invalid portfolio
+    Check element is present    ${TXT_Portfolio_No_Data} 
+
+#     search invalid portfolio
 
 verify if the search bar should be enabled to search any portfolio and it should display result as per the search input 
     Search Portfolio    ${TC01_Portfolio_name}
+    Verify a Portfolio is displayed    ${TC01_Portfolio_name}
+
+
 
 verify if it display a dropdown with edit and delete button
-    click on portfolio more button    ${TC01_Portfolio_name}
+    Click the Kebab button on portfolio    ${TC01_Portfolio_name}
     Capture Page Screenshot
 
 
 verify it should display a dropdown and it should display portfolio popup window in editable mode and save the changes by clicking save button
     click on portfolio more button    ${TC01_Portfolio_name}
-    Click on Edit button and click on save button    ${TC01_Portfolio_name}    ${TC01_Portfolio_Description2}
+    Edit Portfolio    ${TC01_Portfolio_name}    ${TC01_Portfolio_Description2}    ${BTN_Portfolio_edit_save}    
     Capture Page Screenshot
 
 verify if it display edit and delete button as Dropdown, it should display Edit portfolio popup in editable mode , User to enter the data and It should redirect to the Portfolio page     
-    verify if it display a dropdown with edit and delete button    
-    click on edit button and click on cancel button    ${TC01_Portfolio_name}    ${TC01_Portfolio_Description1}
+    #verify if it display a dropdown with edit and delete button    
+    Edit Portfolio    ${TC01_Portfolio_name}    ${TC01_Portfolio_Description1}    ${BTN_Portfolio_edit_cancel}    
     Capture Page Screenshot
 
 verify if it display edit and delete button as dropdown, It Redirect to the Portfolio Page 
-    verify if it display a dropdown with edit and delete button
-    click on delete icon present in the more options    ${TC01_Portfolio_name}    ${BTN_Portfolio_delete_cancel}
+    #verify if it display a dropdown with edit and delete button
+    Delete Potfolio    ${TC01_Portfolio_name}    ${BTN_Portfolio_delete_cancel}
 
 verify if it display edit and delete button as dropdown,it Deleted Portfolio should not display in the portfolio page
-    verify if it display a dropdown with edit and delete button
-    click on delete icon present in the more options    ${TC01_Portfolio_name}    ${BTN_Portfolio_delete_confirm}
+    #verify if it display a dropdown with edit and delete button
+    Delete Potfolio   ${TC01_Portfolio_name}    ${BTN_Portfolio_delete_confirm}
 
 
 
