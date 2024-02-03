@@ -1,2 +1,3 @@
+set "tags=TC01"
 
-@REM python Access.py
+robot -d .\output\ -i %tags% .\Testcase\
