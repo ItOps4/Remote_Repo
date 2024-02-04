@@ -107,3 +107,75 @@ Select the checkbox
 
 "Close the Browser"
     Close Browser
+
+
+
+# TC03 Finance customize budget
+
+click system Settings and navigate to Finance custom Budget
+    [Documentation]    Using this keyword we can navigate to finance customize budget tab
+    Wait Until Element is present then click the element    ${System_setting_btn}    
+    Wait Until Element is present then click the element    ${Finance_custom_budget_Btn}
+
+Create new finance 
+    [Documentation]    Using this keyword we can create new finance budget
+    [Arguments]    ${name}    ${Description}
+    Wait Until Element is present then click the element    ${New_finance_btn}
+    Input Text    ${Budget_name}    ${name}
+    Press Keys    ${budget_Description}    ${Description} 
+    Wait Until Element is present then click the element    ${Finance_custom_save}
+    Sleep    2
+
+
+click new finance and cancel button    
+    [Documentation]    Using this keyword we  click new finance and cancel 
+    Wait Until Element is present then click the element    ${New_finance_btn}
+    button is disabled
+    Wait Until Element is present then click the element    ${finance_custom_cancel}
+
+
+button is disabled
+    [Documentation]    Using this keyword we can check button is disabled
+    Wait Until Page Contains Element    ${Finance_custom_save}    50 
+    Element Should Be Disabled    ${Finance_custom_save}    
+
+search Budget
+    [Documentation]    using this keyword we can search portfolio
+    [Arguments]    ${Name}
+    Wait Until Element is present then click the element    ${budget_search}
+    Press Keys    ${budget_search}    CTRL+A+BACKSPACE
+    Press Keys    ${budget_search}    ${Name}
+    Sleep    1
+
+
+Verify search budget displayed    
+    [Documentation]    using this keyword we can verify search budget displays
+    [Arguments]    ${name}    
+    ${budget}    Format String    ${created_budget_name}    name=${name}
+    Check element is present    ${budget}
+
+
+Click the Kebab button on budget
+    [Documentation]    Using this keywork we can click kebab button 
+    [Arguments]    ${name}
+    ${Bud_more}    Format String    ${Budget_more_icon}    name=${name}
+    Wait Until Element is present then click the element    ${Bud_more}
+
+Edit budget    
+    [Documentation]    using this keyword we can edit budget
+    [Arguments]    ${name}    ${name_bud}    ${Description}    ${element}
+    ${budget_edit}    Format String    ${Edit_budget}    name=${name}
+    Wait Until Element is present then click the element    ${budget_edit}
+    Press Keys    ${Budget_name}    CTRL+A+BACKSPACE
+    Input Text    ${Budget_name}    ${name_bud}
+    Press Keys    ${budget_Description}    CTRL+A+BACKSPACE
+    Input Text    ${budget_Description}    ${Description}
+    Wait Until Element is present then click the element    ${element}
+
+Delete Budget
+    [Documentation]    Using this keyword we can delete budget
+    [Arguments]    ${name}    ${element}
+
+    ${budget_delete}    Format String    ${Delete_budget}    name=${name}
+    Wait Until Element is present then click the element    ${budget_delete}
+    Wait Until Element is present then click the element    ${element}

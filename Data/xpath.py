@@ -28,3 +28,20 @@ Portfolio_Name = '//td[@id="custom-id-{name}"]'
 
 
 
+# TC03 Finance customize budget
+System_setting_btn = '//span[@id="icon-System Settings"]'
+Finance_custom_budget_Btn = '//p[@id="tabs-name-Finance Customize Budget"]'
+New_finance_btn = '//button[@id="customize-finance-add-new-budget"]'
+Finance_custom_save = '//button[@id="add-finance-budget-save"]'
+finance_custom_cancel = '//button[@id="add-finance-budget-cancel"]'
+Budget_name = '//input[@id="customize-budget-name"]'
+budget_Description = '//textarea[@id="customize-budget-description"]'
+budget_search = '//input[@id="customize-finance-budget-search-input"]'
+created_budget_name = '//td[@id="custom-id-{name}"]'
+Budget_more_icon = '//div[@id="finance-budget-action-{name}"]'
+Edit_budget = '//li[@id="fin-budget-row-edit-{name}"]'
+Delete_budget = '//li[@id="fin-budget-row-delete-{name}"]'
+Delete_cancel_btn = '//p[text()="Cancel"]'
+Delete_confirm_btn = '//p[text()="Confirm"]'
+edit_budget_cancel = '//button[@id="edit-finance-budget-cancel"]'
+Edit_budget_save = '//button[@id="edit-finance-budget-save"]'
