@@ -40,7 +40,7 @@ Verify if user should be able to login successfully
     Login Application    ${username002}
 
 Verify Finance customize Budget page should be displayed
-    click system Settings and navigate to Finance custom Budget    ${System_setting_btn}    ${Finance_custom_budget_Btn}    
+    click and navigate    ${System_setting_btn}    ${Finance_custom_budget_Btn}    
 
 
 Verify Save Button should be disabled and Category shouldn't be created
