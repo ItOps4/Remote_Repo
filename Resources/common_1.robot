@@ -112,10 +112,11 @@ Select the checkbox
 
 # TC03 Finance customize budget
 
-click system Settings and navigate to Finance custom Budget
-    [Documentation]    Using this keyword we can navigate to finance customize budget tab
-    Wait Until Element is present then click the element    ${System_setting_btn}    
-    Wait Until Element is present then click the element    ${Finance_custom_budget_Btn}
+click and navigate
+    [Documentation]    Using this keyword we can click and Navigate
+    [Arguments]    ${elemnet1}    ${elemnet2}
+    Wait Until Element is present then click the element    ${elemnet1}    
+    Wait Until Element is present then click the element    ${elemnet2}
 
 Create new finance 
     [Documentation]    Using this keyword we can create new finance budget
