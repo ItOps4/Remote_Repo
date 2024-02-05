@@ -1,3 +1,7 @@
+public_key = '58m6kWLkFLw0srrHpI1s_5iNeoD3sGccNsFExGu0zig='
+
+
+
 username001 = 'Tparthi@valuefactors.io'
 username002 = 'neeraj@codebyte.solutions'
 
@@ -18,4 +22,16 @@ TC02_Category_Description = 'TC02_Category_description'
 TC02_Invalid_Category = 'TC002_Category'
 TC02_Category_name_new = 'TC02_Cateorynew'
 TC02_Category_Description_new = 'TC02_Category_descriptionnew'
+
+TC01_invalidPortfolio = 'TC02_PORTFOLIO2'
+
+
+#TC03 Finance Customize Budget
+PROD_7_budget_name = 'TC03_budget'
+PROD_7_budget_description = 'TC03_budget'
+TXT_NO_Data = 'No records to display'
+PROD_7_budget_name1 = 'TC03_standard_budget'
+PROD_7_budget_description1 = 'TC03_standard_descript'
+
+
 

@@ -1,11 +1,13 @@
 *** Settings ***
 Resource    ../Resources/common_1.robot
-Resource    ${CURDIR}${/}..\\Login.robot
+Resource    ../Resources/Login.robot
 Variables    ../Data/data.py
+
 
 *** Keywords ***
 Given Login into Productor Application
-    Verify an application should be opened
+    [Arguments]    ${username}
+    Verify an application should be opened    ${username}
 
 When Navigate to Portfolio Management Menu
     Verify a Portfolio Managment Menu should be displayed
@@ -16,8 +18,8 @@ Then Click on Create portfolio button, Enter the mandatory details and click on 
 Then Click on Create portfolio button and Enter the mandatory details and click on Save button
     Verify a mandatory fields should be entered, a Save should be enabled, a Portfolio should be created
 
-Then Select the checkbox of portfolio
-    verify if checkbox of portfolio selected
+# Then Select the checkbox of portfolio
+    # verify if checkbox of portfolio selected
 
 Then Click on Search bar and Enter invalid portfolio name  
     verify if it should not display any result , it display message as " No records to display "       
@@ -41,7 +43,8 @@ Then Close the Browser
     Verify an Application should be closed
 
 Verify an application should be opened
-    Login Application    ${username002}
+    [Arguments]    ${username}
+    Login Application     ${username}  
 
           
     
@@ -56,7 +59,7 @@ Verify a mandatory fields should be entered, a Save should be enabled, a Portfol
 
 
 verify if it should not display any result , it display message as " No records to display "    
-    Search Portfolio    ${TC01_invalidPortfolio}
+    Search Data    ${Input_Portfolio_Search}    ${TC01_invalidPortfolio}
     Check element is present    ${TXT_Portfolio_No_Data} 
    
 
@@ -64,7 +67,7 @@ verify if it should not display any result , it display message as " No records 
 
 
 verify if the search bar should be enabled to search any portfolio and it should display result as per the search input 
-    Search Portfolio    ${TC01_Portfolio_name}
+    Search Data    ${Input_Portfolio_Search}    ${TC01_Portfolio_name}
     Verify a Portfolio is displayed    ${TC01_Portfolio_name}
   
 
@@ -84,7 +87,7 @@ verify it should display a dropdown and it should display portfolio popup window
 
 
 verify if it display edit and delete button as dropdown, It Redirect to the Portfolio Page 
-    Search Portfolio    ${TC02_Portfolio_name}
+    Search Data    ${Input_Portfolio_Search}    ${TC02_Portfolio_name}
     Click the Kebab button on portfolio    ${TC02_Portfolio_name}
     Delete Potfolio    ${TC02_Portfolio_name}    ${BTN_Portfolio_delete_cancel}
 

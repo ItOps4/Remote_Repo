@@ -4,11 +4,10 @@ Library    OperatingSystem
 Library    JSONLibrary
 Library    RPA.Crypto
 Library    String
-Variables    Access.py
-Variables    ${CURDIR}/Data/data.py
-Variables    ${CURDIR}/Data/url.py
-Variables    ${CURDIR}/Data/data.py
-Resource    ${CURDIR}/Resources/common_1.robot
+Variables    ../Data/data.py
+Variables    ../Data/url.py
+Variables    ../Data/xpath.py
+Resource    common_1.robot
 
 
 

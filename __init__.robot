@@ -6,7 +6,7 @@ Suite Setup    Setup
 *** Keywords ***
 Setup
     Log    start to run
-    Empty Directory    ./output/allure
+    # Empty Directory    ./output/pabot_results
     
 
     
