@@ -5,6 +5,7 @@ Variables    ../Data/data.py
 
 *** Keywords ***
 
+
 Given Login into application
     [Arguments]    ${username}
     Verify an application should be opened    ${username}

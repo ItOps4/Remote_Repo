@@ -108,9 +108,10 @@ Select the checkbox
 "Close the Browser"
     Close Browser
 
-#Adding Category to Finance Configuration
+# PROD-5 Finance Configuration Category
+
 Add Category
-    [Documentation]     Adding Category using Keyword
+    [Documentation]    Using this keyword we can add a category
     [Arguments]    ${name}    ${Description}
     Wait Until Element is present then click the element    ${BTN_Add_Category}
     Wait Until Page Contains Element    ${Input_Category_name}    50
@@ -118,37 +119,41 @@ Add Category
     Wait Until Page Contains Element    ${Input_Category_Description}    50
     Input Text    ${Input_Category_Description}    ${Description}
 
-Search Category
-    [Documentation]    Searching Category Using
+Search Category 
+    [Documentation]    no need
     [Arguments]    ${Name}
     Wait Until Element is present then click the element    ${Search_FinanceConfiguration}
     Press Keys    ${Search_FinanceConfiguration}    CTRL+A+BACKSPACE
     Press Keys    ${Search_FinanceConfiguration}    ${Name}
 
+
+
 Click the Kebab button Category
-    [Documentation]    Clicking Kebab in Category name using keyword
+    [Documentation]    Using this keyword we can click the kebab button
     [Arguments]    ${name}
     ${Category_more_option}    Format String    ${BTN_Category_More}    name=${name}
     Wait Until Element is present then click the element    ${Category_more_option}
 
 Edit Category
-    [Documentation]    Editing Category name using keyword
+    [Documentation]    Using this Keyword we can Editing Category name 
     [Arguments]    ${name}    ${name1}     ${Description2}  
     ${Category_edit}    Format String    ${BTN_Category_Edit}    name=${name}
     Wait Until Element is present then click the element    ${Category_edit}
     Press Keys    ${Input_Category_name}    CTRL+A+BACKSPACE
     Press Keys    ${Input_Category_name}    ${name1}  
     Press Keys    ${Input_Category_Description}    CTRL+A+BACKSPACE    
-    Press Keys    ${Input_Category_Description}    ${Description2}    
+    Press Keys    ${Input_Category_Description}    ${Description2}  
+
+  
 
 Verify a Category is displayed
-    [Documentation]    Filter and Display Category name
+    [Documentation]    Using this keyword we can Filter Category name
     [Arguments]    ${name}
     ${Category}    Format String    ${Category_name}    name=${name}
     Check element is present    ${Category}
 
 Delete Category  
-    [Documentation]    Clicking Delete Button in Category name using keyword
+    [Documentation]    Using this keyword we can click category delete button
     [Arguments]    ${name}  
     ${Category}    Format String    ${BTN_Category_Delete}    name=${name}
     Wait Until Element is present then click the element    ${Category}

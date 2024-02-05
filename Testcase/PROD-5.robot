@@ -1,13 +1,13 @@
 *** Settings ***
-Documentation    
-Resource    TC02_Support.robot
-Force Tags    TC02
+Documentation    Category Create,Search,Edit and Delete    
+Resource    PROD-5_Support.robot
+Force Tags    PROD-5    Test    name:Amritha   
 
 
 
 *** Test Cases ***
 Category
-Category
+    [Documentation]    Category Create,Search,Edit and Delete 
     Given Login into application    ${username002}
     When Click on the System Settings Icon
     Then Click on Add Category button, Don't enter Mandatory fields and Click on cancel button

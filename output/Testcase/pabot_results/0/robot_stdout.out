@@ -11,36 +11,17 @@ Robot Framework: 6.0.2
 Total testing: 0.0 seconds
 Elapsed time:  0.0 seconds
 Error: Command 'pabot -d .\output\Testcase  -i TC02 .' returned non-zero exit status 1.
-Productor.Testcase.Tc02                                                       
+Productor.Testcase.TC02                                                       
 ==============================================================================
-Category                                                              | FAIL |
-Test contains no keywords.
+Category                                                              | PASS |
 ------------------------------------------------------------------------------
-Category                                                                
-  Traceback (most recent call last):
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  C:\Productor\Testcase\tc02.robot:10
-    T:  Category    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  C:\Productor\Testcase\tc02.robot:21
-      And Close the Browser    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  C:\Productor\Testcase\TC02_Support.robot:40
-      Verify Application should be Close    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  C:\Productor\Testcase\TC02_Support.robot:93
-      "Close the Browser"    
-______________________________________________________________________________
-| FAIL |
-User keyword '"Close the Browser"' contains no keywords.
-------------------------------------------------------------------------------
-Productor.Testcase.Tc02                                               | FAIL |
-2 tests, 0 passed, 2 failed
+Productor.Testcase.TC02                                               | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
-Productor.Testcase                                                    | FAIL |
-2 tests, 0 passed, 2 failed
+Productor.Testcase                                                    | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
-Productor                                                             | FAIL |
-2 tests, 0 passed, 2 failed
+Productor                                                             | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
 Output:  C:\Productor\output\Testcase\pabot_results\0\output.xml

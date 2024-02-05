@@ -1,4 +1,4 @@
-2024-02-05 13:09:43,923 - RPA.core.certificates - INFO - Truststore not in use, HTTPS traffic validated against `certifi` package. (requires Python 3.10.12 and 'pip' 23.2.1 at minimum)
+2024-02-05 13:19:22,267 - RPA.core.certificates - INFO - Truststore not in use, HTTPS traffic validated against `certifi` package. (requires Python 3.10.12 and 'pip' 23.2.1 at minimum)
 Traceback (most recent call last):
   File "C:\Users\amird\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
     return _run_code(code, main_globals, None,
@@ -20,4 +20,3 @@ Traceback (most recent call last):
   File "C:\Users\amird\AppData\Local\Programs\Python\Python310\lib\shutil.py", line 615, in _rmtree_unsafe
     os.unlink(fullname)
 PermissionError: [WinError 32] The process cannot access the file because it is being used by another process: '.\\output\\Testcase\\pabot_results\\0\\output.xml'
-[ WARN ] Multiple tests with name 'Category' executed in suite 'Productor.Testcase.Tc02'.
