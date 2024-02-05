@@ -1,7 +1,8 @@
 *** Settings ***
 Resource    ../Resources/common_1.robot
-Resource    ${CURDIR}${/}..\\Login.robot
+Resource    ../Resources/Login.robot
 Variables    ../Data/data.py
+
 
 *** Keywords ***
 Login into Productor Application
@@ -47,7 +48,7 @@ verify if user able to enter mandatory details in the fields and click the save 
     Create Portfolio     test1     test2
 
 Verify a Tool configuration Menu should be displayed
-    Wait Until Element is present then click the element        
+    Wait Until Element is present then click the element    ${BTN_Portfolio_edit_cancel}      
     
 Verify a Portfolio Managment Menu should be displayed
     Wait Until Element is present then click the element    ${BTN_Portfolio_man}

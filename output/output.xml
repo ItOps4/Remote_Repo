@@ -1,38 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 6.0.2 (Python 3.10.0 on win32)" generated="20240203 19:12:02.750" rpa="false" schemaversion="3">
+<robot generator="Rebot 6.0.2 (Python 3.10.0 on win32)" generated="20240203 19:52:35.008" rpa="false" schemaversion="3">
 <suite id="s1" name="Productor" source="C:\Productor">
 <kw name="Setup" type="SETUP">
 <kw name="Log" library="BuiltIn">
 <arg>start to run</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240203 19:11:45.231" level="INFO">start to run</msg>
-<status status="PASS" starttime="20240203 19:11:45.231" endtime="20240203 19:11:45.231"/>
+<msg timestamp="20240203 19:52:04.885" level="INFO">start to run</msg>
+<status status="PASS" starttime="20240203 19:52:04.885" endtime="20240203 19:52:04.885"/>
 </kw>
-<kw name="Log" library="BuiltIn">
-<arg>start to run</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240203 19:11:45.237" level="INFO">start to run</msg>
-<status status="PASS" starttime="20240203 19:11:45.236" endtime="20240203 19:11:45.237"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>start to run</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240203 19:11:45.224" level="INFO">start to run</msg>
-<status status="PASS" starttime="20240203 19:11:45.223" endtime="20240203 19:11:45.224"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>start to run</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240203 19:11:45.197" level="INFO">start to run</msg>
-<status status="PASS" starttime="20240203 19:11:45.196" endtime="20240203 19:11:45.197"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>start to run</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240203 19:11:45.238" level="INFO">start to run</msg>
-<status status="PASS" starttime="20240203 19:11:45.236" endtime="20240203 19:11:45.238"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:45.230" endtime="20240203 19:11:45.231"/>
+<status status="PASS" starttime="20240203 19:52:04.885" endtime="20240203 19:52:04.885"/>
 </kw>
 <suite id="s1-s1" name="Testcase" source="C:\Productor\Testcase">
 <suite id="s1-s1-s1" name="Tc01" source="C:\Productor\Testcase\tc01.robot">
@@ -46,710 +22,384 @@
 <var>${json_data}</var>
 <arg>Data/password.json</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20240203 19:11:45.668" level="INFO" html="true">Getting file '&lt;a href="file://C:\Productor\Data\password.json"&gt;C:\Productor\Data\password.json&lt;/a&gt;'.</msg>
-<msg timestamp="20240203 19:11:45.668" level="INFO">${json_data} = {
+<msg timestamp="20240203 19:52:05.241" level="INFO" html="true">Getting file '&lt;a href="file://C:\Productor\Data\password.json"&gt;C:\Productor\Data\password.json&lt;/a&gt;'.</msg>
+<msg timestamp="20240203 19:52:05.241" level="INFO">${json_data} = {
     "Tparthi@valuefactors.io": "gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==",
     "neeraj@codebyte.solutions": "gAAAAABlvf_wHd_s-rfaDVYJP09Sz...</msg>
-<status status="PASS" starttime="20240203 19:11:45.667" endtime="20240203 19:11:45.668"/>
+<status status="PASS" starttime="20240203 19:52:05.241" endtime="20240203 19:52:05.241"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${object}</var>
 <arg>json.loads('''${json_data}''')</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240203 19:11:45.670" level="INFO">${object} = {'Tparthi@valuefactors.io': 'gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==', 'neeraj@codebyte.solutions': 'gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J...</msg>
-<status status="PASS" starttime="20240203 19:11:45.669" endtime="20240203 19:11:45.670"/>
+<msg timestamp="20240203 19:52:05.242" level="INFO">${object} = {'Tparthi@valuefactors.io': 'gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==', 'neeraj@codebyte.solutions': 'gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J...</msg>
+<status status="PASS" starttime="20240203 19:52:05.242" endtime="20240203 19:52:05.242"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${encry}</var>
 <arg>${object['${username}']}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240203 19:11:45.672" level="INFO">${encry} = gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J09u-ZvB3nvy4zPznfgWrIF25Uq0ihXWaVr3yq0MSlnkAximgkzjaHawUJIXA==</msg>
-<status status="PASS" starttime="20240203 19:11:45.670" endtime="20240203 19:11:45.672"/>
+<msg timestamp="20240203 19:52:05.243" level="INFO">${encry} = gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J09u-ZvB3nvy4zPznfgWrIF25Uq0ihXWaVr3yq0MSlnkAximgkzjaHawUJIXA==</msg>
+<status status="PASS" starttime="20240203 19:52:05.242" endtime="20240203 19:52:05.243"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
 <arg>sys,selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240203 19:11:45.673" level="INFO">${options} = &lt;selenium.webdriver.edge.options.Options object at 0x0000019649B6DE70&gt;</msg>
-<status status="PASS" starttime="20240203 19:11:45.673" endtime="20240203 19:11:45.673"/>
+<msg timestamp="20240203 19:52:05.245" level="INFO">${options} = &lt;selenium.webdriver.edge.options.Options object at 0x0000014E7668DF00&gt;</msg>
+<status status="PASS" starttime="20240203 19:52:05.243" endtime="20240203 19:52:05.245"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>inprivate</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240203 19:11:45.674" endtime="20240203 19:11:45.674"/>
+<status status="PASS" starttime="20240203 19:52:05.245" endtime="20240203 19:52:05.245"/>
 </kw>
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <var>${driver}</var>
 <arg>Edge</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20240203 19:11:45.676" level="INFO">Creating an instance of the Edge WebDriver.</msg>
-<msg timestamp="20240203 19:11:45.688" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<msg timestamp="20240203 19:11:51.402" level="INFO">${driver} = 1</msg>
-<status status="PASS" starttime="20240203 19:11:45.675" endtime="20240203 19:11:51.402"/>
+<msg timestamp="20240203 19:52:05.246" level="INFO">Creating an instance of the Edge WebDriver.</msg>
+<msg timestamp="20240203 19:52:05.252" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<msg timestamp="20240203 19:52:07.003" level="INFO">${driver} = 1</msg>
+<status status="PASS" starttime="20240203 19:52:05.245" endtime="20240203 19:52:07.003"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${Productor_Url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240203 19:11:51.405" level="INFO">Opening url 'https://predev-productor.valuefactors.io/auth/login/'</msg>
-<status status="PASS" starttime="20240203 19:11:51.403" endtime="20240203 19:11:53.773"/>
+<msg timestamp="20240203 19:52:07.003" level="INFO">Opening url 'https://predev-productor.valuefactors.io/auth/login/'</msg>
+<status status="PASS" starttime="20240203 19:52:07.003" endtime="20240203 19:52:09.076"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240203 19:11:53.773" endtime="20240203 19:11:53.951"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.1</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20240203 19:11:53.951" endtime="20240203 19:11:53.952"/>
+<status status="PASS" starttime="20240203 19:52:09.077" endtime="20240203 19:52:09.194"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${Input_Username}</arg>
 <arg>50</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20240203 19:11:53.952" endtime="20240203 19:11:54.155"/>
+<status status="PASS" starttime="20240203 19:52:09.194" endtime="20240203 19:52:09.208"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>${Input_Username}</arg>
 <arg>${username}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20240203 19:11:54.157" level="INFO">Sending key(s) ('neeraj@codebyte.solutions',) to //input[@id="auth-email-id"] element.</msg>
-<msg timestamp="20240203 19:11:54.697" level="INFO">Sending keys neeraj@codebyte.solutions</msg>
-<status status="PASS" starttime="20240203 19:11:54.156" endtime="20240203 19:11:55.111"/>
+<msg timestamp="20240203 19:52:09.209" level="INFO">Sending key(s) ('neeraj@codebyte.solutions',) to //input[@id="auth-email-id"] element.</msg>
+<msg timestamp="20240203 19:52:09.503" level="INFO">Sending keys neeraj@codebyte.solutions</msg>
+<status status="PASS" starttime="20240203 19:52:09.208" endtime="20240203 19:52:09.691"/>
 </kw>
 <kw name="Use Encryption Key" library="RPA.Crypto">
 <arg>${public_key}</arg>
 <doc>Set key for all following encryption/decryption operations.</doc>
-<msg timestamp="20240203 19:11:55.112" level="INFO">Protecting keyword: RPA.Crypto.Use Encryption Key</msg>
-<msg timestamp="20240203 19:11:55.113" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20240203 19:11:55.112" endtime="20240203 19:11:55.112"/>
+<msg timestamp="20240203 19:52:09.691" level="INFO">Protecting keyword: RPA.Crypto.Use Encryption Key</msg>
+<msg timestamp="20240203 19:52:09.692" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240203 19:52:09.691" endtime="20240203 19:52:09.692"/>
 </kw>
 <kw name="Decrypt String" library="RPA.Crypto">
 <var>${Decry}</var>
 <arg>${encry}</arg>
 <doc>Decrypt a string.</doc>
-<msg timestamp="20240203 19:11:55.117" level="INFO">${Decry} = Test123$%^</msg>
-<status status="PASS" starttime="20240203 19:11:55.113" endtime="20240203 19:11:55.117"/>
+<msg timestamp="20240203 19:52:09.696" level="INFO">${Decry} = Test123$%^</msg>
+<status status="PASS" starttime="20240203 19:52:09.692" endtime="20240203 19:52:09.696"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${Decry}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240203 19:11:55.118" level="INFO">Test123$%^</msg>
-<status status="PASS" starttime="20240203 19:11:55.117" endtime="20240203 19:11:55.118"/>
+<msg timestamp="20240203 19:52:09.697" level="INFO">Test123$%^</msg>
+<status status="PASS" starttime="20240203 19:52:09.696" endtime="20240203 19:52:09.697"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>${Input_Password}</arg>
 <arg>${Decry}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20240203 19:11:55.120" level="INFO">Sending key(s) ('Test123$%^',) to //input[@id="auth-password"] element.</msg>
-<msg timestamp="20240203 19:11:55.627" level="INFO">Sending keys Test123$%^</msg>
-<status status="PASS" starttime="20240203 19:11:55.118" endtime="20240203 19:11:55.811"/>
+<msg timestamp="20240203 19:52:09.699" level="INFO">Sending key(s) ('Test123$%^',) to //input[@id="auth-password"] element.</msg>
+<msg timestamp="20240203 19:52:10.013" level="INFO">Sending keys Test123$%^</msg>
+<status status="PASS" starttime="20240203 19:52:09.698" endtime="20240203 19:52:10.065"/>
 </kw>
-<status status="PASS" starttime="20240203 19:11:45.666" endtime="20240203 19:11:55.812"/>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Login}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240203 19:52:10.066" endtime="20240203 19:52:10.077"/>
 </kw>
-<status status="PASS" starttime="20240203 19:11:45.666" endtime="20240203 19:11:55.813"/>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240203 19:52:10.079" level="INFO">Clicking element '//p[text()="Sign In"]/parent::button'.</msg>
+<status status="PASS" starttime="20240203 19:52:10.078" endtime="20240203 19:52:10.250"/>
 </kw>
-<status status="PASS" starttime="20240203 19:11:45.665" endtime="20240203 19:11:55.813"/>
+<status status="PASS" starttime="20240203 19:52:10.077" endtime="20240203 19:52:10.250"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:10.065" endtime="20240203 19:52:10.250"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:05.240" endtime="20240203 19:52:10.251"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:05.240" endtime="20240203 19:52:10.251"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:05.240" endtime="20240203 19:52:10.251"/>
+</kw>
+<kw name="When Navigate to Portfolio Management Menu" library="TC01_Support">
+<kw name="Verify a Portfolio Managment Menu should be displayed" library="TC01_Support">
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Portfolio_man}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240203 19:52:10.253" endtime="20240203 19:52:13.465"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240203 19:52:13.475" level="INFO">Clicking element '//span[@id="icon-Portfolio Management"]/ancestor::a'.</msg>
+<msg timestamp="20240203 19:52:14.785" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="0-selenium-screenshot-1.png"&gt;&lt;img src="0-selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240203 19:52:14.785" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a data-if="/portfolio" class="px-[16px] py-[8px] mb-[9px] !w-full flex items-center border-b-0 border-l-4 border-white-300
+                 false cursor-pointer block hover:border-b-0 hover:border-white-300 hover:!text-primary !text-gray-300" href="/portfolio/"&gt;...&lt;/a&gt; is not clickable at point (32, 151). Other element would receive the click: &lt;div class="fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-[10000] overflow-hidden bg-black bg-opacity-75 flex flex-col items-center justify-center"&gt;...&lt;/div&gt;
+  (Session info: MicrosoftEdge=121.0.2277.83)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7BD16BC42+60738]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7BD0F7EE2+233074]
+	(No symbol) [0x00007FF7BCF0AE0B]
+	(No symbol) [0x00007FF7BCF622BD]
+	(No symbol) [0x00007FF7BCF5FD89]
+	(No symbol) [0x00007FF7BCF5D4F3]
+	(No symbol) [0x00007FF7BCF5C6B4]
+	(No symbol) [0x00007FF7BCF4E851]
+	(No symbol) [0x00007FF7BCF7C5CA]
+	(No symbol) [0x00007FF7BCF4E201]
+	(No symbol) [0x00007FF7BCF4E0AD]
+	(No symbol) [0x00007FF7BCF7C8B0]
+	(No symbol) [0x00007FF7BCF4E201]
+	(No symbol) [0x00007FF7BCF99528]
+	(No symbol) [0x00007FF7BCF7C233]
+	(No symbol) [0x00007FF7BCF4D568]
+	(No symbol) [0x00007FF7BCF4C394]
+	(No symbol) [0x00007FF7BCF4D101]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7BD32878C+1074636]
+	(No symbol) [0x00007FF7BCFD0F45]
+	(No symbol) [0x00007FF7BD068F6C]
+	(No symbol) [0x00007FF7BD060A5D]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7BD3271D3+1069075]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7BD101E38+273864]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7BD0FCB44+252628]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7BD0FCC72+252930]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7BD0F3271+213505]
+	BaseThreadInitThunk [0x00007FFE0D4B257D+29]
+	RtlUserThreadStart [0x00007FFE0D62AA58+40]
+</msg>
+<status status="FAIL" starttime="20240203 19:52:13.465" endtime="20240203 19:52:14.791"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240203 19:52:21.805" level="INFO">Clicking element '//span[@id="icon-Portfolio Management"]/ancestor::a'.</msg>
+<status status="PASS" starttime="20240203 19:52:21.805" endtime="20240203 19:52:22.047"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:13.465" endtime="20240203 19:52:22.047"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:10.253" endtime="20240203 19:52:22.047"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:10.252" endtime="20240203 19:52:22.048"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:10.252" endtime="20240203 19:52:22.048"/>
+</kw>
+<kw name="Then Click on Create portfolio button, Enter the mandatory details and click on cancel button" library="TC01_Support">
+<kw name="Verify a Save button should be disabled by default and Portfolio shouldn't be created." library="TC01_Support">
+<kw name="Create Portfolio and cancel" library="common_1">
+<arg>${TC01_Portfolio_name}</arg>
+<arg>${TC01_Portfolio_Description1}</arg>
+<doc>Using this keyword we can create portfolio</doc>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Create_Portfolio}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240203 19:52:22.051" endtime="20240203 19:52:22.581"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240203 19:52:22.585" level="INFO">Clicking element '//button[@id="portfolio-create-btn"]'.</msg>
+<status status="PASS" starttime="20240203 19:52:22.581" endtime="20240203 19:52:22.753"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:22.581" endtime="20240203 19:52:22.755"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:22.051" endtime="20240203 19:52:22.755"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_Portfolio_Name}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240203 19:52:22.756" endtime="20240203 19:52:22.779"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Portfolio_Name}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240203 19:52:22.781" level="INFO">Typing text 'TC01_portfolio' into text field '//input[@id="portfolio-management-portfolio-name"]'.</msg>
+<status status="PASS" starttime="20240203 19:52:22.780" endtime="20240203 19:52:23.716"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${INput_Portfolio_Description}</arg>
+<arg>${description}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240203 19:52:23.718" level="INFO">Sending key(s) ('TC01_portfolio_description1',) to //textarea[@id="portfolio-management-portfolio-description"] element.</msg>
+<msg timestamp="20240203 19:52:24.081" level="INFO">Sending keys TC01_portfolio_description1</msg>
+<status status="PASS" starttime="20240203 19:52:23.717" endtime="20240203 19:52:25.543"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Input_Portfolio_Manager}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240203 19:52:25.544" endtime="20240203 19:52:25.556"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240203 19:52:25.558" level="INFO">Clicking element '//div[@id="portfolio-management-manager"]'.</msg>
+<status status="PASS" starttime="20240203 19:52:25.557" endtime="20240203 19:52:25.680"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:25.556" endtime="20240203 19:52:25.680"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:25.543" endtime="20240203 19:52:25.681"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Search_Manager}</arg>
+<arg>${TXT_manager_Iyyappan}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240203 19:52:25.683" level="INFO">Sending key(s) ('Iyyappan',) to //input[@id="search-field"] element.</msg>
+<msg timestamp="20240203 19:52:26.000" level="INFO">Sending keys Iyyappan</msg>
+<status status="PASS" starttime="20240203 19:52:25.681" endtime="20240203 19:52:26.035"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Drop_Down_Manager}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240203 19:52:26.035" endtime="20240203 19:52:27.835"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240203 19:52:27.841" level="INFO">Clicking element '//li[text()="Iyyappan"]'.</msg>
+<status status="PASS" starttime="20240203 19:52:27.835" endtime="20240203 19:52:27.972"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:27.835" endtime="20240203 19:52:27.972"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:26.035" endtime="20240203 19:52:27.972"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240203 19:52:28.135" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="0-selenium-screenshot-2.png"&gt;&lt;img src="0-selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240203 19:52:27.972" endtime="20240203 19:52:28.135"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_portfolio_cancel}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240203 19:52:28.138" endtime="20240203 19:52:28.157"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240203 19:52:28.157" level="INFO">Clicking element '//button[@id="portfolio-create-cancel-btn"]'.</msg>
+<status status="PASS" starttime="20240203 19:52:28.157" endtime="20240203 19:52:28.269"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:28.157" endtime="20240203 19:52:28.269"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:28.138" endtime="20240203 19:52:28.271"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:22.050" endtime="20240203 19:52:28.271"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:22.049" endtime="20240203 19:52:28.271"/>
+</kw>
+<status status="PASS" starttime="20240203 19:52:22.048" endtime="20240203 19:52:28.271"/>
 </kw>
 <kw name="Then Close the Browser" library="TC01_Support">
 <kw name="Verify an Application should be closed" library="TC01_Support">
 <kw name="&quot;Close the Browser&quot;" library="common_1">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240203 19:11:55.816" endtime="20240203 19:11:58.033"/>
+<status status="PASS" starttime="20240203 19:52:28.272" endtime="20240203 19:52:30.497"/>
 </kw>
-<status status="PASS" starttime="20240203 19:11:55.815" endtime="20240203 19:11:58.033"/>
+<status status="PASS" starttime="20240203 19:52:28.272" endtime="20240203 19:52:30.497"/>
 </kw>
-<status status="PASS" starttime="20240203 19:11:55.814" endtime="20240203 19:11:58.033"/>
+<status status="PASS" starttime="20240203 19:52:28.271" endtime="20240203 19:52:30.497"/>
 </kw>
-<status status="PASS" starttime="20240203 19:11:55.814" endtime="20240203 19:11:58.033"/>
-</kw>
-<tag>TC01</tag>
-<status status="PASS" starttime="20240203 19:11:45.663" endtime="20240203 19:11:58.033"/>
-</test>
-<doc>Create,Edit,Delete Portfolio</doc>
-<status status="PASS" starttime="20240203 19:11:45.235" endtime="20240203 19:11:58.033"/>
-</suite>
-<suite id="s1-s1-s2" name="TC02" source="C:\Productor\Testcase\TC02.robot">
-<test id="s1-s1-s2-t1" name="TC02" line="9">
-<kw name="Given Login into Productor Application" library="TC01_Support">
-<kw name="Verify an application should be opened" library="TC01_Support">
-<kw name="Login Application" library="Login">
-<arg>${username002}</arg>
-<doc>Using this keyword we can login Productor Application.</doc>
-<kw name="Get File" library="OperatingSystem">
-<var>${json_data}</var>
-<arg>Data/password.json</arg>
-<doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20240203 19:11:45.672" level="INFO" html="true">Getting file '&lt;a href="file://C:\Productor\Data\password.json"&gt;C:\Productor\Data\password.json&lt;/a&gt;'.</msg>
-<msg timestamp="20240203 19:11:45.672" level="INFO">${json_data} = {
-    "Tparthi@valuefactors.io": "gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==",
-    "neeraj@codebyte.solutions": "gAAAAABlvf_wHd_s-rfaDVYJP09Sz...</msg>
-<status status="PASS" starttime="20240203 19:11:45.670" endtime="20240203 19:11:45.672"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${object}</var>
-<arg>json.loads('''${json_data}''')</arg>
-<arg>json</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240203 19:11:45.673" level="INFO">${object} = {'Tparthi@valuefactors.io': 'gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==', 'neeraj@codebyte.solutions': 'gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J...</msg>
-<status status="PASS" starttime="20240203 19:11:45.673" endtime="20240203 19:11:45.673"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${encry}</var>
-<arg>${object['${username}']}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240203 19:11:45.675" level="INFO">${encry} = gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J09u-ZvB3nvy4zPznfgWrIF25Uq0ihXWaVr3yq0MSlnkAximgkzjaHawUJIXA==</msg>
-<status status="PASS" starttime="20240203 19:11:45.674" endtime="20240203 19:11:45.675"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${options}</var>
-<arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
-<arg>sys,selenium.webdriver</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240203 19:11:45.675" level="INFO">${options} = &lt;selenium.webdriver.edge.options.Options object at 0x0000028A6E96DEA0&gt;</msg>
-<status status="PASS" starttime="20240203 19:11:45.675" endtime="20240203 19:11:45.675"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>inprivate</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240203 19:11:45.676" endtime="20240203 19:11:45.676"/>
-</kw>
-<kw name="Create Webdriver" library="SeleniumLibrary">
-<var>${driver}</var>
-<arg>Edge</arg>
-<arg>options=${options}</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20240203 19:11:45.679" level="INFO">Creating an instance of the Edge WebDriver.</msg>
-<msg timestamp="20240203 19:11:45.692" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<msg timestamp="20240203 19:11:51.052" level="INFO">${driver} = 1</msg>
-<status status="PASS" starttime="20240203 19:11:45.677" endtime="20240203 19:11:51.052"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${Productor_Url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240203 19:11:51.053" level="INFO">Opening url 'https://predev-productor.valuefactors.io/auth/login/'</msg>
-<status status="PASS" starttime="20240203 19:11:51.052" endtime="20240203 19:11:53.792"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240203 19:11:53.792" endtime="20240203 19:11:54.058"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.1</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20240203 19:11:54.058" endtime="20240203 19:11:54.059"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Input_Username}</arg>
-<arg>50</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20240203 19:11:54.060" endtime="20240203 19:11:54.211"/>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${Input_Username}</arg>
-<arg>${username}</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20240203 19:11:54.214" level="INFO">Sending key(s) ('neeraj@codebyte.solutions',) to //input[@id="auth-email-id"] element.</msg>
-<msg timestamp="20240203 19:11:54.766" level="INFO">Sending keys neeraj@codebyte.solutions</msg>
-<status status="PASS" starttime="20240203 19:11:54.211" endtime="20240203 19:11:55.145"/>
-</kw>
-<kw name="Use Encryption Key" library="RPA.Crypto">
-<arg>${public_key}</arg>
-<doc>Set key for all following encryption/decryption operations.</doc>
-<msg timestamp="20240203 19:11:55.147" level="INFO">Protecting keyword: RPA.Crypto.Use Encryption Key</msg>
-<msg timestamp="20240203 19:11:55.147" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20240203 19:11:55.146" endtime="20240203 19:11:55.147"/>
-</kw>
-<kw name="Decrypt String" library="RPA.Crypto">
-<var>${Decry}</var>
-<arg>${encry}</arg>
-<doc>Decrypt a string.</doc>
-<msg timestamp="20240203 19:11:55.152" level="INFO">${Decry} = Test123$%^</msg>
-<status status="PASS" starttime="20240203 19:11:55.148" endtime="20240203 19:11:55.152"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${Decry}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240203 19:11:55.152" level="INFO">Test123$%^</msg>
-<status status="PASS" starttime="20240203 19:11:55.152" endtime="20240203 19:11:55.152"/>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${Input_Password}</arg>
-<arg>${Decry}</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20240203 19:11:55.155" level="INFO">Sending key(s) ('Test123$%^',) to //input[@id="auth-password"] element.</msg>
-<msg timestamp="20240203 19:11:55.712" level="INFO">Sending keys Test123$%^</msg>
-<status status="PASS" starttime="20240203 19:11:55.152" endtime="20240203 19:11:55.882"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:45.670" endtime="20240203 19:11:55.883"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:45.669" endtime="20240203 19:11:55.884"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:45.668" endtime="20240203 19:11:55.884"/>
-</kw>
-<kw name="Then Close the Browser" library="TC01_Support">
-<kw name="Verify an Application should be closed" library="TC01_Support">
-<kw name="&quot;Close the Browser&quot;" library="common_1">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240203 19:11:55.886" endtime="20240203 19:11:58.226"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:55.885" endtime="20240203 19:11:58.226"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:55.885" endtime="20240203 19:11:58.226"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:55.884" endtime="20240203 19:11:58.226"/>
+<status status="PASS" starttime="20240203 19:52:28.271" endtime="20240203 19:52:30.497"/>
 </kw>
 <tag>TC01</tag>
-<status status="PASS" starttime="20240203 19:11:45.666" endtime="20240203 19:11:58.232"/>
+<tag>Test</tag>
+<status status="PASS" starttime="20240203 19:52:05.237" endtime="20240203 19:52:30.497"/>
 </test>
 <doc>Create,Edit,Delete Portfolio</doc>
-<status status="PASS" starttime="20240203 19:11:45.242" endtime="20240203 19:11:58.232"/>
+<status status="PASS" starttime="20240203 19:52:04.885" endtime="20240203 19:52:30.497"/>
 </suite>
-<suite id="s1-s1-s3" name="TC03" source="C:\Productor\Testcase\TC03.robot">
-<test id="s1-s1-s3-t1" name="TC03" line="9">
-<kw name="Given Login into Productor Application" library="TC01_Support">
-<kw name="Verify an application should be opened" library="TC01_Support">
-<kw name="Login Application" library="Login">
-<arg>${username002}</arg>
-<doc>Using this keyword we can login Productor Application.</doc>
-<kw name="Get File" library="OperatingSystem">
-<var>${json_data}</var>
-<arg>Data/password.json</arg>
-<doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20240203 19:11:45.657" level="INFO" html="true">Getting file '&lt;a href="file://C:\Productor\Data\password.json"&gt;C:\Productor\Data\password.json&lt;/a&gt;'.</msg>
-<msg timestamp="20240203 19:11:45.657" level="INFO">${json_data} = {
-    "Tparthi@valuefactors.io": "gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==",
-    "neeraj@codebyte.solutions": "gAAAAABlvf_wHd_s-rfaDVYJP09Sz...</msg>
-<status status="PASS" starttime="20240203 19:11:45.657" endtime="20240203 19:11:45.658"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${object}</var>
-<arg>json.loads('''${json_data}''')</arg>
-<arg>json</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240203 19:11:45.658" level="INFO">${object} = {'Tparthi@valuefactors.io': 'gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==', 'neeraj@codebyte.solutions': 'gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J...</msg>
-<status status="PASS" starttime="20240203 19:11:45.658" endtime="20240203 19:11:45.659"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${encry}</var>
-<arg>${object['${username}']}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240203 19:11:45.660" level="INFO">${encry} = gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J09u-ZvB3nvy4zPznfgWrIF25Uq0ihXWaVr3yq0MSlnkAximgkzjaHawUJIXA==</msg>
-<status status="PASS" starttime="20240203 19:11:45.659" endtime="20240203 19:11:45.660"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${options}</var>
-<arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
-<arg>sys,selenium.webdriver</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240203 19:11:45.661" level="INFO">${options} = &lt;selenium.webdriver.edge.options.Options object at 0x000001ADBF08DE70&gt;</msg>
-<status status="PASS" starttime="20240203 19:11:45.660" endtime="20240203 19:11:45.661"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>inprivate</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240203 19:11:45.662" endtime="20240203 19:11:45.662"/>
-</kw>
-<kw name="Create Webdriver" library="SeleniumLibrary">
-<var>${driver}</var>
-<arg>Edge</arg>
-<arg>options=${options}</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20240203 19:11:45.664" level="INFO">Creating an instance of the Edge WebDriver.</msg>
-<msg timestamp="20240203 19:11:45.675" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<msg timestamp="20240203 19:11:51.502" level="INFO">${driver} = 1</msg>
-<status status="PASS" starttime="20240203 19:11:45.662" endtime="20240203 19:11:51.502"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${Productor_Url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240203 19:11:51.506" level="INFO">Opening url 'https://predev-productor.valuefactors.io/auth/login/'</msg>
-<status status="PASS" starttime="20240203 19:11:51.504" endtime="20240203 19:11:52.275"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240203 19:11:52.276" endtime="20240203 19:11:53.659"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.1</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20240203 19:11:53.660" endtime="20240203 19:11:53.665"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Input_Username}</arg>
-<arg>50</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20240203 19:11:53.665" endtime="20240203 19:11:53.810"/>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${Input_Username}</arg>
-<arg>${username}</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20240203 19:11:53.825" level="INFO">Sending key(s) ('neeraj@codebyte.solutions',) to //input[@id="auth-email-id"] element.</msg>
-<msg timestamp="20240203 19:11:54.458" level="INFO">Sending keys neeraj@codebyte.solutions</msg>
-<status status="PASS" starttime="20240203 19:11:53.819" endtime="20240203 19:11:54.815"/>
-</kw>
-<kw name="Use Encryption Key" library="RPA.Crypto">
-<arg>${public_key}</arg>
-<doc>Set key for all following encryption/decryption operations.</doc>
-<msg timestamp="20240203 19:11:54.817" level="INFO">Protecting keyword: RPA.Crypto.Use Encryption Key</msg>
-<msg timestamp="20240203 19:11:54.819" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20240203 19:11:54.816" endtime="20240203 19:11:54.819"/>
-</kw>
-<kw name="Decrypt String" library="RPA.Crypto">
-<var>${Decry}</var>
-<arg>${encry}</arg>
-<doc>Decrypt a string.</doc>
-<msg timestamp="20240203 19:11:54.824" level="INFO">${Decry} = Test123$%^</msg>
-<status status="PASS" starttime="20240203 19:11:54.819" endtime="20240203 19:11:54.824"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${Decry}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240203 19:11:54.825" level="INFO">Test123$%^</msg>
-<status status="PASS" starttime="20240203 19:11:54.825" endtime="20240203 19:11:54.826"/>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${Input_Password}</arg>
-<arg>${Decry}</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20240203 19:11:54.829" level="INFO">Sending key(s) ('Test123$%^',) to //input[@id="auth-password"] element.</msg>
-<msg timestamp="20240203 19:11:55.409" level="INFO">Sending keys Test123$%^</msg>
-<status status="PASS" starttime="20240203 19:11:54.826" endtime="20240203 19:11:55.575"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:45.655" endtime="20240203 19:11:55.576"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:45.655" endtime="20240203 19:11:55.577"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:45.654" endtime="20240203 19:11:55.577"/>
-</kw>
-<kw name="Then Close the Browser" library="TC01_Support">
-<kw name="Verify an Application should be closed" library="TC01_Support">
-<kw name="&quot;Close the Browser&quot;" library="common_1">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240203 19:11:55.580" endtime="20240203 19:11:57.812"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:55.580" endtime="20240203 19:11:57.812"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:55.579" endtime="20240203 19:11:57.812"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:55.578" endtime="20240203 19:11:57.812"/>
-</kw>
-<tag>TC01</tag>
-<status status="PASS" starttime="20240203 19:11:45.653" endtime="20240203 19:11:57.812"/>
-</test>
-<doc>Create,Edit,Delete Portfolio</doc>
-<status status="PASS" starttime="20240203 19:11:45.228" endtime="20240203 19:11:57.812"/>
+<status status="PASS" starttime="20240203 19:52:04.885" endtime="20240203 19:52:30.497"/>
 </suite>
-<suite id="s1-s1-s4" name="TC04" source="C:\Productor\Testcase\TC04.robot">
-<test id="s1-s1-s4-t1" name="TC04" line="9">
-<kw name="Given Login into Productor Application" library="TC01_Support">
-<kw name="Verify an application should be opened" library="TC01_Support">
-<kw name="Login Application" library="Login">
-<arg>${username002}</arg>
-<doc>Using this keyword we can login Productor Application.</doc>
-<kw name="Get File" library="OperatingSystem">
-<var>${json_data}</var>
-<arg>Data/password.json</arg>
-<doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20240203 19:11:45.616" level="INFO" html="true">Getting file '&lt;a href="file://C:\Productor\Data\password.json"&gt;C:\Productor\Data\password.json&lt;/a&gt;'.</msg>
-<msg timestamp="20240203 19:11:45.616" level="INFO">${json_data} = {
-    "Tparthi@valuefactors.io": "gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==",
-    "neeraj@codebyte.solutions": "gAAAAABlvf_wHd_s-rfaDVYJP09Sz...</msg>
-<status status="PASS" starttime="20240203 19:11:45.615" endtime="20240203 19:11:45.616"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${object}</var>
-<arg>json.loads('''${json_data}''')</arg>
-<arg>json</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240203 19:11:45.617" level="INFO">${object} = {'Tparthi@valuefactors.io': 'gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==', 'neeraj@codebyte.solutions': 'gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J...</msg>
-<status status="PASS" starttime="20240203 19:11:45.616" endtime="20240203 19:11:45.617"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${encry}</var>
-<arg>${object['${username}']}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240203 19:11:45.619" level="INFO">${encry} = gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J09u-ZvB3nvy4zPznfgWrIF25Uq0ihXWaVr3yq0MSlnkAximgkzjaHawUJIXA==</msg>
-<status status="PASS" starttime="20240203 19:11:45.617" endtime="20240203 19:11:45.619"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${options}</var>
-<arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
-<arg>sys,selenium.webdriver</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240203 19:11:45.620" level="INFO">${options} = &lt;selenium.webdriver.edge.options.Options object at 0x000001CCA17BDED0&gt;</msg>
-<status status="PASS" starttime="20240203 19:11:45.619" endtime="20240203 19:11:45.620"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>inprivate</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240203 19:11:45.620" endtime="20240203 19:11:45.621"/>
-</kw>
-<kw name="Create Webdriver" library="SeleniumLibrary">
-<var>${driver}</var>
-<arg>Edge</arg>
-<arg>options=${options}</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20240203 19:11:45.623" level="INFO">Creating an instance of the Edge WebDriver.</msg>
-<msg timestamp="20240203 19:11:45.633" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<msg timestamp="20240203 19:11:51.056" level="INFO">${driver} = 1</msg>
-<status status="PASS" starttime="20240203 19:11:45.622" endtime="20240203 19:11:51.056"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${Productor_Url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240203 19:11:51.057" level="INFO">Opening url 'https://predev-productor.valuefactors.io/auth/login/'</msg>
-<status status="PASS" starttime="20240203 19:11:51.056" endtime="20240203 19:11:53.042"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240203 19:11:53.042" endtime="20240203 19:11:53.304"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.1</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20240203 19:11:53.304" endtime="20240203 19:11:53.306"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Input_Username}</arg>
-<arg>50</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20240203 19:11:53.306" endtime="20240203 19:11:53.452"/>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${Input_Username}</arg>
-<arg>${username}</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20240203 19:11:53.455" level="INFO">Sending key(s) ('neeraj@codebyte.solutions',) to //input[@id="auth-email-id"] element.</msg>
-<msg timestamp="20240203 19:11:54.098" level="INFO">Sending keys neeraj@codebyte.solutions</msg>
-<status status="PASS" starttime="20240203 19:11:53.453" endtime="20240203 19:11:54.474"/>
-</kw>
-<kw name="Use Encryption Key" library="RPA.Crypto">
-<arg>${public_key}</arg>
-<doc>Set key for all following encryption/decryption operations.</doc>
-<msg timestamp="20240203 19:11:54.475" level="INFO">Protecting keyword: RPA.Crypto.Use Encryption Key</msg>
-<msg timestamp="20240203 19:11:54.476" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20240203 19:11:54.474" endtime="20240203 19:11:54.476"/>
-</kw>
-<kw name="Decrypt String" library="RPA.Crypto">
-<var>${Decry}</var>
-<arg>${encry}</arg>
-<doc>Decrypt a string.</doc>
-<msg timestamp="20240203 19:11:54.484" level="INFO">${Decry} = Test123$%^</msg>
-<status status="PASS" starttime="20240203 19:11:54.477" endtime="20240203 19:11:54.484"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${Decry}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240203 19:11:54.485" level="INFO">Test123$%^</msg>
-<status status="PASS" starttime="20240203 19:11:54.484" endtime="20240203 19:11:54.485"/>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${Input_Password}</arg>
-<arg>${Decry}</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20240203 19:11:54.488" level="INFO">Sending key(s) ('Test123$%^',) to //input[@id="auth-password"] element.</msg>
-<msg timestamp="20240203 19:11:55.111" level="INFO">Sending keys Test123$%^</msg>
-<status status="PASS" starttime="20240203 19:11:54.486" endtime="20240203 19:11:55.277"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:45.614" endtime="20240203 19:11:55.278"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:45.614" endtime="20240203 19:11:55.279"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:45.613" endtime="20240203 19:11:55.280"/>
-</kw>
-<kw name="Then Close the Browser" library="TC01_Support">
-<kw name="Verify an Application should be closed" library="TC01_Support">
-<kw name="&quot;Close the Browser&quot;" library="common_1">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240203 19:11:55.285" endtime="20240203 19:11:57.510"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:55.283" endtime="20240203 19:11:57.511"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:55.281" endtime="20240203 19:11:57.512"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:55.280" endtime="20240203 19:11:57.514"/>
-</kw>
-<tag>TC01</tag>
-<status status="PASS" starttime="20240203 19:11:45.609" endtime="20240203 19:11:57.515"/>
-</test>
-<doc>Create,Edit,Delete Portfolio</doc>
-<status status="PASS" starttime="20240203 19:11:45.199" endtime="20240203 19:11:57.515"/>
-</suite>
-<suite id="s1-s1-s5" name="TC05" source="C:\Productor\Testcase\TC05.robot">
-<test id="s1-s1-s5-t1" name="TC05" line="9">
-<kw name="Given Login into Productor Application" library="TC01_Support">
-<kw name="Verify an application should be opened" library="TC01_Support">
-<kw name="Login Application" library="Login">
-<arg>${username002}</arg>
-<doc>Using this keyword we can login Productor Application.</doc>
-<kw name="Get File" library="OperatingSystem">
-<var>${json_data}</var>
-<arg>Data/password.json</arg>
-<doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20240203 19:11:45.675" level="INFO" html="true">Getting file '&lt;a href="file://C:\Productor\Data\password.json"&gt;C:\Productor\Data\password.json&lt;/a&gt;'.</msg>
-<msg timestamp="20240203 19:11:45.675" level="INFO">${json_data} = {
-    "Tparthi@valuefactors.io": "gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==",
-    "neeraj@codebyte.solutions": "gAAAAABlvf_wHd_s-rfaDVYJP09Sz...</msg>
-<status status="PASS" starttime="20240203 19:11:45.674" endtime="20240203 19:11:45.675"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${object}</var>
-<arg>json.loads('''${json_data}''')</arg>
-<arg>json</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240203 19:11:45.677" level="INFO">${object} = {'Tparthi@valuefactors.io': 'gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==', 'neeraj@codebyte.solutions': 'gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J...</msg>
-<status status="PASS" starttime="20240203 19:11:45.676" endtime="20240203 19:11:45.677"/>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<var>${encry}</var>
-<arg>${object['${username}']}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240203 19:11:45.679" level="INFO">${encry} = gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J09u-ZvB3nvy4zPznfgWrIF25Uq0ihXWaVr3yq0MSlnkAximgkzjaHawUJIXA==</msg>
-<status status="PASS" starttime="20240203 19:11:45.677" endtime="20240203 19:11:45.679"/>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<var>${options}</var>
-<arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
-<arg>sys,selenium.webdriver</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240203 19:11:45.681" level="INFO">${options} = &lt;selenium.webdriver.edge.options.Options object at 0x0000017C0304DED0&gt;</msg>
-<status status="PASS" starttime="20240203 19:11:45.680" endtime="20240203 19:11:45.681"/>
-</kw>
-<kw name="Call Method" library="BuiltIn">
-<arg>${options}</arg>
-<arg>add_argument</arg>
-<arg>inprivate</arg>
-<doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240203 19:11:45.681" endtime="20240203 19:11:45.682"/>
-</kw>
-<kw name="Create Webdriver" library="SeleniumLibrary">
-<var>${driver}</var>
-<arg>Edge</arg>
-<arg>options=${options}</arg>
-<doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20240203 19:11:45.683" level="INFO">Creating an instance of the Edge WebDriver.</msg>
-<msg timestamp="20240203 19:11:45.695" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<msg timestamp="20240203 19:11:47.493" level="INFO">${driver} = 1</msg>
-<status status="PASS" starttime="20240203 19:11:45.682" endtime="20240203 19:11:47.493"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${Productor_Url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240203 19:11:47.497" level="INFO">Opening url 'https://predev-productor.valuefactors.io/auth/login/'</msg>
-<status status="PASS" starttime="20240203 19:11:47.496" endtime="20240203 19:11:50.014"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240203 19:11:50.017" endtime="20240203 19:11:51.167"/>
-</kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.1</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20240203 19:11:51.167" endtime="20240203 19:11:51.168"/>
-</kw>
-<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Input_Username}</arg>
-<arg>50</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20240203 19:11:51.168" endtime="20240203 19:11:51.564"/>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${Input_Username}</arg>
-<arg>${username}</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20240203 19:11:51.567" level="INFO">Sending key(s) ('neeraj@codebyte.solutions',) to //input[@id="auth-email-id"] element.</msg>
-<msg timestamp="20240203 19:11:52.266" level="INFO">Sending keys neeraj@codebyte.solutions</msg>
-<status status="PASS" starttime="20240203 19:11:51.565" endtime="20240203 19:11:53.364"/>
-</kw>
-<kw name="Use Encryption Key" library="RPA.Crypto">
-<arg>${public_key}</arg>
-<doc>Set key for all following encryption/decryption operations.</doc>
-<msg timestamp="20240203 19:11:53.367" level="INFO">Protecting keyword: RPA.Crypto.Use Encryption Key</msg>
-<msg timestamp="20240203 19:11:53.369" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20240203 19:11:53.365" endtime="20240203 19:11:53.368"/>
-</kw>
-<kw name="Decrypt String" library="RPA.Crypto">
-<var>${Decry}</var>
-<arg>${encry}</arg>
-<doc>Decrypt a string.</doc>
-<msg timestamp="20240203 19:11:53.375" level="INFO">${Decry} = Test123$%^</msg>
-<status status="PASS" starttime="20240203 19:11:53.369" endtime="20240203 19:11:53.375"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>${Decry}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240203 19:11:53.379" level="INFO">Test123$%^</msg>
-<status status="PASS" starttime="20240203 19:11:53.376" endtime="20240203 19:11:53.379"/>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${Input_Password}</arg>
-<arg>${Decry}</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20240203 19:11:53.383" level="INFO">Sending key(s) ('Test123$%^',) to //input[@id="auth-password"] element.</msg>
-<msg timestamp="20240203 19:11:54.006" level="INFO">Sending keys Test123$%^</msg>
-<status status="PASS" starttime="20240203 19:11:53.381" endtime="20240203 19:11:54.282"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:45.673" endtime="20240203 19:11:54.282"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:45.673" endtime="20240203 19:11:54.284"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:45.672" endtime="20240203 19:11:54.284"/>
-</kw>
-<kw name="Then Close the Browser" library="TC01_Support">
-<kw name="Verify an Application should be closed" library="TC01_Support">
-<kw name="&quot;Close the Browser&quot;" library="common_1">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20240203 19:11:54.287" endtime="20240203 19:11:56.597"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:54.287" endtime="20240203 19:11:56.597"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:54.285" endtime="20240203 19:11:56.597"/>
-</kw>
-<status status="PASS" starttime="20240203 19:11:54.284" endtime="20240203 19:11:56.597"/>
-</kw>
-<tag>TC01</tag>
-<status status="PASS" starttime="20240203 19:11:45.670" endtime="20240203 19:11:56.601"/>
-</test>
-<doc>Create,Edit,Delete Portfolio</doc>
-<status status="PASS" starttime="20240203 19:11:45.242" endtime="20240203 19:11:56.601"/>
-</suite>
-<status status="PASS" starttime="20240203 19:11:45.197" endtime="20240203 19:11:58.232"/>
-</suite>
-<doc>[https://pabot.org/?ref=log|Pabot] result from 5 executions.</doc>
-<status status="PASS" starttime="20240203 19:11:44.855" endtime="20240203 19:11:58.237"/>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 1 executions.</doc>
+<status status="PASS" starttime="20240203 19:52:04.597" endtime="20240203 19:52:30.505"/>
 </suite>
 <statistics>
 <total>
-<stat pass="5" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="5" fail="0" skip="0">TC01</stat>
+<stat pass="1" fail="0" skip="0">TC01</stat>
+<stat pass="1" fail="0" skip="0">Test</stat>
 </tag>
 <suite>
-<stat pass="5" fail="0" skip="0" id="s1" name="Productor">Productor</stat>
-<stat pass="5" fail="0" skip="0" id="s1-s1" name="Testcase">Productor.Testcase</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Productor">Productor</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Testcase">Productor.Testcase</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Tc01">Productor.Testcase.Tc01</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s2" name="TC02">Productor.Testcase.TC02</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s3" name="TC03">Productor.Testcase.TC03</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s4" name="TC04">Productor.Testcase.TC04</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s5" name="TC05">Productor.Testcase.TC05</stat>
 </suite>
 </statistics>
 <errors>

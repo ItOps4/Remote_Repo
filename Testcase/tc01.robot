@@ -1,15 +1,15 @@
 *** Settings ***
 Documentation    Create,Edit,Delete Portfolio
 Resource    TC01_Support.robot
-Force Tags      TC01
+Force Tags      TC01    Test
 
 
 
 *** Test Cases ***
 TC01
     Given Login into Productor Application
-    # When Navigate to Portfolio Management Menu
-    # Then Click on Create portfolio button, Enter the mandatory details and click on cancel button
+    When Navigate to Portfolio Management Menu
+    Then Click on Create portfolio button, Enter the mandatory details and click on cancel button
     # Then Click on Create portfolio button and Enter the mandatory details and click on Save button
     # Then Select the checkbox of portfolio
     # Then Click on Search bar and search with valid portfolio in the portfolio page

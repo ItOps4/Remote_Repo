@@ -1,6 +1,6 @@
-@REM del /q "output\pabot_results"
+@REM @REM del /q "output\pabot_results"
 
-pip install -r .\requirements.txt
-Set Tags=tc01
+@REM pip install -r .\requirements.txt
+Set Tags=Test
 Set Thread=5
-pabot --suitesfrom .\Testcase\ --processes %Thread% -d .\output\ -i %Tags% .
+pabot --suitesfrom .\Testcase\ -st --processes %Thread% -d .\output\ -i %Tags% .

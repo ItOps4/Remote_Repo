@@ -1,6 +1,6 @@
 Input_Username = '//input[@id="auth-email-id"]'
 Input_Password = '//input[@id="auth-password"]'
-BTN_Login = '//button[@id="sign-in-btn"]'
+BTN_Login = '//p[text()="Sign In"]/parent::button'
 
 BTN_Create_Portfolio = '//button[@id="portfolio-create-btn"]'
 Input_Portfolio_Name = '//input[@id="portfolio-management-portfolio-name"]'
