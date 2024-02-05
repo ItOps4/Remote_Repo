@@ -6,7 +6,7 @@ Force Tags      PROD-4    Test    Name:Gayathri
 
 
 *** Test Cases ***
-Poertfolio Management
+Portfolio Management
     [Documentation]    Portfolio Create,Edit,Search,Delete
     Given Login into Productor Application    ${username002}
     When Navigate to Portfolio Management Menu

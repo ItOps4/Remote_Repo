@@ -5,9 +5,13 @@
 
 
 
-Set Tags=Test
+@REM Set Tags=Test
 
 
-Set Thread=5
+@REM Set Thread=5
 
-pabot --suitesfrom .\Testcase\ --processes %Thread% -d .\output\ -i %Tags% .
+@REM pabot --suitesfrom .\Testcase\ --processes %Thread% -d .\output\ -i %Tags% .
+
+git add .
+git commit -m "Portfolio Testcase Name Change"
+git push origin TC02
