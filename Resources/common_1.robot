@@ -180,3 +180,10 @@ Delete Budget
     ${budget_delete}    Format String    ${Delete_budget}    name=${name}
     Wait Until Element is present then click the element    ${budget_delete}
     Wait Until Element is present then click the element    ${element}
+
+    # TC05 recycl bin
+click on restore button and cancel restore
+    [Documentation]
+    
+    Wait Until Element is present then click the element    ${Restore_btn}
+    wait Until Element is present then click the element    ${Restore_cancel_btn}        
