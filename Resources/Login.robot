@@ -20,6 +20,7 @@ Login Application
     ${encry}    Set Variable    ${object['${username}']}
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].EdgeOptions()    sys,selenium.webdriver
     Call Method    ${options}    add_argument    inprivate
+    Call Method    ${options}    add_argument    --headless
     ${driver}    Create Webdriver    Edge    options=${options}    
     Go To    ${Productor_Url}
     Maximize Browser Window
