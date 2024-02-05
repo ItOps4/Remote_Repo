@@ -1,8 +1,7 @@
 *** Settings ***
 Documentation    Create,Edit,Delete Portfolio
 Resource    TC01_Support.robot
-Force Tags    TC01
-
+Force Tags      TC01    Test
 
 
 
@@ -36,4 +35,12 @@ Poertfolio Management
 
 
 
+<<<<<<< HEAD
     
+=======
+<<<<<<< HEAD
+    
+=======
+    
+>>>>>>> f626f76d834c0bc8752a745b29b79a3b60ab9544
+>>>>>>> 13a1de5ed0a6a5801bcab4feedcb0f5b52e6abfc
