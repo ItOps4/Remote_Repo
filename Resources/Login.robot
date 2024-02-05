@@ -23,7 +23,7 @@ Login Application
     ${driver}    Create Webdriver    Edge    options=${options} 
     Go To    ${Productor_Url}
     Maximize Browser Window
-    #Set Selenium Speed    0.1
+    Set Selenium Speed    1
     Wait Until Page Contains Element    ${Input_Username}    50
     Press Keys    ${Input_Username}    ${username}
     Use Encryption Key    ${public_key}

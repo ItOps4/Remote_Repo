@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Finance Customize Budget
 Resource    TC05_Support.robot
-Force Tags    TC05    Test
+Force Tags    TC05    
 
 
 *** Test Cases ***

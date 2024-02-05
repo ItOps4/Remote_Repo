@@ -1,11 +1,12 @@
 *** Settings ***
 Resource    ../Resources/common_1.robot
-Resource    ${CURDIR}${/}..\\Login.robot
+Resource    ../Resources/Login.robot
 Variables    ../Data/data.py
 
 *** Keywords ***
 Given Login into Productor Application
-    Verify if user should be able to login successfully
+    [Arguments]    ${username}
+    Verify if user should be able to login successfully    ${username}
 
 When Click on the System Settings Tab and click on Finance Customize Budget Menu
     Verify Finance customize Budget page should be displayed
@@ -37,45 +38,50 @@ And Close the Browser
     verify application is closed
 
 Verify if user should be able to login successfully
-    Login Application    ${username002}
+    [Arguments]    ${username}
+    Login Application    ${username}
 
 Verify Finance customize Budget page should be displayed
-    click and navigate    ${System_setting_btn}    ${Finance_custom_budget_Btn}    
+    Wait Until Element is present then click the element    ${BTN_System_setting}
+    Wait Until Element is present then click the element     ${BTN_Finance_custom_budget} 
 
 
 Verify Save Button should be disabled and Category shouldn't be created
-    click new finance and cancel button
+    Create Finance    ${PROD_7_budget_name}    ${PROD_7_budget_description}  
+    wait Until Element is present then click the element    ${BTN_Finance_custom_cancel}  
 
 Verify Save button should be enabled and Category should be created
-    Create new finance    ${TC03_budget_name1}    ${TC03_budget_description1}
+    Create finance    ${PROD_7_budget_name1}    ${PROD_7_budget_description1}
+    Wait Until Element is present then click the element    ${BTN_Finance_custom_save}
+
 
 verify an error message displayed as "No results found"
-    search Budget    ${TC03_budget_name}
-    Check text is present    ${No_records}    
+    search Data    ${INPUT_budget_search }    ${PROD_7_budget_name}
+    Check text is present    ${TXT_NO_Data}    
 
 verify if category Record should be Filtered and Displayed
     Set Selenium Implicit Wait    1
-    search Budget    ${TC03_budget_name1}    
-    Verify search budget displayed    ${TC03_budget_name1}   
+    Search Data    ${INPUT_budget_search }    ${PROD_7_budget_name1}    
+    Verify Finance Budget is displayed   ${PROD_7_budget_name1}   
     Capture Page Screenshot  
 
 
 verify category Fields should not be changed
-    Click the Kebab button on budget    ${TC03_budget_name1}
-    Edit budget    ${TC03_budget_name1}    ${TC03_budget_name}    ${TC03_budget_description}    ${edit_budget_cancel}
+    Click the Kebab button on budget    ${PROD_7_budget_name1}
+    Edit budget    ${PROD_7_budget_name1}    ${PROD_7_budget_name}    ${PROD_7_budget_description}    ${BTN_edit_budget_cancel}
 
 verify category name should be changed    
-    Click the Kebab button on budget    ${TC03_budget_name1}    
-    Edit budget    ${TC03_budget_name1}    ${TC03_budget_name}    ${TC03_budget_description}    ${Edit_budget_save}   
+    Click the Kebab button on budget    ${PROD_7_budget_name1}    
+    Edit budget    ${PROD_7_budget_name1}    ${PROD_7_budget_name}    ${PROD_7_budget_description}    ${BTN_Edit_budget_save}   
 
 Verify a Category name Should not be deleted
-    search Budget    ${TC03_budget_name}
-    Click the Kebab button on budget    ${TC03_budget_name}
-    Delete Budget    ${TC03_budget_name}    ${Delete_cancel_btn}      
+    Search Data    ${INPUT_budget_search}    ${PROD_7_budget_name}
+    Click the Kebab button on budget    ${PROD_7_budget_name}
+    Delete Budget    ${PROD_7_budget_name}    ${BTN_Delete_cancel}      
 
 Verify a Category name Should be deleted
-    Click the Kebab button on budget    ${TC03_budget_name}
-    Delete Budget    ${TC03_budget_name}    ${Delete_confirm_btn}      
+    Click the Kebab button on budget    ${PROD_7_budget_name}
+    Delete Budget    ${PROD_7_budget_name}    ${BTN_Delete_confirm}      
 
 verify application is closed
     "Close the Browser"
