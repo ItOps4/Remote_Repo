@@ -1,14 +1,15 @@
-@REM @REM del /q "output\pabot_results"
-
-@REM python Access.py
-@REM pip install -r .\requirements.txt
 
 
+RMDIR "output/" /S /Q
+
+Timeout 2
+
+MKDIR "output"
 
 Set Tags=Test
 
-
 Set Thread=5
 
-pabot --suitesfrom .\Testcase\ --processes %Thread% -d .\output\ -i %Tags% .
+pabot --suitesfrom .\Testcase\ --processes %Thread% -d .\output\ -i %Tags% --listener allure_robotframework .
 
+Timeout 2
