@@ -31,10 +31,14 @@ Portfolio_Name = '//td[@id="custom-id-{name}"]'
 
 
 # Adding Category in Finance Configuration
-
 Icon_SystemSettings = '//span[@id="icon-System Settings"]'
 BTN_Add_Category = '//button[@id="finance-add-category"]'
 Input_Category_name = '//input[@id="finance-config-category-name"]'
 Input_Category_Description = '//textarea[@id="finance-config-description"]'
-BTN_Category_cancel = '//button[@id="overall-finance-config-cancel"]'
-BTN_Category_save = '//button[@id="overall-finance-config-save"]'
+Search_FinanceConfiguration = '//input[@id="finance-config-search-input"]'
+TXT_Category_NO_DATA = '//p[text()="No records to display"]'
+Category_name = '//td[@id="custom-id-{name}"]/..'
+BTN_Category_More = '//div[@id="more-btn-{name}"]'
+BTN_Category_Edit = '//li[@id="edit-{name}"]'
+BTN_Category_Delete = '//li[@id="delete-{name}"]'
+BTN_Confirm = '//p[text()="Confirm"]/parent::button'
