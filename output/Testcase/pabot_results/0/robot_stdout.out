@@ -1,0 +1,46 @@
+==============================================================================
+Productor                                                                     
+==============================================================================
+Productor.Testcase                                                            
+==============================================================================
+[ERROR] EXCEPTION RAISED DURING PABOT EXECUTION
+[ERROR] PLEASE CONSIDER REPORTING THIS ISSUE TO https://github.com/mkorpela/pabot/issues
+Pabot: 2.18.0
+Python: 3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]
+Robot Framework: 6.0.2
+Total testing: 0.0 seconds
+Elapsed time:  0.0 seconds
+Error: Command 'pabot -d .\output\Testcase  -i TC02 .' returned non-zero exit status 1.
+Productor.Testcase.Tc02                                                       
+==============================================================================
+Category                                                              | FAIL |
+Test contains no keywords.
+------------------------------------------------------------------------------
+Category                                                                
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Productor\Testcase\tc02.robot:10
+    T:  Category    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Productor\Testcase\tc02.robot:21
+      And Close the Browser    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Productor\Testcase\TC02_Support.robot:40
+      Verify Application should be Close    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Productor\Testcase\TC02_Support.robot:93
+      "Close the Browser"    
+______________________________________________________________________________
+| FAIL |
+User keyword '"Close the Browser"' contains no keywords.
+------------------------------------------------------------------------------
+Productor.Testcase.Tc02                                               | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Productor.Testcase                                                    | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Productor                                                             | FAIL |
+2 tests, 0 passed, 2 failed
+==============================================================================
+Output:  C:\Productor\output\Testcase\pabot_results\0\output.xml
