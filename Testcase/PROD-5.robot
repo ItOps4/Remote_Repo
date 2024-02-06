@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Category Create,Search,Edit and Delete    
 Resource    PROD-5_Support.robot
-Force Tags    PROD-5    Test    name:Amritha   
+Force Tags    PROD-5    Test    Name:Amritha   
 
 
 
