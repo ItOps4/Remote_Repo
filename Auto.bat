@@ -5,10 +5,12 @@
 
 
 
-Set Tags=Test
+Set Tags=PROD-4
 
 
 Set Thread=5
 
 pabot --suitesfrom .\Testcase\ --processes %Thread% -d .\output\ -i %Tags% .
+
+
 
