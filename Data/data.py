@@ -21,9 +21,8 @@ PROD_5_Category_name = 'PROD_5_Category'
 PROD_5_Category_Description = 'PROD_5_Category_description'
 PROD_5_Invalid_Category = 'PROD_5_Category'
 PROD_5_Category_name_new = 'PROD_5_Cateorynew'
-PROD_5_Category_Description_new = 'TC02_Category_descriptionnew'
+PROD_5_Category_Description_new = 'PROD_5_Category_descriptionnew'
 
-TC01_invalidPortfolio = 'PROD_5_PORTFOLIO2'
 
 
 #TC03 Finance Customize Budget
