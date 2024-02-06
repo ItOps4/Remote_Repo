@@ -16,9 +16,9 @@ PROD_4_Portfolio_Description2 ='PROD_4_portfolio_description2'
 
 
 # Adding Category to Finance Configuration
-PROD_5_Category_name = 'PROD_5_Category'
+PROD_5_Category_name = 'PROD_5_Category_name'
 PROD_5_Category_Description = 'PROD_5_Category_description'
-PROD_5_Invalid_Category = 'PROD_5_Category'
+PROD_5_Invalid_Category = 'PROD_5_Category1'
 PROD_5_Category_name_new = 'PROD_5_Cateorynew'
 PROD_5_Category_Description_new = 'PROD_5_Category_descriptionnew'
 
