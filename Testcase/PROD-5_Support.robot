@@ -54,40 +54,40 @@ Verify it should display Finance Configuration Tab by Default
     Wait Until Element is present then click the element    ${Icon_SystemSettings}
 
 Verify Save Button should be disabled and Category shouldn't be created 
-    Add Category    ${TC02_Category_name}    ${TC02_Category_Description}
+    Add Category    ${PROD_5_Category_name}    ${PROD_5_Category_Description}
     Wait Until Element is present then click the element    ${BTN_Cancel}
 
 Verify Save button should be enabled and Category should be created
-    Add Category    ${TC02_Category_name}    ${TC02_Category_Description}
+    Add Category    ${PROD_5_Category_name}    ${PROD_5_Category_Description}
     Wait Until Element is present then click the element    ${BTN_Save}
 
 Verify an error message shouble be display as " No results found".
-    Search Category    ${TC02_Invalid_Category}
+    Search Category    ${PROD_5_Invalid_Category}
     Check element is present    ${TXT_Category_NO_DATA}
 
 Verify if Category Record should be Filtered and Displayed
-    Search Category    ${TC02_Category_name}
-    Verify a Category is displayed    ${TC02_Category_name}
+    Search Category    ${PROD_5_Category_name}
+    Verify a Category is displayed    ${PROD_5_Category_name}
 
 Verify if category Fields should not be changed
-    Click the Kebab button Category    ${TC02_Category_name} 
-    Edit Category    ${TC02_Category_name}    ${TC02_Category_name_new}    ${TC02_Category_Description_new} 
+    Click the Kebab button Category    ${PROD_5_Category_name} 
+    Edit Category    ${PROD_5_Category_name}    ${PROD_5_Category_name_new}    ${PROD_5_Category_Description_new} 
     Wait Until Element is present then click the element    ${BTN_Cancel}
 
 verify if category Fields should be changed
-    Click the Kebab button Category    ${TC02_Category_name} 
-    Edit Category    ${TC02_Category_name}    ${TC02_Category_name_new}    ${TC02_Category_Description_new}
+    Click the Kebab button Category    ${PROD_5_Category_name} 
+    Edit Category    ${PROD_5_Category_name}    ${PROD_5_Category_name_new}    ${PROD_5_Category_Description_new}
     Wait Until Element is present then click the element    ${BTN_Save}
 
 Verify a Category name Should not be deleted
-    Search Category    ${TC02_Category_name_new}
-    Click the Kebab button Category    ${TC02_Category_name_new}  
-    Delete Category    ${TC02_Category_name_new} 
+    Search Category    ${PROD_5_Category_name_new}
+    Click the Kebab button Category    ${PROD_5_Category_name_new}  
+    Delete Category    ${PROD_5_Category_name_new} 
     Wait Until Element is present then click the element    ${BTN_Cancel} 
 
 Verify a Category name Should be deleted
-    Click the Kebab button Category    ${TC02_Category_name_new}  
-    Delete Category    ${TC02_Category_name_new} 
+    Click the Kebab button Category    ${PROD_5_Category_name_new}  
+    Delete Category    ${PROD_5_Category_name_new} 
     Wait Until Element is present then click the element    ${BTN_Confirm}
 
 Verify Application should be Close
