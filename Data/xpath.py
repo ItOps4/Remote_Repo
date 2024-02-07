@@ -1,9 +1,11 @@
+# Common
 Input_Username = '//input[@id="auth-email-id"]'
 Input_Password = '//input[@id="auth-password"]'
 BTN_Login = '//p[text()="Sign In"]/parent::button'
 BTN_Cancel = '//p[text()="Cancel"]/parent::button'
 BTN_Save = '//p[text()="Save"]/parent::button'
-#
+
+# PROD-4 Portfolio managemet
 BTN_Create_Portfolio = '//button[@id="portfolio-create-btn"]'
 Input_Portfolio_Name = '//input[@id="portfolio-management-portfolio-name"]'
 Input_error_name  = '//p[@id="Name-input-box-name-field-err-msg"]'
@@ -16,33 +18,37 @@ Input_Search_Manager = '//input[@id="search-field"]'
 BTN_Portfolio_Save = '//button[@id="portfolio-create-save-btn"]'
 BTN_portfolio_cancel ='//button[@id="portfolio-create-cancel-btn"]'
 BTN_Portfolio_name = '//td[@id="custom-id-{name}"]'
-BTN_Portfolio_more = '//div[@id="more-btn-{name}"]/../..'
-BTN_Portfolio_delete = '//li[@id="delete-{name}"]'
+BTN_Portfolio_more = '//div[@id="portfolio-more-btn-{name}"]/../..'
+BTN_Portfolio_delete = '//li[@id="portfolio-delete-{name}"]'
 BTN_Portfolio_delete_confirm = '//p[text()="Confirm"]/parent::button'
 BTN_Portfolio_delete_cancel = '//p[text()="Cancel"]/parent::button'
-BTN_Portfolio_Edit = '//li[@id="edit-{name}"]'
+BTN_Portfolio_Edit = '//li[@id="portfolio-edit-{name}"]'
 BTN_Portfolio_edit_save= '//button[@id="portfolio-edit-save-btn"]'
 BTN_Portfolio_edit_cancel = '//button[@id="portfolio-edit-cancel-btn"]'
-Input_Portfolio_Search = '//input[@id="portfolio-search-products"]'
+Input_Portfolio_Search = '//input[@id="portfolio-search-input"]'
 CHBOX_portfolio = '//td[@id="custom-id-{checkbox_name}"]/parent::tr/td[1]/span/input'
 TXT_Portfolio_No_Data = '//p[text()="No records to display"]'
 Portfolio_Name = '//td[@id="custom-id-{name}"]'
 
-
-
-# Adding Category in Finance Configuration
+# PROD-5 Finance Configuration
 Icon_SystemSettings = '//span[@id="icon-System Settings"]'
-BTN_Add_Category = '//button[@id="finance-add-category"]'
+BTN_Add_Category = '//button[@id="finance-config-add-category"]'    
 Input_Category_name = '//input[@id="finance-config-category-name"]'
 Input_Category_Description = '//textarea[@id="finance-config-description"]'
+BTN_Create_Popup_Cancel = '//button[@id="create-finance-config-cancel"]'
+BTN_Category_Popup_Save = '//button[@id="create-finance-config-save"]'
 Search_FinanceConfiguration = '//input[@id="finance-config-search-input"]'
 TXT_Category_NO_DATA = '//p[text()="No records to display"]'
-Category_name = '//td[@id="custom-id-{name}"]/..'
-BTN_Category_More = '//div[@id="more-btn-{name}"]'
-BTN_Category_Edit = '//li[@id="edit-{name}"]'
-BTN_Category_Delete = '//li[@id="delete-{name}"]'
-BTN_Confirm = '//p[text()="Confirm"]/parent::button'
-# TC03 Finance customize budget
+Category_name = '//td[@id="custom-id-{name}"]/parent::tr'
+BTN_Category_More = '//div[@id="finance-config-more-btn-{name}"]'
+BTN_Category_Edit = '//li[@id="finance-config-edit-{name}"]'
+BTN_Edit_Popup_Cancel = '//button[@id="edit-finance-config-cancel"]'
+BTN_Edit_Popup_Save = '//button[@id="edit-finance-config-save"]'
+BTN_Category_Delete = '//li[@id="finance-config-delete-{name}"]'
+BTN_Detele_Popup_Cancel = '//button[@id="comman-delete-cancel-btn"]'
+BTN_Delete_Popup_Confirm = '//button[@id="comman-delete-confirm-btn"]'
+
+#PROD-7 Finance Customize Budget
 BTN_System_setting = '//span[@id="icon-System Settings"]'
 BTN_Finance_custom_budget = '//p[@id="tabs-name-Finance Customize Budget"]'
 BTN_New_finance = '//button[@id="customize-finance-add-new-budget"]'
@@ -60,11 +66,28 @@ BTN_Delete_confirm = '//p[text()="Confirm"]'
 BTN_edit_budget_cancel = '//button[@id="edit-finance-budget-cancel"]'
 BTN_Edit_budget_save = '//button[@id="edit-finance-budget-save"]'
 
-
-
 # TC05 
 Recycle_bin_btn = '//div[@id="system-settings-recycle-bin"]'
 Restore_btn = '//button[@id="recycle-bin-restore"]'
 Restore_cancel_btn = '//button[@id="recycbin-restore-cancel-btn"]'
 Restore_confirm_btn = '//button[@id="recycbin-restore-confirm-btn"]'
 name_profile ='//td[@id="custom-id-gayathri  portfolio"]'
+
+# PROD-8 Product Squad Role
+Tab_Product_Squad_Role = '//div[@id="system-settings-product-squad-roles"]'
+BTN_Add_Role = '//button[@id="product-squad-add-role"]'
+Input_Product_Squad_Role_name = '//input[@id="product-squad-role-name"]'
+Input_Product_Squad_Role_Description = '//textarea[@id="product-squad-role-description"]'
+BTN_Role_Cancel = '//button[@id="product-squad-role-add-cancel-btn"]'
+BTN_Role_Save = '//button[@id="product-squad-role-add-save-btn"]'
+Search_Product_Squad_Role = '//input[@id="product-squad-roles-search-input"]'
+TXT_Product_Squad_Role_NO_DATA = '//p[text()="No records to display"]'
+Product_Squad_Role_name = '//td[@id="custom-id-{name}"]/parent::tr'
+BTN_Product_Squad_Role_Kebab = '//div[@id="product-squad-role-more-btn-{name}"]'
+BTN_Product_Squad_Role_Edit = '//li[@id="product-squad-role-edit-{name}"]'
+BTN_Role_Edit_Cancel = '//button[@id="product-squad-role-edit-cancel-btn"]'
+BTN_Role_Edit_Save = '//button[@id="product-squad-role-edit-save-btn"]'
+BTN_Product_Squad_Role_Delete = '//li[@id="product-squad-role-delete-{name}"]'
+BTN_Role_Delete_Cancel = '//button[@id="comman-delete-cancel-btn"]'
+BTN_Role_Delete_Confirm = '//button[@id="comman-delete-confirm-btn"]'
+
