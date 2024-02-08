@@ -59,9 +59,7 @@ Check element isn't present
     Wait Until Page Does Not Contain Element    ${element}    50
     Page Should Not Contain Element    ${element}
 
-# search BACKSPACE
-#     [Arguments]    ${name}
-#     Press Keys    ${name}    CTRL+A+BACKSPACE  
+
 
 Verify a Portfolio is displayed
     [Arguments]    ${name}
@@ -144,17 +142,7 @@ Delete Category
 
 
 
-    
-    
-
-
 # TC03 Finance customize budget
-
-# click and navigate
-#     [Documentation]    Using this keyword we can click and Navigate
-#     [Arguments]    ${element1}    ${element2}
-#     Wait Until Element is present then click the element    ${element1}    
-#     Wait Until Element is present then click the element    ${element2}
 
 
 Create Finance
@@ -170,19 +158,7 @@ Check element is disabled
     [Arguments]    ${Element}
     Wait Until Element is present then click the element    ${Element}
     Element Should Be Disabled    ${Element}
-    
-    
-
-
-
-# search Budget
-#     [Documentation]    using this keyword we can search portfolio
-#     [Arguments]    ${Name}
-#     Wait Until Element is present then click the element    ${budget_search}
-#     Press Keys    ${budget_search}    CTRL+A+BACKSPACE
-#     Sleep    1
-#     Press Keys    ${budget_search}    ${Name}
-    
+      
 
 
 Verify Finance Budget is displayed   
