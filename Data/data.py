@@ -33,14 +33,25 @@ PROD_8_Product_Squad_Role_Invalid_name = 'TC_Prod'
 PROD_8_Produt_Squad_Role_name_new = 'PROD_8_Product_Squad_Role_name_new'
 PROD_8_Product_Squad_Role_Description_new = 'PROD_8_Product_Squad_Role_Description_new'
 
-#PROD-6 PRODUCT / PLATFORM OKR and Squad
-PROD_6_portfolio = 'PROD-6 PORTFOLIO'
-PROD_6_description =  'PROD-6_description'
-PROD_6_PPG_NAME = 'PROD_6_ppg_name'
-TXT_Manager_name = "Lohitha"
-PROD_6_pp_name = 'PROD_6_pp_name1'
-TXT_manager_OKR = 'Neeraj patel'
-PROD_6_OKR_name = 'PROD_6_okr1'
-PROD_6_OKR_name1= 'PROD_6_okr2'
+# PROD-14 PPG-Product/Platform
+PROD_14_Portfolio_Name = 'PROD_14_Portfolio_name'
+PROD_14_Portfolio_Description = 'PROD_14_Portfolio_Description'
+PROD_14_PPG_name = 'PROD_14_PPG_name'
+PROD_14_PPG_Description = 'PROD_14_PPG_Description'
+PROD_14_Owner = 'Tom Parthi'
+PROD_14_PPG_2_name = 'PROD_14_PPG_2_name'
+PROD_14_Portfolio_2_Description = 'PROD_14_Portfoli_2o_Description'
+PROD_14_PPG_Invalid_name = 'PROD_14_PPG_Invalid_name'
+# PROD-14 Product/Platform
+PROD_14_Product_Platform_name = 'PROD_14_Product_Platform_name'
+PROD_14_Product_Platform_description = 'PROD_14_Product_Platform_description'
+PROD_14_Product_Platform_name_Invalid = 'PROD_14_Product_Platform_name_Invalid'
+
+
+
+
+
+
+
 
 
