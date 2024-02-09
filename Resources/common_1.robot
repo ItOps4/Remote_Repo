@@ -265,6 +265,99 @@ Delete Product Squad Role
     Wait Until Element is present then click the element    ${Product_Squad_Role_Delete}
 
 
+# PPG-Product/Platform
+Click_Portfolio
+    [Documentation]    Using this keyword we can Navigate to Portfolio    
+    [Arguments]    ${name}  
+    ${Portfolio}    Format String    ${Portfolio_Click}    name=${name}
+    Wait Until Element is present then click the element    ${Portfolio}
+
+Create PPG 
+    [Documentation]    Using this keyword we can create PPG 
+    [Arguments]    ${name2}    ${description}    ${Owner} 
+    ${Status}    Run Keyword And Return Status    Page Should Contain Element    ${BTN_Add_PPG} 
+    IF    '${Status}' == '${True}'
+        Wait Until Element is present then click the element    ${BTN_Add_PPG}
+    ELSE
+        Wait Until Element is present then click the element    ${BTN_Create_PPG}
+    END   
+    Wait Until Page Contains Element    ${Input_PPG_name}    50
+    Input Text    ${Input_PPG_name}    ${name2}
+    Press Keys    ${Input_PPG_Description}    ${description}
+    Wait Until Element is present then click the element    ${Input_PPG_Owner}
+    Press Keys    ${Input_Search_Owner}    ${Owner}
+    ${Owner}    Format String    ${Select_Owner}    name=${Owner}
+    Wait Until Element is present then click the element    ${Owner}
+    Wait Until Element is present then click the element    ${Input_PPG_Type}
+
+Click the Kebab button in PPG 
+    [Documentation]    Using this keyword we can click kebab for PPG
+    [Arguments]    ${name}
+    ${Kebab}    Format String    ${BTN_PPG_Kebab}    name=${name}
+    Wait Until Element is present then click the element    ${Kebab}
+
+Edit PPG
+    [Documentation]    Using this keyword we can edit Type Field
+    [Arguments]    ${name}    
+    ${Edit}    Format String    ${BTN_PPG_Edit}    name=${name}
+    Wait Until Element is present then click the element    ${Edit}
+    Wait Until Element is present then click the element    ${Input_PPG_Type}
+
+Click_PPG
+    [Documentation]    Using this keyword we can Navigate PPG    
+    [Arguments]    ${name}  
+    ${PPG}    Format String    ${PPG_Click}    name=${name}
+    Wait Until Element is present then click the element    ${PPG}
+
+Create Product/Platform
+    [Documentation]    Using this keyword we can create Product/Platform
+    [Arguments]    ${name2}    ${description}    ${Owner}
+    Wait Until Element is present then click the element    ${BTN_Add_Product_Platform}
+    Wait Until Page Contains Element    ${Input_Product_Platform_name}    50
+    Input Text    ${Input_Product_Platform_name}    ${name2}
+    Press Keys    ${Input_Product_Platform_Description}    ${description}
+    Wait Until Element is present then click the element    ${Input_Product_Platform_Owner}
+    Press Keys    ${Search_Product_Platform_Owner}    ${Owner}
+    ${Owner}    Format String    ${Select_Owner}    name=${Owner}
+    Wait Until Element is present then click the element    ${Owner}
+    Wait Until Element is present then click the element    ${Input_Product_Platform_Type}
+
+Click the Kebab button in Product/Platform
+    [Documentation]    Using this keyword we can click kebab for Product/Platform 
+    [Arguments]    ${name}
+    ${Kebab}    Format String    ${BTN_Product_Platform_Kebab}    name=${name}
+    Wait Until Element is present then click the element    ${Kebab}
+
+Edit Product/Platform
+    [Documentation]    Using this keyword we can edit Type Field 
+    [Arguments]    ${name}    
+    ${Edit}    Format String    ${BTN_Product_Platform_Edit}    name=${name}
+    Wait Until Element is present then click the element    ${Edit}
+    Wait Until Element is present then click the element    ${Input_Product_Platform_Type}
+Delete Product/Platform
+    [Documentation]    Using this keyword we can click delete button for Product/Platform 
+    [Arguments]    ${name}    
+    ${Delete}    Format String    ${BTN_Product_Platform_Delete}    name=${name}
+    Wait Until Element is present then click the element    ${Delete}
+
+Click Breadcrums
+    [Documentation]    Using this keyword we canNavigate Breadcrums
+    [Arguments]    ${name}    
+    ${Breadcrums}    Format String    ${Bread_Crums}    name=${name}
+    Wait Until Element is present then click the element    ${Breadcrums}
+
+Delete PPG
+    [Documentation]    Using this keyword we can click delete button for PPG    
+    [Arguments]    ${name}    
+    ${Delete}    Format String    ${BTN_PPG_Delete}    name=${name}
+    Wait Until Element is present then click the element    ${Delete}
+ 
+
+
+    
+    
+ 
+    
 
 
 
