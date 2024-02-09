@@ -33,6 +33,24 @@ PROD_8_Product_Squad_Role_Invalid_name = 'TC_Prod'
 PROD_8_Produt_Squad_Role_name_new = 'PROD_8_Product_Squad_Role_name_new'
 PROD_8_Product_Squad_Role_Description_new = 'PROD_8_Product_Squad_Role_Description_new'
 
+# PROD-14 PPG-Product/Platform
+PROD_14_Portfolio_Name = 'PROD_14_Portfolio_name'
+PROD_14_Portfolio_Description = 'PROD_14_Portfolio_Description'
+PROD_14_PPG_name = 'PROD_14_PPG_name'
+PROD_14_PPG_Description = 'PROD_14_PPG_Description'
+PROD_14_Owner = 'Tom Parthi'
+PROD_14_PPG_2_name = 'PROD_14_PPG_2_name'
+PROD_14_Portfolio_2_Description = 'PROD_14_Portfoli_2o_Description'
+PROD_14_PPG_Invalid_name = 'PROD_14_PPG_Invalid_name'
+# PROD-14 Product/Platform
+PROD_14_Product_Platform_name = 'PROD_14_Product_Platform_name'
+PROD_14_Product_Platform_description = 'PROD_14_Product_Platform_description'
+PROD_14_Product_Platform_name_Invalid = 'PROD_14_Product_Platform_name_Invalid'
+
+
+
+
+
 
 
 
