@@ -8,7 +8,7 @@ Timeout 2
 
 MKDIR "output"
 
-Set Tags=Test
+Set Tags=PROD-6
 
 Set Thread=5
 

@@ -1,6 +1,7 @@
 *** Settings ***
 Library         SeleniumLibrary
 Library         String
+Library    DateTime
 Variables       ../Data/xpath.py
 Variables       ../Data/data.py
 
@@ -241,8 +242,57 @@ Delete Product Squad Role
     Wait Until Element is present then click the element    ${Product_Squad_Role_Delete}
 
 
+# navigate to portfolio
+#     [Arguments]    ${name}
+#     ${Portfolio_click}    Format String    ${Portfolio_Name}    name=${name}
+#     Wait Until Element is present then click the element    ${Portfolio_click}
+#     Sleep    1
 
+create ppg
+    [Arguments]    ${name}    ${typename}    ${element}    
+    Wait Until Element is present then click the element    ${BTN_ADD_PPG}
+    Input Text    ${INPUT_ppg_name}    ${name}    
+    Wait Until Element is present then click the element    ${BTN_PPg_OWNER}
+    Press Keys    ${Input_Search_Manager}    ${TXT_Manager_name}
+    Wait Until Element is present then click the element    ${INPUT_PPG_OWNER}
+    Wait Until Element is present then click the element    ${BTN_ppg_type}
+    Wait Until Element is present then click the element    ${typename}
+    Wait Until Element is present then click the element    ${element}
 
+create Product/platform
+    [Arguments]    ${button}    ${name}    ${owner}    ${manager}    ${owner_input}    ${typebutton}    ${typename}    ${element}
+    Wait Until Element is present then click the element    ${button}    
+    Input Text    ${INPT_prod_plat_name}    ${name}
+    Wait Until Element is present then click the element    ${owner}    
+    Press Keys    ${Input_Search_Manager}    ${manager}    
+    Wait Until Element is present then click the element    ${owner_input}    
+    Wait Until Element is present then click the element    ${typebutton}    
+    Wait Until Element is present then click the element    ${typename}
+    Wait Until Element is present then click the element    ${element}
 
+create PLatform OKR
+    [Arguments]    ${name}    ${Manager}    ${element}
+    Wait Until Element is present then click the element    ${BTN_Add_OKR}
+    Input Text    ${INPUT_OKR_name}    ${name}
+    Wait Until Element is present then click the element    ${INPUT_assign_to}    
+    Press Keys    ${Input_Search_Manager}    ${Manager}
+    Wait Until Element is present then click the element    ${INPT_okr_owner}
+    ${currentdate}=    Get Current Date        
+    Log    ${currentdate}
+    ${cd}    Convert Date    ${currentdate}    result_format=%m/%d/%Y
+    Log    ${cd}
+    ${currentdate1}=    Get Current Date    increment=25day
+    Log    ${currentdate1}    
+    ${cd1}    Convert Date    ${currentdate1}    result_format=%m/%d/%Y    
+    Log    ${cd1}
+    Press Keys    ${INPUT_start_date}    ${cd}
+    Press Keys    ${INPUT_END_date}    ${cd1}
+    Wait Until Element is present then click the element    ${INPT_link_SO}
+    Wait Until Element is present then click the element    ${INPUT_strat_out_name}
+    Wait Until Element is present then click the element    ${element}
 
+Click on add result button
+    [Arguments]    ${name}
+    ${addresult}    Format String    ${BTN_add_result}    name=${name}
+    Wait Until Element is present then click the element    ${addresult}
    
