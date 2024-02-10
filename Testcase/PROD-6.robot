@@ -15,4 +15,9 @@ Product / platform OKR and Squad
     Then click on search and enter invalid OKR
     Then click on search and enter valid OKR
     Then Click on Add Result button in OKR and enter the mandatory fields and cancel button
+    Then Click on Add Result button in OKR and enter the mandatory fields and save button
+    Then navigate to OKR-key Result page
+    Then click on More icon and click on edit button in Key result and modify data and click on Cancel button
+    Then click on More icon and click on edit button in Key result and modify data and click on Save button
+    Then Navigate to key result page and should display edit button
     

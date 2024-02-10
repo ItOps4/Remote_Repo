@@ -48,11 +48,11 @@ Verify Finance customize Budget page should be displayed
 
 Verify Save Button should be disabled and Category shouldn't be created
     Create Finance    ${PROD_7_budget_name}    ${PROD_7_budget_description}  
-    wait Until Element is present then click the element    ${BTN_Finance_custom_cancel}  
+    wait Until Element is present then click the element    ${BTN_Cancel}  
 
 Verify Save button should be enabled and Category should be created
     Create finance    ${PROD_7_budget_name1}    ${PROD_7_budget_description1}
-    Wait Until Element is present then click the element    ${BTN_Finance_custom_save}
+    Wait Until Element is present then click the element    ${BTN_Save}
 
 
 verify an error message displayed as "No results found"
@@ -68,20 +68,20 @@ verify if category Record should be Filtered and Displayed
 
 verify category Fields should not be changed
     Click the Kebab button on budget    ${PROD_7_budget_name1}
-    Edit budget    ${PROD_7_budget_name1}    ${PROD_7_budget_name}    ${PROD_7_budget_description}    ${BTN_edit_budget_cancel}
+    Edit budget    ${PROD_7_budget_name1}    ${PROD_7_budget_name}    ${PROD_7_budget_description}    ${BTN_Cancel}
 
 verify category name should be changed    
     Click the Kebab button on budget    ${PROD_7_budget_name1}    
-    Edit budget    ${PROD_7_budget_name1}    ${PROD_7_budget_name}    ${PROD_7_budget_description}    ${BTN_Edit_budget_save}   
+    Edit budget    ${PROD_7_budget_name1}    ${PROD_7_budget_name}    ${PROD_7_budget_description}    ${BTN_Save}   
 
 Verify a Category name Should not be deleted
     Search Data    ${INPUT_budget_search}    ${PROD_7_budget_name}
     Click the Kebab button on budget    ${PROD_7_budget_name}
-    Delete Budget    ${PROD_7_budget_name}    ${BTN_Delete_cancel}      
+    Delete Budget    ${PROD_7_budget_name}    ${BTN_Cancel}      
 
 Verify a Category name Should be deleted
     Click the Kebab button on budget    ${PROD_7_budget_name}
-    Delete Budget    ${PROD_7_budget_name}    ${BTN_Delete_confirm}      
+    Delete Budget    ${PROD_7_budget_name}    ${BTN_Confirm}      
 
 verify application is closed
     "Close the Browser"

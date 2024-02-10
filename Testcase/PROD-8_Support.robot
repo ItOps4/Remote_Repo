@@ -62,11 +62,11 @@ Verify that the Product Squad Role Page is displayed
 
 Verify Save should be Disabled and Category shouldn't be created.
     Add Product Squad Role    ${PROD_8_Product_Squad_Role_name}    ${PROD_8_Produt_Squad_Role_Description}
-    Wait Until Element is present then click the element    ${BTN_Role_Cancel}
+    Wait Until Element is present then click the element    ${BTN_Cancel}
 
 Verify Save button should be Enabled and Category should be created.
     Add Product Squad Role    ${PROD_8_Product_Squad_Role_name}    ${PROD_8_Produt_Squad_Role_Description}
-    Wait Until Element is present then click the element    ${BTN_Role_Save}
+    Wait Until Element is present then click the element    ${BTN_Save}
 
 Verify an error message shouble be display as " No results found".
     Search Data    ${Search_Product_Squad_Role}    ${PROD_8_Product_Squad_Role_Invalid_name}
@@ -79,23 +79,23 @@ Verify if the Product Squad Role Record should be Filtered and Displayed
 Verify if Product Squal Role name should not be changed
     Click the Kebab button in Product Squad Role    ${PROD_8_Product_Squad_Role_name}
     Edit Product Squad Role    ${PROD_8_Product_Squad_Role_name}    ${PROD_8_Produt_Squad_Role_name_new}    ${PROD_8_Product_Squad_Role_Description_new}
-    Wait Until Element is present then click the element    ${BTN_Role_Edit_Cancel}
+    Wait Until Element is present then click the element    ${BTN_Cancel}
 
 Verify if Product Squal Role name should be changed
     Click the Kebab button in Product Squad Role    ${PROD_8_Product_Squad_Role_name}
     Edit Product Squad Role    ${PROD_8_Product_Squad_Role_name}    ${PROD_8_Produt_Squad_Role_name_new}    ${PROD_8_Product_Squad_Role_Description_new}
-    Wait Until Element is present then click the element    ${BTN_Role_Edit_Save}
+    Wait Until Element is present then click the element    ${BTN_Save}
 
 Verify a Product Squal Role name Should not be deleted
     Search Data    ${Search_Product_Squad_Role}    ${PROD_8_Produt_Squad_Role_name_new} 
     Click the Kebab button in Product Squad Role    ${PROD_8_Produt_Squad_Role_name_new} 
     Delete Product Squad Role    ${PROD_8_Produt_Squad_Role_name_new}
-    Wait Until Element is present then click the element    ${BTN_Role_Delete_Cancel}  
+    Wait Until Element is present then click the element    ${BTN_Cancel}  
 
 Verify a Product Squal Role name Should be deleted 
     Click the Kebab button in Product Squad Role    ${PROD_8_Produt_Squad_Role_name_new} 
     Delete Product Squad Role    ${PROD_8_Produt_Squad_Role_name_new}  
-    Wait Until Element is present then click the element    ${BTN_Role_Delete_Confirm}
+    Wait Until Element is present then click the element    ${BTN_Confirm}
 
 Verify Application should be Close
     "Close the Browser"
