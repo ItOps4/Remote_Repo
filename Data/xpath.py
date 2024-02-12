@@ -18,7 +18,7 @@ BTN_Portfolio_Man_Menu='//span[@id="icon-Portfolio Management"]/ancestor::a'
 Input_Portfolio_Manager = '//div[@id="portfolio-management-manager"]'
 Drop_Down_Manager = '//li[text()="Iyyappan"]'
 Input_Search_Manager = '//input[@id="search-field"]'
-BTN_Portfolio_name = '//td[@id="custom-id-{name}"]'
+BTN_Portfolio_CUSTOM = '//td[@id="custom-id-{name}"]'
 BTN_Portfolio_more = '//div[@id="portfolio-more-btn-{name}"]/../..'
 BTN_Portfolio_delete = '//li[@id="portfolio-delete-{name}"]'
 BTN_Portfolio_Edit = '//li[@id="portfolio-edit-{name}"]'
@@ -69,7 +69,7 @@ Product_Squad_Role_name = '//td[@id="custom-id-{name}"]/parent::tr'
 BTN_Product_Squad_Role_Kebab = '//div[@id="product-squad-role-more-btn-{name}"]'
 BTN_Product_Squad_Role_Edit = '//li[@id="product-squad-role-edit-{name}"]'
 BTN_Product_Squad_Role_Delete = '//li[@id="product-squad-role-delete-{name}"]'
-BTN_DELETE_result=
+
 
 #PROD-6 PRODUCT/PLATFORM OKR and SQUAD
 
@@ -84,6 +84,9 @@ INPT_link_SO = '//div[@id="okr-SO"]'
 INPUT_strat_out_name = '//li[@id="delt so"]'
 BTN_okr_search = '//input[@id="okr-search-input"]'
 BTN_add_result = '//button[@id="okr-add-result-{name}"]'
+BTN_more_OKR = '//div[@id="okr-more-btn-{name}"]'
+BTN_EDIT_OKR = '//li[@id="okr-edit-{name}"]'
+BTN_DELETE_OKR = '//li[@id="okr-delete-{name}"]'
 INPUT_key_result_name = '//input[@id="keyresult-key-result"]'
 INPUT_Key_result_description ='//textarea[@id="keyresult-description"]'
 INPUT_baseline ='//input[@id="keyresult-basline"]'
@@ -93,6 +96,8 @@ BTN_more_keyresult = '//div[@id="keyresult-more-btn-{name}"]'
 BTN_EDIT_keyresult = '//li[@id="keyresult-edit-{name}"]'
 BTN_OVERVIEW_edit = '//button[@id="okr-overview-edit-btn"]'
 BTN_BACKARROW_KEY_OVERVIEW = '//i[@id="back-to-result-undefined"]'
+BTN_DELETE_result= '//li[@id="keyresult-delete-{name}"]'
+BTN_BACKARROW_OKR = '//i[@id="back-to-okr-PROD_6_okr1"]'
 
 # PROD-14 PPG-Product/Platform
 Portfolio_Click = '//td[@id="custom-id-{name}"]'

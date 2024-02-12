@@ -52,14 +52,14 @@ Verify a Portfolio Managment Menu should be displayed
     Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
 
 Verify a Save button should be disabled by default and Portfolio shouldn't be created.
-    Create Portfolio    ${PROD_4_Portfolio_name}     ${PROD_4_Portfolio_Description1}    ${BTN_Cancel}
+    Create Portfolio    ${PROD_4_Portfolio1}     ${PROD_4_Portfolio_Description1}    ${BTN_Cancel}
 
 Verify a mandatory fields should be entered, a Save should be enabled, a Portfolio should be created
-    Create Portfolio    ${PROD_4_Portfolio_name}     ${PROD_4_Portfolio_Description1}    ${BTN_Save}
+    Create Portfolio    ${PROD_4_Portfolio1}     ${PROD_4_Portfolio_Description1}    ${BTN_Save}
 
 
 verify if it should not display any result , it display message as " No records to display "    
-    Search Data    ${Input_Portfolio_Search}    ${PROD_4_Portfolio_name2}
+    Search Data    ${Input_Portfolio_Search}    ${PROD_4_PortfoliO2}
     Check element is present    ${TXT_Portfolio_No_Data} 
    
 
@@ -67,34 +67,34 @@ verify if it should not display any result , it display message as " No records 
 
 
 verify if the search bar should be enabled to search any portfolio and it should display result as per the search input 
-    Search Data    ${Input_Portfolio_Search}    ${PROD_4_Portfolio_name}
-    Verify a Portfolio is displayed    ${PROD_4_Portfolio_name}
+    Search Data    ${Input_Portfolio_Search}    ${PROD_4_Portfolio1}
+    Verify a Portfolio is displayed    ${PROD_4_Portfolio1}
   
 
 
 
 
 verify if it display edit and delete button as Dropdown, it should display Edit portfolio popup in editable mode , User to enter the data and It should redirect to the Portfolio page     
-    Click the Kebab button on portfolio    ${PROD_4_Portfolio_name}    
-    Edit Portfolio    ${PROD_4_Portfolio_name}    ${PROD_4_Portfolio_name2}    ${PROD_4_Portfolio_Description2}    ${BTN_Cancel}    
+    Click the Kebab button on portfolio    ${PROD_4_Portfolio1}    
+    Edit Portfolio    ${PROD_4_Portfolio1}    ${PROD_4_Portfolio2}    ${PROD_4_Portfolio_Description2}    ${BTN_Cancel}    
     
 
 
 verify it should display a dropdown and it should display portfolio popup window in editable mode and save the changes by clicking save button
-    Click the Kebab button on portfolio    ${PROD_4_Portfolio_name}   
-    Edit Portfolio    ${PROD_4_Portfolio_name}    ${PROD_4_Portfolio_name2}    ${PROD_4_Portfolio_Description2}    ${BTN_Save}    
+    Click the Kebab button on portfolio    ${PROD_4_Portfolio1}   
+    Edit Portfolio    ${PROD_4_Portfolio1}    ${PROD_4_Portfolio2}    ${PROD_4_Portfolio_Description2}    ${BTN_Save}    
     
 
 
 verify if it display edit and delete button as dropdown, It Redirect to the Portfolio Page 
-    Search Data    ${Input_Portfolio_Search}    ${PROD_4_Portfolio_name2}
-    Click the Kebab button on portfolio    ${PROD_4_Portfolio_name2}
-    Delete Potfolio    ${PROD_4_Portfolio_name2}    ${BTN_Cancel}
+    Search Data    ${Input_Portfolio_Search}    ${PROD_4_Portfolio2}
+    Click the Kebab button on portfolio    ${PROD_4_Portfolio2}
+    Delete Potfolio    ${PROD_4_Portfolio2}    ${BTN_Cancel}
 
 
 verify if it display edit and delete button as dropdown,it Deleted Portfolio should not display in the portfolio page
-    Click the Kebab button on portfolio    ${PROD_4_Portfolio_name2}
-    Delete Potfolio   ${PROD_4_Portfolio_name2}    ${BTN_Confirm}
+    Click the Kebab button on portfolio    ${PROD_4_Portfolio2}
+    Delete Potfolio   ${PROD_4_Portfolio2}    ${BTN_Confirm}
 
      
 

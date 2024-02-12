@@ -20,4 +20,11 @@ Product / platform OKR and Squad
     Then click on More icon and click on edit button in Key result and modify data and click on Cancel button
     Then click on More icon and click on edit button in Key result and modify data and click on Save button
     Then Navigate to key result page and should display edit button
+    Then click on more button and click on delete button and click on cancel button
+    Then click on more button and click on delete button and click on confirm button
+    Then click on more icon and click on Edit button , change the data and cancel button
+    Then Click on more icon and click on Edit button , change the data and Save button
+    Then Click on more icon and Click on delete button and click on cancel button
+    Then Click on more icon , click on delete button and click on Save button
+
     

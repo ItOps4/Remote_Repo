@@ -30,7 +30,7 @@ Create Portfolio
 
 Navigate to portfolio data
     [Arguments]    ${name}
-    ${Portfolio}    Format String    ${BTN_Portfolio_name}    name=${name}
+    ${Portfolio}    Format String    ${BTN_Portfolio_CUSTOM}    name=${name}
     Wait Until Element is present then click the element    ${Portfolio}
 
 Search Data
@@ -68,7 +68,7 @@ Check element isn't present
 Verify a Portfolio is displayed
     [Documentation]    Using this keyword we can verify portfolio
     [Arguments]    ${name}
-    ${Portfolio}    Format String    ${BTN_Portfolio_name}    name=${name}
+    ${Portfolio}    Format String    ${BTN_Portfolio_CUSTOM}    name=${name}
     Check element is present    ${Portfolio}
 
 Click the Kebab button on portfolio
@@ -193,7 +193,7 @@ Delete Budget
 
 click on restore button and cancel restore
     Wait Until Element is present then click the element    ${Restore_btn}
-    wait Until Element is present then click the element    ${Restore_cancel_btn}
+    wait Until Element is present then click the element    ${BTN_Cancel}
 
 # PROD-8 Product Squad Role
 
@@ -353,6 +353,40 @@ Click on add result button
     ${addresult}    Format String    ${BTN_add_result}    name=${name}
     Wait Until Element is present then click the element    ${addresult}
 
+click on okr kebab button
+    [Arguments]    ${name}
+    ${OKR_kebab}    Format String    ${BTN_more_OKR}    name=${name}
+    Wait Until Element is present then click the element    ${OKR_kebab}
+
+Edit OKR
+    [Arguments]    ${name}    ${name1}    ${manager}    ${element}
+    ${edit_okr}    Format String    ${BTN_EDIT_OKR}    name=${name}
+    Wait Until Element is present then click the element    ${edit_okr}
+    Press Keys    ${INPUT_OKR_name}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_OKR_name}    ${name1}
+    Wait Until Element is present then click the element    ${INPUT_assign_to}
+    Press Keys    ${Input_Search_Manager}    CTRL+A+BAACKSPACE
+    Press Keys    ${Input_Search_Manager}    ${manager}
+    Wait Until Element is present then click the element    ${Drop_Down_Manager}
+    # ${currentdate}    Get Current Date
+    # Log    ${currentdate}
+    # ${cd}    Convert Date    ${currentdate}    result_format=%m/%d/%Y
+    # Log    ${cd}
+    # ${currentdate1}    Get Current Date    increment=25day
+    # Log    ${currentdate1}
+    # ${cd1}    Convert Date    ${currentdate1}    result_format=%m/%d/%Y
+    # Log    ${cd1}
+    # Press Keys    ${INPUT_start_date}    CTRL+A+BACKSPACE
+    # Press Keys    ${INPUT_start_date}    ${cd}
+    # Press Keys    ${INPUT_END_date}    CTRL+A+BACKSPACE
+    # Press Keys    ${INPUT_END_date}    ${cd1}
+    Wait Until Element is present then click the element    ${element}    
+
+Delete OKR 
+    [Arguments]    ${name}    ${Element}
+    ${Delete_OKR}    Format String    ${BTN_DELETE_OKR}    name=${name}
+    Wait Until Element is present then click the element    ${Delete_OKR}
+    Wait Until Element is present then click the element    ${Element}
 
 Create key result
     [Documentation]    Using this keyword we can create key result
@@ -390,8 +424,9 @@ edit key result
 
 Delete Key result
     [Documentation]    Using this keyword we can delete key result
-    [Arguments]    ${name}
+    [Arguments]    ${name}    ${Element}
     ${Delete_result}    Format String    ${BTN_DELETE_result}    name=${name}
     Wait Until Element is present then click the element    ${Delete_result}
+    Wait Until Element is present then click the element    ${Element}
 
 

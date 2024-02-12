@@ -77,7 +77,7 @@ Verify an application should be opened
 
 Verify a PPG Page should be displayed
     Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
-    Create Portfolio    ${PROD_14_Portfolio_Name}    ${PROD_14_Portfolio_Description}    ${BTN_Portfolio_Save}
+    Create Portfolio    ${PROD_14_Portfolio_Name}    ${PROD_14_Portfolio_Description}    ${BTN_Save}
     Search Data    ${Input_Portfolio_Search}    ${PROD_14_Portfolio_Name}
     Click_Portfolio    ${PROD_14_Portfolio_Name}
     Wait Until Element is present then click the element    ${TAB_PPG}
@@ -85,33 +85,33 @@ Verify a PPG Page should be displayed
 Verify a PPG shouldn't be created
     Create PPG    ${PROD_14_PPG_name}    ${PROD_14_PPG_Description}    ${PROD_14_Owner}
     Wait Until Element is present then click the element    ${Input_Type_Platform}        
-    Wait Until Element is present then click the element    ${BTN_PPG_Cancel}
+    Wait Until Element is present then click the element    ${BTN_Cancel}
 
 Verify a PPG should be Created
     Create PPG    ${PROD_14_PPG_name}    ${PROD_14_PPG_Description}    ${PROD_14_Owner} 
     Wait Until Element is present then click the element    ${Input_Type_Platform}   
-    Wait Until Element is present then click the element    ${BTN_PPG_Save}
+    Wait Until Element is present then click the element    ${BTN_Save}
 
 Verify PPG Fields should not be Changed
     Click the Kebab button in PPG     ${PROD_14_PPG_name}
     Edit PPG    ${PROD_14_PPG_name}
     Wait Until Element is present then click the element    ${Input_Type_Product}    
-    Wait Until Element is present then click the element    ${BTN_PPG_Edit_Cancel}
+    Wait Until Element is present then click the element    ${BTN_Cancel}
 
 Verify PPG Fields should be Changed
     Click the Kebab button in PPG     ${PROD_14_PPG_name}
     Edit PPG    ${PROD_14_PPG_name}
     Wait Until Element is present then click the element    ${Input_Type_Product}
-    Wait Until Element is present then click the element    ${BTN_PPG_Edit_Save}
+    Wait Until Element is present then click the element    ${BTN_Save}
 
 Verify a Another PPG Fields should be Changed
     Create PPG    ${PROD_14_PPG_2_name}    ${PROD_14_Portfolio_2_Description}    ${PROD_14_Owner} 
     Wait Until Element is present then click the element    ${Input_Type_Product}   
-    Wait Until Element is present then click the element    ${BTN_PPG_Save}
+    Wait Until Element is present then click the element    ${BTN_Save}
     Click the Kebab button in PPG     ${PROD_14_PPG_2_name}
     Edit PPG    ${PROD_14_PPG_2_name}
     Wait Until Element is present then click the element    ${Input_Type_Platform}
-    Wait Until Element is present then click the element    ${BTN_PPG_Edit_Save}
+    Wait Until Element is present then click the element    ${BTN_Save}
 
 Verify it should display as per the search
     Search Data    ${Search_PPG}    ${PROD_14_PPG_Invalid_name}
@@ -124,24 +124,24 @@ Verify a Product/Platform Page should be displayed
 Verify a Product/Platform shouldn't be created
     Create Product/Platform    ${PROD_14_Product_Platform_name}    ${PROD_14_Product_Platform_description}    ${PROD_14_Owner}
     Wait Until Element is present then click the element    ${Input_Type_Product}
-    Wait Until Element is present then click the element    ${BTN_Product_Platform_Cancel}
+    Wait Until Element is present then click the element    ${BTN_Cancel}
 
 Verify a Product/Platform should be created
     Create Product/Platform    ${PROD_14_Product_Platform_name}    ${PROD_14_Product_Platform_description}    ${PROD_14_Owner}
     Wait Until Element is present then click the element    ${Input_Type_Product}
-    Wait Until Element is present then click the element    ${BTN_Product_Platform_Save}
+    Wait Until Element is present then click the element    ${BTN_Save}
 
 Verify Platform Fields should not be Changed
     Click the Kebab button in Product/Platform     ${PROD_14_Product_Platform_name}
     Edit Product/Platform    ${PROD_14_Product_Platform_name}
     Wait Until Element is present then click the element    ${Input_Type_Platform}
-    Wait Until Element is present then click the element    ${BTN_Product_Platform_Edit_Cancel}
+    Wait Until Element is present then click the element    ${BTN_Cancel}
 
 Verify Platform Fields should be Changed
     Click the Kebab button in Product/Platform     ${PROD_14_Product_Platform_name}
     Edit Product/Platform    ${PROD_14_Product_Platform_name}
     Wait Until Element is present then click the element    ${Input_Type_Platform}
-    Wait Until Element is present then click the element    ${BTN_Product_Platform_Edit_Save}
+    Wait Until Element is present then click the element    ${BTN_Save}
 
 Verify it should display as per the both search
     Search Data    ${Search_Product_Platform}    ${PROD_14_Product_Platform_name_Invalid}
@@ -150,19 +150,19 @@ Verify it should display as per the both search
 Verify a Platform and Product PPG Should be deleted
     Click the Kebab button in Product/Platform     ${PROD_14_Product_Platform_name}
     Delete Product/Platform    ${PROD_14_Product_Platform_name}
-    Wait Until Element is present then click the element    ${BTN_Product_Platform_Delete_Cancel}
+    Wait Until Element is present then click the element    ${BTN_Cancel}
     Click the Kebab button in Product/Platform     ${PROD_14_Product_Platform_name}
     Delete Product/Platform    ${PROD_14_Product_Platform_name}
-    Wait Until Element is present then click the element    ${BTN_Product_Platform_Delete_Confirm}
+    Wait Until Element is present then click the element    ${BTN_Confirm}
     Press Keys    ${Search_Product_Platform}    CTRL+A+BACKSPACE
     Click Breadcrums    ${PROD_14_PPG_name}
     Search Data    ${Search_PPG}    ${PROD_14_PPG_name}
     Click the Kebab button in PPG     ${PROD_14_PPG_name}
     Delete PPG    ${PROD_14_PPG_name}
-    Wait Until Element is present then click the element    ${BTN_PPG_Delete_Cancel}
+    Wait Until Element is present then click the element    ${BTN_Cancel}
     Click the Kebab button in PPG     ${PROD_14_PPG_name}
     Delete PPG    ${PROD_14_PPG_name}
-    Wait Until Element is present then click the element    ${BTN_PPG_Delete_Confirm}
+    Wait Until Element is present then click the element    ${BTN_Confirm}
 
 Verify a Product/Platform(for Platform) Page should be displayed
     Search Data    ${Search_PPG}    ${PROD_14_PPG_2_name}
@@ -172,11 +172,11 @@ Verify a Product/Platform(for Platform) Page should be displayed
 Verify Product Fields should be Changed
     Create Product/Platform    ${PROD_14_Product_Platform_name}    ${PROD_14_Product_Platform_description}    ${PROD_14_Owner}
     Wait Until Element is present then click the element    ${Input_Type_Platform}
-    Wait Until Element is present then click the element    ${BTN_Product_Platform_Save}
+    Wait Until Element is present then click the element    ${BTN_Save}
     Click the Kebab button in Product/Platform     ${PROD_14_Product_Platform_name}
     Edit Product/Platform    ${PROD_14_Product_Platform_name}
     Wait Until Element is present then click the element    ${Input_Type_Product}
-    Wait Until Element is present then click the element    ${BTN_Product_Platform_Edit_Save}
+    Wait Until Element is present then click the element    ${BTN_Save}
 
 Verify it should display as per each the search
     Search Data    ${Search_Product_Platform}    ${PROD_14_Product_Platform_name_Invalid}
@@ -185,18 +185,18 @@ Verify it should display as per each the search
 Verify a Product and Platform PPG Should be deleted
     Click the Kebab button in Product/Platform     ${PROD_14_Product_Platform_name}
     Delete Product/Platform    ${PROD_14_Product_Platform_name}
-    Wait Until Element is present then click the element    ${BTN_Product_Platform_Delete_Confirm}
+    Wait Until Element is present then click the element    ${BTN_Confirm}
     Press Keys    ${Search_Product_Platform}    CTRL+A+BACKSPACE
     Click Breadcrums    ${PROD_14_PPG_2_name}
     Search Data    ${Search_PPG}    ${PROD_14_PPG_2_name}
     Click the Kebab button in PPG     ${PROD_14_PPG_2_name}
     Delete PPG    ${PROD_14_PPG_2_name}
-    Wait Until Element is present then click the element    ${BTN_PPG_Delete_Confirm}
+    Wait Until Element is present then click the element    ${BTN_Confirm}
     Press Keys    ${Search_PPG}    CTRL+A+BACKSPACE
     Wait Until Element is present then click the element    ${Portfolio_BreadCrums}
     Search Data    ${Input_Portfolio_Search}    ${PROD_14_Portfolio_Name}
     Click the Kebab button on portfolio    ${PROD_14_Portfolio_Name}
-    Delete Potfolio    ${PROD_14_Portfolio_Name}    ${BTN_Portfolio_delete_confirm}
+    Delete Potfolio    ${PROD_14_Portfolio_Name}    ${BTN_confirm}
     Press Keys    ${Input_Portfolio_Search}    CTRL+A+BACKSPACE
     
 Verify Application should be Close
