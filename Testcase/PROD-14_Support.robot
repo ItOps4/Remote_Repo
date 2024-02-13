@@ -118,7 +118,7 @@ Verify if the PPG should be Filtered and Displayed
     Verify a Created Data is displayed    ${PROD_14_PPG}    
 
 Verify a Product/Platform Page should be displayed
-    Naviagte to PPG and Click on Product/Platform Tab   ${PROD_14_PPG}    ${TAB_Product_Platform}
+    Navigate to PPG and Click on Product/Platform Tab   ${PROD_14_PPG}    ${TAB_Product_Platform}
 
 Verify a Product/Platform shouldn't be created
     Create Product/Platform    ${PROD_14_Product_Platform}    ${PROD_14_Product_Platform_description}    ${PROD_14_Owner}    ${Input_Type_Product}    ${BTN_Cancel}
