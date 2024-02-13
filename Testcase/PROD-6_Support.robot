@@ -73,6 +73,7 @@ Verify if user should be able to login successfully
 verify it should display ppg page
     Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
     # Create Portfolio    ${PROD_6_portfolio}    ${PROD_6_description}    ${BTN_Portfolio_Save}
+    Search Data    ${Input_Portfolio_Search}    ${PROD_6_portfolio}
     Navigate to portfolio data    ${PROD_6_portfolio}
     Wait Until Element is present then click the element    ${TAB_PPG}
     # Create PPG    ${PROD_6_PPG_NAME}    ${PROD_14_PPG_Description}    ${TXT_Manager_name}
@@ -97,7 +98,7 @@ Verify a OKRs should be created
 
 verify if it should not display any result , it display message as " No records to display "
     Search Data    ${BTN_okr_search}    ${PROD_6_OKR_UPDATE}
-    Check element is present    ${TXT_Portfolio_No_Data}
+    Check element is present    ${TXT_NO_DATA}
 
 verify if it display resullt as per input search
     Search Data    ${BTN_okr_search}    ${PROD_6_OKR}

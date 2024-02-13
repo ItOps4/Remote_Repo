@@ -58,43 +58,39 @@ Verify an application should be opened
 
 Verify that the Product Squad Role Page is displayed
     Wait Until Element is present then click the element    ${Icon_SystemSettings}
-    Wait Until Element is present then click the element    ${Tab_Product_Squad_Role}
+    Wait Until Element is present then click the element    ${TAB_Product_Squad_Role}
 
 Verify Save should be Disabled and Category shouldn't be created.
-    Add Product Squad Role    ${PROD_8_Product_Squad_Role_name}    ${PROD_8_Produt_Squad_Role_Description}
-    Wait Until Element is present then click the element    ${BTN_Cancel}
+    Add Product Squad Role    ${PROD_8_Product_Squad_Role}    ${PROD_8_Produt_Squad_Role_Description}    ${BTN_Cancel}
 
 Verify Save button should be Enabled and Category should be created.
-    Add Product Squad Role    ${PROD_8_Product_Squad_Role_name}    ${PROD_8_Produt_Squad_Role_Description}
-    Wait Until Element is present then click the element    ${BTN_Save}
+    Add Product Squad Role    ${PROD_8_Product_Squad_Role}    ${PROD_8_Produt_Squad_Role_Description}    ${BTN_Save}
 
 Verify an error message shouble be display as " No results found".
-    Search Data    ${Search_Product_Squad_Role}    ${PROD_8_Product_Squad_Role_Invalid_name}
-    Check element is present    ${TXT_Product_Squad_Role_NO_DATA}  
+    Search Data    ${Input_Search_Product_Squad_Role}    ${PROD_8_Product_Squad_Role_Invalid}
+    Check element is present    ${TXT_NO_DATA}  
 
 Verify if the Product Squad Role Record should be Filtered and Displayed 
-    Search Data    ${Search_Product_Squad_Role}    ${PROD_8_Product_Squad_Role_name}  
-    Verify a Product Squad Role is displayed    ${PROD_8_Product_Squad_Role_name} 
+    Search Data    ${Input_Search_Product_Squad_Role}    ${PROD_8_Product_Squad_Role}  
+    Verify a Product Squad Role is displayed    ${PROD_8_Product_Squad_Role} 
 
 Verify if Product Squal Role name should not be changed
-    Click the Kebab button in Product Squad Role    ${PROD_8_Product_Squad_Role_name}
-    Edit Product Squad Role    ${PROD_8_Product_Squad_Role_name}    ${PROD_8_Produt_Squad_Role_name_new}    ${PROD_8_Product_Squad_Role_Description_new}
-    Wait Until Element is present then click the element    ${BTN_Cancel}
+    Click the Kebab button in Product Squad Role    ${PROD_8_Product_Squad_Role}
+    Edit Product Squad Role    ${PROD_8_Product_Squad_Role}    ${PROD_8_Produt_Squad_Role_Update}    ${PROD_8_Product_Squad_Role_Description_Update}    ${BTN_Cancel}
 
 Verify if Product Squal Role name should be changed
-    Click the Kebab button in Product Squad Role    ${PROD_8_Product_Squad_Role_name}
-    Edit Product Squad Role    ${PROD_8_Product_Squad_Role_name}    ${PROD_8_Produt_Squad_Role_name_new}    ${PROD_8_Product_Squad_Role_Description_new}
-    Wait Until Element is present then click the element    ${BTN_Save}
+    Click the Kebab button in Product Squad Role    ${PROD_8_Product_Squad_Role}
+    Edit Product Squad Role    ${PROD_8_Product_Squad_Role}    ${PROD_8_Produt_Squad_Role_Update}    ${PROD_8_Product_Squad_Role_Description_Update}    ${BTN_Save}
 
 Verify a Product Squal Role name Should not be deleted
-    Search Data    ${Search_Product_Squad_Role}    ${PROD_8_Produt_Squad_Role_name_new} 
-    Click the Kebab button in Product Squad Role    ${PROD_8_Produt_Squad_Role_name_new} 
-    Delete Product Squad Role    ${PROD_8_Produt_Squad_Role_name_new}
+    Search Data    ${Input_Search_Product_Squad_Role}    ${PROD_8_Produt_Squad_Role_Update} 
+    Click the Kebab button in Product Squad Role    ${PROD_8_Produt_Squad_Role_Update} 
+    Delete Product Squad Role    ${PROD_8_Produt_Squad_Role_Update}
     Wait Until Element is present then click the element    ${BTN_Cancel}  
 
 Verify a Product Squal Role name Should be deleted 
-    Click the Kebab button in Product Squad Role    ${PROD_8_Produt_Squad_Role_name_new} 
-    Delete Product Squad Role    ${PROD_8_Produt_Squad_Role_name_new}  
+    Click the Kebab button in Product Squad Role    ${PROD_8_Produt_Squad_Role_Update} 
+    Delete Product Squad Role    ${PROD_8_Produt_Squad_Role_Update}  
     Wait Until Element is present then click the element    ${BTN_Confirm}
 
 Verify Application should be Close

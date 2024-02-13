@@ -1,7 +1,7 @@
 *** Settings ***
 Library         SeleniumLibrary
 Library         String
-Library         DateTime
+Library        DateTime
 Variables       ../Data/xpath.py
 Variables       ../Data/data.py
 
@@ -13,8 +13,7 @@ Wait Until Element is present then click the element
     Wait Until Page Contains Element    ${Element}    50
     Wait Until Keyword Succeeds    6    7    Click Element    ${Element}
 
-# TC01    portfolio management
-
+# PROD-4 Portfolio Management
 Create Portfolio
     [Documentation]    Using this keyword we can create portfolio
     [Arguments]    ${name}    ${description}    ${Element}
@@ -29,6 +28,7 @@ Create Portfolio
     Wait Until Element is present then click the element    ${Element}
 
 Navigate to portfolio data
+    [Documentation]    Using this keywork we can navigate to Portfolio
     [Arguments]    ${name}
     ${Portfolio}    Format String    ${BTN_Portfolio_CUSTOM}    name=${name}
     Wait Until Element is present then click the element    ${Portfolio}
@@ -74,7 +74,7 @@ Verify a Portfolio is displayed
 Click the Kebab button on portfolio
     [Documentation]    Using this keywork we can click kebab button
     [Arguments]    ${name}
-    ${portfolio_more_option}    Format String    ${BTN_Portfolio_more}    name=${name}
+    ${portfolio_more_option}    Format String    ${BTN_Portfolio_Kebab}    name=${name}
     Wait Until Element is present then click the element    ${portfolio_more_option}
 
 Delete Potfolio
@@ -104,47 +104,51 @@ Select the checkbox
 "Close the Browser"
     Close Browser
 
-# PROD-5 Finance Configuration Category
 
+
+# PROD-5 Finance Configuration 
 Add Category
     [Documentation]    Using this keyword we can add category
-    [Arguments]    ${name}    ${Description}
+    [Arguments]    ${name}    ${Description}    ${Element}
     Wait Until Element is present then click the element    ${BTN_Add_Category}
-    Wait Until Page Contains Element    ${Input_Category_name}    50
-    Input Text    ${Input_Category_name}    ${name}
+    Wait Until Page Contains Element    ${Input_Category}    50
+    Input Text    ${Input_Category}    ${name}
     Wait Until Page Contains Element    ${Input_Category_Description}    50
     Input Text    ${Input_Category_Description}    ${Description}
+    Wait Until Element is present then click the element    ${Element}
 
 Click the Kebab button Category
     [Documentation]    Using this keyword we can click the kebab button
     [Arguments]    ${name}
-    ${Category_more_option}    Format String    ${BTN_Category_More}    name=${name}
+    ${Category_more_option}    Format String    ${BTN_Category_Kebab}    name=${name}
     Wait Until Element is present then click the element    ${Category_more_option}
 
 Edit Category
-    [Documentation]    Using this Keyword we can Edit Category
-    [Arguments]    ${name}    ${name1}    ${Description2}
+    [Documentation]    Using this Keyword we can Edit Category  
+    [Arguments]    ${name}    ${name_update}     ${Description_Update}    ${Element}  
     ${Category_edit}    Format String    ${BTN_Category_Edit}    name=${name}
     Wait Until Element is present then click the element    ${Category_edit}
-    Press Keys    ${Input_Category_name}    CTRL+A+BACKSPACE
-    Press Keys    ${Input_Category_name}    ${name1}
-    Press Keys    ${Input_Category_Description}    CTRL+A+BACKSPACE
-    Press Keys    ${Input_Category_Description}    ${Description2}
+    Press Keys    ${Input_Category}    CTRL+A+BACKSPACE
+    Press Keys    ${Input_Category}    ${name_update}  
+    Press Keys    ${Input_Category_Description}    CTRL+A+BACKSPACE    
+    Press Keys    ${Input_Category_Description}    ${Description_Update}
+    Wait Until Element is present then click the element    ${Element}  
 
 Verify a Category is displayed
-    [Documentation]    Using this keyword we can Filter Category name
+    [Documentation]    Using this keyword we can Filter Category 
     [Arguments]    ${name}
-    ${Category}    Format String    ${Category_name}    name=${name}
+    ${Category}    Format String    ${Navigate_Category}    name=${name}
     Check element is present    ${Category}
 
-Delete Category
+Delete Category  
     [Documentation]    Using this keyword we can click delete button
-    [Arguments]    ${name}
+    [Arguments]    ${name}    ${Element}  
     ${Category}    Format String    ${BTN_Category_Delete}    name=${name}
     Wait Until Element is present then click the element    ${Category}
+    Wait Until Element is present then click the element    ${Element}
 
-# TC03 Finance customize budget
 
+#PROD-7 Finance Customize Budget
 Create Finance
     [Documentation]    Using this keyword we can create new finance budget
     [Arguments]    ${name}    ${Description}
@@ -187,29 +191,24 @@ Delete Budget
     [Arguments]    ${name}    ${element}
     ${budget_delete}    Format String    ${BTN_Delete_budget}    name=${name}
     Wait Until Element is present then click the element    ${budget_delete}
-    Wait Until Element is present then click the element    ${element}
+    Wait Until Element is present then click the element    ${element}   
 
-    # TC05 recycl bin
-
-click on restore button and cancel restore
-    Wait Until Element is present then click the element    ${Restore_btn}
-    wait Until Element is present then click the element    ${BTN_Cancel}
 
 # PROD-8 Product Squad Role
-
 Add Product Squad Role
-    [Documentation]    Using this Keyword we can add Product Squad Role
-    [Arguments]    ${name}    ${Description}
+    [Documentation]     Using this Keyword we can add Product Squad Role
+    [Arguments]    ${name}    ${Description}    ${Element}
     Wait Until Element is present then click the element    ${BTN_Add_Role}
-    Wait Until Page Contains Element    ${Input_Product_Squad_Role_name}    50
-    Input Text    ${Input_Product_Squad_Role_name}    ${name}
+    Wait Until Page Contains Element    ${Input_Product_Squad_Role}    50
+    Input Text    ${Input_Product_Squad_Role}    ${name}
     Wait Until Page Contains Element    ${Input_Product_Squad_Role_Description}    50
     Input Text    ${Input_Product_Squad_Role_Description}    ${Description}
+    Wait Until Element is present then click the element    ${Element}
 
 Verify a Product Squad Role is displayed
-    [Documentation]    Using this keyword we can display Product Squad Role
+    [Documentation]    Using this keyword we can display Product Squad Role 
     [Arguments]    ${name}
-    ${Product_Squad_Role}    Format String    ${Product_Squad_Role_name}    name=${name}
+    ${Product_Squad_Role}    Format String    ${Navigate_Product_Squad_Role}    name=${name}
     Check element is present    ${Product_Squad_Role}
 
 Click the Kebab button in Product Squad Role
@@ -217,112 +216,121 @@ Click the Kebab button in Product Squad Role
     [Arguments]    ${name}
     ${Product_Squad_Role}    Format String    ${BTN_Product_Squad_Role_Kebab}    name=${name}
     Wait Until Element is present then click the element    ${Product_Squad_Role}
+    
 
 Edit Product Squad Role
     [Documentation]    Using this we can Click Edit Category
-    [Arguments]    ${name}    ${name1}    ${Description2}
+    [Arguments]    ${name}    ${name1}     ${Description2}    ${Element}  
     ${Product_Squad_Role_edit}    Format String    ${BTN_Product_Squad_Role_Edit}    name=${name}
     Wait Until Element is present then click the element    ${Product_Squad_Role_edit}
-    Press Keys    ${Input_Product_Squad_Role_name}    CTRL+A+BACKSPACE
-    Press Keys    ${Input_Product_Squad_Role_name}    ${name1}
-    Press Keys    ${Input_Product_Squad_Role_Description}    CTRL+A+BACKSPACE
+    Press Keys    ${Input_Product_Squad_Role}    CTRL+A+BACKSPACE
+    Press Keys    ${Input_Product_Squad_Role}    ${name1}  
+    Press Keys    ${Input_Product_Squad_Role_Description}    CTRL+A+BACKSPACE    
     Press Keys    ${Input_Product_Squad_Role_Description}    ${Description2}
+    Wait Until Element is present then click the element    ${Element} 
 
 Delete Product Squad Role
-    [Documentation]    Using this keyword we can click delete button
-    [Arguments]    ${name}
+    [Documentation]    Using this keyword we can click delete button     
+    [Arguments]    ${name}  
     ${Product_Squad_Role_Delete}    Format String    ${BTN_Product_Squad_Role_Delete}    name=${name}
     Wait Until Element is present then click the element    ${Product_Squad_Role_Delete}
 
-# PPG-Product/Platform
 
-Click_Portfolio
-    [Documentation]    Using this keyword we can Navigate to Portfolio
-    [Arguments]    ${name}
+# PROD-14 PPG-Product/Platform
+Navigate to Portfolio and Click on PPG tab
+    [Documentation]    Using this keyword we can Navigate to Portfolio    
+    [Arguments]    ${name}    ${Element}      
     ${Portfolio}    Format String    ${Portfolio_Click}    name=${name}
     Wait Until Element is present then click the element    ${Portfolio}
+    Wait Until Element is present then click the element    ${Element}
 
-Create PPG
-    [Documentation]    Using this keyword we can create PPG
-    [Arguments]    ${name2}    ${description}    ${Owner}
-    ${Status}    Run Keyword And Return Status    Page Should Contain Element    ${BTN_Add_PPG}
+Create PPG 
+    [Documentation]    Using this keyword we can create PPG 
+    [Arguments]    ${name2}    ${description}    ${Owner}    ${Type}    ${Element} 
+    ${Status}    Run Keyword And Return Status    Page Should Contain Element    ${BTN_Add_PPG} 
     IF    '${Status}' == '${True}'
         Wait Until Element is present then click the element    ${BTN_Add_PPG}
     ELSE
         Wait Until Element is present then click the element    ${BTN_Create_PPG}
-    END
+    END   
     Wait Until Page Contains Element    ${Input_PPG_name}    50
-    Input Text    ${Input_PPG_name}    ${name2}
+    Input Text    ${Input_PPG_name}    ${name2}    
     Press Keys    ${Input_PPG_Description}    ${description}
-    Wait Until Element is present then click the element    ${Input_PPG_Owner}
+    Wait Until Element is present then click the element    ${BTN_PPG_Owner}
     Press Keys    ${Input_Search_Owner}    ${Owner}
-    ${Owner}    Format String    ${Select_Owner}    name=${Owner}
+    ${Owner}    Format String    ${BTN_Select_Owner}    name=${Owner}
     Wait Until Element is present then click the element    ${Owner}
     Wait Until Element is present then click the element    ${Input_PPG_Type}
+    Wait Until Element is present then click the element    ${Type}
+    Wait Until Element is present then click the element    ${Element}
 
-Click the Kebab button in PPG
-    [Documentation]    Using this keyword we can click kebab for PPG
+Click the Kebab button 
+    [Documentation]    Using this keyword we can click kebab
+    [Arguments]    ${name}    ${Element}    
+    ${Kebab}    Format String    ${Element}    name=${name}
+    Wait Until Element is present then click the element    ${Kebab} 
+
+Verify a Created Data is displayed
+    [Documentation]    Using this keyword we can display the Created data
     [Arguments]    ${name}
-    ${Kebab}    Format String    ${BTN_PPG_Kebab}    name=${name}
-    Wait Until Element is present then click the element    ${Kebab}
+    ${Data}    Format String    ${Input_Created_Data}    name=${name}
+    Check element is present    ${Data}
 
 Edit PPG
     [Documentation]    Using this keyword we can edit Type Field
-    [Arguments]    ${name}
+    [Arguments]    ${name}    ${Type}    ${Element}    
     ${Edit}    Format String    ${BTN_PPG_Edit}    name=${name}
     Wait Until Element is present then click the element    ${Edit}
     Wait Until Element is present then click the element    ${Input_PPG_Type}
+    Wait Until Element is present then click the element    ${Type}
+    Wait Until Element is present then click the element    ${Element}
 
-Click_PPG
-    [Documentation]    Using this keyword we can Navigate PPG
-    [Arguments]    ${name}
-    ${PPG}    Format String    ${PPG_Click}    name=${name}
+Navigate to PPG and Click on Product/Platform Tab
+    [Documentation]    Using this keyword we can Navigate PPG    
+    [Arguments]    ${name}    ${Element}  
+    ${PPG}    Format String    ${Navigate_PPG}    name=${name}
     Wait Until Element is present then click the element    ${PPG}
+    Wait Until Element is present then click the element    ${Element}
 
 Create Product/Platform
     [Documentation]    Using this keyword we can create Product/Platform
-    [Arguments]    ${name2}    ${description}    ${Owner}
+    [Arguments]    ${name2}    ${description}    ${Owner}    ${Type}    ${Element}
     Wait Until Element is present then click the element    ${BTN_Add_Product_Platform}
-    Wait Until Page Contains Element    ${Input_Product_Platform_name}    50
-    Input Text    ${Input_Product_Platform_name}    ${name2}
+    Wait Until Page Contains Element    ${Input_Product_Platform}    50
+    Input Text    ${Input_Product_Platform}    ${name2}
     Press Keys    ${Input_Product_Platform_Description}    ${description}
     Wait Until Element is present then click the element    ${Input_Product_Platform_Owner}
-    Press Keys    ${Search_Product_Platform_Owner}    ${Owner}
-    ${Owner}    Format String    ${Select_Owner}    name=${Owner}
+    Press Keys    ${BTN_Search_Product_Platform_Owner}    ${Owner}
+    ${Owner}    Format String    ${BTN_Select_Owner}    name=${Owner}
     Wait Until Element is present then click the element    ${Owner}
-    Wait Until Element is present then click the element    ${Input_Product_Platform_Type}
-
-Click the Kebab button in Product/Platform
-    [Documentation]    Using this keyword we can click kebab for Product/Platform
-    [Arguments]    ${name}
-    ${Kebab}    Format String    ${BTN_Product_Platform_Kebab}    name=${name}
-    Wait Until Element is present then click the element    ${Kebab}
+    Wait Until Element is present then click the element    ${Drop_Down_Product_Platform_Type}
+    Wait Until Element is present then click the element    ${Type}
+    Wait Until Element is present then click the element    ${Element}
 
 Edit Product/Platform
-    [Documentation]    Using this keyword we can edit Type Field
-    [Arguments]    ${name}
+    [Documentation]    Using this keyword we can edit Type Field 
+    [Arguments]    ${name}    ${Type}    ${Element}    
     ${Edit}    Format String    ${BTN_Product_Platform_Edit}    name=${name}
     Wait Until Element is present then click the element    ${Edit}
-    Wait Until Element is present then click the element    ${Input_Product_Platform_Type}
+    Wait Until Element is present then click the element    ${Drop_Down_Product_Platform_Type}
+    Wait Until Element is present then click the element    ${Type} 
+    Wait Until Element is present then click the element    ${Element} 
 
-Delete Product/Platform
-    [Documentation]    Using this keyword we can click delete button for Product/Platform
-    [Arguments]    ${name}
-    ${Delete}    Format String    ${BTN_Product_Platform_Delete}    name=${name}
+Delete
+    [Documentation]    Using this keyword we can click delete  
+    [Arguments]    ${name}    ${Element}    ${Element2}    
+    ${Delete}    Format String    ${Element}    name=${name}
     Wait Until Element is present then click the element    ${Delete}
+    Wait Until Element is present then click the element    ${Element2}
 
 Click Breadcrums
     [Documentation]    Using this keyword we canNavigate Breadcrums
-    [Arguments]    ${name}
+    [Arguments]    ${name}    
     ${Breadcrums}    Format String    ${Bread_Crums}    name=${name}
     Wait Until Element is present then click the element    ${Breadcrums}
 
-Delete PPG
-    [Documentation]    Using this keyword we can click delete button for PPG
-    [Arguments]    ${name}
-    ${Delete}    Format String    ${BTN_PPG_Delete}    name=${name}
-    Wait Until Element is present then click the element    ${Delete}
 
+ 
 #PROD-6 PLAtform OKR and PRODUCT SQUAD
 
 create PLatform OKR
@@ -430,3 +438,14 @@ Delete Key result
     Wait Until Element is present then click the element    ${Element}
 
 
+
+
+    
+    
+ 
+    
+
+
+
+
+   

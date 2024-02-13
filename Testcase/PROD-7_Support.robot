@@ -58,7 +58,7 @@ Verify Save button should be enabled and Category should be created
 
 verify an error message displayed as "No results found"
     search Data    ${INPUT_budget_search }    ${PROD_7_budget_update}
-    Check text is present    ${TXT_NO_Data}    
+    Check text is present    ${TXT_NO_Record_Data}    
 
 verify if category Record should be Filtered and Displayed
     Set Selenium Implicit Wait    1
