@@ -54,41 +54,35 @@ Verify it should display Finance Configuration Tab by Default
     Wait Until Element is present then click the element    ${Icon_SystemSettings}
 
 Verify Save Button should be disabled and Category shouldn't be created 
-    Add Category    ${PROD_5_Category_name}    ${PROD_5_Category_Description}
-    Wait Until Element is present then click the element    ${BTN_Create_Popup_Cancel}
+    Add Category    ${PROD_5_Category}    ${PROD_5_Category_Description}    ${BTN_Cancel}
 
 Verify Save button should be enabled and Category should be created
-    Add Category    ${PROD_5_Category_name}    ${PROD_5_Category_Description}
-    Wait Until Element is present then click the element    ${BTN_Category_Popup_Save}
+    Add Category    ${PROD_5_Category}    ${PROD_5_Category_Description}    ${BTN_Save}
 
 Verify an error message shouble be display as " No results found".
-    Search Data    ${Search_FinanceConfiguration}    ${PROD_5_Invalid_Category}
-    Check element is present    ${TXT_Category_NO_DATA}
+    Search Data    ${Input_Search_FinanceConfiguration}    ${PROD_5_Invalid_Category}
+    Check element is present    ${TXT_NO_DATA}
 
 Verify if Category Record should be Filtered and Displayed
-    Search Data    ${Search_FinanceConfiguration}    ${PROD_5_Category_name}
-    Verify a Category is displayed    ${PROD_5_Category_name}
+    Search Data    ${Input_Search_FinanceConfiguration}    ${PROD_5_Category}
+    Verify a Category is displayed    ${PROD_5_Category}
 
 Verify if category Fields should not be changed
-    Click the Kebab button Category    ${PROD_5_Category_name} 
-    Edit Category    ${PROD_5_Category_name}    ${PROD_5_Category_name_new}    ${PROD_5_Category_Description_new} 
-    Wait Until Element is present then click the element    ${BTN_Edit_Popup_Cancel}
+    Click the Kebab button Category    ${PROD_5_Category} 
+    Edit Category    ${PROD_5_Category}    ${PROD_5_Category_Update}    ${PROD_5_Category_Description_Update}    ${BTN_Cancel} 
 
 verify if category Fields should be changed
-    Click the Kebab button Category    ${PROD_5_Category_name} 
-    Edit Category    ${PROD_5_Category_name}    ${PROD_5_Category_name_new}    ${PROD_5_Category_Description_new}
-    Wait Until Element is present then click the element    ${BTN_Edit_Popup_Save}
+    Click the Kebab button Category    ${PROD_5_Category} 
+    Edit Category    ${PROD_5_Category}    ${PROD_5_Category_Update}    ${PROD_5_Category_Description_Update}     ${BTN_Save}
 
 Verify a Category name Should not be deleted
-    Search Data    ${Search_FinanceConfiguration}    ${PROD_5_Category_name_new}
-    Click the Kebab button Category    ${PROD_5_Category_name_new}  
-    Delete Category    ${PROD_5_Category_name_new} 
-    Wait Until Element is present then click the element    ${BTN_Detele_Popup_Cancel} 
+    Search Data    ${Input_Search_FinanceConfiguration}    ${PROD_5_Category_Update}
+    Click the Kebab button Category    ${PROD_5_Category_Update}  
+    Delete Category    ${PROD_5_Category_Update}    ${BTN_Cancel}  
 
 Verify a Category name Should be deleted
-    Click the Kebab button Category    ${PROD_5_Category_name_new}  
-    Delete Category    ${PROD_5_Category_name_new} 
-    Wait Until Element is present then click the element    ${BTN_Delete_Popup_Confirm}
+    Click the Kebab button Category    ${PROD_5_Category_Update}  
+    Delete Category    ${PROD_5_Category_Update}    ${BTN_Confirm} 
 
 Verify Application should be Close
     "Close the Browser"
