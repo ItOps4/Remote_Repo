@@ -62,13 +62,12 @@ TAB_Product_Squad_Role = '//div[@id="system-settings-product-squad-roles"]'
 BTN_Add_Role = '//button[@id="product-squad-add-role"]'
 Input_Product_Squad_Role = '//input[@id="product-squad-role-name"]'
 Input_Product_Squad_Role_Description = '//textarea[@id="product-squad-role-description"]'
-Search_Product_Squad_Role = '//input[@id="product-squad-roles-search-input"]'
 TXT_Product_Squad_Role_NO_DATA = '//p[text()="No records to display"]'
-Product_Squad_Role_name = '//td[@id="custom-id-{name}"]/parent::tr'
+Input_Search_Product_Squad_Role = '//input[@id="product-squad-roles-search-input"]'
+Navigate_Product_Squad_Role = '//td[@id="custom-id-{name}"]/parent::tr'
 BTN_Product_Squad_Role_Kebab = '//div[@id="product-squad-role-more-btn-{name}"]'
 BTN_Product_Squad_Role_Edit = '//li[@id="product-squad-role-edit-{name}"]'
 BTN_Product_Squad_Role_Delete = '//li[@id="product-squad-role-delete-{name}"]'
-
 
 #PROD-6 PRODUCT/PLATFORM OKR and SQUAD
 
@@ -97,11 +96,9 @@ BTN_OVERVIEW_edit = '//button[@id="okr-overview-edit-btn"]'
 BTN_BACKARROW_KEY_OVERVIEW = '//i[@id="back-to-result-undefined"]'
 BTN_DELETE_result= '//li[@id="keyresult-delete-{name}"]'
 BTN_BACKARROW_OKR = '//i[@id="back-to-okr-PROD_6_okr1"]'
-Input_Search_Product_Squad_Role = '//input[@id="product-squad-roles-search-input"]'
-Navigate_Product_Squad_Role = '//td[@id="custom-id-{name}"]/parent::tr'
-BTN_Product_Squad_Role_Kebab = '//div[@id="product-squad-role-more-btn-{name}"]'
-BTN_Product_Squad_Role_Edit = '//li[@id="product-squad-role-edit-{name}"]'
-BTN_Product_Squad_Role_Delete = '//li[@id="product-squad-role-delete-{name}"]'
+
+TAB_squad = '//div[@id="product-squad"]'
+
 
 # PROD-14 PPG-Product/Platform
 Portfolio_Click = '//td[@id="custom-id-{name}"]'

@@ -27,4 +27,5 @@ Product / platform OKR and Squad
     Then Click on more icon and Click on delete button and click on cancel button
     Then Click on more icon , click on delete button and click on Save button
 
-    
+    Then click on ppg menu and navigate to ppg name
+    Then Navigate to product , click on squad tab

@@ -66,6 +66,12 @@ Then Click on more icon and Click on delete button and click on cancel button
 Then Click on more icon , click on delete button and click on Save button
     verify a OKR should be delete
 
+Then click on ppg menu and navigate to ppg name
+    Verify it should display ppg
+
+Then Navigate to product , click on squad tab
+    Verify it should display product page and it should display squad page
+
 Verify if user should be able to login successfully
     [Arguments]    ${username}
     Login Application    ${username}
@@ -157,3 +163,15 @@ verify a OKR shouldn't be delete
 verify a OKR should be delete
     click on okr kebab button    ${PROD_6_OKR_UPDATE}
     Delete OKR    ${PROD_6_OKR_UPDATE}    ${BTN_Confirm}
+
+
+Verify it should display ppg 
+    Click Breadcrums    ${PROD_6_PPG}
+    Create PPG    ${PROD_6_product}    ${PROD_6_description}    ${TXT_Manager_name}    ${Input_Type_Product}    ${BTN_Save}
+
+Verify it should display product page and it should display squad page
+    Navigate to portfolio data    ${PROD_6_product}
+    Wait Until Element is present then click the element    ${TAB_Product_Platform }
+    Create Product/Platform    ${PROD_6_PP_product}    ${PROD_6_PP_description}    ${TXT_Manager_name}    ${Input_Type_Product}    ${BTN_Save}
+    Navigate to portfolio data    ${PROD_6_product}
+    Wait Until Element is present then click the element    ${}

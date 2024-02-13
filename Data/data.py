@@ -50,6 +50,10 @@ PROD_6_KEY_RESULT_UPDATE = 'PROD_6_keyname1'
 PROD_6_keyDescription_UPDATE = 'PROD_6_keyDescription1'
 PROD_6_BASELINE = '12345'
 PROD_6_UOM = 'kg'
+PROD_6_product = 'PROD_6_product'
+PROD_6_PP_product = 'PROD_6_PP_product'
+PROD_6_PP_description = 'PROD_6_PP_description'
+
 
 
 # PROD-14 PPG-Product/Platform
