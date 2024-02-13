@@ -33,6 +33,25 @@ PROD_8_Product_Squad_Role_Invalid = 'TC_Prod'
 PROD_8_Produt_Squad_Role_Update = 'PROD_8_Product_Squad_Role_name_Update'
 PROD_8_Product_Squad_Role_Description_Update = 'PROD_8_Product_Squad_Role_Description_Update'
 
+#PROD-6 PRODUCT / PLATFORM OKR and Squad
+PROD_6_portfolio = 'PROD-6 PORTFOLIO'
+PROD_6_description =  'PROD-6_description'
+PROD_6_PPG = 'PROD_6_ppg_name'
+TXT_Manager_name = "Lohitha"
+PROD_6_pp = 'PROD_6_pp_name1'
+TXT_manager_OKR = 'Neeraj patel'
+PROD_6_OKR = 'PROD_6_okr1'
+PROD_6_OKR_UPDATE= 'PROD_6_okr2'
+PROD_6_Keyresult = 'PROD_6_keyresult'
+PROD_6_keyresult_descript = 'PROD_6_keyresult_descript'
+TXT_baseline = '1234'
+TXT_uom = 'cm'
+PROD_6_KEY_RESULT_UPDATE = 'PROD_6_keyname1'
+PROD_6_keyDescription_UPDATE = 'PROD_6_keyDescription1'
+PROD_6_BASELINE = '12345'
+PROD_6_UOM = 'kg'
+
+
 # PROD-14 PPG-Product/Platform
 PROD_14_Portfolio = 'PROD_14_Portfolio'
 PROD_14_Portfolio_Description = 'PROD_14_Portfolio_Description'
