@@ -103,3 +103,123 @@ Input_Search_Product_Platform = '//input[@id="product-platform-search-field"]'
 BTN_Product_Platform_Delete = '//li[@id="product-platform-delete-{name}"]'
 Bread_Crums = '//p[@id="breadcrums-{name}"]'
 BreadCrums_Portfolio = '//p[@id="breadcrums-Portfolio Management"]'
+
+#PROD-12 Strategic outcome
+Icon_Portfolio_Management = '//span[@id="icon-Portfolio Management"]'
+Strategic_outcome_Tab = "//a[@id='Strategic Outcome-tabs']"
+BTN_Add_Strategic_outcome = "//button[@id='create-strategic-outcome-nullstate-btn']"
+INPUT_Search_Strategic_Outcome = "//input[@id='strategic-outcome-search']"
+INPUT_Strategic_Outcome_Name = "//input[@id='strategy-outcome-name']"
+INPUT_Strategic_Outcome_Description = "//textarea[@id='strategy-outcome-description']"
+INPUT_SO_Start_Date =  '//p[@id="strategy-outcome-start-date"]/parent::div/descendant::input'
+INPUT_SO_End_Date ='//p[@id="strategy-outcome-end-date"]/parent::div/descendant::input'
+Drop_Down_Select_Manager = "//div[@id='strategy-outcome-assign-to']"
+Drop_Down_Input_Select_Manager = "//input[@id='search-field']"
+BTN_Add_Strategic_Cancel = "//button[@id='strategic-outcome-create-cancel-btn']"
+BTN_Add_Strategic_Save = "//button[@id='strategic-outcome-create-save-btn']"
+BTN_More_SO ="//div[@id='strategic-outcome-more-btn-{name}']"
+BTN_Add_OKR = '//button[@id="add-okr-{name}"]'
+BTN_Create_OKR_Cancel = "//button[@id='okr-create-cancel-btn']"
+BTN_Create_OKR_Save = "//button[@id='okr-create-save-btn']"
+INPUT_OKR_name = "//input[@id='okr-objective-key']"
+INPUT_OKR_Description = "//textarea[@id='okr-description']"
+INPUT_OKR_Start_Date = '//p[@id="okr-start-date"]/parent::div/descendant::input'
+INPUT_OKR_End_Date = '//p[@id="okr-end-date"]/parent::div/descendant::input'
+Drop_Down_Add_Under = "//div[@id='okr-ppg']"
+Drop_Down_Select_ppg = "//li[@id='ppg']"
+Drop_Down_Select_product = "//li[@id='product']"
+Drop_Down_Assign_To= "//div[@id='okr-assign-to']"
+Drop_Down_INPUT_Search_Member = "//input[@id='search-field']"
+Drop_Down_Select_ppg_name= "//li[@id='TestN_PPG']"
+BTN_OKR_Cancel = "//p[contains(text(),'Cancel')]"
+BTN_OKR_Save = "//p[contains(text(),'Save')]"
+BTN_More_OKR = "//div[@id='okr-more-btn-{name}']"
+BTN_More_Edit_OKR = "//p[contains(text(),'Edit')]"
+BTN_More_Delete_OKR = "//p[contains(text(),'Delete')]"
+BTN_OKR_Delete_Cancel = "//button[@id='common-delete-cancel-btn']"
+BTN_OKR_Delete_Confirm = "//button[@id='common-delete-confirm-btn']"
+INPUT_Edit_OKR_Name = "//input[@id='okr-objective-key']"
+INPUT_Edit_OKR_Description = "//textarea[@id='okr-description']"
+INPUT_Edit_OKR_Start_Date = "//input[@id=':r2p:']"
+INPUT_Edit_OKR_End_Date = "//input[@id=':r2s:']"
+Drop_Down_Edit_Add_Under = "//div[@id='okr-ppg']"
+Drop_Down_Edit_Select_ppg = "//li[@id='ppg']"
+Drop_Down_Edit_Select_product = "//li[@id='product']"
+Drop_Down_Select_Product_Platform = "//div[@id='okr-product']"
+BTN_OKR_Edit_Cancel = "//button[@id='okr-edit-cancel-btn']"
+BTN_OKR_Edit_Save = "//button[@id='okr-edit-save-btn']"
+BTN_Strategic_Expand = "//tbody/tr[1]/td[1]/span[1]/button[1]/*[1]" #id required
+BTN_Strategic_Outcome_more = "//div[@id='so-more-btn-{name}']"
+BTN_Strategic_Outcome_more_Edit = "//p[contains(text(),'Edit')]"
+BTN_Strategic_Outcome_more_Delete = "//p[contains(text(),'Delete')]"
+INPUT_Edit_Strategic_Outcome_Name = "//input[@id='strategy-outcome-name']"
+INPUT_Edit_Strategic_Outcome_Description = "//textarea[@id='strategy-outcome-description']"
+BTN_Edit_Strategic_Cancel = "//button[@id='strategic-outcome-edit-cancel-btn']"
+BTN_Edit_Strategic_Save = "//button[@id='strategic-outcome-edit-save-btn']"
+Drop_Down_Edit_Assign_To = "//div[@id='strategy-outcome-assign-to']"
+Drop_Down_INPUT_Edit_Search_Member = "//input[@id='search-field']"
+BTN_OKR_Delete = "//p[contains(text(),'Delete')]"
+BTN_Strategic_Delete_Cancel = "//button[@id='common-delete-cancel-btn']"
+BTN_Strategic_Delete_Confirm ="//button[@id='common-delete-confirm-btn']"
+BTN_Create_OKR = "//button[@id='so-okr-add-okr-btn']"
+BTN_OKR_Expand = "//tbody/tr[1]/td[1]/span[1]/button[1]/*[1]" #id required
+BTN_Add_Result = "//button[@id='okr-create-result-{name}']"
+BTN_Add_Key_Results = "//button[@id='create-sc-keyResultNullState-btn']"
+INPUT_Search_Key_Results = "//input[@id='keyresult-search-input']"
+BTN_More_Key_Results ="//div[@id='keyresult-more-btn-{name}']"
+INPUT_Search_OKR = "//input[@id='okr-search-input']"
+INPUT_Key_Result_Name = "//input[@id='keyresult-key-result']"
+INPUT_Key_Result_Description = "//textarea[@id='keyresult-description']"
+INPUT_Key_Result_Baseline = "//input[@id='keyresult-basline']"
+INPUT_Key_Result_Unit = "//input[@id='keyresult-uom']"
+INPUT_Key_Result_Dropdown = "//div[@id='keyresult-assign-to']"
+INPUT_Key_Result_Dropdown_Input = "//input[@id='search-field']"
+BTN_Key_Result_Cancel = "//p[contains(text(),'Cancel')]"
+BTN_Key_Result_Edit_Cancel = "//button[@id='keyresult-edit-cancel']"
+BTN_Key_Result_Edit_Save = "//button[@id='keyresult-edit-save']"
+BTN_Key_Result_Save = "//p[contains(text(),'Save')]"
+BTN_Key_Result_Edit = "//p[contains(text(),'Edit')]"
+BTN_Key_Result_Delete = "//p[contains(text(),'Delete')]"
+BTN_Key_Result_Delete_Cancel = "//button[@id='common-delete-cancel-btn']"
+BTN_Key_Result_Delete_Confirm = "//button[@id='common-delete-confirm-btn']"
+Drop_Down_LI_Iyyappan = "//li[@id='Iyyappan']"
+Back_to_SO = '//i[@id="back-to-so-{name}"]'
+Back_to_OKR = '//i[@id="back-to-okr-{name}"]'
+Radio_SO_Active = '//p[text()="Active"]'
+Radio_SO_Inactive = '//p[text()="Inactive"]'
+Radio_OKR_Active = '//p[text()="Active"]'
+Radio_OKR_Inactive = '//p[text()="Inactive"]'
+Radio_key_Result_Active = '//p[text()="Active"]'
+Radio_Key_Result_Inactive = '//p[text()="Inactive"]'
+OBJ_KEY_RES_NAME = "//td[@id='custom-id-{name}']"
+Portfolio_Name = '//td[@id="custom-id-{name}"]'
+
+
+#Edit Key Result- Advance Settings
+BTN_EK_Add_Quarter = "//button[@id='keyresult-details-add-quarter']"
+Drop_Down_EK_Year = "//div[@id='keyresult-details-year_0']"
+INPUT_EK_Year = "//input[@id='search-field']"
+EK_Select_Year = "//li[@id='2024']"
+Drop_Down_EK_Quarter = "//div[@id='keyresult-details-quarter_0']"
+INPUT_EK_Quarter = "//input[@id='search-field']"
+EK_Select_Quarter = "//li[@id='Quarter 1']"
+INPUT_EK_Target= "//input[@id='keyresult-details-target_0']"
+INPUT_EK_Actual = "//input[@id='keyresult-details-actual_0']"
+
+
+#PROD-16 portfolio - Settings - User Access
+Settings_Tab = '//a[@id="Settings-tabs"]'
+User_Access_Tab = "//p[@id='tabs-name-User Access']"
+BTN_Add_User = "//button[@id=' Portfolio-setting-add-user-access']"
+INPUT_Search_Add_User= "//input[@id='search-field']"
+INPUT_Search_User_Access = "//input[@id=' Portfolio-user-access-input-search']"
+Drop_Down_Select_Name = "//li[@id='label-iyyappan']"
+Drop_Down_Search_Add_user = "//input[@id='checkbox-{name}']"
+BTN_Add_user_Cancel = "//button[@id='useraccess-cancel-btn']" 
+BTN_Add_user_Save = "//button[@id='useraccess-save-btn']"
+TXT_Header_Add_User = "//p[@id='popup-header-Add Users']"
+BTN_More_UA = "//div[@id=' Portfolio-useraccess-more-btn-{name}']"
+BTN_Assign_Role = "//li[@id=' Portfolio-useraccess-assgin-role-{name}']"
+BTN_Assign_Role_Admin = "//li[@id=' Portfolio-useraccess-assgin-role-admin-{name}']"
+BTN_Assign_Role_Viewer = "//li[@id=' Portfolio-useraccess-assgin-role-viewer-{name}']"
+UA_More_Delete = "//li[@id=' Portfolio-useraccess-delete-{name}']"

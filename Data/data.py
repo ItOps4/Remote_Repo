@@ -48,10 +48,39 @@ PROD_14_Product_Platform = 'PROD_14_Product_Platform'
 PROD_14_Product_Platform_description = 'PROD_14_Product_Platform_description'
 PROD_14_Product_Platform_Invalid = 'PROD_14_Product_Platform_Invalid'
 
+#TC12 Strategic outcome
+PROD_12_Input_Start_Date = '02022024'
+PROD_12_Input_End_Date = '02202024'
+PROD_12_Input_Edit_Start_Date = '02022024'
+PROD_12_Input_Edit_End_Date = '02202024'
+PROD_12_SO_name = 'PROD 12 SO name'
+PROD_12_SO_Description = 'PROD 12 SO Description'
+PROD_12_Invalid_Name = 'PROD 12 invalid name'
+PROD_SO_Edit_name = 'PROD 12 SO Edit name'
+PROD_SO_Edit_description = 'PROD 12 SO Edit description'
+PROD_OKR_Edit_name = 'PROD 12 OKR Edit name'
+PROD_OKR_Edit_description = 'PROD 12 OKR Edit description'
+PROD_OKR_name = 'PROD 12 OKR name'
+PROD_OKR_description = 'PROD 12 OKR description'
+PROD_Key_name = 'PROD 12 Key name'
+PROD_Key_description = 'PROD 12 Key description'
+PROD_Key_Edit_name = 'PROD 12 Edit key name'
+PROD_Key_Edit_description = 'PROD 12 Edit Key description'
+TXT_PM_Created_Name = 'TestN'
+TXT_SO_Created_Name = 'PROD 12 SO name'
+TXT_OKR_created_Name = 'PROD 12 OKR name'
+TXT_KEY_created_Name = 'PROD 12 Key name'
+TXT_Key_Baseline = '100'
+TXT_Key_Edit_Baseline = '10'
+TXT_Key_UOM = 'cm'
+TXT_Key_Edit_UOM = 'mm'
+TXT_Key_Edit_Target = '80'
+TXT_Key_Edit_Actual = '30'
 
 
-
-
+#PROD-16 User Access
+TXT_Iyyappan = 'Iyyappan'
+PROD_16_Invalid_Name = 'PROD 16 invalid name'
 
 
 
