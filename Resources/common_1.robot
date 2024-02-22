@@ -436,8 +436,8 @@ Edit Key Results
     Wait Until Element is present then click the element    ${EK_Select_Year}
     Wait Until Element is present then click the element    ${Drop_Down_EK_Quarter}
     Wait Until Element is present then click the element    ${EK_Select_Quarter}
-    Input Text    ${INPUT_EK_Target}    ${TXT_Key_Edit_Target}
-    Input Text    ${INPUT_EK_Actual}    ${TXT_Key_Edit_Actual}
+    Input Text    ${INPUT_EK_Target}    ${TXT_12_Key_Edit_Target}
+    Input Text    ${INPUT_EK_Actual}    ${TXT_12_Key_Edit_Actual}
 Click the Kebab button on Strategic Outcome
     [Documentation]    Using this keywork we can click kebab button 
     [Arguments]    ${name}
