@@ -157,7 +157,7 @@ Verify a OKR shouldn't be created
      Create,edit OKR   ${PROD_12_OKR_name}    ${PROD_12_OKR_description}    ${BTN_Save}    ${Drop_Down_Select_Product_Platform}
 
 Verify a okr Page should be displayed
-    click name and navigate to next page    ${Portfolio_Name}    ${TXT_12_SO_Created_Name}  
+    click name and navigate to next page    ${Portfolio_Name}    ${PROD_12_SO_Created_Name}  
 Verify an error message should be display as " No results found" and Verify if Category Record should be Filtered and Displayed in OKR
 
     Search Data    ${INPUT_Search_OKR}    ${PROD_12_Invalid_Name}
@@ -167,14 +167,14 @@ Verify an error message should be display as " No results found" and Verify if C
    
 Verify a Key Results shouldn't be created
     click Button and navigate to popup    ${BTN_Add_Result}    ${PROD_12_OKR_name}
-    Create Key results    ${PROD_12_Key_name}    ${PROD_12_Key_description}    ${TXT_12_Key_Baseline}    ${TXT_12_Key_UOM}   
+    Create Key results    ${PROD_12_Key_name}    ${PROD_12_Key_description}    ${PROD_12_Key_Baseline}    ${PROD_12_Key_UOM}   
     Wait Until Element is present then click the element    ${BTN_Cancel}    
 Verify a Key Results should be created
     click Button and navigate to popup    ${BTN_Add_Result}    ${PROD_12_OKR_name}
-    Create Key Results    ${PROD_12_Key_name}    ${PROD_12_Key_description}    ${TXT_12_Key_Baseline}    ${TXT_12_Key_UOM}   
+    Create Key Results    ${PROD_12_Key_name}    ${PROD_12_Key_description}    ${PROD_12_Key_Baseline}    ${PROD_12_Key_UOM}   
     Wait Until Element is present then click the element    ${BTN_Save}    
 Verify a key Result Page should be displayed
-    click name and navigate to next page    ${Portfolio_Name}    ${TXT_12_OKR_Created_Name}    
+    click name and navigate to next page    ${Portfolio_Name}    ${PROD_12_OKR_Created_Name}    
        
 Verify an error message should be display as " No results found" in Verify if Category Record should be Filtered and Displayed in Key Results
 
@@ -187,12 +187,12 @@ Verify an error message should be display as " No results found" in Verify if Ca
 Verify if category Fields should not be changed in Key Results   
     Click the Kebab button on Key Results    ${PROD_12_Key_name}
     Wait Until Element is present then click the element    ${BTN_Key_Result_Edit}
-    Edit Key Results    ${PROD_12_Key_Edit_name}    ${PROD_12_Key_Edit_description}    ${TXT_12_Key_Edit_Baseline}    ${TXT_12_Key_Edit_UOM}    
+    Edit Key Results    ${PROD_12_Key_Edit_name}    ${PROD_12_Key_Edit_description}    ${PROD_12_Key_Edit_Baseline}    ${PROD_12_Key_Edit_UOM}    
     Wait Until Element is present then click the element    ${BTN_Cancel} 
 verify if category Fields should be changed in Key Results
     Click the Kebab button on Key Results    ${PROD_12_Key_name}     
     Wait Until Element is present then click the element    ${BTN_Key_Result_Edit}
-    Edit Key Results    ${PROD_12_Key_Edit_name}    ${PROD_12_Key_Edit_description}    ${TXT_12_Key_Edit_Baseline}    ${TXT_12_Key_Edit_UOM}
+    Edit Key Results    ${PROD_12_Key_Edit_name}    ${PROD_12_Key_Edit_description}    ${PROD_12_Key_Edit_Baseline}    ${PROD_12_Key_Edit_UOM}
     Wait Until Element is present then click the element    ${BTN_Save}
  Verify a Category name Should not be deleted in Key Results
     Click the Kebab button on Key Results    ${PROD_12_Key_Edit_name}    
