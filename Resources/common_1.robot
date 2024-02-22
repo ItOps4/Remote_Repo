@@ -1,7 +1,7 @@
 *** Settings ***
 Library         SeleniumLibrary
 Library         String
-Library    DateTime
+Library         DateTime
 Variables       ../Data/xpath.py
 Variables       ../Data/data.py
 

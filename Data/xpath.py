@@ -105,6 +105,7 @@ Bread_Crums = '//p[@id="breadcrums-{name}"]'
 BreadCrums_Portfolio = '//p[@id="breadcrums-Portfolio Management"]'
 
 #PROD-12 Strategic outcome
+INPUT_Search_Portfolio = "//input[@id='portfolio-search-input']"
 Icon_Portfolio_Management = '//span[@id="icon-Portfolio Management"]'
 Strategic_outcome_Tab = "//a[@id='Strategic Outcome-tabs']"
 BTN_Add_Strategic_outcome = "//button[@id='create-strategic-outcome-nullstate-btn']"
@@ -117,6 +118,9 @@ Drop_Down_Select_Manager = "//div[@id='strategy-outcome-assign-to']"
 Drop_Down_Input_Select_Manager = "//input[@id='search-field']"
 BTN_Add_Strategic_Cancel = "//button[@id='strategic-outcome-create-cancel-btn']"
 BTN_Add_Strategic_Save = "//button[@id='strategic-outcome-create-save-btn']"
+BTN_More_Portfolio = "//div[@id='portfolio-more-btn-{name}']"
+BTN_Portfolio_more_Edit = "//p[contains(text(),'Edit')]"
+BTN_Portfolio_more_Delete = "//p[contains(text(),'Delete')]"
 BTN_More_SO ="//div[@id='strategic-outcome-more-btn-{name}']"
 BTN_Add_OKR = '//button[@id="add-okr-{name}"]'
 BTN_Create_OKR_Cancel = "//button[@id='okr-create-cancel-btn']"
@@ -130,7 +134,7 @@ Drop_Down_Select_ppg = "//li[@id='ppg']"
 Drop_Down_Select_product = "//li[@id='product']"
 Drop_Down_Assign_To= "//div[@id='okr-assign-to']"
 Drop_Down_INPUT_Search_Member = "//input[@id='search-field']"
-Drop_Down_Select_ppg_name= "//li[@id='TestN_PPG']"
+Drop_Down_Select_ppg_name= "//li[@id='PROD_12_PPG_name']"
 BTN_OKR_Cancel = "//p[contains(text(),'Cancel')]"
 BTN_OKR_Save = "//p[contains(text(),'Save')]"
 BTN_More_OKR = "//div[@id='okr-more-btn-{name}']"
@@ -156,6 +160,9 @@ INPUT_Edit_Strategic_Outcome_Name = "//input[@id='strategy-outcome-name']"
 INPUT_Edit_Strategic_Outcome_Description = "//textarea[@id='strategy-outcome-description']"
 BTN_Edit_Strategic_Cancel = "//button[@id='strategic-outcome-edit-cancel-btn']"
 BTN_Edit_Strategic_Save = "//button[@id='strategic-outcome-edit-save-btn']"
+BTN_Edit_Portfolio_Cancel = "//button[@id='portfolio-edit-cancel-btn']"
+BTN_Edit_Portfolio_Save = "//button[@id='portfolio-edit-save-btn']"
+Breadcrums_Portfolio_Management = "//p[@id='breadcrums-Portfolio Management']"
 Drop_Down_Edit_Assign_To = "//div[@id='strategy-outcome-assign-to']"
 Drop_Down_INPUT_Edit_Search_Member = "//input[@id='search-field']"
 BTN_OKR_Delete = "//p[contains(text(),'Delete')]"
@@ -193,6 +200,7 @@ Radio_key_Result_Active = '//p[text()="Active"]'
 Radio_Key_Result_Inactive = '//p[text()="Inactive"]'
 OBJ_KEY_RES_NAME = "//td[@id='custom-id-{name}']"
 Portfolio_Name = '//td[@id="custom-id-{name}"]'
+
 
 
 #Edit Key Result- Advance Settings
