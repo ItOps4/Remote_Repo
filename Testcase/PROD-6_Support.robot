@@ -78,14 +78,14 @@ Verify if user should be able to login successfully
 
 verify it should display ppg page
     Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
-    Create Portfolio    ${PROD_6_portfolio}    ${PROD_6_description}    ${BTN_Portfolio_Save}
+    Create Portfolio    ${PROD_6_portfolio}    ${PROD_6_description}    ${BTN_Save}
     Search Data    ${Input_Portfolio_Search}    ${PROD_6_portfolio}
     Navigate to portfolio data    ${PROD_6_portfolio}
     Wait Until Element is present then click the element    ${TAB_PPG}
     # Create PPG    ${PROD_6_PPG_NAME}    ${PROD_14_PPG_Description}    ${TXT_Manager_name}
     # Wait Until Element is present then click the element    ${Input_Type_Platform}        
-    # Wait Until Element is present then click the element    ${BTN_PPG_Save}
-    # # create ppg    ${PROD_6_PPG_NAME}    ${INPUT_type_product}    ${BTN_PPG_SAVE}
+    Wait Until Element is present then click the element    ${BTN_Save}
+    Create PPG    ${PROD_6_PPG}    ${PROD_14_PPG_Description}    ${PROD_14_Owner}    ${INPUT_type_product}    ${BTN_SAVE}
     Navigate to portfolio data    ${PROD_6_PPG}
     Wait Until Element is present then click the element    ${TAB_Product_Platform}
     # Create Product/Platform    ${PROD_6_pp_name}    ${PROD_14_Product_Platform_description}    ${TXT_Manager_name}
@@ -158,11 +158,11 @@ verify OKR fields can be changed
       
 verify a OKR shouldn't be delete
     click on okr kebab button    ${PROD_6_OKR_UPDATE}
-    Delete OKR    ${PROD_6_OKR_UPDATE}    ${BTN_Cancel}
+    Delete OKR    ${BTN_Cancel}
 
 verify a OKR should be delete
     click on okr kebab button    ${PROD_6_OKR_UPDATE}
-    Delete OKR    ${PROD_6_OKR_UPDATE}    ${BTN_Confirm}
+    Delete OKR    ${BTN_Confirm}
 
 
 Verify it should display ppg 
@@ -172,6 +172,6 @@ Verify it should display ppg
 Verify it should display product page and it should display squad page
     Navigate to portfolio data    ${PROD_6_product}
     Wait Until Element is present then click the element    ${TAB_Product_Platform }
-    Create Product/Platform    ${PROD_6_PP_product}    ${PROD_6_PP_description}    ${TXT_Manager_name}    ${Input_Type_Product}    ${BTN_Save}
+    Create Product/Platform    ${PROD_6_PP_product}    ${PROD_6_PP_description}    ${TXT_Manager}    ${Input_Type_Product}    ${BTN_Save}
     Navigate to portfolio data    ${PROD_6_PP_product}
     # Wait Until Element is present then click the element    ${}

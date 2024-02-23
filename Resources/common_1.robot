@@ -2,6 +2,7 @@
 Library         SeleniumLibrary
 Library         String
 Library        DateTime
+Library         DateTime
 Variables       ../Data/xpath.py
 Variables       ../Data/data.py
 
@@ -329,120 +330,170 @@ Click Breadcrums
     ${Breadcrums}    Format String    ${Bread_Crums}    name=${name}
     Wait Until Element is present then click the element    ${Breadcrums}
 
+# PROD-12 Strategic Outcome
 
- 
-#PROD-6 PLAtform OKR and PRODUCT SQUAD
-
-create PLatform OKR
-    [Documentation]    using this keyword we can create platform OKR
-    [Arguments]    ${name}    ${Manager}    ${element}
-    Wait Until Element is present then click the element    ${BTN_Add_OKR}
-    Input Text    ${INPUT_OKR_name}    ${name}
-    Wait Until Element is present then click the element    ${INPUT_assign_to}
-    Press Keys    ${Input_Search_Manager}    ${Manager}
-    Wait Until Element is present then click the element    ${INPT_okr_owner}
-    ${currentdate}    Get Current Date
-    Log    ${currentdate}
-    ${cd}    Convert Date    ${currentdate}    result_format=%m/%d/%Y
-    Log    ${cd}
-    ${currentdate1}    Get Current Date    increment=25day
-    Log    ${currentdate1}
-    ${cd1}    Convert Date    ${currentdate1}    result_format=%m/%d/%Y
-    Log    ${cd1}
-    Press Keys    ${INPUT_start_date}    ${cd}
-    Press Keys    ${INPUT_END_date}    ${cd1}
-    Wait Until Element is present then click the element    ${INPT_link_SO}
-    Wait Until Element is present then click the element    ${INPUT_strat_out_name}
+create,edit strategic outcome
+    [Documentation]    Using this keyword we can create strategic outcome
+    [Arguments]    ${name}    ${description}    ${Element}
+    Press Keys    ${INPUT_Strategic_Outcome_Name}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_Strategic_Outcome_Name}    ${name}
+    Press Keys    ${INPUT_Strategic_Outcome_Description}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_Strategic_Outcome_Description}    ${description}
+    ${current_date}=    Get Current Date    result_format=%m/%d/%Y        
+    Log    ${current_date}
+    Press Keys    ${INPUT_SO_Start_Date}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_SO_Start_Date}    ${current_date}    
+    Press Keys    ${INPUT_SO_End_Date}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_SO_End_Date}    ${current_date}
+    Wait Until Element is present then click the element    ${Drop_Down_Select_Manager}
+    Press Keys    ${Drop_Down_Input_Select_Manager}    ${TXT_manager_Iyyappan}
+    Wait Until Element is present then click the element    ${Drop_Down_LI_Iyyappan}
+    Wait Until Element is present then click the element    ${Element}
+    
+Delete Strategic outcome
+    [Documentation]    Using this keyword we can delete strategic outcome
+    [Arguments]    ${element}
+    Wait Until Element is present then click the element    ${BTN_Strategic_Outcome_more_Delete}
     Wait Until Element is present then click the element    ${element}
 
-Click on add result button
-    [Documentation]    Using this keyword we can click on add result button
-    [Arguments]    ${name}
-    ${addresult}    Format String    ${BTN_add_result}    name=${name}
-    Wait Until Element is present then click the element    ${addresult}
-
-click on okr kebab button
-    [Arguments]    ${name}
-    ${OKR_kebab}    Format String    ${BTN_more_OKR}    name=${name}
-    Wait Until Element is present then click the element    ${OKR_kebab}
-
-Edit OKR
-    [Arguments]    ${name}    ${name1}    ${manager}    ${element}
-    ${edit_okr}    Format String    ${BTN_EDIT_OKR}    name=${name}
-    Wait Until Element is present then click the element    ${edit_okr}
+Create,edit OKR
+    [Documentation]    Using this keyword we can create,edit OKR
+    [Arguments]    ${name}    ${description}    ${Element}    ${Select_element_ppg_platform}
     Press Keys    ${INPUT_OKR_name}    CTRL+A+BACKSPACE
-    Press Keys    ${INPUT_OKR_name}    ${name1}
-    Wait Until Element is present then click the element    ${INPUT_assign_to}
-    Press Keys    ${Input_Search_Manager}    CTRL+A+BAACKSPACE
-    Press Keys    ${Input_Search_Manager}    ${manager}
-    Wait Until Element is present then click the element    ${Drop_Down_Manager}
-    # ${currentdate}    Get Current Date
-    # Log    ${currentdate}
-    # ${cd}    Convert Date    ${currentdate}    result_format=%m/%d/%Y
-    # Log    ${cd}
-    # ${currentdate1}    Get Current Date    increment=25day
-    # Log    ${currentdate1}
-    # ${cd1}    Convert Date    ${currentdate1}    result_format=%m/%d/%Y
-    # Log    ${cd1}
-    # Press Keys    ${INPUT_start_date}    CTRL+A+BACKSPACE
-    # Press Keys    ${INPUT_start_date}    ${cd}
-    # Press Keys    ${INPUT_END_date}    CTRL+A+BACKSPACE
-    # Press Keys    ${INPUT_END_date}    ${cd1}
-    Wait Until Element is present then click the element    ${element}    
+    Input Text    ${INPUT_OKR_name}    ${name}
+    Press Keys    ${INPUT_OKR_Description}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_OKR_Description}    ${description}
+    ${current_date}=    Get Current Date    result_format=%m/%d/%Y        
+    Log    ${current_date}
+    Press Keys    ${INPUT_OKR_Start_Date}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_OKR_Start_Date}    ${current_date}   
+    Press Keys    ${INPUT_OKR_End_Date}    CTRL+A+BACKSPACE               
+    Press Keys    ${INPUT_OKR_End_Date}    ${current_date}
+    Wait Until Element is present then click the element    ${Drop_Down_Add_Under}
+    Click Element    ${Drop_Down_Select_ppg}
+    Wait Until Element is present then click the element    ${Drop_Down_Assign_To}
+    Press Keys    ${Drop_Down_Input_Select_Manager}    ${TXT_manager_Iyyappan}
+    Wait Until Element is present then click the element    ${Drop_Down_LI_Iyyappan}
+    Wait Until Element is present then click the element    ${Select_element_ppg_platform}
+    Click Element    ${Drop_Down_Select_ppg_name}
+    Wait Until Element is present then click the element    ${Element}    
 
-Delete OKR 
-    [Arguments]    ${name}    ${Element}
-    ${Delete_OKR}    Format String    ${BTN_DELETE_OKR}    name=${name}
-    Wait Until Element is present then click the element    ${Delete_OKR}
-    Wait Until Element is present then click the element    ${Element}
+Delete OKR    
+    [Documentation]    Using this keyword we can delete Key Results
+    [Arguments]    ${element}
+    Wait Until Element is present then click the element    ${BTN_OKR_Delete}
+    Wait Until Element is present then click the element    ${element} 
+click portfolio and navigate to Next page
+    [Documentation]    Using this keyword we can click on portfolio name and navigate to strategic outcome
+    [Arguments]    ${element1}    ${name}    ${element2}
+    ${Click_name}    Format String    ${element1}    name=${name}
+    Wait Until Element is present then click the element    ${Click_name}    
+    Wait Until Element is present then click the element    ${element2}
+click name and navigate to next page
+    [Documentation]    Using this keyword we can click on name and navigate to next page
+    [Arguments]    ${element}    ${name}
+    ${Click_name}    Format String    ${element}    name=${name}
+    Wait Until Element is present then click the element    ${Click_name} 
 
-Create key result
-    [Documentation]    Using this keyword we can create key result
-    [Arguments]    ${name}    ${description}    ${manager}    ${basevalue}    ${uomvalue}    ${element}
-    Input Text    ${INPUT_key_result_name}    ${name}
-    Input Text    ${INPUT_Key_result_description}    ${description}
-    Wait Until Element is present then click the element    ${INPUT_ASSign_TO_key}
-    Press Keys    ${Input_Search_Manager}    ${manager}
-    Wait Until Element is present then click the element    ${INPT_okr_owner}
-    Input Text    ${INPUT_baseline}    ${basevalue}
-    Input Text    ${INPUT_unit_of_measure}    ${uomvalue}
-    Wait Until Element is present then click the element    ${element}
+click Button and navigate to popup
+    [Documentation]    Using this keyword we can click button and navigate to popup
+    [Arguments]    ${element}    ${name}
+    ${Click_Button}    Format String    ${element}    name=${name}
+    Wait Until Element is present then click the element    ${Click_Button}    
 
-click key result kebab button
-    [Documentation]    Using this keyword we can click key result kebab button
+Create Key Results
+    [Documentation]    Using this keyword we can edit Key Results
+    [Arguments]    ${name}    ${description}    ${edit baseline}    ${edit UOM}
+    Press Keys    ${INPUT_Key_Result_Name}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_Key_Result_Name}    ${name}
+    Press Keys    ${INPUT_Key_Result_Description}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_Key_Result_Description}    ${description}
+    Press Keys    ${INPUT_Key_Result_Baseline}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_Key_Result_Baseline}    ${edit baseline}
+    Press Keys    ${INPUT_Key_Result_Unit}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_Key_Result_Unit}    ${edit UOM}
+    Wait Until Element is present then click the element    ${INPUT_Key_Result_Dropdown}
+    Press Keys    ${Drop_Down_Input_Select_Manager}    ${TXT_manager_Iyyappan}
+    Wait Until Element is present then click the element    ${Drop_Down_LI_Iyyappan}
+
+
+Edit Key Results
+    [Documentation]    Using this keyword we can edit Key Results
+    [Arguments]    ${name}    ${description}    ${edit baseline}    ${edit UOM}
+    Press Keys    ${INPUT_Key_Result_Name}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_Key_Result_Name}    ${name}
+    Press Keys    ${INPUT_Key_Result_Description}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_Key_Result_Description}    ${description}
+    Press Keys    ${INPUT_Key_Result_Baseline}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_Key_Result_Baseline}    ${edit baseline}
+    Press Keys    ${INPUT_Key_Result_Unit}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_Key_Result_Unit}    ${edit UOM}
+    Wait Until Element is present then click the element    ${INPUT_Key_Result_Dropdown}
+    Press Keys    ${Drop_Down_Input_Select_Manager}    ${TXT_manager_Iyyappan}
+    Wait Until Element is present then click the element    ${Drop_Down_LI_Iyyappan}
+    Scroll Element Into View    ${BTN_EK_Add_Quarter}
+    Wait Until Element is present then click the element    ${BTN_EK_Add_Quarter}
+    Wait Until Element is present then click the element    ${Drop_Down_EK_Year}
+    Wait Until Element is present then click the element    ${EK_Select_Year}
+    Wait Until Element is present then click the element    ${Drop_Down_EK_Quarter}
+    Wait Until Element is present then click the element    ${EK_Select_Quarter}
+    Input Text    ${INPUT_EK_Target}    ${PROD_12_Key_Edit_Target}
+    Input Text    ${INPUT_EK_Actual}    ${PROD_12_Key_Edit_Actual}
+Click the Kebab button on Strategic Outcome
+    [Documentation]    Using this keywork we can click kebab button 
     [Arguments]    ${name}
-    ${keyresult_more}    Format String    ${BTN_more_keyresult}    name=${name}
-    Wait Until Element is present then click the element    ${keyresult_more}
+    ${SO_more_option}    Format String    ${BTN_More_SO}    name=${name}
+    Wait Until Element is present then click the element    ${SO_more_option}
 
-edit key result
-    [Documentation]    Using this keyword we can edit key result 
-    [Arguments]    ${name}    ${name1}    ${description}    ${bvalue}    ${uomvalue}    ${element}
-    ${edit_keyresult}    Format String    ${BTN_EDIT_keyresult}    name=${name}
-    Wait Until Element is present then click the element    ${edit_keyresult}
-    Press Keys    ${INPUT_key_result_name}    CTRL+A+BACKSPACE
-    Press Keys    ${INPUT_key_result_name}    ${name1}
-    Press Keys    ${INPUT_Key_result_description}    CTRL+A+BACKSPACE
-    Press Keys    ${INPUT_Key_result_description}    ${description}
-    Press Keys    ${INPUT_baseline}    CTRL+A+BACKSPACE
-    Press Keys    ${INPUT_baseline}    ${bvalue}
-    Press Keys    ${INPUT_unit_of_measure}    CTRL+A+BACKSPACE
-    Press Keys    ${INPUT_unit_of_measure}    ${uomvalue}
-    Wait Until Element is present then click the element    ${element}
+Click the Kebab button on OKR
+    [Documentation]    Using this keywork we can click kebab button 
+    [Arguments]    ${name}
+    ${OKR_more_option}    Format String    ${BTN_More_OKR}    name=${name}
+    Wait Until Element is present then click the element    ${OKR_more_option}    
 
+Click the Kebab button on Key Results
+    [Documentation]    Using this keywork we can click kebab button 
+    [Arguments]    ${name}
+    ${key_more_option}    Format String    ${BTN_More_Key_Results}    name=${name}
+    Wait Until Element is present then click the element    ${key_more_option}    
 
-Delete Key result
-    [Documentation]    Using this keyword we can delete key result
+ #PROD-16 User Access
+Add User Access in setting Section
+    [Documentation]    Using this keyword we can add user access
     [Arguments]    ${name}    ${Element}
-    ${Delete_result}    Format String    ${BTN_DELETE_result}    name=${name}
-    Wait Until Element is present then click the element    ${Delete_result}
+    Input Text    ${INPUT_Search_Add_User}    ${name}
+    Wait Until Element is present then click the element    ${Drop_Down_Select_Name}
+    Wait Until Element is present then click the element    ${TXT_Header_Add_User}
     Wait Until Element is present then click the element    ${Element}
-
-
-
-
+    
+Click the Kebab button on User Access and click on viewer
+    [Documentation]    Using this keywork we can click kebab button on user access
+    [Arguments]    ${User_name}
+    ${UA_more_option}    Format String    ${BTN_More_UA}    name=${user_name}
+    Wait Until Element is present then click the element    ${UA_more_option}
+    ${UA_Assign_role}    Format String    ${BTN_Assign_Role}    name=${user_name}
+    Wait Until Element is present then click the element    ${UA_Assign_role}  
+    ${UA_Assign_role_viewer}    Format String    ${BTN_Assign_Role_Viewer}    name=${user_name}
+    Wait Until Element is present then click the element    ${UA_Assign_role_viewer}
     
     
- 
+ Click the Kebab button on User Access and click on Admin
+    [Documentation]    Using this keywork we can click kebab button on user access
+    [Arguments]    ${User_name}
+    ${UA_more_option}    Format String    ${BTN_More_UA}    name=${user_name}
+    Wait Until Element is present then click the element    ${UA_more_option}
+    ${UA_Assign_role}    Format String    ${BTN_Assign_Role}    name=${user_name}
+    Wait Until Element is present then click the element    ${UA_Assign_role}  
+    ${UA_Assign_role_admin}    Format String    ${BTN_Assign_Role_Admin}    name=${user_name}
+    Wait Until Element is present then click the element    ${UA_Assign_role_admin}
+    
+Click the Kebab button on User Access
+    [Documentation]    Using this keywork we can click kebab button on user access
+    [Arguments]    ${User_name}
+    ${UA_more_option}    Format String    ${BTN_More_UA}    name=${user_name}
+    Wait Until Element is present then click the element    ${UA_more_option}
+    ${UA_Delete}    Format String    ${UA_More_Delete}    name=${user_name}
+    Wait Until Element is present then click the element    ${UA_Delete}    
     
 
 
