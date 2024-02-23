@@ -120,7 +120,6 @@ BTN_Add_Strategic_Cancel = "//button[@id='strategic-outcome-create-cancel-btn']"
 BTN_Add_Strategic_Save = "//button[@id='strategic-outcome-create-save-btn']"
 BTN_More_Portfolio = "//div[@id='portfolio-more-btn-{name}']"
 BTN_Portfolio_more_Edit = "//p[contains(text(),'Edit')]"
-BTN_Portfolio_more_Delete = "//p[contains(text(),'Delete')]"
 BTN_More_SO ="//div[@id='strategic-outcome-more-btn-{name}']"
 BTN_Add_OKR = '//button[@id="add-okr-{name}"]'
 BTN_Create_OKR_Cancel = "//button[@id='okr-create-cancel-btn']"

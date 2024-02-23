@@ -251,22 +251,19 @@ Verify a Category name Should be deleted in strategic outcome
 
 Verify if category Fields should not be changed in portfolio
     Click the Kebab button on portfolio    ${PROD_12_Portfolio_name}
-    # Wait Until Element is present then click the element    ${BTN_Portfolio_more_Edit}
     Edit Portfolio    ${PROD_12_Portfolio_name}    ${PROD_12_Portfolio_Edit_name}    ${PROD_12_Portfolio_Edit_Description}    ${BTN_Cancel}
 Verify if category Fields should be changed in portfolio
     Click the Kebab button on portfolio    ${PROD_12_Portfolio_name}
-    # Wait Until Element is present then click the element    ${BTN_Portfolio_more_Edit}
     Edit Portfolio    ${PROD_12_Portfolio_name}    ${PROD_12_Portfolio_Edit_name}    ${PROD_12_Portfolio_Edit_Description}    ${BTN_Save}
 
 Verify a Category name Should not be deleted in portfolio
     Click the Kebab button on portfolio    ${PROD_12_Portfolio_Edit_name}
-    Wait Until Element is present then click the element    ${BTN_Portfolio_more_Delete}
-    Wait Until Element is present then click the element    ${BTN_Cancel}   
+    Delete Potfolio    ${PROD_12_Portfolio_Edit_name}    ${BTN_Cancel}
 
 Verify a Category name Should be deleted in portfolio
     Click the Kebab button on portfolio    ${PROD_12_Portfolio_Edit_name}
-    Wait Until Element is present then click the element    ${BTN_Portfolio_more_Delete}
-    Wait Until Element is present then click the element    ${BTN_Confirm}       
+    Delete Potfolio    ${PROD_12_Portfolio_Edit_name}    ${BTN_Cancel}
+
 
 Verify Application should be Close in portfolio management
     "Close the Browser"
