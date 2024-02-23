@@ -82,11 +82,10 @@ verify it should display ppg page
     Search Data    ${Input_Portfolio_Search}    ${PROD_6_portfolio}
     Navigate to portfolio data    ${PROD_6_portfolio}
     Wait Until Element is present then click the element    ${TAB_PPG}
-    Create PPG    ${PROD_6_PPG}    ${PROD_14_PPG_Description}    ${TXT_Manager}    ${Input_Type_Platform}    ${BTN_SAVE}
-    # Create PPG    ${PROD_6_PPG}    ${PROD_14_PPG_Description}    ${TXT_Manager}    ${Input_Type_Platform}    ${BTN_SAVE}
+    Create PPG    ${PROD_6_PPG}    ${PROD_6_description}    ${TXT_Manager}    ${Input_Type_Platform}    ${BTN_SAVE}
     Navigate to portfolio data    ${PROD_6_PPG}
     Wait Until Element is present then click the element    ${TAB_Product_Platform}
-    Create Product/Platform    ${PROD_6_pp}    ${PROD_14_Product_Platform_description}    ${TXT_Manager}    ${Input_Type_Platform}    ${BTN_Save}                    
+    Create Product/Platform    ${PROD_6_pp}    ${PROD_6_description}    ${TXT_Manager}    ${Input_Type_Platform}    ${BTN_Save}                    
 
 
 verify it should display product page and OKR page should be displayed
@@ -168,7 +167,7 @@ Verify it should display ppg
 
 Verify it should display product page and it should display squad page
     Navigate to portfolio data    ${PROD_6_product}
-    Wait Until Element is present then click the element    ${TAB_Product_Platform }
+    Wait Until Element is present then click the element    ${TAB_Product_Platform}
     Create Product/Platform    ${PROD_6_PP_product}    ${PROD_6_PP_description}    ${TXT_Manager}    ${Input_Type_Product}    ${BTN_Save}
     Navigate to portfolio data    ${PROD_6_PP_product}
     # Wait Until Element is present then click the element    ${}
