@@ -5,15 +5,16 @@ Productor.Testcase
 ==============================================================================
 Productor.Testcase.PROD-6 :: Product/platform OKR and squad JIRA ID - PROD-6  
 ==============================================================================
-Product / platform OKR and Squad                                      | PASS |
+Product / platform OKR and Squad                                      | FAIL |
+Element '//td[@id="custom-id-PROD-6 PORTFOLIO"]' did not appear in 50 seconds.
 ------------------------------------------------------------------------------
-Productor.Testcase.PROD-6 :: Product/platform OKR and squad JIRA I... | PASS |
-1 test, 1 passed, 0 failed
+Productor.Testcase.PROD-6 :: Product/platform OKR and squad JIRA I... | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-Productor.Testcase                                                    | PASS |
-1 test, 1 passed, 0 failed
+Productor.Testcase                                                    | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
-Productor                                                             | PASS |
-1 test, 1 passed, 0 failed
+Productor                                                             | FAIL |
+1 test, 0 passed, 1 failed
 ==============================================================================
 Output:  C:\Users\Gayathri\Productor\output\pabot_results\0\output.xml
