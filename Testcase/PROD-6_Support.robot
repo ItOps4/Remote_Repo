@@ -82,15 +82,12 @@ verify it should display ppg page
     Search Data    ${Input_Portfolio_Search}    ${PROD_6_portfolio}
     Navigate to portfolio data    ${PROD_6_portfolio}
     Wait Until Element is present then click the element    ${TAB_PPG}
-    # Create PPG    ${PROD_6_PPG_NAME}    ${PROD_14_PPG_Description}    ${TXT_Manager_name}
-    # Wait Until Element is present then click the element    ${Input_Type_Platform}        
-    Wait Until Element is present then click the element    ${BTN_Save}
-    Create PPG    ${PROD_6_PPG}    ${PROD_14_PPG_Description}    ${PROD_14_Owner}    ${INPUT_type_product}    ${BTN_SAVE}
+    Create PPG    ${PROD_6_PPG}    ${PROD_14_PPG_Description}    ${TXT_Manager}    ${Input_Type_Platform}    ${BTN_SAVE}
+    # Create PPG    ${PROD_6_PPG}    ${PROD_14_PPG_Description}    ${TXT_Manager}    ${Input_Type_Platform}    ${BTN_SAVE}
     Navigate to portfolio data    ${PROD_6_PPG}
     Wait Until Element is present then click the element    ${TAB_Product_Platform}
-    # Create Product/Platform    ${PROD_6_pp_name}    ${PROD_14_Product_Platform_description}    ${TXT_Manager_name}
-    # Wait Until Element is present then click the element    ${Input_Type_Product}
-    # Wait Until Element is present then click the element    ${BTN_Product_Platform_Save}
+    Create Product/Platform    ${PROD_6_pp}    ${PROD_14_Product_Platform_description}    ${TXT_Manager}    ${Input_Type_Platform}    ${BTN_Save}                    
+
 
 verify it should display product page and OKR page should be displayed
     Navigate to portfolio data    ${PROD_6_pp}
@@ -167,7 +164,7 @@ verify a OKR should be delete
 
 Verify it should display ppg 
     Click Breadcrums    ${PROD_6_PPG}
-    Create PPG    ${PROD_6_product}    ${PROD_6_description}    ${TXT_Manager_name}    ${Input_Type_Product}    ${BTN_Save}
+    Create PPG    ${PROD_6_product}    ${PROD_6_description}    ${TXT_Manager}    ${Input_Type_Product}    ${BTN_Save}
 
 Verify it should display product page and it should display squad page
     Navigate to portfolio data    ${PROD_6_product}
