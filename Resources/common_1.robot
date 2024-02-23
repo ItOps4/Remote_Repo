@@ -335,8 +335,8 @@ Click Breadcrums
 create PLatform OKR
     [Documentation]    using this keyword we can create platform OKR
     [Arguments]    ${name}    ${Manager}    ${element}
-    Wait Until Element is present then click the element    ${BTN_Add_OKR}
-    Input Text    ${INPUT_OKR_name}    ${name}
+    Wait Until Element is present then click the element    ${BTN_Add_OKR_platform}
+    Input Text    ${INPUT_OKR_PLATFORM}    ${name}
     Wait Until Element is present then click the element    ${INPUT_assign_to}
     Press Keys    ${Input_Search_Manager}    ${Manager}
     Wait Until Element is present then click the element    ${INPT_okr_owner}
@@ -369,8 +369,8 @@ Edit OKR
     [Arguments]    ${name}    ${name1}    ${manager}    ${element}
     ${edit_okr}    Format String    ${BTN_EDIT_OKR}    name=${name}
     Wait Until Element is present then click the element    ${edit_okr}
-    Press Keys    ${INPUT_OKR_name}    CTRL+A+BACKSPACE
-    Press Keys    ${INPUT_OKR_name}    ${name1}
+    Press Keys    ${INPUT_OKR_PLATFORM}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_OKR_PLATFORM}    ${name1}
     Wait Until Element is present then click the element    ${INPUT_assign_to}
     Press Keys    ${Input_Search_Manager}    CTRL+A+BAACKSPACE
     Press Keys    ${Input_Search_Manager}    ${manager}
@@ -436,7 +436,13 @@ Delete Key result
     Wait Until Element is present then click the element    ${Delete_result}
     Wait Until Element is present then click the element    ${Element}
 
-
+Create Squad
+    [Arguments]    ${name}    ${lead}
+    Wait Until Element is present then click the element    ${BTN_ADD_SQUAD}
+    Input Text    ${INPUT_SQUAD}    ${name}
+    Wait Until Element is present then click the element    ${INPUT_SQUAD_LEAD}
+    Press Keys    ${Input_Search_Manager}    ${lead}
+    Wait Until Element is present then click the element    ${BTN_NEXT}
 
 # PROD-12 Strategic Outcome
 create,edit strategic outcome

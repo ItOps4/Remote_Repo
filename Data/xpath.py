@@ -72,8 +72,8 @@ BTN_Product_Squad_Role_Delete = '//li[@id="product-squad-role-delete-{name}"]'
 #PROD-6 PRODUCT/PLATFORM OKR and SQUAD
 
 BTN_prod_OKR = '//div[@id="product-okrs"]'
-BTN_Add_OKR = '//button[@id="create-okr-nullstate-btn"]'
-INPUT_OKR_name = '//input[@id="okr-name"]'
+BTN_Add_OKR_platform = '//button[@id="create-okr-nullstate-btn"]'
+INPUT_OKR_PLATFORM = '//input[@id="okr-name"]'
 INPUT_start_date = '//p[@id="okr-start-date"]/parent::div/descendant::input'
 INPUT_END_date = '//p[@id="okr-end-date"]/parent::div/descendant::input'
 INPUT_assign_to = '//div[@id="okr-owner"]'
@@ -98,6 +98,10 @@ BTN_DELETE_result= '//li[@id="keyresult-delete-{name}"]'
 BTN_BACKARROW_OKR = '//i[@id="back-to-okr-PROD_6_okr1"]'
 
 TAB_squad = '//div[@id="product-squad"]'
+BTN_ADD_SQUAD ='//button[@id="add-squad-btn"]'
+INPUT_SQUAD = '//input[@id="squad-name"]'
+INPUT_SQUAD_LEAD = '//div[@id="squad-lead"]'
+BTN_NEXT = '//button[@id="create-squad-save"]'
 
 
 # PROD-14 PPG-Product/Platform

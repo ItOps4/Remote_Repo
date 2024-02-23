@@ -72,6 +72,9 @@ Then click on ppg menu and navigate to ppg name
 Then Navigate to product , click on squad tab
     Verify it should display product page and it should display squad page
 
+
+Then click on Add squad button and enter mandatory fields in step 1, click on next button, add squad member, click on back button and click on cancel button
+    Verify if squad shouldn't be Created
 Verify if user should be able to login successfully
     [Arguments]    ${username}
     Login Application    ${username}
@@ -170,4 +173,9 @@ Verify it should display product page and it should display squad page
     Wait Until Element is present then click the element    ${TAB_Product_Platform}
     Create Product/Platform    ${PROD_6_PP_product}    ${PROD_6_PP_description}    ${TXT_Manager}    ${Input_Type_Product}    ${BTN_Save}
     Navigate to portfolio data    ${PROD_6_PP_product}
-    # Wait Until Element is present then click the element    ${}
+
+
+
+Verify if squad shouldn't be Created
+    Create Squad    ${PROD_6_SQUAD}    ${TXT_manager_Iyyappan}
+    

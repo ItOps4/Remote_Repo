@@ -54,6 +54,9 @@ PROD_6_product = 'PROD_6_product'
 PROD_6_PP_product = 'PROD_6_PP_product'
 PROD_6_PP_description = 'PROD_6_PP_description'
 
+PROD_6_SQUAD = 'prod_6_SQUAD'
+
+
 
 
 # PROD-14 PPG-Product/Platform
