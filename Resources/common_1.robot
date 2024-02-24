@@ -1,7 +1,7 @@
 *** Settings ***
 Library         SeleniumLibrary
 Library         String
-Library         DateTime
+Library        DateTime
 Variables       ../Data/xpath.py
 Variables       ../Data/data.py
 
@@ -329,8 +329,124 @@ Click Breadcrums
     ${Breadcrums}    Format String    ${Bread_Crums}    name=${name}
     Wait Until Element is present then click the element    ${Breadcrums}
 
-# PROD-12 Strategic Outcome
 
+
+ 
+#PROD-6 PLAtform OKR and PRODUCT SQUAD
+
+create PLatform OKR
+    [Documentation]    using this keyword we can create platform OKR
+    [Arguments]    ${name}    ${Manager}    ${element}
+    Wait Until Element is present then click the element    ${BTN_Add_OKR_platform}
+    Input Text    ${INPUT_OKR_PLATFORM}    ${name}
+    Wait Until Element is present then click the element    ${INPUT_assign_to}
+    Press Keys    ${Input_Search_Manager}    ${Manager}
+    Wait Until Element is present then click the element    ${INPT_okr_owner}
+    ${currentdate}    Get Current Date
+    Log    ${currentdate}
+    ${cd}    Convert Date    ${currentdate}    result_format=%m/%d/%Y
+    Log    ${cd}
+    ${currentdate1}    Get Current Date    increment=25day
+    Log    ${currentdate1}
+    ${cd1}    Convert Date    ${currentdate1}    result_format=%m/%d/%Y
+    Log    ${cd1}
+    Press Keys    ${INPUT_start_date}    ${cd}
+    Press Keys    ${INPUT_END_date}    ${cd1}
+    Wait Until Element is present then click the element    ${INPT_link_SO}
+    Wait Until Element is present then click the element    ${INPUT_strat_out_name}
+    Wait Until Element is present then click the element    ${element}
+
+Click on add result button
+    [Documentation]    Using this keyword we can click on add result button
+    [Arguments]    ${name}
+    ${addresult}    Format String    ${BTN_add_result}    name=${name}
+    Wait Until Element is present then click the element    ${addresult}
+
+click on okr kebab button
+    [Arguments]    ${name}
+    ${OKR_kebab}    Format String    ${BTN_more_OKR}    name=${name}
+    Wait Until Element is present then click the element    ${OKR_kebab}
+
+Edit OKR
+    [Arguments]    ${name}    ${name1}    ${manager}    ${element}
+    ${edit_okr}    Format String    ${BTN_EDIT_OKR}    name=${name}
+    Wait Until Element is present then click the element    ${edit_okr}
+    Press Keys    ${INPUT_OKR_PLATFORM}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_OKR_PLATFORM}    ${name1}
+    Wait Until Element is present then click the element    ${INPUT_assign_to}
+    Press Keys    ${Input_Search_Manager}    CTRL+A+BAACKSPACE
+    Press Keys    ${Input_Search_Manager}    ${manager}
+    Wait Until Element is present then click the element    ${Drop_Down_Manager}
+    # ${currentdate}    Get Current Date
+    # Log    ${currentdate}
+    # ${cd}    Convert Date    ${currentdate}    result_format=%m/%d/%Y
+    # Log    ${cd}
+    # ${currentdate1}    Get Current Date    increment=25day
+    # Log    ${currentdate1}
+    # ${cd1}    Convert Date    ${currentdate1}    result_format=%m/%d/%Y
+    # Log    ${cd1}
+    # Press Keys    ${INPUT_start_date}    CTRL+A+BACKSPACE
+    # Press Keys    ${INPUT_start_date}    ${cd}
+    # Press Keys    ${INPUT_END_date}    CTRL+A+BACKSPACE
+    # Press Keys    ${INPUT_END_date}    ${cd1}
+    Wait Until Element is present then click the element    ${element}    
+
+Delete OKR 
+    [Arguments]    ${name}    ${Element}
+    ${Delete_OKR}    Format String    ${BTN_DELETE_OKR}    name=${name}
+    Wait Until Element is present then click the element    ${Delete_OKR}
+    Wait Until Element is present then click the element    ${Element}
+
+Create key result
+    [Documentation]    Using this keyword we can create key result
+    [Arguments]    ${name}    ${description}    ${manager}    ${basevalue}    ${uomvalue}    ${element}
+    Input Text    ${INPUT_key_result_name}    ${name}
+    Input Text    ${INPUT_Key_result_description}    ${description}
+    Wait Until Element is present then click the element    ${INPUT_ASSign_TO_key}
+    Press Keys    ${Input_Search_Manager}    ${manager}
+    Wait Until Element is present then click the element    ${INPT_okr_owner}
+    Input Text    ${INPUT_baseline}    ${basevalue}
+    Input Text    ${INPUT_unit_of_measure}    ${uomvalue}
+    Wait Until Element is present then click the element    ${element}
+
+click key result kebab button
+    [Documentation]    Using this keyword we can click key result kebab button
+    [Arguments]    ${name}
+    ${keyresult_more}    Format String    ${BTN_more_keyresult}    name=${name}
+    Wait Until Element is present then click the element    ${keyresult_more}
+
+edit key result
+    [Documentation]    Using this keyword we can edit key result 
+    [Arguments]    ${name}    ${name1}    ${description}    ${bvalue}    ${uomvalue}    ${element}
+    ${edit_keyresult}    Format String    ${BTN_EDIT_keyresult}    name=${name}
+    Wait Until Element is present then click the element    ${edit_keyresult}
+    Press Keys    ${INPUT_key_result_name}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_key_result_name}    ${name1}
+    Press Keys    ${INPUT_Key_result_description}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_Key_result_description}    ${description}
+    Press Keys    ${INPUT_baseline}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_baseline}    ${bvalue}
+    Press Keys    ${INPUT_unit_of_measure}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_unit_of_measure}    ${uomvalue}
+    Wait Until Element is present then click the element    ${element}
+
+
+Delete Key result
+    [Documentation]    Using this keyword we can delete key result
+    [Arguments]    ${name}    ${Element}
+    ${Delete_result}    Format String    ${BTN_DELETE_result}    name=${name}
+    Wait Until Element is present then click the element    ${Delete_result}
+    Wait Until Element is present then click the element    ${Element}
+
+Create Squad
+    [Arguments]    ${name}    ${lead}
+    Wait Until Element is present then click the element    ${BTN_ADD_SQUAD}
+    Input Text    ${INPUT_SQUAD}    ${name}
+    Wait Until Element is present then click the element    ${INPUT_SQUAD_LEAD}
+    Press Keys    ${Input_Search_Manager}    ${lead}
+    Wait Until Element is present then click the element    ${BTN_NEXT}
+
+# PROD-12 Strategic Outcome
 create,edit strategic outcome
     [Documentation]    Using this keyword we can create strategic outcome
     [Arguments]    ${name}    ${description}    ${Element}
