@@ -25,7 +25,7 @@ Then click on search and enter invalid OKR
     verify if it should not display any result , it display message as " No records to display "
 
 Then click on search and enter valid OKR
-    verify if it display resullt as per input search
+    verify if it should display resullt as per input search
 
 Then Click on Add Result button in OKR and enter the mandatory fields and cancel button
     verify a Result shouldn't be created
@@ -36,7 +36,7 @@ Then Click on Add Result button in OKR and enter the mandatory fields and save b
 
 
 Then navigate to OKR-key Result page
-    Verify it displays OKR key result page
+    Verify it should displays OKR key result page
 
 Then click on More icon and click on edit button in Key result and modify data and click on Cancel button
     Verify a key result data can not be changed
@@ -46,7 +46,7 @@ Then click on More icon and click on edit button in Key result and modify data a
     Verify a key result can be changed
 
 Then Navigate to key result page and should display edit button
-     Verify it displays Key result overview page and contains edit button
+     Verify it should displays Key result overview page and contains edit button
 
 Then click on more button and click on delete button and click on cancel button
     Verify a key result shouldn't be deleted
@@ -84,6 +84,70 @@ Then Click on Add squad button and enter mandatory fields in step1 , click on ne
 Then Navigate to created product squad and view squad member 
     Verfiy it should display added squad member
     
+Then Click on search and enter invalid squad member 
+    Verify if it should display message as " No records to display "
+
+Then Click on search and enter valid squad member 
+    Verify it should display result as per input search in squad product details
+
+Then Click on edit button ,Enter mandatory fields and click on cancel button in squad member
+    Verify it shouldn't be changed
+
+Then Click on edit button , Enter mandatory fields and click on save button in squad member
+    Verify it should be changed
+
+Then navigate to product squad 
+    Verify it should display product squad
+
+Then Click on search and enter invalid squad 
+    Verify if it should not display any result , it should display message as " No records to display "
+
+Then Click on search and enter valid squad 
+    Verify it should display result as per input search
+
+Then Click on edit button ,Enter mandatory fields and click on cancel button in squad product
+    Verify it shouldn't be changed in squad product
+
+Then Click on edit button , Enter mandatory fields and click on save button in squad product
+    Verify it should be changed in squad product
+
+Then Click on product member tab
+    Verify it should display a Product member page
+
+Then Click on Add member button, enter member and Click on cancel button
+    Verify it shouldn't add member
+
+Then Click on Add member button , enter member and Click on Save button 
+    Verify it should add member
+
+Then Click on search and enter invalid member in product member
+    Verify if it should not display any result , it display message as " No records to display " in product member
+
+Then Click on Search and enter valid member in product member
+    Verify if it should display resullt as per input search in product member
+
+Then Click on edit button , enter mandatory fields and click on cancel button in product member
+    Verify it shouldn't be changed in product member
+
+Then Click on edit button , enter mandatory fields and click on Save button in product member
+    Verify it should be changed in product member
+
+
+Then Click on delete button and click on cancel button in product member
+    Verify a product member shouldn't be deleted
+
+Then Click on delete button and click on confirm button in product member
+    Verify a product member should be deleted
+
+
+Then navigate to product squad tab
+    Verify it should display Product squad page
+
+Then Click on delete button and click on cancel button in product squad 
+    Verify a product squad member shouldn't be deleted in product squad 
+
+Then Click on delete button and click on Confirm button in product squad 
+    Verify a product squad member should be deleted in product squad 
 Verify if user should be able to login successfully
     [Arguments]    ${username}
     Login Application    ${username}
@@ -117,7 +181,7 @@ verify if it should not display any result , it display message as " No records 
     Search Data    ${BTN_okr_search}    ${PROD_6_OKR_UPDATE}
     Check element is present    ${TXT_NO_DATA}
 
-verify if it display resullt as per input search
+verify if it should display resullt as per input search
     Search Data    ${BTN_okr_search}    ${PROD_6_OKR}
     Verify a Portfolio is displayed    ${PROD_6_OKR}
 
@@ -131,7 +195,7 @@ verify a Result should be created
     Create key result    ${PROD_6_Keyresult}    ${PROD_6_keyresult_descript}    ${TXT_manager_OKR}    ${TXT_baseline}    ${TXT_uom}    ${BTN_Save}
 
 
-Verify it displays OKR key result page
+Verify it should displays OKR key result page
     Navigate to portfolio data    ${PROD_6_OKR}
 
 
@@ -143,7 +207,7 @@ Verify a key result can be changed
     click key result kebab button    ${PROD_6_Keyresult}
     edit key result    ${PROD_6_Keyresult}    ${PROD_6_KEY_RESULT_UPDATE}    ${PROD_6_keyDescription_UPDATE}    ${PROD_6_BASELINE}    ${PROD_6_UOM}    ${BTN_Save}    
 
- Verify it displays Key result overview page and contains edit button
+ Verify it should displays Key result overview page and contains edit button
     Navigate to portfolio data    ${PROD_6_KEY_RESULT_UPDATE}
     Check element is present    ${BTN_OVERVIEW_edit}
     Wait Until Element is present then click the element    ${BTN_BACKARROW_KEY_OVERVIEW}
@@ -199,4 +263,98 @@ verify if squad should be created
 Verfiy it should display added squad member
     Navigate to portfolio data    ${PROD_6_SQUAD}
     Check element is present    ${product_mem}
+
+Verify if it should display message as " No records to display "
+    Search Data    ${INPUT_search_squad_member}    ${TXT_Manager}
+    Check element is present    ${TXT_NO_DATA}
+
+Verify it should display result as per input search in squad product details
+    Search Data    ${INPUT_search_squad_member}    ${TXT_squad_member}
+    Verify a Portfolio is displayed    ${TXT_squad_member}
+
+
+Verify it shouldn't be changed
+    click squad member kebab button    ${TXT_squad_member}    ${BTN_more_squad_details}    
+    Edit squad product details    ${TXT_squad_member}    ${BTN_EDIT_squad_details}     ${INPUT_value}    ${TXT_select_role}    ${select_role_data}
+    Wait Until Element is present then click the element    ${BTN_Cancel}
+
+Verify it should be changed
+    click squad member kebab button    ${TXT_squad_member}    ${BTN_more_squad_details}    
+    Edit squad product details    ${TXT_squad_member}    ${BTN_EDIT_squad_details}     ${INPUT_value}    ${TXT_select_role}    ${select_role_data}
+    Wait Until Element is present then click the element    ${BTN_Save}
+
+Verify it should display product squad
+    Wait Until Element is present then click the element    ${BTN_BACKARROW_squad}    
+
+Verify if it should not display any result , it should display message as " No records to display "
+    Search Data    ${INPUT_SEARCH_SQUAD}    ${PROD_6_SO}
+    Check element is present    ${TXT_NO_DATA}
+
+Verify it should display result as per input search
+    Search Data    ${INPUT_SEARCH_SQUAD}    ${PROD_6_SQUAD}
+    Verify a Portfolio is displayed    ${PROD_6_SQUAD}
+
+Verify it shouldn't be changed in squad product
+    click squad member kebab button    ${PROD_6_SQUAD}    ${BTN_MORE_product_squad}
+    Edit squad product    ${PROD_6_SQUAD_2}    ${TXT_Manager}    ${DATA_owner}
+    Wait Until Element is present then click the element    ${BTN_Cancel}
+   
+Verify it should be changed in squad product
+    click squad member kebab button    ${PROD_6_SQUAD}    ${BTN_MORE_product_squad}
+    Edit squad product    ${PROD_6_SQUAD_2}    ${TXT_Manager}    ${DATA_owner}
+    Wait Until Element is present then click the element    ${BTN_Save}
+
+Verify it should display a Product member page
+    Wait Until Element is present then click the element    ${TAB_product_member}
+
+Verify it shouldn't add member
+    Create product member    ${TXT_manager}    ${CHECKBOX_label}   
+    Wait Until Element is present then click the element    ${TXT_product_member}
+    Wait Until Element is present then click the element    ${BTN_Cancel}
+
+Verify it should add member
+    Create product member    ${TXT_manager}    ${CHECKBOX_label}  
+    Wait Until Element is present then click the element    ${TXT_product_member}
+    Wait Until Element is present then click the element    ${BTN_ADD}  
+
+Verify if it should not display any result , it display message as " No records to display " in product member
+    Search Data    ${INPUT_SEARCH_P_MEMBER}    ${TXT_squad_member}
+    Check element is present    ${TXT_NO_DATA}
+
+Verify if it should display resullt as per input search in product member
+    Search Data    ${INPUT_SEARCH_P_MEMBER}    ${TXT_Manager}
+    Verify a Portfolio is displayed    ${TXT_Manager}
+
+    
+Verify it shouldn't be changed in product member
+    click squad member kebab button    ${TXT_Manager}    ${BTN_more_product_member}
+    Edit squad product details    ${TXT_Manager}    ${BTN_EDIT_product_member}    ${INPUT_VALUE_2}    ${TXT_select_role}    ${select_role_data}
+    Wait Until Element is present then click the element    ${BTN_Cancel}
+
+Verify it should be changed in product member
+    click squad member kebab button    ${TXT_Manager}    ${BTN_more_product_member}
+    Edit squad product details    ${TXT_Manager}    ${BTN_EDIT_product_member}    ${INPUT_VALUE_2}    ${TXT_select_role}    ${select_role_data}
+    Wait Until Element is present then click the element    ${BTN_Save}
+
+Verify a product member shouldn't be deleted
+    click squad member kebab button    ${TXT_Manager}    ${BTN_more_product_member}
+    delete product squad    ${TXT_Manager}    ${BTN_DELETE_SQUAD_MEMBER}    ${BTN_Cancel}
+
+Verify a Product member should be deleted
+    click squad member kebab button    ${TXT_Manager}    ${BTN_more_product_member}
+    delete product squad    ${TXT_Manager}    ${BTN_DELETE_SQUAD_MEMBER}    ${BTN_Confirm}
+
+Verify it should display Product squad page
+    Wait Until Element is present then click the element    ${TAB_SQUAD1}
+
+
+Verify a product squad member shouldn't be deleted in product squad 
+    Search Data    ${INPUT_SEARCH_SQUAD}    ${PROD_6_SQUAD_2}
+    click squad member kebab button    ${PROD_6_SQUAD_2}    ${BTN_MORE_product_squad}
+    delete product squad    ${PROD_6_SQUAD_2}    ${BTN_DELETE_SQUAD_PRODUCT}    ${BTN_Cancel}
+
+Verify a product squad member should be deleted in product squad 
+    click squad member kebab button    ${PROD_6_SQUAD_2}    ${BTN_MORE_product_squad}
+    delete product squad    ${PROD_6_SQUAD_2}    ${BTN_DELETE_SQUAD_PRODUCT}    ${BTN_Confirm}
+
 

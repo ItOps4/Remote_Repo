@@ -34,7 +34,7 @@ PROD_8_Produt_Squad_Role_Update = 'PROD_8_Product_Squad_Role_name_Update'
 PROD_8_Product_Squad_Role_Description_Update = 'PROD_8_Product_Squad_Role_Description_Update'
 
 #PROD-6 PRODUCT / PLATFORM OKR and Squad
-PROD_6_portfolio = 'PROD_6_PORTFOLIO_33'
+PROD_6_portfolio = 'PROD_6_PORTFOLIO_39'
 PROD_6_description =  'PROD-6_description'
 PROD_6_PPG = 'PROD_6_ppg_name'
 TXT_Manager = "Lohitha"
@@ -45,7 +45,6 @@ PROD_6_OKR_UPDATE= 'PROD_6_okr2'
 PROD_6_SO = 'PROD_6_SO_name'
 PROD_6_SO_Description = 'PROD_6_SO_Description'
 INPUT_DATA = 'L'
-# PROD_6_so_link = 'PROD_6_SO_name'
 PROD_6_Keyresult = 'PROD_6_keyresult'
 PROD_6_keyresult_descript = 'PROD_6_keyresult_descript'
 TXT_baseline = '1234'
@@ -57,11 +56,12 @@ PROD_6_UOM = 'kg'
 PROD_6_product = 'PROD_6_product'
 PROD_6_PP_product = 'PROD_6_PP_product'
 PROD_6_PP_description = 'PROD_6_PP_description'
-
 PROD_6_SQUAD = 'prod_6_SQUAD'
-TXT_create_new_squad = '//p[@id="popup-header-Create New Squad"]'
-
-
+TXT_squad_member = 'Laragon'
+TXT_select_role = 'deveops squad'
+INPUT_value = '20'
+INPUT_VALUE_2 = '40'
+PROD_6_SQUAD_2 = 'PROD_6_SQUAD_2'
 
 # PROD-14 PPG-Product/Platform
 PROD_14_Portfolio = 'PROD_14_Portfolio'

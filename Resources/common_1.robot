@@ -454,7 +454,44 @@ Create Squad
     Wait Until Element is present then click the element    ${element1}
     # Wait Until Element is present then click the element    ${BTN_squad_CANCEL}
 
+click squad member kebab button
+    [Documentation]    Using this keyword we can click key result kebab button
+    [Arguments]    ${name}    ${element}
+    ${squadmember_more}    Format String    ${element}    name=${name}
+    Wait Until Element is present then click the element    ${squadmember_more}
 
+Edit squad product details 
+    [Arguments]    ${name}    ${element}    ${value}    ${role}    ${element1}
+    ${Edit_squad_details}    Format String    ${element}    name=${name}
+    Wait Until Element is present then click the element    ${Edit_squad_details}
+    Press Keys    ${INPUT_ALLOCATION}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_ALLOCATION}    ${value}
+    Wait Until Element is present then click the element    ${INPUT_SELECT_ROLE}
+    Press Keys    ${Input_Search_Manager}    ${role} 
+    Wait Until Element is present then click the element    ${element1}           
+
+Edit squad product
+    [Arguments]    ${name}    ${lead}    ${Element}    
+    click squad member kebab button    ${PROD_6_SQUAD}    ${BTN_EDIT_product_squad}
+    Press Keys    ${INPUT_SQUAD}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_SQUAD}    ${name}
+    Wait Until Element is present then click the element    ${INPUT_SQUAD_LEAD}
+    Press Keys    ${Input_Search_Manager}    ${lead}
+    Wait Until Element is present then click the element    ${Element}
+
+
+Create product member
+    [Arguments]    ${member}    ${element}
+    Wait Until Element is present then click the element    ${BTN_product_member}
+    Press Keys    ${Input_Search_Manager}    ${member}
+    Wait Until Element is present then click the element    ${element}
+    
+delete product squad
+    [Arguments]    ${name}    ${element}    ${ELEMENT1}
+    ${delete_squad}    Format String    ${element}    name=${name}
+    Wait Until Element is present then click the element    ${delete_squad}
+    Wait Until Element is present then click the element    ${ELEMENT1}
+    
 
 # PROD-12 Strategic Outcome
 create,edit strategic outcome
