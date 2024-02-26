@@ -73,8 +73,17 @@ Then Navigate to product , click on squad tab
     Verify it should display product page and it should display squad page
 
 
+
 Then click on Add squad button and enter mandatory fields in step 1, click on next button, add squad member, click on back button and click on cancel button
     Verify if squad shouldn't be Created
+
+Then Click on Add squad button and enter mandatory fields in step1 , click on next button , add squad member and click on save button
+    verify if squad should be created
+
+
+Then Navigate to created product squad and view squad member 
+    Verfiy it should display added squad member
+    
 Verify if user should be able to login successfully
     [Arguments]    ${username}
     Login Application    ${username}
@@ -84,6 +93,9 @@ verify it should display ppg page
     Create Portfolio    ${PROD_6_portfolio}    ${PROD_6_description}    ${BTN_Save}
     Search Data    ${Input_Portfolio_Search}    ${PROD_6_portfolio}
     Navigate to portfolio data    ${PROD_6_portfolio}
+    Wait Until Element is present then click the element    ${Strategic_outcome_Tab}
+    Wait Until Element is present then click the element    ${BTN_Add_Strategic_outcome}
+    Create,edit Strategic Outcome    ${PROD_6_SO}    ${PROD_6_SO_Description}    ${BTN_Save}
     Wait Until Element is present then click the element    ${TAB_PPG}
     Create PPG    ${PROD_6_PPG}    ${PROD_6_description}    ${TXT_Manager}    ${Input_Type_Platform}    ${BTN_SAVE}
     Navigate to portfolio data    ${PROD_6_PPG}
@@ -96,10 +108,10 @@ verify it should display product page and OKR page should be displayed
     Wait Until Element is present then click the element    ${BTN_prod_OKR}
 
 Verify a OKRs shouldn't be created
-    create PLatform OKR    ${PROD_6_OKR}    ${TXT_manager_OKR}    ${BTN_Cancel}
+    create PLatform OKR    ${PROD_6_OKR}    ${TXT_manager_OKR}    ${PROD_6_SO}    ${BTN_Cancel}
 
 Verify a OKRs should be created
-    create PLatform OKR    ${PROD_6_OKR}    ${TXT_manager_OKR}    ${BTN_Save}
+    create PLatform OKR    ${PROD_6_OKR}    ${TXT_manager_OKR}    ${PROD_6_SO}    ${BTN_Save}
 
 verify if it should not display any result , it display message as " No records to display "
     Search Data    ${BTN_okr_search}    ${PROD_6_OKR_UPDATE}
@@ -157,11 +169,10 @@ verify OKR fields can be changed
       
 verify a OKR shouldn't be delete
     click on okr kebab button    ${PROD_6_OKR_UPDATE}
-    Delete OKR    ${BTN_Cancel}
-
+    Delete platform OKR    ${PROD_6_OKR_UPDATE}    ${BTN_Cancel} 
 verify a OKR should be delete
     click on okr kebab button    ${PROD_6_OKR_UPDATE}
-    Delete OKR    ${BTN_Confirm}
+    Delete platform OKR    ${PROD_6_OKR_UPDATE}    ${BTN_Confirm}
 
 
 Verify it should display ppg 
@@ -177,5 +188,15 @@ Verify it should display product page and it should display squad page
 
 
 Verify if squad shouldn't be Created
-    Create Squad    ${PROD_6_SQUAD}    ${TXT_manager_Iyyappan}
+    Wait Until Element is present then click the element    ${TAB_squad}
+    Create Squad    ${PROD_6_SQUAD}    ${TXT_manager_Iyyappan}    ${BTN_NEXT}    ${BTN_BACK}
+    Wait Until Element is present then click the element    ${BTN_squad_Cancel}       
     
+verify if squad should be created
+    Create Squad    ${PROD_6_SQUAD}    ${TXT_manager_Iyyappan}    ${BTN_NEXT}    ${BTN_Save}
+    
+
+Verfiy it should display added squad member
+    Navigate to portfolio data    ${PROD_6_SQUAD}
+    Check element is present    ${product_mem}
+

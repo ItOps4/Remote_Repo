@@ -34,7 +34,7 @@ PROD_8_Produt_Squad_Role_Update = 'PROD_8_Product_Squad_Role_name_Update'
 PROD_8_Product_Squad_Role_Description_Update = 'PROD_8_Product_Squad_Role_Description_Update'
 
 #PROD-6 PRODUCT / PLATFORM OKR and Squad
-PROD_6_portfolio = 'PROD-6 PORTFOLIO'
+PROD_6_portfolio = 'PROD_6_PORTFOLIO_33'
 PROD_6_description =  'PROD-6_description'
 PROD_6_PPG = 'PROD_6_ppg_name'
 TXT_Manager = "Lohitha"
@@ -42,6 +42,10 @@ PROD_6_pp = 'PROD_6_pp_name1'
 TXT_manager_OKR = 'Neeraj patel'
 PROD_6_OKR = 'PROD_6_okr1'
 PROD_6_OKR_UPDATE= 'PROD_6_okr2'
+PROD_6_SO = 'PROD_6_SO_name'
+PROD_6_SO_Description = 'PROD_6_SO_Description'
+INPUT_DATA = 'L'
+# PROD_6_so_link = 'PROD_6_SO_name'
 PROD_6_Keyresult = 'PROD_6_keyresult'
 PROD_6_keyresult_descript = 'PROD_6_keyresult_descript'
 TXT_baseline = '1234'
@@ -55,7 +59,7 @@ PROD_6_PP_product = 'PROD_6_PP_product'
 PROD_6_PP_description = 'PROD_6_PP_description'
 
 PROD_6_SQUAD = 'prod_6_SQUAD'
-
+TXT_create_new_squad = '//p[@id="popup-header-Create New Squad"]'
 
 
 

@@ -55,6 +55,8 @@ BTN_Delete_budget = '//li[@id="fin-budget-row-delete-{name}"]'
 # TC05 
 Recycle_bin_btn = '//div[@id="system-settings-recycle-bin"]'
 Restore_btn = '//button[@id="recycle-bin-restore"]'
+Restore_cancel_btn = '//button[@id="recycbin-restore-cancel-btn"]'
+Restore_confirm_btn = '//button[@id="recycbin-restore-confirm-btn"]'
 name_profile ='//td[@id="custom-id-gayathri  portfolio"]'
 
 # PROD-8 Product Squad Role
@@ -74,12 +76,12 @@ BTN_Product_Squad_Role_Delete = '//li[@id="product-squad-role-delete-{name}"]'
 BTN_prod_OKR = '//div[@id="product-okrs"]'
 BTN_Add_OKR_platform = '//button[@id="create-okr-nullstate-btn"]'
 INPUT_OKR_PLATFORM = '//input[@id="okr-name"]'
-INPUT_start_date = '//p[@id="okr-start-date"]/parent::div/descendant::input'
-INPUT_END_date = '//p[@id="okr-end-date"]/parent::div/descendant::input'
+INPUT_start_date = '//p[@id="okr-edit-start-date"]/parent::div/descendant::input'
+INPUT_END_date = '//p[@id="okr-edit-end-date"]/parent::div/descendant::input'
 INPUT_assign_to = '//div[@id="okr-owner"]'
 INPT_okr_owner = '//li[@id="Neeraj Patel"]'
 INPT_link_SO = '//div[@id="okr-SO"]'
-INPUT_strat_out_name = '//li[@id="delt so"]'
+INPUT_strat_out_name = '//li[@id="{name}"]'
 BTN_okr_search = '//input[@id="okr-search-input"]'
 BTN_add_result = '//button[@id="okr-add-result-{name}"]'
 BTN_more_OKR = '//div[@id="okr-more-btn-{name}"]'
@@ -96,15 +98,15 @@ BTN_OVERVIEW_edit = '//button[@id="okr-overview-edit-btn"]'
 BTN_BACKARROW_KEY_OVERVIEW = '//i[@id="back-to-result-undefined"]'
 BTN_DELETE_result= '//li[@id="keyresult-delete-{name}"]'
 BTN_BACKARROW_OKR = '//i[@id="back-to-okr-PROD_6_okr1"]'
-
 TAB_squad = '//div[@id="product-squad"]'
 BTN_ADD_SQUAD ='//button[@id="add-squad-btn"]'
 INPUT_SQUAD = '//input[@id="squad-name"]'
 INPUT_SQUAD_LEAD = '//div[@id="squad-lead"]'
-BTN_NEXT = '//button[@id="create-squad-save"]'
-
-
-# PROD-14 PPG-Product/Platform
+BTN_NEXT = '//button[@id="create-squad-next"]'
+Label_1 = '//input[@id="checkbox-laragon"]'
+product_mem = '//td[@id="custom-id-Laragon"]'
+BTN_BACK = '//button[@id="create-squad-step-2-back"]'
+BTN_squad_CANCEL = '//button[@id="create-squad-cancel"]'
 Portfolio_Click = '//td[@id="custom-id-{name}"]'
 TAB_PPG = '//a[@id="PPG-tabs"]'
 BTN_Add_PPG = '//p[text()="Add PPG"]/ancestor::button'
@@ -203,7 +205,7 @@ BTN_Strategic_Delete_Cancel = "//button[@id='common-delete-cancel-btn']"
 BTN_Strategic_Delete_Confirm ="//button[@id='common-delete-confirm-btn']"
 BTN_Create_OKR = "//button[@id='so-okr-add-okr-btn']"
 BTN_OKR_Expand = "//tbody/tr[1]/td[1]/span[1]/button[1]/*[1]" #id required
-BTN_Add_Result = "//button[@id='okr-create-result-{name}']"
+BTN_Add_Result = "//button[@id='okr-add-result-{name}']"
 BTN_Add_Key_Results = "//button[@id='create-sc-keyResultNullState-btn']"
 INPUT_Search_Key_Results = "//input[@id='keyresult-search-input']"
 BTN_More_Key_Results ="//div[@id='keyresult-more-btn-{name}']"
