@@ -98,17 +98,13 @@ BTN_OVERVIEW_edit = '//button[@id="okr-overview-edit-btn"]'
 BTN_BACKARROW_KEY_OVERVIEW = '//i[@id="back-to-result-undefined"]'
 BTN_DELETE_result= '//li[@id="keyresult-delete-{name}"]'
 BTN_BACKARROW_OKR = '//i[@id="back-to-okr-PROD_6_okr1"]'
-
 TAB_squad = '//div[@id="product-squad"]'
 BTN_ADD_SQUAD ='//button[@id="add-squad-btn"]'
 INPUT_SQUAD = '//input[@id="squad-name"]'
 INPUT_SQUAD_LEAD = '//div[@id="squad-lead"]'
 BTN_NEXT = '//button[@id="create-squad-next"]'
 Label_1 = '//input[@id="checkbox-laragon"]'
-'//li[@id="label-laragon"]'
-
 product_mem = '//td[@id="custom-id-Laragon"]'
-
 BTN_BACK = '//button[@id="create-squad-step-2-back"]'
 BTN_squad_CANCEL = '//button[@id="create-squad-cancel"]'
 Portfolio_Click = '//td[@id="custom-id-{name}"]'
