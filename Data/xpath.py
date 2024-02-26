@@ -55,6 +55,8 @@ BTN_Delete_budget = '//li[@id="fin-budget-row-delete-{name}"]'
 # TC05 
 Recycle_bin_btn = '//div[@id="system-settings-recycle-bin"]'
 Restore_btn = '//button[@id="recycle-bin-restore"]'
+Restore_cancel_btn = '//button[@id="recycbin-restore-cancel-btn"]'
+Restore_confirm_btn = '//button[@id="recycbin-restore-confirm-btn"]'
 name_profile ='//td[@id="custom-id-gayathri  portfolio"]'
 
 # PROD-8 Product Squad Role

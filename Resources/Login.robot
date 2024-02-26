@@ -20,7 +20,7 @@ Login Application
     ${encry}    Set Variable    ${object['${username}']}
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].EdgeOptions()    sys,selenium.webdriver
     Call Method    ${options}    add_argument    inprivate
-    # Call Method    ${options}    add_argument    --headless    
+    Call Method    ${options}    add_argument    --headless    
     ${driver}    Create Webdriver    Edge    options=${options}    
     Set Window Size    1920    1080
     Go To    ${Productor_Url}
@@ -30,10 +30,9 @@ Login Application
     Press Keys    ${Input_Username}    ${username}
     Use Encryption Key    ${public_key}
     ${Decry} =  Decrypt String    ${encry}
-    Log    ${Decry}    
+    Log    ${Decry}
     Press Keys    ${Input_Password}    ${Decry}
     Wait Until Element is present then click the element    ${BTN_Login}
-
 
 
     
