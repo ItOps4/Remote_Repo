@@ -329,14 +329,16 @@ Click Breadcrums
     ${Breadcrums}    Format String    ${Bread_Crums}    name=${name}
     Wait Until Element is present then click the element    ${Breadcrums}
 
+
+
  
 #PROD-6 PLAtform OKR and PRODUCT SQUAD
 
 create PLatform OKR
     [Documentation]    using this keyword we can create platform OKR
-    [Arguments]    ${name}    ${Manager}    ${element}
+    [Arguments]    ${name1}    ${Manager}    ${name}    ${element}
     Wait Until Element is present then click the element    ${BTN_Add_OKR_platform}
-    Input Text    ${INPUT_OKR_PLATFORM}    ${name}
+    Input Text    ${INPUT_OKR_PLATFORM}    ${name1}
     Wait Until Element is present then click the element    ${INPUT_assign_to}
     Press Keys    ${Input_Search_Manager}    ${Manager}
     Wait Until Element is present then click the element    ${INPT_okr_owner}
@@ -351,7 +353,8 @@ create PLatform OKR
     Press Keys    ${INPUT_start_date}    ${cd}
     Press Keys    ${INPUT_END_date}    ${cd1}
     Wait Until Element is present then click the element    ${INPT_link_SO}
-    Wait Until Element is present then click the element    ${INPUT_strat_out_name}
+    ${strategic_out_link}    Format String    ${INPUT_strat_out_name}    name=${name}
+    Wait Until Element is present then click the element    ${strategic_out_link}
     Wait Until Element is present then click the element    ${element}
 
 Click on add result button
@@ -389,7 +392,7 @@ Edit OKR
     # Press Keys    ${INPUT_END_date}    ${cd1}
     Wait Until Element is present then click the element    ${element}    
 
-Delete OKR 
+Delete platform OKR 
     [Arguments]    ${name}    ${Element}
     ${Delete_OKR}    Format String    ${BTN_DELETE_OKR}    name=${name}
     Wait Until Element is present then click the element    ${Delete_OKR}
@@ -437,12 +440,58 @@ Delete Key result
     Wait Until Element is present then click the element    ${Element}
 
 Create Squad
-    [Arguments]    ${name}    ${lead}
+    [Arguments]    ${name}    ${lead}    ${element}    ${element1}        
     Wait Until Element is present then click the element    ${BTN_ADD_SQUAD}
     Input Text    ${INPUT_SQUAD}    ${name}
     Wait Until Element is present then click the element    ${INPUT_SQUAD_LEAD}
     Press Keys    ${Input_Search_Manager}    ${lead}
-    Wait Until Element is present then click the element    ${BTN_NEXT}
+    Wait Until Element is present then click the element    ${Drop_Down_Manager}
+    Wait Until Element is present then click the element    ${element} 
+    Press Keys    ${Input_Search_Manager}    ${INPUT_DATA}
+    # Wait Until Element is present then click the element    ${Drop_Down_Manager}
+    Wait Until Element is present then click the element    ${Label_1}
+    Wait Until Element is present then click the element    ${TXT_create_new_squad}
+    Wait Until Element is present then click the element    ${element1}
+    # Wait Until Element is present then click the element    ${BTN_squad_CANCEL}
+
+click squad member kebab button
+    [Documentation]    Using this keyword we can click key result kebab button
+    [Arguments]    ${name}    ${element}
+    ${squadmember_more}    Format String    ${element}    name=${name}
+    Wait Until Element is present then click the element    ${squadmember_more}
+
+Edit squad product details 
+    [Arguments]    ${name}    ${element}    ${value}    ${role}    ${element1}
+    ${Edit_squad_details}    Format String    ${element}    name=${name}
+    Wait Until Element is present then click the element    ${Edit_squad_details}
+    Press Keys    ${INPUT_ALLOCATION}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_ALLOCATION}    ${value}
+    Wait Until Element is present then click the element    ${INPUT_SELECT_ROLE}
+    Press Keys    ${Input_Search_Manager}    ${role} 
+    Wait Until Element is present then click the element    ${element1}           
+
+Edit squad product
+    [Arguments]    ${name}    ${lead}    ${Element}    
+    click squad member kebab button    ${PROD_6_SQUAD}    ${BTN_EDIT_product_squad}
+    Press Keys    ${INPUT_SQUAD}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_SQUAD}    ${name}
+    Wait Until Element is present then click the element    ${INPUT_SQUAD_LEAD}
+    Press Keys    ${Input_Search_Manager}    ${lead}
+    Wait Until Element is present then click the element    ${Element}
+
+
+Create product member
+    [Arguments]    ${member}    ${element}
+    Wait Until Element is present then click the element    ${BTN_product_member}
+    Press Keys    ${Input_Search_Manager}    ${member}
+    Wait Until Element is present then click the element    ${element}
+    
+delete product squad
+    [Arguments]    ${name}    ${element}    ${ELEMENT1}
+    ${delete_squad}    Format String    ${element}    name=${name}
+    Wait Until Element is present then click the element    ${delete_squad}
+    Wait Until Element is present then click the element    ${ELEMENT1}
+    
 
 # PROD-12 Strategic Outcome
 create,edit strategic outcome

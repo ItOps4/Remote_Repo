@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Portfolio - Strategic Outcome   
 Resource    PROD-12_Support.robot
-Force Tags    PROD-12    Test    name:Naresh  
+# Force Tags    PROD-12    Test    name:Naresh  
 
 
 

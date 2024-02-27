@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Portfolio - Settings - User Access   
 Resource    PROD-16_Support.robot
-Force Tags    PROD-16    Test    name:Naresh  
+# Force Tags    PROD-16    Test    name:Naresh  
 
 
 *** Test Cases ***
