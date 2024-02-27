@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Create,Search,Edit and Delete PPG and Product/Platform    JIRA ID - PROD-14
 Resource    PROD-14_Support.robot
-Force Tags    PROD-14    Test    Name:Amritha
+# Force Tags    PROD-14    Test    Name:Amritha
 
 *** Test Cases ***
 

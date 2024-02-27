@@ -30,10 +30,9 @@ Login Application
     Press Keys    ${Input_Username}    ${username}
     Use Encryption Key    ${public_key}
     ${Decry} =  Decrypt String    ${encry}
-    Log    ${Decry}    
+    Log    ${Decry}
     Press Keys    ${Input_Password}    ${Decry}
     Wait Until Element is present then click the element    ${BTN_Login}
-
 
 
     
