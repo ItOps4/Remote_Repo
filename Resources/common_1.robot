@@ -664,7 +664,10 @@ Navigate to Product/Platform and Click on Roadmap Tab
     ${PPG}    Format String    ${Navigate_PPG}    name=${name}
     Wait Until Element is present then click the element    ${PPG}
     Wait Until Element is present then click the element    ${Element}
-
+click edit button
+    [Arguments]    ${name}    ${element}
+    ${format_element}    Format String    ${element}    name=${name}
+    Wait Until Element is present then click the element    ${format_element} 
 
 ADD and EDIT Category
     [Arguments]    ${Category_name}    ${name1}    ${color}    ${button}
@@ -684,16 +687,7 @@ ADD and EDIT Category
 
 
 Create and edit task
-    [Arguments]    ${name}    ${name2}    ${task_name}    ${button}
-    ${Add_task}    Format String    ${BTN_ROADMAP_ADD}    name=${name}
-    Wait Until Element is present then click the element    ${Add_task}
-    ${Edit_task}    Format String    ${BTN_ROADMAP_EDIT_TASK}    name=${name2}
-    ${Status}    Run Keyword And Return Status    Page Should Contain Element    ${Add_task}
-    IF    '${Status}' == '${True}'
-        Wait Until Element is present then click the element    ${Add_task}
-    ELSE
-        Wait Until Element is present then click the element    ${Edit_task}
-    END
+    [Arguments]    ${task_name}    ${button}
     Press Keys    ${INPUT_TASK_NAME}    CTRL+A+BACKSPACE
     Input Text    ${INPUT_TASK_NAME}    ${task_name}
     ${current_date}=    Get Current Date    result_format=%m/%d/%Y        
@@ -706,18 +700,15 @@ Create and edit task
     Wait Until Element is present then click the element    ${button}
     
 
-
-
-
-    
-    
-
-
-   
-
-
-
-
+Add and edit milestone
+    [Arguments]    ${milestone_name}    ${Type}    ${element}       
+    Press Keys    ${INPUT_Milestone_Name}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_Milestone_Name}    ${milestone_name}
+    Press Keys    ${Dropdown_Milestone_Select_Type}    ${Type}
+    ${current_date}=    Get Current Date    result_format=%m/%d/%Y 
+    Press Keys    ${INPUT_MILESTONE_DATE}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_MILESTONE_DATE}    ${current_date}
+    Wait Until Element is present then click the element    ${element}
 
 
 #create roadmap
