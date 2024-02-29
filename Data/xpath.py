@@ -296,6 +296,8 @@ Roadmap_Tab = "//p[@id='tabs-name-Road Map']"
 INPUT_Search_Roadmap = "//input[@id='roadmap-search-input']"
 BTN_Add_Road_Map = "//button[@id='roadmap-nullstate-btn']"
 DropDown_Select_Create_New_Roadmap = "//li[@id='Create-New-Roadmap']"
+INPUT_Create_Roadmap = '//input[@id="portfolio-management-roadmap-name"]'
+Navigate_Roadmap = '//td[@id="custom-id-{name}"]'
 Dropdown_Link_Roadmap = "//li[@id='Link-Roadmap']"
 Dropdown_Attach_Roadmap = "//li[@id='Attach-Roadmap']"
 BTN_Add_Category = "//button[@id='add-category-roadmap-btn']"
