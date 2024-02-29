@@ -678,6 +678,32 @@ ADD and EDIT Category
 
 
 Create task
+    [Arguments]    ${name}    ${name2}    ${task_name}    ${button}
+    ${Add_task}    Format String    ${BTN_ROADMAP_ADD}    name=${name}
+    Wait Until Element is present then click the element    ${Add_task}
+    ${Edit_task}    Format String    ${BTN_ROADMAP_EDIT_TASK}    name=${name2}
+    ${Status}    Run Keyword And Return Status    Page Should Contain Element    ${Add_task}
+    IF    '${Status}' == '${True}'
+        Wait Until Element is present then click the element    ${Add_task}
+    ELSE
+        Wait Until Element is present then click the element    ${Edit_task}
+    END
+    Press Keys    ${INPUT_TASK_NAME}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_TASK_NAME}    ${task_name}
+    ${current_date}=    Get Current Date    result_format=%m/%d/%Y        
+    Log    ${current_date}
+    ${change_date}    Get Current Date    increment=7day    result_format=%m/%d/%Y 
+    Press Keys    ${INPUT_TASK_START_DATE}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_TASK_START_DATE}    ${current_date}   
+    Press Keys    ${INPUT_TASK_END_DATE}    CTRL+A+BACKSPACE               
+    Press Keys    ${INPUT_TASK_END_DATE}    ${change_date}    
+    Wait Until Element is present then click the element    ${button}
+    
+
+
+
+
+    
     
 
 
