@@ -300,8 +300,8 @@ INPUT_Create_Roadmap = '//input[@id="portfolio-management-roadmap-name"]'
 Navigate_Roadmap = '//td[@id="custom-id-{name}"]'
 Dropdown_Link_Roadmap = "//li[@id='Link-Roadmap']"
 Dropdown_Attach_Roadmap = "//li[@id='Attach-Roadmap']"
-BTN_Add_Category = "//button[@id='add-category-roadmap-btn']"
-BTN_Add_Milestone = "//button[@id='add-milestone-roadmap-btn']"
+BTN_Add_Category_Roadmap = "//button[@id='add-category-roadmap-btn']"
+# BTN_Add_Milestone = "//button[@id='add-milestone-roadmap-btn']"
 INPUT_Category_Name = "//input[@id='road-map-tg-add-category-name']"
 CHOOSE_COLOR_Purple = "//div[@id='road-map-tg-tl-add-category-color-#A38EF4']"
 CHOOSE_COLOR_Pink = "//div[@id='road-map-tg-tl-add-category-color-#FBB6F0']"
@@ -311,15 +311,15 @@ Dropdown_Quartly = "//li[@id='Quartly']"
 Dropdown_Monthly = "//li[@id='Monthly']"
 Dropdown_Weekly = "//li[@id='Weekly']"
 Dropdown_Daily = "//li[@id='Daily']"
-BTN_Add_Milestone = "//button[@id='roadmap-add-milestone']"
+# BTN_Add_Milestone = "//button[@id='roadmap-add-milestone']"
 INPUT_Milestone_Name = "//input[@id='road-map-tg-add-milestone-name']"
 Dropdown_Milestone_Select_Type = "//div[@id='road-map-tg-add-milestone-release']"
 Dropdown_Minor_Release = "//li[@id='Minor Release']"
 Dropdown_Major_Release = "//li[@id='Major Release']"
-ICON_Milestone_Minor = "//span[@id='roadmap-milestone-release-Sample Milestone']"
-BTN_Add_Icon = "//div[@id='road-map-tg-cat-group-add-Sample Category']"
-BTN_Edit_Icon = "//div[@id='road-map-tg-cat-group-edit-Sample Category']"
-BTN_Delete_Icon = "//div[@id='road-map-tg-cat-group-delete-Sample Category']"
+ICON_Milestone_Minor = "//span[@id='roadmap-milestone-release-{name}']"
+BTN_Add_Icon = "//div[@id='road-map-tg-cat-group-add-{name}']"
+BTN_Edit_Icon = "//div[@id='road-map-tg-cat-group-edit-{name}']"
+BTN_Delete_Icon = "//div[@id='road-map-tg-cat-group-delete-{name}']"
 Task_Name = "//input[@id='road-sc-task-roadmap-name']"
 BTN_Roadmap_Back_btn = "//i[@id='roadmap-scheduler-backaButton-arrow']"
 Breadcrums_Product = "//p[@id='breadcrums-Sample Product']"
@@ -335,7 +335,7 @@ BTN_ROADMAP_ADD = '//div[@id="road-map-tg-cat-group-add-{name}"]'
 BTN_ROADMAP_EDIT_TASK = '//div[@id="roadmap-items-task-{name2}"]'
 BTN_ROADMAP_DELETE ='//div[@id="road-map-tg-cat-group-delete-{name}"]'
 INPUT_CATEGORY_NAME = '//input[@id="road-map-tg-add-category-name"]'
-INPUT_CHOOSE_COLOR = '//div[@id="road-map-tg-tl-add-category-color-{Color}"]'
+INPUT_CHOOSE_COLOR = '//div[@id="road-map-tg-tl-add-category-color-{color}"]'
 INPUT_TASK_NAME = '//input[@id="road-sc-task-roadmap-name"]'
 INPUT_TASK_START_DATE = '//div[@id="road-sc-task-start-date"]/parent::div/descendant::input'
 INPUT_TASK_END_DATE = '//div[@id="road-sc-task-end-date"]/parent::div/descendant::input'

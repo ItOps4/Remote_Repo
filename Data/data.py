@@ -117,8 +117,8 @@ PROD_16_Portfolio_name = 'PROD_16_Portfolio_name'
 PROD_16_Portfolio_Description = 'PROD_16_Portfolio_Description'
 
 # ROADMAP PPG-Product/Platform
-RM_Portfolio = 'RM_Portfolio8'
-RM_Portfolio_Description = 'RM_Portfolio_Description8'
+RM_Portfolio = 'RM_Portfolio22'
+RM_Portfolio_Description = 'RM_Portfolio_Description22'
 RM_PPG = 'RM_PPG6'
 RM_PPG_Description = 'RM_PPG_Description6'
 RM_Owner = 'Tom Parthi'
@@ -141,3 +141,7 @@ RM_Roadmap = "RM_Roadmap6"
 RM_Category = "RM_Category_bag"
 RM_Edit_Category = "RM_Edit_Category_laptop"
 RM_task = "RM_New_task6"
+RM_Edit_Task = "RM_Edit_Task"
+RM_milestone = "RM_Milestone_Name"
+RM_Edit_milestone = "RM_Edit_Milestone_Name"
+

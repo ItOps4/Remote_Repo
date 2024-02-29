@@ -664,16 +664,16 @@ Navigate to Product/Platform and Click on Roadmap Tab
     ${PPG}    Format String    ${Navigate_PPG}    name=${name}
     Wait Until Element is present then click the element    ${PPG}
     Wait Until Element is present then click the element    ${Element}
-click edit button
-    [Arguments]    ${name}    ${element}
-    ${format_element}    Format String    ${element}    name=${name}
-    Wait Until Element is present then click the element    ${format_element} 
+click on edit icon in roadmap
+    [Arguments]    ${name}    
+    ${edit icon}    Format String    ${BTN_Edit_Icon}    name=${name}
+    Wait Until Element is present then click the element    ${edit icon} 
 
 ADD and EDIT Category
     [Arguments]    ${Category_name}    ${color}    ${button}
     Press Keys    ${INPUT_CATEGORY_NAME}    CTRL+A+BACKSPACE
     Input Text    ${INPUT_CATEGORY_NAME}    ${Category_name}
-    ${color_choose_category}    Format String    ${INPUT_CHOOSE_COLOR}    name=${color}
+    ${color_choose_category}    Format String    ${INPUT_CHOOSE_COLOR}    color=${color}
     Wait Until Element is present then click the element    ${color_choose_category}
     Wait Until Element is present then click the element    ${button}    
 
@@ -718,3 +718,21 @@ navigate to roadmap
     [Arguments]    ${name}  
     ${Roadmap}    Format String    ${Navigate_Roadmap}    name=${name}
     Wait Until Element is present then click the element    ${Roadmap}
+
+click milestone icon
+    [Documentation]    Using this keyword we can click milestone icon   
+    [Arguments]    ${name}  
+    ${milestone}    Format String    ${ICON_Milestone_Minor}    name=${name}
+    Wait Until Element is present then click the element    ${milestone}
+
+click on add icon in roadmap   
+    [Documentation]    Using this keyword we can click on add icon in roadmap  
+    [Arguments]    ${name}  
+    ${Add icon}    Format String    ${BTN_Add_Icon}    name=${name}
+    Wait Until Element is present then click the element    ${Add icon}
+
+click on delete icon in roadmap   
+    [Documentation]    Using this keyword we can click on add icon in roadmap  
+    [Arguments]    ${name}  
+    ${Delete icon}    Format String    ${BTN_Delete_Icon}    name=${name}
+    Wait Until Element is present then click the element    ${Delete icon}

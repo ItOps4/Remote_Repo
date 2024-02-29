@@ -23,11 +23,21 @@ Then Click on Add RoadMap Button,Select Create new roadmap and don't mandatory f
     Verify a roadmap should be created
 Then Navigate to Roadmap
 	verify a Road-Map page should be display
+
 Then click on Add Category button and don't enter mandatory fields and click on cancel button
 	Verify category should not be created
 Then click on Add Category button and enter mandatory fields and click on Save button
-	Verify category should be created  
-
+	Verify category should be created
+Then click on Add Milestone button,don't enter mandatory Fields and click on cancel button
+	verify milestone should not created 
+Then click on Add Milestone button,enter mandatory Fields and click on Save button
+	verify milestone should be created 
+Then click on daily dropdown and select Yearly,Quarter,Monthly,Weekly and Daily
+	Verify it should be change as per respective Year,Quarter,Month,Week and Days
+Then click on Milestone icon,don't enter mandatory fields and click on cancel button
+	Verify milestone should not be changed
+Then click on Milestone icon,enter mandatory fields and click on Save button	
+    Verify milestone should be changed    
 Then click on + icon in the category Section and dont enter mandatory fields and click on Cancel button
 	Verify create Task pop up window is displayed and task should'nt be created
 Then click on + icon in the category Section and enter mandatory fields and click on Save button
@@ -72,36 +82,74 @@ Verify a Roadmap should be display
     Navigate to Product/Platform and Click on Roadmap Tab    ${RM_Product_Platform_}    ${Roadmap_Tab}
 
 verify a roadmap should not be created
+    # Wait Until Element is present then click the element    ${BTN_Add_Road_Map}
+    # Wait Until Element is present then click the element    ${DropDown_Select_Create_New_Roadmap}
     Create,Edit roadmap    ${BTN_Cancel}
 
 verify a roadmap should be created
+    # Wait Until Element is present then click the element    ${BTN_Add_Road_Map}
+    # Wait Until Element is present then click the element    ${DropDown_Select_Create_New_Roadmap}
     Create,Edit roadmap    ${BTN_Save}    
 
 verify a Road-Map page should be display
     navigate to roadmap    ${RM_Roadmap}    
 
 Verify category should not be created
-    ADD and EDIT Category    ${RM_Category}    Naresh    ${choose_color1}    ${BTN_Cancel}    
+    Wait Until Element is present then click the element    ${BTN_Add_Category_Roadmap}
+    ADD and EDIT Category    ${RM_Category}    ${choose_color1}    ${BTN_Cancel}
 
-Verify category should be created    
-    ADD and EDIT Category    ${RM_Category}    Naresh    ${choose_color1}    ${BTN_Save}   
+Verify category should be created
+    Wait Until Element is present then click the element    ${BTN_Add_Category_Roadmap}
+    ADD and EDIT Category    ${RM_Category}    ${choose_color1}    ${BTN_Save}
+
+verify milestone should not created
+    Wait Until Element is present then click the element    ${BTN_ADD_MILESTONE}
+    Add and edit milestone    ${RM_milestone}    ${Dropdown_Major_Release}    ${BTN_Cancel}
+
+verify milestone should be created
+    Wait Until Element is present then click the element    ${BTN_ADD_MILESTONE}
+    Add and edit milestone    ${RM_milestone}    ${Dropdown_Major_Release}    ${BTN_Save}    
+
+Verify it should be change as per respective Year,Quarter,Month,Week and Days
+    Wait Until Element is present then click the element    ${Dropdown_default_Daily}    
+    Wait Until Element is present then click the element    ${Dropdown_Yearly} 
+    Wait Until Element is present then click the element    ${Dropdown_default_Daily}    
+    Wait Until Element is present then click the element    ${Dropdown_Quartly} 
+    Wait Until Element is present then click the element    ${Dropdown_default_Daily}    
+    Wait Until Element is present then click the element    ${Dropdown_Monthly}  
+    Wait Until Element is present then click the element    ${Dropdown_default_Daily}    
+    Wait Until Element is present then click the element    ${Dropdown_Weekly}  
+    Wait Until Element is present then click the element    ${Dropdown_default_Daily}    
+    Wait Until Element is present then click the element    ${Dropdown_Daily}    
+
+  
+
+
 
 Verify create Task pop up window is displayed and task should'nt be created
+    click on add icon in roadmap    ${RM_Category}
     Create and edit task    ${Task_Name}    ${BTN_Cancel}   
 
-Verify create Task pop up window is displayed and task should be created      
+Verify create Task pop up window is displayed and task should be created 
+    click on add icon in roadmap    ${RM_Category}
     Create and edit task    ${Task_Name}    ${BTN_Save}   
 
 Verify Edit Category pop up window is displayed and category should not be changed
-    ADD and EDIT Category    ${RM_Edit_Category}    ${RM_Category}    ${choose_color2}    ${BTN_Cancel}    
+    click on edit icon in roadmap    ${RM_Category}    
+    ADD and EDIT Category    ${RM_Edit_Category}    ${choose_color2}    ${BTN_Cancel}    
 
 Verify Edit Category pop up window is displayed and category should be created
-    ADD and EDIT Category    ${RM_Edit_Category}    ${RM_Category}    ${choose_color2}    ${BTN_Save}  
+    click on edit icon in roadmap    ${RM_Category}    
+    ADD and EDIT Category    ${RM_Edit_Category}    ${choose_color2}    ${BTN_Save} 
 
-# Verify Category name Should not be deleted 
-#     Wait Until Element is present then click the element    $Element
+Verify milestone should not be changed
+    click milestone icon    ${RM_milestone}
+    Add and edit milestone    ${RM_Edit_milestone}    ${Dropdown_Minor_Release}    ${BTN_Cancel}
 
-# Verify Category name Should be deleted
+Verify milestone should be changed
+    click milestone icon    ${RM_milestone}
+    Add and edit milestone    ${RM_Edit_milestone}    ${Dropdown_Minor_Release}    ${BTN_Save}
+
 
 
 Verify it should move on Product page
