@@ -14,10 +14,19 @@ Then click on PPG Tab and navigate to PPG
 Then click on product/platform tab and nagivate to Product
     Verify a Product/Platform should display
 
-
-
 Then Click on Roadmap tab
     Verify a Roadmap should be display
+
+Then Click on Add RoadMap Button,Select Create new roadmap and don't mandatory fields and click on Cancel button
+    verify a roadmap should not be created
+Then Click on Add RoadMap Button,Select Create new roadmap and don't mandatory fields and click on Save button	
+    Verify a roadmap should be created
+Then Navigate to Roadmap
+	verify a Road-Map page should be display
+Then click on Add Category button and don't enter mandatory fields and click on cancel button
+	Verify category should not be created
+Then click on Add Category button and enter mandatory fields and click on Save button
+	Verify category should be created    
 And Close the Browser
     Verify Application should be Close
 
@@ -46,6 +55,21 @@ Verify a Product/Platform should display
     Create Product/Platform    ${RM_Product_Platform_}    ${RM_Product_Platform_description}    ${RM_Owner}    ${Input_Type_Product}    ${BTN_Save}
 Verify a Roadmap should be display
     Navigate to Product/Platform and Click on Roadmap Tab    ${RM_Product_Platform_}    ${Roadmap_Tab}
+
+verify a roadmap should not be created
+    Create,Edit roadmap    ${BTN_Cancel}
+
+verify a roadmap should be created
+    Create,Edit roadmap    ${BTN_Save}    
+
+verify a Road-Map page should be display
+    navigate to roadmap    ${RM_Roadmap}    
+
+Verify category should not be created
+    ADD and EDIT Category    $Category_name    $name1    $name    ${BTN_Cancel}    
+
+Verify category should be created    
+    ADD and EDIT Category    $Category_name    $name1    $name    ${BTN_Save}    
 
 # Verify a Platform and Product PPG Should be deleted
 #     Click the Kebab button     ${PROD_14_Product_Platform}    ${BTN_Product_Platform_Kebab}

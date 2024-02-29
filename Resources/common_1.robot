@@ -688,3 +688,24 @@ Create task
 
 
    
+
+
+
+
+
+
+#create roadmap
+Create,Edit roadmap
+    [Documentation]    Using this keyword we can Create Roadmap   
+    [Arguments]    ${Element}  
+    Wait Until Element is present then click the element    ${BTN_Add_Road_Map}
+    Wait Until Element is present then click the element    ${DropDown_Select_Create_New_Roadmap}
+    Press Keys    ${INPUT_Create_Roadmap}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_Create_Roadmap}    ${RM_Roadmap}
+    Wait Until Element is present then click the element    ${Element}
+
+navigate to roadmap
+    [Documentation]    Using this keyword we can navigate to Roadmap   
+    [Arguments]    ${name}  
+    ${Roadmap}    Format String    ${Navigate_Roadmap}    name=${name}
+    Wait Until Element is present then click the element    ${Roadmap}
