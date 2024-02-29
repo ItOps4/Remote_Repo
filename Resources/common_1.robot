@@ -670,15 +670,7 @@ click edit button
     Wait Until Element is present then click the element    ${format_element} 
 
 ADD and EDIT Category
-    [Arguments]    ${Category_name}    ${name1}    ${color}    ${button}
-    ${Edit_category}    Format String    ${BTN_ROADMAP_EDIT_CATEGORY}    name=${name1}
-    ${Status}    Run Keyword And Return Status    Page Should Contain Element    ${BTN_ROADMAP_ADD_CATEGORY} 
-    IF    '${Status}' == '${True}'
-        Wait Until Element is present then click the element    ${BTN_ROADMAP_ADD_CATEGORY}
-
-    ELSE
-          Wait Until Element is present then click the element    ${Edit_category}
-    END
+    [Arguments]    ${Category_name}    ${color}    ${button}
     Press Keys    ${INPUT_CATEGORY_NAME}    CTRL+A+BACKSPACE
     Input Text    ${INPUT_CATEGORY_NAME}    ${Category_name}
     ${color_choose_category}    Format String    ${INPUT_CHOOSE_COLOR}    name=${color}
