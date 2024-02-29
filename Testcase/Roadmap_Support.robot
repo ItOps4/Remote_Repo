@@ -87,10 +87,10 @@ Verify category should be created
     ADD and EDIT Category    ${RM_Category}    Naresh    ${choose_color1}    ${BTN_Save}   
 
 Verify create Task pop up window is displayed and task should'nt be created
-    Create and edit task    ${RM_Category}    Naresh    ${Task_Name}    ${BTN_Cancel}   
+    Create and edit task    ${Task_Name}    ${BTN_Cancel}   
 
 Verify create Task pop up window is displayed and task should be created      
-    Create and edit task    ${RM_Category}    Naresh    ${Task_Name}    ${BTN_Save}   
+    Create and edit task    ${Task_Name}    ${BTN_Save}   
 
 Verify Edit Category pop up window is displayed and category should not be changed
     ADD and EDIT Category    ${RM_Edit_Category}    ${RM_Category}    ${choose_color2}    ${BTN_Cancel}    
@@ -105,6 +105,7 @@ Verify Edit Category pop up window is displayed and category should be created
 
 
 Verify it should move on Product page
+    Wait Until Element is present then click the element    ${BTN_Roadmap_Back_btn}
 # Verify a Platform and Product PPG Should be deleted
 #     Click the Kebab button     ${PROD_14_Product_Platform}    ${BTN_Product_Platform_Kebab}
 #     Delete    ${PROD_14_Product_Platform}    ${BTN_Product_Platform_Delete}    ${BTN_Cancel}

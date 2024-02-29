@@ -117,8 +117,8 @@ PROD_16_Portfolio_name = 'PROD_16_Portfolio_name'
 PROD_16_Portfolio_Description = 'PROD_16_Portfolio_Description'
 
 # ROADMAP PPG-Product/Platform
-RM_Portfolio = 'RM_Portfolio6'
-RM_Portfolio_Description = 'RM_Portfolio_Description6'
+RM_Portfolio = 'RM_Portfolio8'
+RM_Portfolio_Description = 'RM_Portfolio_Description8'
 RM_PPG = 'RM_PPG6'
 RM_PPG_Description = 'RM_PPG_Description6'
 RM_Owner = 'Tom Parthi'

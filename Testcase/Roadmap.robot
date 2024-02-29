@@ -18,6 +18,7 @@ Roadmap
     Then click on + icon in the category Section and enter mandatory fields and click on Save button
     Then click on Edit icon in category Section and don't enter mandatory fields and click on Cancel button
     Then click on Edit icon in category Section and enter mandatory fields and click on Save button
+    Then click on back button in Roadmap
     And Close the Browser
 
 
