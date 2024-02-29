@@ -116,12 +116,24 @@ PROD_16_Invalid_Name = 'PROD_16_invalid_name'
 PROD_16_Portfolio_name = 'PROD_16_Portfolio_name'
 PROD_16_Portfolio_Description = 'PROD_16_Portfolio_Description'
 
+# ROADMAP PPG-Product/Platform
+RM_Portfolio = 'RM_Portfolio4'
+RM_Portfolio_Description = 'RM_Portfolio_Description4'
+RM_PPG = 'RM_PPG4'
+RM_PPG_Description = 'RM_PPG_Description4'
+RM_Owner = 'Tom Parthi'
+RM_PPG_Update = 'RM_PPG_Update'
+RM_Portfolio_Description_Update = 'RM_Portfolio_Description_Update'
+RM_PPG_Invalid = 'RM_PPG_Invalid'
 
-# roadmap 
+
+#ROADMAP Product/Platform
+RM_Product_Platform = 'RM_Product_Platform4'
+RM_Product_Platform_description = 'RM_Product_Platform_description4'
+RM_Product_Platform_Invalid = 'RM_Product_Platform_Invalid'
 choose_color1 = '#E8E8E8'
 choose_color2 = '#FFB7B7'
 choose_color3 = '#ECA9A5'
 edit_task_name = 'bag'
-
 
 

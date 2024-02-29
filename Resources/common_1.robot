@@ -656,9 +656,15 @@ Click the Kebab button on User Access
     Wait Until Element is present then click the element    ${UA_more_option}
     ${UA_Delete}    Format String    ${UA_More_Delete}    name=${user_name}
     Wait Until Element is present then click the element    ${UA_Delete}    
-    
 
-# roadmap
+ # roadmap   
+Navigate to Product/Platform and Click on Roadmap Tab
+    [Documentation]    Using this keyword we can Navigate Roadmap   
+    [Arguments]    ${name}    ${Element}  
+    ${PPG}    Format String    ${Navigate_PPG}    name=${name}
+    Wait Until Element is present then click the element    ${PPG}
+    Wait Until Element is present then click the element    ${Element}
+
 
 ADD and EDIT Category
     [Arguments]    ${Category_name}    ${name1}    ${name}    ${button}
@@ -677,7 +683,7 @@ ADD and EDIT Category
     Wait Until Element is present then click the element    ${button}    
 
 
-Create task
+Create and edit task
     [Arguments]    ${name}    ${name2}    ${task_name}    ${button}
     ${Add_task}    Format String    ${BTN_ROADMAP_ADD}    name=${name}
     Wait Until Element is present then click the element    ${Add_task}
