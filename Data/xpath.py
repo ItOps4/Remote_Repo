@@ -11,6 +11,7 @@ BTN_Confirm = '//p[text()="Confirm"]/parent::button'
 TXT_NO_DATA = '//p[text()="No records to display"]'
 Input_Created_Data = '//td[@id="custom-id-{name}"]/parent::tr'
 BTN_ADD = '//p[text()="Add"]/parent::button'
+BTN_UPDATE = '//p[text()="Update"]/parent::button'
 
 
 # PROD-4 Portfolio management
@@ -331,8 +332,11 @@ Breadcrums_Portfolio_Management = "//p[@id='breadcrums-Portfolio Management']"
 BTN_ROADMAP_ADD_CATEGORY = '//button[@id="roadmap-add-category"]'
 BTN_ROADMAP_EDIT_CATEGORY = '//div[@id="road-map-tg-cat-group-edit-{name1}"]'
 BTN_ROADMAP_ADD = '//div[@id="road-map-tg-cat-group-add-{name}"]'
+BTN_ROADMAP_EDIT_TASK = '//div[@id="roadmap-items-task-{name2}"]'
 BTN_ROADMAP_DELETE ='//div[@id="road-map-tg-cat-group-delete-{name}"]'
 INPUT_CATEGORY_NAME = '//input[@id="road-map-tg-add-category-name"]'
 INPUT_CHOOSE_COLOR = '//div[@id="road-map-tg-tl-add-category-color-{name}"]'
-
+INPUT_TASK_NAME = '//input[@id="road-sc-task-roadmap-name"]'
+INPUT_TASK_START_DATE = '//div[@id="road-sc-task-start-date"]/parent::div/descendant::input'
+INPUT_TASK_END_DATE = '//div[@id="road-sc-task-end-date"]/parent::div/descendant::input'
 
