@@ -656,7 +656,8 @@ Click the Kebab button on User Access
     Wait Until Element is present then click the element    ${UA_more_option}
     ${UA_Delete}    Format String    ${UA_More_Delete}    name=${user_name}
     Wait Until Element is present then click the element    ${UA_Delete}    
-    
+
+ # roadmap   
 Navigate to Product/Platform and Click on Roadmap Tab
     [Documentation]    Using this keyword we can Navigate Roadmap   
     [Arguments]    ${name}    ${Element}  
@@ -664,6 +665,26 @@ Navigate to Product/Platform and Click on Roadmap Tab
     Wait Until Element is present then click the element    ${PPG}
     Wait Until Element is present then click the element    ${Element}
 
+
+ADD and EDIT Category
+    [Arguments]    ${Category_name}    ${name1}    ${name}    ${button}
+    ${Edit_category}    Format String    ${BTN_ROADMAP_EDIT_CATEGORY}    name=${name1}
+    ${Status}    Run Keyword And Return Status    Page Should Contain Element    ${BTN_ROADMAP_ADD_CATEGORY} 
+    IF    '${Status}' == '${True}'
+        Wait Until Element is present then click the element    ${BTN_ROADMAP_ADD_CATEGORY}
+
+    ELSE
+          Wait Until Element is present then click the element    ${Edit_category}
+    END
+    Press Keys    ${INPUT_CATEGORY_NAME}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_CATEGORY_NAME}    ${Category_name}
+    ${color_choose_category}    Format String    ${INPUT_CHOOSE_COLOR}    name=${name}
+    Wait Until Element is present then click the element    ${color_choose_category}
+    Wait Until Element is present then click the element    ${button}    
+
+
+Create task
+    
 
 
    

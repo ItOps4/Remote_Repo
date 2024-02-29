@@ -323,3 +323,14 @@ Breadcrums_Product = "//p[@id='breadcrums-Sample Product']"
 Breadcrums_PPG = "//p[@id='breadcrums-Sample PPG']"
 Breadcrums_portfolio = "//p[@id='breadcrums-NARESH S']"
 Breadcrums_Portfolio_Management = "//p[@id='breadcrums-Portfolio Management']"
+
+# roadmap
+
+BTN_ROADMAP_ADD_CATEGORY = '//button[@id="roadmap-add-category"]'
+BTN_ROADMAP_EDIT_CATEGORY = '//div[@id="road-map-tg-cat-group-edit-{name1}"]'
+BTN_ROADMAP_ADD = '//div[@id="road-map-tg-cat-group-add-{name}"]'
+BTN_ROADMAP_DELETE ='//div[@id="road-map-tg-cat-group-delete-{name}"]'
+INPUT_CATEGORY_NAME = '//input[@id="road-map-tg-add-category-name"]'
+INPUT_CHOOSE_COLOR = '//div[@id="road-map-tg-tl-add-category-color-{name}"]'
+
+
