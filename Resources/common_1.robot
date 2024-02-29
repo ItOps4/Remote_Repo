@@ -658,6 +658,18 @@ Click the Kebab button on User Access
     Wait Until Element is present then click the element    ${UA_Delete}    
     
 
+# roadmap
+
+ADD and EDIT Category
+    [Arguments]    ${element}    ${Category_name}    ${name}    ${button}
+    Wait Until Element is present then click the element    ${element}
+    Press Keys    ${INPUT_CATEGORY_NAME}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_CATEGORY_NAME}    ${Category_name}
+    ${color_choose_category}    Format String    ${INPUT_CHOOSE_COLOR}    name=${name}
+    Wait Until Element is present then click the element    ${color_choose_category}
+    Wait Until Element is present then click the element    ${button}    
+
+
 
 
 

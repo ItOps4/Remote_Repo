@@ -117,6 +117,11 @@ PROD_16_Portfolio_name = 'PROD_16_Portfolio_name'
 PROD_16_Portfolio_Description = 'PROD_16_Portfolio_Description'
 
 
+# roadmap 
+choose_color1 = '#E8E8E8'
+choose_color2 = '#FFB7B7'
+choose_color3 = '#ECA9A5'
+
 
 
 
