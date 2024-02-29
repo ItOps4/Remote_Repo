@@ -317,10 +317,10 @@ Dropdown_Milestone_Select_Type = "//div[@id='road-map-tg-add-milestone-release']
 Dropdown_Minor_Release = "//li[@id='Minor Release']"
 Dropdown_Major_Release = "//li[@id='Major Release']"
 ICON_Milestone_Minor = "//span[@id='roadmap-milestone-release-Sample Milestone']"
-# BTN_Add_Icon = "//div[@id='road-map-tg-cat-group-add-Sample Category']"
-# BTN_Edit_Icon = "//div[@id='road-map-tg-cat-group-edit-Sample Category']"
-# BTN_Delete_Icon = "//div[@id='road-map-tg-cat-group-delete-Sample Category']"
-# Task_Name = "//input[@id='road-sc-task-roadmap-name']"
+BTN_Add_Icon = "//div[@id='road-map-tg-cat-group-add-Sample Category']"
+BTN_Edit_Icon = "//div[@id='road-map-tg-cat-group-edit-Sample Category']"
+BTN_Delete_Icon = "//div[@id='road-map-tg-cat-group-delete-Sample Category']"
+Task_Name = "//input[@id='road-sc-task-roadmap-name']"
 BTN_Roadmap_Back_btn = "//i[@id='roadmap-scheduler-backaButton-arrow']"
 Breadcrums_Product = "//p[@id='breadcrums-Sample Product']"
 Breadcrums_PPG = "//p[@id='breadcrums-Sample PPG']"
@@ -330,12 +330,12 @@ Breadcrums_Portfolio_Management = "//p[@id='breadcrums-Portfolio Management']"
 # roadmap
 
 BTN_ROADMAP_ADD_CATEGORY = '//button[@id="roadmap-add-category"]'
-BTN_ROADMAP_EDIT_CATEGORY = '//div[@id="road-map-tg-cat-group-edit-{name}"]'
+BTN_ROADMAP_EDIT_CATEGORY = '//div[@id="road-map-tg-cat-group-edit-{name1}"]'
 BTN_ROADMAP_ADD = '//div[@id="road-map-tg-cat-group-add-{name}"]'
-BTN_ROADMAP_EDIT_TASK = '//div[@id="roadmap-items-task-{name}"]'
+BTN_ROADMAP_EDIT_TASK = '//div[@id="roadmap-items-task-{name2}"]'
 BTN_ROADMAP_DELETE ='//div[@id="road-map-tg-cat-group-delete-{name}"]'
 INPUT_CATEGORY_NAME = '//input[@id="road-map-tg-add-category-name"]'
-INPUT_CHOOSE_COLOR = '//div[@id="road-map-tg-tl-add-category-color-{name}"]'
+INPUT_CHOOSE_COLOR = '//div[@id="road-map-tg-tl-add-category-color-{Color}"]'
 INPUT_TASK_NAME = '//input[@id="road-sc-task-roadmap-name"]'
 INPUT_TASK_START_DATE = '//div[@id="road-sc-task-start-date"]/parent::div/descendant::input'
 INPUT_TASK_END_DATE = '//div[@id="road-sc-task-end-date"]/parent::div/descendant::input'
