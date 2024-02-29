@@ -343,4 +343,3 @@ BTN_ADD_MILESTONE = '//button[@id="roadmap-add-milestone"]'
 BTN_EDIT_MILESTONE = '//span[@id="roadmap-milestone-release-{name}"]'
 INPUT_MILESTONE_DATE = '//div[@id="road-map-tg-add-milestone-date"]/parent::div/descendant::input'
 
-
