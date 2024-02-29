@@ -26,7 +26,22 @@ Then Navigate to Roadmap
 Then click on Add Category button and don't enter mandatory fields and click on cancel button
 	Verify category should not be created
 Then click on Add Category button and enter mandatory fields and click on Save button
-	Verify category should be created    
+	Verify category should be created  
+
+Then click on + icon in the category Section and dont enter mandatory fields and click on Cancel button
+	Verify create Task pop up window is displayed and task should'nt be created
+Then click on + icon in the category Section and enter mandatory fields and click on Save button
+	Verify create Task pop up window is displayed and task should be created
+Then click on Edit icon in category Section and don't enter mandatory fields and click on Cancel button
+	Verify Edit Category pop up window is displayed and category should not be changed
+Then click on Edit icon in category Section and enter mandatory fields and click on Save button
+	Verify Edit Category pop up window is displayed and category should be created
+# Then click on Delete icon in category Section and click on Cancel button
+# 	Verify Category name Should not be deleted 
+# Then click on Delete icon in category Section and click on Confirm button
+# 	Verify Category name Should be deleted
+Then click on back button in Roadmap
+	Verify it should move on Product page      
 And Close the Browser
     Verify Application should be Close
 
@@ -66,11 +81,30 @@ verify a Road-Map page should be display
     navigate to roadmap    ${RM_Roadmap}    
 
 Verify category should not be created
-    ADD and EDIT Category    $Category_name    $name1    $name    ${BTN_Cancel}    
+    ADD and EDIT Category    ${RM_Category}    Naresh    ${choose_color1}    ${BTN_Cancel}    
 
 Verify category should be created    
-    ADD and EDIT Category    $Category_name    $name1    $name    ${BTN_Save}    
+    ADD and EDIT Category    ${RM_Category}    Naresh    ${choose_color1}    ${BTN_Save}   
 
+Verify create Task pop up window is displayed and task should'nt be created
+    Create and edit task    ${RM_Category}    Naresh    ${Task_Name}    ${BTN_Cancel}   
+
+Verify create Task pop up window is displayed and task should be created      
+    Create and edit task    ${RM_Category}    Naresh    ${Task_Name}    ${BTN_Save}   
+
+Verify Edit Category pop up window is displayed and category should not be changed
+    ADD and EDIT Category    ${RM_Edit_Category}    ${RM_Category}    ${choose_color2}    ${BTN_Cancel}    
+
+Verify Edit Category pop up window is displayed and category should be created
+    ADD and EDIT Category    ${RM_Edit_Category}    ${RM_Category}    ${choose_color2}    ${BTN_Save}  
+
+# Verify Category name Should not be deleted 
+#     Wait Until Element is present then click the element    $Element
+
+# Verify Category name Should be deleted
+
+
+Verify it should move on Product page
 # Verify a Platform and Product PPG Should be deleted
 #     Click the Kebab button     ${PROD_14_Product_Platform}    ${BTN_Product_Platform_Kebab}
 #     Delete    ${PROD_14_Product_Platform}    ${BTN_Product_Platform_Delete}    ${BTN_Cancel}

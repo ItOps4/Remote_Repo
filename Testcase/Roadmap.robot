@@ -12,6 +12,12 @@ Roadmap
     Then Then click on PPG Tab and navigate to PPG
     Then Then click on product/platform tab and nagivate to Product
     Then Then Click on Roadmap tab
+    Then click on Add Category button and don't enter mandatory fields and click on cancel button
+    Then click on Add Category button and enter mandatory fields and click on Save button
+    Then click on + icon in the category Section and dont enter mandatory fields and click on Cancel button
+    Then click on + icon in the category Section and enter mandatory fields and click on Save button
+    Then click on Edit icon in category Section and don't enter mandatory fields and click on Cancel button
+    Then click on Edit icon in category Section and enter mandatory fields and click on Save button
     And Close the Browser
 
 
