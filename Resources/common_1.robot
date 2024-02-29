@@ -657,7 +657,12 @@ Click the Kebab button on User Access
     ${UA_Delete}    Format String    ${UA_More_Delete}    name=${user_name}
     Wait Until Element is present then click the element    ${UA_Delete}    
     
-
+Navigate to Product/Platform and Click on Roadmap Tab
+    [Documentation]    Using this keyword we can Navigate Roadmap   
+    [Arguments]    ${name}    ${Element}  
+    ${PPG}    Format String    ${Navigate_PPG}    name=${name}
+    Wait Until Element is present then click the element    ${PPG}
+    Wait Until Element is present then click the element    ${Element}
 
 
 
