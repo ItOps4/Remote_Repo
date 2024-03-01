@@ -307,7 +307,7 @@ CHOOSE_COLOR_Purple = "//div[@id='road-map-tg-tl-add-category-color-#A38EF4']"
 CHOOSE_COLOR_Pink = "//div[@id='road-map-tg-tl-add-category-color-#FBB6F0']"
 Dropdown_default_Daily = "//div[@id='roadmap-view-dp']"
 Dropdown_Yearly = "//li[@id='Yearly']"
-Dropdown_Quartly = "//li[@id='Quartly']"
+Dropdown_Quartly = "//li[@id='Quarter']"
 Dropdown_Monthly = "//li[@id='Monthly']"
 Dropdown_Weekly = "//li[@id='Weekly']"
 Dropdown_Daily = "//li[@id='Daily']"
@@ -326,7 +326,10 @@ Breadcrums_Product = "//p[@id='breadcrums-Sample Product']"
 Breadcrums_PPG = "//p[@id='breadcrums-Sample PPG']"
 Breadcrums_portfolio = "//p[@id='breadcrums-NARESH S']"
 Breadcrums_Portfolio_Management = "//p[@id='breadcrums-Portfolio Management']"
-
+Mouse_over_category = '//p[@id="roadmap-category-{name}"]'
+BTN_Kebab_Roadmap = "//div[@id='roadmap-action-{name}']"
+BTN_More_Edit_Roadmap = '//li[@id="roadmap-edit-{name}"]'
+BTN_More_Delete_Roadmap ='//li[@id="roadmap-delete-{name}"]' 
 # roadmap
 
 BTN_ROADMAP_ADD_CATEGORY = '//button[@id="roadmap-add-category"]'

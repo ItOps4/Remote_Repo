@@ -117,10 +117,10 @@ PROD_16_Portfolio_name = 'PROD_16_Portfolio_name'
 PROD_16_Portfolio_Description = 'PROD_16_Portfolio_Description'
 
 # ROADMAP PPG-Product/Platform
-RM_Portfolio = 'RM_Portfolio22'
-RM_Portfolio_Description = 'RM_Portfolio_Description22'
-RM_PPG = 'RM_PPG6'
-RM_PPG_Description = 'RM_PPG_Description6'
+RM_Portfolio = 'RM_Portfolio31'
+RM_Portfolio_Description = 'RM_Portfolio_Description31'
+RM_PPG = 'RM_PPG29'
+RM_PPG_Description = 'RM_PPG_Description29'
 RM_Owner = 'Tom Parthi'
 RM_PPG_Update = 'RM_PPG_Update'
 RM_Portfolio_Description_Update = 'RM_Portfolio_Description_Update'
@@ -128,8 +128,8 @@ RM_PPG_Invalid = 'RM_PPG_Invalid'
 
 
 #ROADMAP Product/Platform
-RM_Product_Platform = 'RM_Product_Platform6'
-RM_Product_Platform_description = 'RM_Product_Platform_description6'
+RM_Product_Platform = 'RM_Product_Platform30'
+RM_Product_Platform_description = 'RM_Product_Platform_description30'
 RM_Product_Platform_Invalid = 'RM_Product_Platform_Invalid'
 choose_color1 = '#E8E8E8'
 choose_color2 = '#FFB7B7'
@@ -138,9 +138,11 @@ edit_task_name = 'bag'
 
 #ROADMAP
 RM_Roadmap = "RM_Roadmap6"
+RM_Edit_Roadmap = "RM_Edit_Roadmap30"
+RM_Roadmap_Invalid = "RM_Roadmap_invalid"
 RM_Category = "RM_Category_bag"
 RM_Edit_Category = "RM_Edit_Category_laptop"
-RM_task = "RM_New_task6"
+RM_task = "RM_New_task30"
 RM_Edit_Task = "RM_Edit_Task"
 RM_milestone = "RM_Milestone_Name"
 RM_Edit_milestone = "RM_Edit_Milestone_Name"

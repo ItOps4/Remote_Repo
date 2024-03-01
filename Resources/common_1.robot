@@ -704,13 +704,13 @@ Add and edit milestone
 
 
 #create roadmap
-Create,Edit roadmap
+Create roadmap
     [Documentation]    Using this keyword we can Create Roadmap   
-    [Arguments]    ${Element}  
+    [Arguments]    ${name}    ${Element}  
     Wait Until Element is present then click the element    ${BTN_Add_Road_Map}
     Wait Until Element is present then click the element    ${DropDown_Select_Create_New_Roadmap}
     Press Keys    ${INPUT_Create_Roadmap}    CTRL+A+BACKSPACE
-    Input Text    ${INPUT_Create_Roadmap}    ${RM_Roadmap}
+    Input Text    ${INPUT_Create_Roadmap}    ${name}
     Wait Until Element is present then click the element    ${Element}
 
 navigate to roadmap
@@ -736,3 +736,44 @@ click on delete icon in roadmap
     [Arguments]    ${name}  
     ${Delete icon}    Format String    ${BTN_Delete_Icon}    name=${name}
     Wait Until Element is present then click the element    ${Delete icon}
+
+mouse over on category 
+    [Documentation]    Using this keyword we can mouse over on category in roadmap  
+    [Arguments]    ${name}  
+    ${mouse over}    Format String    ${Mouse_over_category}    name=${name}
+    Wait Until Keyword Succeeds    3    3    Mouse Over    ${mouse over}
+    # ${cat name}    Format String    ${BTN_Add_Icon}    name=${name}
+    # Wait Until Element is present then click the element    ${cat name}
+
+
+Click the Kebab button on Roadmap
+    [Documentation]    Using this keywork we can click kebab button
+    [Arguments]    ${name}
+    ${roadmap_more_option}    Format String    ${BTN_Kebab_Roadmap}    name=${name}
+    Wait Until Element is present then click the element    ${roadmap_more_option}
+
+Edit Roadmap  
+    [Documentation]    Using this keywork we can edit roadmap
+    [Arguments]    ${name}    ${element}
+    Wait Until Element Is Visible    ${INPUT_Create_Roadmap}
+
+    Wait Until Element is present then click the element    ${Element} 
+Delete Roadmap
+    [Documentation]    Using this keyword delete Roadmap
+    [Arguments]    ${name}    ${element}
+    ${roadmap_more_option}    Format String    ${BTN_Kebab_Roadmap}    name=${name}
+    Wait Until Element is present then click the element    ${roadmap_more_option}
+    ${Roadmap_More_delete}    Format String    ${BTN_More_Delete_Roadmap}    name=${name}
+    Wait Until Element is present then click the element    ${Roadmap_More_delete}
+    Wait Until Element is present then click the element    ${element}
+
+Edit
+    [Documentation]    Using this keyword we can click Edit  
+    [Arguments]    ${name}    ${name1}    ${Element} 
+    ${Kebab}    Format String    ${BTN_Kebab_Roadmap}    name=${name}
+    Wait Until Element is present then click the element    ${Kebab}  
+    ${Edit}    Format String    ${BTN_More_Edit_Roadmap}    name=${name}
+    Wait Until Element is present then click the element    ${Edit}
+    Press Keys    ${INPUT_Create_Roadmap}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_Create_Roadmap}    ${name1}
+    Wait Until Element is present then click the element    ${Element}
