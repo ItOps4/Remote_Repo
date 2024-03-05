@@ -8,81 +8,81 @@ TXT_NO_Record_Data = 'No records to display'
 
 # PROD-4 Portfolio management
 TXT_manager_Iyyappan = 'Iyyappan'
-PROD_4_Portfolio = 'PROD_4_Portfolio'
-PROD_4_Portfolio_Update = 'PROD_4_portfolio_Update'
-PROD_4_Portfolio_Description ='PROD_4_portfolio_description'
-PROD_4_Portfolio_Description_Update ='PROD_4_portfolio_description_Update'
+PROD_4_Portfolio = 'PROD_4_Portfolio_N2'
+PROD_4_Portfolio_Update = 'PROD_4_portfolio_Update_N2'
+PROD_4_Portfolio_Description ='PROD_4_portfolio_description_N2'
+PROD_4_Portfolio_Description_Update ='PROD_4_portfolio_description_Update_N2'
 
 # PROD-5 Finance Configuration
-PROD_5_Category = 'Category_PROD_5_'
-PROD_5_Category_Description = 'PROD_5_Category_description'
-PROD_5_Invalid_Category = 'PROD_5_Category01'
-PROD_5_Category_Update = 'PROD_5_Cateory_Update'
-PROD_5_Category_Description_Update = 'PROD_5_Category_description_Update'
+PROD_5_Category = 'Category_PROD_5_N2'
+PROD_5_Category_Description = 'PROD_5_Category_description_N2'
+PROD_5_Invalid_Category = 'PROD_5_Category011'
+PROD_5_Category_Update = 'PROD_5_Cateory_Update_N2'
+PROD_5_Category_Description_Update = 'PROD_5_Category_description_Update_N2'
 
 #PROD-7 Finance Customize Budget
-PROD_7_budget= 'standard_budget_PROD_7'
-PROD_7_budget_description = 'PROD_7_budget_description'
-PROD_7_budget_update = 'PROD_7_standard_budget'
-PROD_7_budget_description_update = 'PROD_7_standard_description_Update'
+PROD_7_budget= 'standard_budget_PROD_7_N2'
+PROD_7_budget_description = 'PROD_7_budget_description_N2'
+PROD_7_budget_update = 'PROD_7_standard_budget_N2'
+PROD_7_budget_description_update = 'PROD_7_standard_description_Update_N2'
 
 # PROD-8 Product Squad Role 
-PROD_8_Product_Squad_Role = 'PROD_8_Produt_Squad_Role'
-PROD_8_Produt_Squad_Role_Description ='PROD_8_Produt_Squad_Role_description'
-PROD_8_Product_Squad_Role_Invalid = 'TC_Prod'
-PROD_8_Produt_Squad_Role_Update = 'PROD_8_Product_Squad_Role_name_Update'
-PROD_8_Product_Squad_Role_Description_Update = 'PROD_8_Product_Squad_Role_Description_Update'
+PROD_8_Product_Squad_Role = 'PROD_8_Produt_Squad_Role_N2'
+PROD_8_Produt_Squad_Role_Description ='PROD_8_Produt_Squad_Role_description_N2'
+PROD_8_Product_Squad_Role_Invalid = 'TC_Prod1'
+PROD_8_Produt_Squad_Role_Update = 'PROD_8_Product_Squad_Role_name_Update_N2'
+PROD_8_Product_Squad_Role_Description_Update = 'PROD_8_Product_Squad_Role_Description_Update_N2'
 
 #PROD-6 PRODUCT / PLATFORM OKR and Squad
-PROD_6_portfolio = 'PROD_6_PORTFOLIO_39'
-PROD_6_description =  'PROD-6_description'
-PROD_6_PPG = 'PROD_6_ppg_name'
+PROD_6_portfolio = 'PROD_6_PORTFOLIO_N2'
+PROD_6_description =  'PROD-6_description_N2'
+PROD_6_PPG = 'PROD_6_ppg_name_N2'
 TXT_Manager = "Lohitha"
-PROD_6_pp = 'PROD_6_pp_name1'
+PROD_6_pp = 'PROD_6_pp_name_N2'
 TXT_manager_OKR = 'Neeraj patel'
-PROD_6_OKR = 'PROD_6_okr1'
+PROD_6_OKR = 'PROD_6_okr_N2'
 PROD_6_OKR_UPDATE= 'PROD_6_okr2'
-PROD_6_SO = 'PROD_6_SO_name'
-PROD_6_SO_Description = 'PROD_6_SO_Description'
+PROD_6_SO = 'PROD_6_SO_name_N2'
+PROD_6_SO_Description = 'PROD_6_SO_Description_N2'
 INPUT_DATA = 'L'
-PROD_6_Keyresult = 'PROD_6_keyresult'
-PROD_6_keyresult_descript = 'PROD_6_keyresult_descript'
+PROD_6_Keyresult = 'PROD_6_keyresult_N2'
+PROD_6_keyresult_descript = 'PROD_6_keyresult_descript_N2'
 TXT_baseline = '1234'
 TXT_uom = 'cm'
-PROD_6_KEY_RESULT_UPDATE = 'PROD_6_keyname1'
-PROD_6_keyDescription_UPDATE = 'PROD_6_keyDescription1'
+PROD_6_KEY_RESULT_UPDATE = 'PROD_6_keyname_N2'
+PROD_6_keyDescription_UPDATE = 'PROD_6_keyDescription_N2'
 PROD_6_BASELINE = '12345'
 PROD_6_UOM = 'kg'
-PROD_6_product = 'PROD_6_product'
-PROD_6_PP_product = 'PROD_6_PP_product'
-PROD_6_PP_description = 'PROD_6_PP_description'
-PROD_6_SQUAD = 'prod_6_SQUAD'
+PROD_6_product = 'PROD_6_product_N2'
+PROD_6_PP_product = 'PROD_6_PP_product_N2'
+PROD_6_PP_description = 'PROD_6_PP_description_N2'
+PROD_6_SQUAD = 'prod_6_SQUAD_N2'
 TXT_squad_member = 'Laragon'
 TXT_select_role = 'deveops squad'
 INPUT_value = '20'
 INPUT_VALUE_2 = '40'
-PROD_6_SQUAD_2 = 'PROD_6_SQUAD_2'
+PROD_6_SQUAD_2 = 'PROD_6_SQUAD_N2'
 
 # PROD-14 PPG-Product/Platform
-PROD_14_Portfolio = 'PROD_14_Portfolio'
-PROD_14_Portfolio_Description = 'PROD_14_Portfolio_Description'
-PROD_14_PPG = 'PROD_14_PPG'
-PROD_14_PPG_Description = 'PROD_14_PPG_Description'
+PROD_14_Portfolio = 'PROD_14_Portfolio_N2'
+PROD_14_Portfolio_Description = 'PROD_14_Portfolio_Description_N2'
+PROD_14_PPG = 'PROD_14_PPG_N2'
+PROD_14_PPG_Description = 'PROD_14_PPG_Description_N2'
 PROD_14_Owner = 'Tom Parthi'
-PROD_14_PPG_Update = 'PROD_14_PPG_Update'
-PROD_14_Portfolio_Description_Update = 'PROD_14_Portfoli_Description_Update'
+PROD_14_PPG_Update = 'PROD_14_PPG_Update_N2'
+PROD_14_Portfolio_Description_Update = 'PROD_14_Portfoli_Description_Update_N2'
 PROD_14_PPG_Invalid = 'PROD_14_PPG_Invalid'
 
 # PROD-14 Product/Platform
-PROD_14_Product_Platform = 'PROD_14_Product_Platform'
-PROD_14_Product_Platform_description = 'PROD_14_Product_Platform_description'
+PROD_14_Product_Platform = 'PROD_14_Product_Platform_N2'
+PROD_14_Product_Platform_description = 'PROD_14_Product_Platform_description_N2'
 PROD_14_Product_Platform_Invalid = 'PROD_14_Product_Platform_Invalid'
 
 #TC12 Strategic outcome
-PROD_12_Portfolio_name = 'PROD_12_Portfolio_name'
-PROD_12_Portfolio_Description = 'PROD_12_Portfolio_Description'
-PROD_12_Portfolio_Edit_name = 'PROD_12_Portfolio_Edit_name'
-PROD_12_Portfolio_Edit_Description = 'PROD_12_Portfolio_Edit_Description'
+PROD_12_Portfolio_name = 'PROD_12_Portfolio_name_N2'
+PROD_12_Portfolio_Description = 'PROD_12_Portfolio_Description_N2'
+PROD_12_Portfolio_Edit_name = 'PROD_12_Portfolio_Edit_name_N2'
+PROD_12_Portfolio_Edit_Description = 'PROD_12_Portfolio_Edit_Description_N2'
 PROD_12_PPG_name = 'PROD_12_PPG_name'
 PROD_12_PPG_Description = 'PROD_12_PPG_Description'
 PROD_12_SO_name = 'PROD_12_SO_name'
@@ -113,10 +113,37 @@ PROD_12_Owner = 'Iyyappan'
 #PROD-16 User Access
 PROD_16_Iyyappan = 'Iyyappan'
 PROD_16_Invalid_Name = 'PROD_16_invalid_name'
-PROD_16_Portfolio_name = 'PROD_16_Portfolio_name'
-PROD_16_Portfolio_Description = 'PROD_16_Portfolio_Description'
+PROD_16_Portfolio_name = 'PROD_16_Portfolio_N2'
+PROD_16_Portfolio_Description = 'PROD_16_Portfolio_Description_N2'
+
+# ROADMAP PPG-Product/Platform
+RM_Portfolio = 'RM_Portfolio_N2'
+RM_Portfolio_Description = 'RM_Portfolio_Description_N2'
+RM_PPG = 'RM_PPG_N2'
+RM_PPG_Description = 'RM_PPG_Description_N2'
+RM_Owner = 'Tom Parthi'
+RM_PPG_Update = 'RM_PPG_Update_N2'
+RM_Portfolio_Description_Update = 'RM_Portfolio_Description_Update_N2'
+RM_PPG_Invalid = 'RM_PPG_Invalid'
 
 
+#ROADMAP Product/Platform
+RM_Product_Platform = 'RM_Product_Platform_N2'
+RM_Product_Platform_description = 'RM_Product_Platform_description_N2'
+RM_Product_Platform_Invalid = 'RM_Product_Platform_Invalid'
+choose_color1 = '#E8E8E8'
+choose_color2 = '#FFB7B7'
+choose_color3 = '#ECA9A5'
+edit_task_name = 'bag'
 
-
+#ROADMAP
+RM_Roadmap = "RM_Roadmap_N2"
+RM_Edit_Roadmap = "RM_Edit_Roadmap_N2"
+RM_Roadmap_Invalid = "RM_Roadmap_invalid"
+RM_Category = "RM_Category_bag"
+RM_Edit_Category = "RM_Edit_Category_laptop"
+RM_task = "RM_New_task"
+RM_Edit_Task = "RM_Edit_Task"
+RM_milestone = "RM_Milestone_Name"
+RM_Edit_milestone = "RM_Edit_Milestone_Name"
 
