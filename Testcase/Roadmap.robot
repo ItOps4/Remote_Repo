@@ -12,8 +12,8 @@ Roadmap
     Then Then click on PPG Tab and navigate to PPG
     Then Then click on product/platform tab and nagivate to Product
     Then Then Click on Roadmap tab
-    Then Click on Add RoadMap Button,Select Create new roadmap and don't mandatory fields and click on Cancel button
-    Then Click on Add RoadMap Button,Select Create new roadmap and don't mandatory fields and click on Save button	
+    Then Click on Add RoadMap Button,Select Create new roadmap and don't enter mandatory fields and click on Cancel button
+    Then Then Click on Add RoadMap Button,Select Create new roadmap and enter mandatory fields and click on Save button	
     Then Then Navigate to Roadmap
     Then click on Add Category button and don't enter mandatory fields and click on cancel button
     Then click on Add Category button and enter mandatory fields and click on Save button
@@ -22,7 +22,7 @@ Roadmap
     Then click on daily dropdown and select Yearly,Quarter,Monthly,Weekly and Daily
     Then click on Milestone icon,don't enter mandatory fields and click on cancel button
     Then click on Milestone icon,enter mandatory fields and click on Save button	
-    Then click on add icon in the category Section and dont enter mandatory fields and click on Cancel button
+    Then click on add icon in the category Section and don't enter mandatory fields and click on Cancel button
     Then click on add icon in the category Section and enter mandatory fields and click on Save button
     Then click on Edit icon in category Section and don't enter mandatory fields and click on Cancel button
     Then click on Edit icon in category Section and enter mandatory fields and click on Save button

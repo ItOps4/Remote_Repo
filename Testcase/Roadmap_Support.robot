@@ -5,7 +5,7 @@ Variables    ../Data/data.py
 
 *** Keywords ***
 Given Login into application
-    Verify an application should be opened    ${username002}
+    Verify an application should be opened    ${username001}
 When Click on Portfolio Management tab and navigate to Portfolio
     verify it should display portfolio
 
@@ -17,9 +17,9 @@ Then click on product/platform tab and nagivate to Product
 Then Click on Roadmap tab
     Verify a Roadmap should be display
 
-Then Click on Add RoadMap Button,Select Create new roadmap and don't mandatory fields and click on Cancel button
+Then Click on Add RoadMap Button,Select Create new roadmap and don't enter mandatory fields and click on Cancel button
     verify a roadmap should not be created
-Then Click on Add RoadMap Button,Select Create new roadmap and don't mandatory fields and click on Save button	
+Then Click on Add RoadMap Button,Select Create new roadmap and enter mandatory fields and click on Save button	
     Verify a roadmap should be created
 Then Navigate to Roadmap
 	verify a Road-Map page should be display
@@ -38,7 +38,7 @@ Then click on Milestone icon,don't enter mandatory fields and click on cancel bu
 	Verify milestone should not be changed
 Then click on Milestone icon,enter mandatory fields and click on Save button	
     Verify milestone should be changed    
-Then click on add icon in the category Section and dont enter mandatory fields and click on Cancel button
+Then click on add icon in the category Section and don't enter mandatory fields and click on Cancel button
 	Verify create Task pop up window is displayed and task should'nt be created
 Then click on add icon in the category Section and enter mandatory fields and click on Save button
 	Verify create Task pop up window is displayed and task should be created
