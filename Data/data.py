@@ -48,7 +48,7 @@ PROD_14_Product_Platform = 'PROD_14_Product_Platform'
 PROD_14_Product_Platform_description = 'PROD_14_Product_Platform_description'
 PROD_14_Product_Platform_Invalid = 'PROD_14_Product_Platform_Invalid'
 
-#TC12 Strategic outcome
+#PROD-12 Strategic outcome
 PROD_12_Portfolio_name = 'PROD_12_Portfolio_name'
 PROD_12_Portfolio_Description = 'PROD_12_Portfolio_Description'
 PROD_12_Portfolio_Edit_name = 'PROD_12_Portfolio_Edit_name'
