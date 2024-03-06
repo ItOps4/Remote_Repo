@@ -64,13 +64,49 @@ TAB_Product_Squad_Role = '//div[@id="system-settings-product-squad-roles"]'
 BTN_Add_Role = '//button[@id="product-squad-add-role"]'
 Input_Product_Squad_Role = '//input[@id="product-squad-role-name"]'
 Input_Product_Squad_Role_Description = '//textarea[@id="product-squad-role-description"]'
+TXT_Product_Squad_Role_NO_DATA = '//p[text()="No records to display"]'
 Input_Search_Product_Squad_Role = '//input[@id="product-squad-roles-search-input"]'
 Navigate_Product_Squad_Role = '//td[@id="custom-id-{name}"]/parent::tr'
 BTN_Product_Squad_Role_Kebab = '//div[@id="product-squad-role-more-btn-{name}"]'
 BTN_Product_Squad_Role_Edit = '//li[@id="product-squad-role-edit-{name}"]'
 BTN_Product_Squad_Role_Delete = '//li[@id="product-squad-role-delete-{name}"]'
 
-# PROD-14 PPG-Product/Platform
+#PROD-6 PRODUCT/PLATFORM OKR and SQUAD
+
+BTN_prod_OKR = '//div[@id="product-okrs"]'
+BTN_Add_OKR_platform = '//button[@id="create-okr-nullstate-btn"]'
+INPUT_OKR_PLATFORM = '//input[@id="okr-name"]'
+INPUT_start_date = '//p[@id="okr-edit-start-date"]/parent::div/descendant::input'
+INPUT_END_date = '//p[@id="okr-edit-end-date"]/parent::div/descendant::input'
+INPUT_assign_to = '//div[@id="okr-owner"]'
+INPT_okr_owner = '//li[@id="Neeraj Patel"]'
+INPT_link_SO = '//div[@id="okr-SO"]'
+INPUT_strat_out_name = '//li[@id="{name}"]'
+BTN_okr_search = '//input[@id="okr-search-input"]'
+BTN_add_result = '//button[@id="okr-add-result-{name}"]'
+BTN_more_OKR = '//div[@id="okr-more-btn-{name}"]'
+BTN_EDIT_OKR = '//li[@id="okr-edit-{name}"]'
+BTN_DELETE_OKR = '//li[@id="okr-delete-{name}"]'
+INPUT_key_result_name = '//input[@id="keyresult-key-result"]'
+INPUT_Key_result_description ='//textarea[@id="keyresult-description"]'
+INPUT_baseline ='//input[@id="keyresult-basline"]'
+INPUT_unit_of_measure = '//input[@id="keyresult-uom"]'
+INPUT_ASSign_TO_key = '//div[@id="keyresult-assign-to"]'
+BTN_more_keyresult = '//div[@id="keyresult-more-btn-{name}"]'
+BTN_EDIT_keyresult = '//li[@id="keyresult-edit-{name}"]'
+BTN_OVERVIEW_edit = '//button[@id="okr-overview-edit-btn"]'
+BTN_BACKARROW_KEY_OVERVIEW = '//i[@id="back-to-result-undefined"]'
+BTN_DELETE_result= '//li[@id="keyresult-delete-{name}"]'
+BTN_BACKARROW_OKR = '//i[@id="back-to-okr-PROD_6_okr1"]'
+TAB_squad = '//div[@id="product-squad"]'
+BTN_ADD_SQUAD ='//button[@id="add-squad-btn"]'
+INPUT_SQUAD = '//input[@id="squad-name"]'
+INPUT_SQUAD_LEAD = '//div[@id="squad-lead"]'
+BTN_NEXT = '//button[@id="create-squad-next"]'
+Label_1 = '//input[@id="checkbox-laragon"]'
+product_mem = '//td[@id="custom-id-Laragon"]'
+BTN_BACK = '//button[@id="create-squad-step-2-back"]'
+BTN_squad_CANCEL = '//button[@id="create-squad-cancel"]'
 Portfolio_Click = '//td[@id="custom-id-{name}"]'
 TAB_PPG = '//a[@id="PPG-tabs"]'
 BTN_Add_PPG = '//p[text()="Add PPG"]/ancestor::button'
@@ -120,7 +156,6 @@ BTN_Add_Strategic_Cancel = "//button[@id='strategic-outcome-create-cancel-btn']"
 BTN_Add_Strategic_Save = "//button[@id='strategic-outcome-create-save-btn']"
 BTN_More_Portfolio = "//div[@id='portfolio-more-btn-{name}']"
 BTN_Portfolio_more_Edit = "//p[contains(text(),'Edit')]"
-BTN_Portfolio_more_Delete = "//p[contains(text(),'Delete')]"
 BTN_More_SO ="//div[@id='strategic-outcome-more-btn-{name}']"
 BTN_Add_OKR = '//button[@id="add-okr-{name}"]'
 BTN_Create_OKR_Cancel = "//button[@id='okr-create-cancel-btn']"
@@ -170,7 +205,7 @@ BTN_Strategic_Delete_Cancel = "//button[@id='common-delete-cancel-btn']"
 BTN_Strategic_Delete_Confirm ="//button[@id='common-delete-confirm-btn']"
 BTN_Create_OKR = "//button[@id='so-okr-add-okr-btn']"
 BTN_OKR_Expand = "//tbody/tr[1]/td[1]/span[1]/button[1]/*[1]" #id required
-BTN_Add_Result = "//button[@id='okr-create-result-{name}']"
+BTN_Add_Result = "//button[@id='okr-add-result-{name}']"
 BTN_Add_Key_Results = "//button[@id='create-sc-keyResultNullState-btn']"
 INPUT_Search_Key_Results = "//input[@id='keyresult-search-input']"
 BTN_More_Key_Results ="//div[@id='keyresult-more-btn-{name}']"
