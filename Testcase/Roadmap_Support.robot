@@ -5,7 +5,8 @@ Variables    ../Data/data.py
 
 *** Keywords ***
 Given Login into application
-    Verify an application should be opened    ${username001}
+    [Arguments]    ${username}
+    Verify an application should be opened    ${username}
 When Click on Portfolio Management tab and navigate to Portfolio
     verify it should display portfolio
 
@@ -110,11 +111,11 @@ verify a Road-Map page should be display
 
 Verify category should not be created
     Wait Until Element is present then click the element    ${BTN_Add_Category_Roadmap}
-    ADD and EDIT Category    ${RM_Category}    ${choose_color1}    ${BTN_Cancel}
+    ADD and EDIT Category    ${RM_Category}    ${choose_color3}    ${BTN_Cancel}
 
 Verify category should be created
     Wait Until Element is present then click the element    ${BTN_Add_Category_Roadmap}
-    ADD and EDIT Category    ${RM_Category}    ${choose_color1}    ${BTN_Save}
+    ADD and EDIT Category    ${RM_Category}    ${choose_color2}    ${BTN_Save}
 
 verify milestone should not created
     Wait Until Element is present then click the element    ${BTN_ADD_MILESTONE}
@@ -158,12 +159,12 @@ Verify create Task pop up window is displayed and task should be created
 Verify Edit Category pop up window is displayed and category should not be changed
     mouse over on category    ${RM_Category}
     click on edit icon in roadmap    ${RM_Category}    
-    ADD and EDIT Category    ${RM_Edit_Category}    ${choose_color2}    ${BTN_Cancel}    
+    ADD and EDIT Category    ${RM_Edit_Category}    ${choose_color3}    ${BTN_Cancel}    
 
 Verify Edit Category pop up window is displayed and category should be created
     mouse over on category    ${RM_Category}
     click on edit icon in roadmap    ${RM_Category}    
-    ADD and EDIT Category    ${RM_Edit_Category}    ${choose_color2}    ${BTN_Save} 
+    ADD and EDIT Category    ${RM_Edit_Category}    ${choose_color3}    ${BTN_Save} 
 
 Verify Category name Should not be deleted
     mouse over on category    ${RM_Edit_Category}

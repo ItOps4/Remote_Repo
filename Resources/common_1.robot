@@ -332,7 +332,7 @@ Click Breadcrums
 
 
  
-#PROD-6 PLAtform OKR and PRODUCT SQUAD
+# PROD-6 PLAtform OKR and PRODUCT SQUAD
 
 create PLatform OKR
     [Documentation]    using this keyword we can create platform OKR
@@ -341,7 +341,7 @@ create PLatform OKR
     Input Text    ${INPUT_OKR_PLATFORM}    ${name1}
     Wait Until Element is present then click the element    ${INPUT_assign_to}
     Press Keys    ${Input_Search_Manager}    ${Manager}
-    Wait Until Element is present then click the element    ${INPT_okr_owner}
+    Wait Until Element is present then click the element    ${Drop_Down_Manager}
     ${currentdate}    Get Current Date
     Log    ${currentdate}
     ${cd}    Convert Date    ${currentdate}    result_format=%m/%d/%Y
@@ -405,7 +405,7 @@ Create key result
     Input Text    ${INPUT_Key_result_description}    ${description}
     Wait Until Element is present then click the element    ${INPUT_ASSign_TO_key}
     Press Keys    ${Input_Search_Manager}    ${manager}
-    Wait Until Element is present then click the element    ${INPT_okr_owner}
+    Wait Until Element is present then click the element    ${Drop_Down_Manager}
     Input Text    ${INPUT_baseline}    ${basevalue}
     Input Text    ${INPUT_unit_of_measure}    ${uomvalue}
     Wait Until Element is present then click the element    ${element}
@@ -479,6 +479,10 @@ Edit squad product
     Press Keys    ${Input_Search_Manager}    ${lead}
     Wait Until Element is present then click the element    ${Element}
 
+click backarrow
+    [Arguments]    ${name}
+    ${backarrow}    Format String    ${BTN_BACKARROW_OKR}    name=${name}
+    Wait Until Element is present then click the element    ${backarrow}
 
 Create product member
     [Arguments]    ${member}    ${element}

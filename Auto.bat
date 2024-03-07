@@ -8,7 +8,7 @@ Timeout 2
 
 MKDIR "output"
 
-Set Tags=Roadmap
+Set Tags=Test
 
 Set Thread=5
 

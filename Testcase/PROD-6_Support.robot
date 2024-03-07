@@ -154,17 +154,17 @@ Verify if user should be able to login successfully
 
 verify it should display ppg page
     Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
-    Create Portfolio    ${PROD_6_portfolio}    ${PROD_6_description}    ${BTN_Save}
-    Search Data    ${Input_Portfolio_Search}    ${PROD_6_portfolio}
-    Navigate to portfolio data    ${PROD_6_portfolio}
+    Create Portfolio    ${portfolio_create_pp}    ${PROD_6_description}    ${BTN_Save}
+    Search Data    ${Input_Portfolio_Search}    ${portfolio_create_pp}
+    Navigate to portfolio data    ${portfolio_create_pp}
     Wait Until Element is present then click the element    ${Strategic_outcome_Tab}
     Wait Until Element is present then click the element    ${BTN_Add_Strategic_outcome}
     Create,edit Strategic Outcome    ${PROD_6_SO}    ${PROD_6_SO_Description}    ${BTN_Save}
     Wait Until Element is present then click the element    ${TAB_PPG}
-    Create PPG    ${PROD_6_PPG}    ${PROD_6_description}    ${TXT_Manager}    ${Input_Type_Platform}    ${BTN_SAVE}
+    Create PPG    ${PROD_6_PPG}    ${PROD_6_description}    ${TXT_manager_Iyyappan}    ${Input_Type_Platform}    ${BTN_SAVE}
     Navigate to portfolio data    ${PROD_6_PPG}
     Wait Until Element is present then click the element    ${TAB_Product_Platform}
-    Create Product/Platform    ${PROD_6_pp}    ${PROD_6_description}    ${TXT_Manager}    ${Input_Type_Platform}    ${BTN_Save}                    
+    Create Product/Platform    ${PROD_6_pp}    ${PROD_6_description}    ${TXT_manager_Iyyappan}    ${Input_Type_Platform}    ${BTN_Save}                    
 
 
 verify it should display product page and OKR page should be displayed
@@ -172,10 +172,10 @@ verify it should display product page and OKR page should be displayed
     Wait Until Element is present then click the element    ${BTN_prod_OKR}
 
 Verify a OKRs shouldn't be created
-    create PLatform OKR    ${PROD_6_OKR}    ${TXT_manager_OKR}    ${PROD_6_SO}    ${BTN_Cancel}
+    create PLatform OKR    ${PROD_6_OKR}    ${TXT_manager_Iyyappan}    ${PROD_6_SO}    ${BTN_Cancel}
 
 Verify a OKRs should be created
-    create PLatform OKR    ${PROD_6_OKR}    ${TXT_manager_OKR}    ${PROD_6_SO}    ${BTN_Save}
+    create PLatform OKR    ${PROD_6_OKR}    ${TXT_manager_Iyyappan}    ${PROD_6_SO}    ${BTN_Save}
 
 verify if it should not display any result , it display message as " No records to display "
     Search Data    ${BTN_okr_search}    ${PROD_6_OKR_UPDATE}
@@ -187,12 +187,12 @@ verify if it should display resullt as per input search
 
 verify a Result shouldn't be created
     Click on add result button    ${PROD_6_OKR}
-    Create key result    ${PROD_6_Keyresult}    ${PROD_6_keyresult_descript}    ${TXT_manager_OKR}    ${TXT_baseline}    ${TXT_uom}    ${BTN_Cancel}
+    Create key result    ${PROD_6_Keyresult}    ${PROD_6_keyresult_descript}    ${TXT_manager_Iyyappan}    ${TXT_baseline}    ${TXT_uom}    ${BTN_Cancel}
 
 
 verify a Result should be created
     Click on add result button    ${PROD_6_OKR}
-    Create key result    ${PROD_6_Keyresult}    ${PROD_6_keyresult_descript}    ${TXT_manager_OKR}    ${TXT_baseline}    ${TXT_uom}    ${BTN_Save}
+    Create key result    ${PROD_6_Keyresult}    ${PROD_6_keyresult_descript}    ${TXT_manager_Iyyappan}    ${TXT_baseline}    ${TXT_uom}    ${BTN_Save}
 
 
 Verify it should displays OKR key result page
@@ -219,7 +219,7 @@ Verify a key result shouldn't be deleted
 Verify a key result should be deleted
     click key result kebab button    ${PROD_6_KEY_RESULT_UPDATE}
     Delete Key result    ${PROD_6_KEY_RESULT_UPDATE}    ${BTN_Confirm}
-    Wait Until Element is present then click the element    ${BTN_BACKARROW_OKR}
+    click backarrow    ${PROD_6_OKR}
 
 verify OKR fields can not be changed
     click on okr kebab button    ${PROD_6_OKR}
@@ -241,12 +241,12 @@ verify a OKR should be delete
 
 Verify it should display ppg 
     Click Breadcrums    ${PROD_6_PPG}
-    Create PPG    ${PROD_6_product}    ${PROD_6_description}    ${TXT_Manager}    ${Input_Type_Product}    ${BTN_Save}
+    Create PPG    ${PROD_6_product}    ${PROD_6_description}    ${TXT_manager_Iyyappan}    ${Input_Type_Product}    ${BTN_Save}
 
 Verify it should display product page and it should display squad page
     Navigate to portfolio data    ${PROD_6_product}
     Wait Until Element is present then click the element    ${TAB_Product_Platform}
-    Create Product/Platform    ${PROD_6_PP_product}    ${PROD_6_PP_description}    ${TXT_Manager}    ${Input_Type_Product}    ${BTN_Save}
+    Create Product/Platform    ${PROD_6_PP_product}    ${PROD_6_PP_description}    ${TXT_manager_Iyyappan}    ${Input_Type_Product}    ${BTN_Save}
     Navigate to portfolio data    ${PROD_6_PP_product}
 
 
@@ -265,7 +265,7 @@ Verfiy it should display added squad member
     Check element is present    ${product_mem}
 
 Verify if it should display message as " No records to display "
-    Search Data    ${INPUT_search_squad_member}    ${TXT_Manager}
+    Search Data    ${INPUT_search_squad_member}    ${TXT_manager_Iyyappan}
     Check element is present    ${TXT_NO_DATA}
 
 Verify it should display result as per input search in squad product details
@@ -296,24 +296,24 @@ Verify it should display result as per input search
 
 Verify it shouldn't be changed in squad product
     click squad member kebab button    ${PROD_6_SQUAD}    ${BTN_MORE_product_squad}
-    Edit squad product    ${PROD_6_SQUAD_2}    ${TXT_Manager}    ${DATA_owner}
+    Edit squad product    ${PROD_6_SQUAD_2}    ${TXT_manager_Iyyappan}    ${Drop_Down_Manager}
     Wait Until Element is present then click the element    ${BTN_Cancel}
    
 Verify it should be changed in squad product
     click squad member kebab button    ${PROD_6_SQUAD}    ${BTN_MORE_product_squad}
-    Edit squad product    ${PROD_6_SQUAD_2}    ${TXT_Manager}    ${DATA_owner}
+    Edit squad product    ${PROD_6_SQUAD_2}    ${TXT_manager_Iyyappan}    ${Drop_Down_Manager}
     Wait Until Element is present then click the element    ${BTN_Save}
 
 Verify it should display a Product member page
     Wait Until Element is present then click the element    ${TAB_product_member}
 
 Verify it shouldn't add member
-    Create product member    ${TXT_manager}    ${CHECKBOX_label}   
+    Create product member    ${TXT_manager_Iyyappan}    ${CHECKBOX_label}   
     Wait Until Element is present then click the element    ${TXT_product_member}
     Wait Until Element is present then click the element    ${BTN_Cancel}
 
 Verify it should add member
-    Create product member    ${TXT_manager}    ${CHECKBOX_label}  
+    Create product member    ${TXT_manager_Iyyappan}    ${CHECKBOX_label}  
     Wait Until Element is present then click the element    ${TXT_product_member}
     Wait Until Element is present then click the element    ${BTN_ADD}  
 
@@ -322,27 +322,27 @@ Verify if it should not display any result , it display message as " No records 
     Check element is present    ${TXT_NO_DATA}
 
 Verify if it should display resullt as per input search in product member
-    Search Data    ${INPUT_SEARCH_P_MEMBER}    ${TXT_Manager}
-    Verify a Portfolio is displayed    ${TXT_Manager}
+    Search Data    ${INPUT_SEARCH_P_MEMBER}    ${TXT_manager_Iyyappan}
+    Verify a Portfolio is displayed    ${TXT_manager_Iyyappan}
 
     
 Verify it shouldn't be changed in product member
-    click squad member kebab button    ${TXT_Manager}    ${BTN_more_product_member}
-    Edit squad product details    ${TXT_Manager}    ${BTN_EDIT_product_member}    ${INPUT_VALUE_2}    ${TXT_select_role}    ${select_role_data}
+    click squad member kebab button    ${TXT_manager_Iyyappan}    ${BTN_more_product_member}
+    Edit squad product details    ${TXT_manager_Iyyappan}    ${BTN_EDIT_product_member}    ${INPUT_VALUE_2}    ${TXT_select_role}    ${select_role_data}
     Wait Until Element is present then click the element    ${BTN_Cancel}
 
 Verify it should be changed in product member
-    click squad member kebab button    ${TXT_Manager}    ${BTN_more_product_member}
-    Edit squad product details    ${TXT_Manager}    ${BTN_EDIT_product_member}    ${INPUT_VALUE_2}    ${TXT_select_role}    ${select_role_data}
+    click squad member kebab button    ${TXT_manager_Iyyappan}    ${BTN_more_product_member}
+    Edit squad product details    ${TXT_manager_Iyyappan}    ${BTN_EDIT_product_member}    ${INPUT_VALUE_2}    ${TXT_select_role}    ${select_role_data}
     Wait Until Element is present then click the element    ${BTN_Save}
 
 Verify a product member shouldn't be deleted
-    click squad member kebab button    ${TXT_Manager}    ${BTN_more_product_member}
-    delete product squad    ${TXT_Manager}    ${BTN_DELETE_SQUAD_MEMBER}    ${BTN_Cancel}
+    click squad member kebab button    ${TXT_manager_Iyyappan}    ${BTN_more_product_member}
+    delete product squad    ${TXT_manager_Iyyappan}    ${BTN_DELETE_SQUAD_MEMBER}    ${BTN_Cancel}
 
 Verify a Product member should be deleted
-    click squad member kebab button    ${TXT_Manager}    ${BTN_more_product_member}
-    delete product squad    ${TXT_Manager}    ${BTN_DELETE_SQUAD_MEMBER}    ${BTN_Confirm}
+    click squad member kebab button    ${TXT_manager_Iyyappan}    ${BTN_more_product_member}
+    delete product squad    ${TXT_manager_Iyyappan}    ${BTN_DELETE_SQUAD_MEMBER}    ${BTN_Confirm}
 
 Verify it should display Product squad page
     Wait Until Element is present then click the element    ${TAB_SQUAD1}
