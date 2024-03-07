@@ -8,7 +8,7 @@ Resource    PROD-12_Support.robot
 *** Test Cases ***
 Portfolio Management-Strategic Outcome
     [Documentation]    Portfolio - Strategic Outcome
-    Given Login into application    ${username002}
+    Given Login into application    ${username001}
     When When Navigate to Portfolio Management Menu
     Then Navigate to Portfolio, Click on strategic outcome Tab
     Then Click on Add strategic outcome button and enter the mandatory fields and click on cancel button

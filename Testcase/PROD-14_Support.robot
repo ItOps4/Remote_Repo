@@ -5,7 +5,7 @@ Variables    ../Data/data.py
 
 *** Keywords ***
 Given Login into application
-    Verify an application should be opened    ${username002}
+    Verify an application should be opened    ${username001}
 
 Then Navigate to Portfolio, Click on PPG Tab
     Verify a PPG Page should be displayed

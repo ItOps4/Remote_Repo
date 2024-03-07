@@ -7,7 +7,7 @@ Resource    PROD-16_Support.robot
 *** Test Cases ***
 Portfolio - Settings - User Access
     [Documentation]    Portfolio - User Access
-    Given Login into application    ${username002}
+    Given Login into application    ${username001}
     When When Navigate to Portfolio Management Menu
     Then Then Navigate to Portfolio, Click on Settings Tab
     Then Click on Add User button and enter the mandatory fields and click on cancel button

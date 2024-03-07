@@ -148,7 +148,7 @@ Delete Category
     Wait Until Element is present then click the element    ${Element}
 
 
-#PROD-7 Finance Customize Budget
+# PROD-7 Finance Customize Budget
 Create Finance
     [Documentation]    Using this keyword we can create new finance budget
     [Arguments]    ${name}    ${Description}
@@ -332,7 +332,7 @@ Click Breadcrums
 
 
  
-#PROD-6 PLAtform OKR and PRODUCT SQUAD
+# PROD-6 PLAtform OKR and PRODUCT SQUAD
 
 create PLatform OKR
     [Documentation]    using this keyword we can create platform OKR
@@ -648,7 +648,6 @@ Click the Kebab button on User Access and click on viewer
     Wait Until Element is present then click the element    ${UA_Assign_role}  
     ${UA_Assign_role_admin}    Format String    ${BTN_Assign_Role_Admin}    name=${user_name}
     Wait Until Element is present then click the element    ${UA_Assign_role_admin}
-    
 Click the Kebab button on User Access
     [Documentation]    Using this keywork we can click kebab button on user access
     [Arguments]    ${User_name}
@@ -657,6 +656,142 @@ Click the Kebab button on User Access
     ${UA_Delete}    Format String    ${UA_More_Delete}    name=${user_name}
     Wait Until Element is present then click the element    ${UA_Delete}    
     
+
+# Portfolio-Settings-Finance Settings
+Add Finance Area
+    [Documentation]    Using this keywork we can create Finance Area
+    [Arguments]    ${name}    ${description}    ${category}
+    Wait Until Element is present then click the element    ${BTN_New_Area}
+    Wait Until Element is present then click the element    ${Financial_Area} 
+    ${Dropdown}    Format String    ${DD_Financial_Area}    name=${name}
+    Wait Until Element is present then click the element    ${Dropdown}
+    Press Keys    ${TXT_Financial_Area_Des}    ${description}
+    Press Keys    ${Search_Financial_Cat}    ${category}
+    ${Select}    Format String    ${Select_Financial_Cat}    name=${category}
+    Wait Until Element is present then click the element    ${Select}
+    Press Keys    ${Search_Financial_Cat}    TAB
+
+Add Category to Finance Area
+    [Documentation]    Using this keywork we can add category to Financial area
+    [Arguments]    ${name}    ${category}
+    ${Addcat}    Format String    ${BTN_Add_Categories}    name=${name}
+    Wait Until Element is present then click the element    ${Addcat}
+    Press Keys    ${Search_Financial_Cat}    ${category}
+    ${Select}    Format String    ${Select_Financial_Cat}    name=${category}
+    Wait Until Element is present then click the element    ${Select}
+    Press Keys    ${Search_Financial_Cat}    TAB
+
+Edit Finance Area Description
+    [Documentation]    Using this keywork we can edit description
+    [Arguments]    ${name}    ${description}
+    ${Edit}    Format String    ${BTN_Financial_Area_Edit}    name=${name}
+    Wait Until Element is present then click the element    ${Edit}
+    Press Keys    ${TXT_Financial_Area_Des}    CTRL+A+BACKSPACE    
+    Press Keys    ${TXT_Financial_Area_Des}    ${description}
+
+Navigate to PPG
+    [Documentation]    Using this keywork we can navigate to PPG
+    [Arguments]    ${name}    
+    ${Navigate}    Format String    ${Navigate_PPG}    name=${name}
+    Wait Until Element is present then click the element    ${Navigate}
+
+Add Schedule to PPG Finance
+    [Documentation]    Using this keywork we can Add Schedule to PPG Finance
+    [Arguments]    ${name}    ${description}    ${date}
+    Wait Until Element is present then click the element    ${BTN_Add_Schedule_PPG}
+    Input Text    ${Input_Schedule_PPG}    ${name}
+    Input Text    ${Input_Sch_Des_PPG}    ${description}
+    # ${currentdate}    Get Current Date    
+    # Log    ${currentdate}
+    Press Keys    ${Input_Sch_Date_PPG}    ${date}
+
+Navigate to PPG Schedule
+    [Documentation]    Using this keywork we can navigate to PPG schedule
+    [Arguments]    ${name}    
+    ${Navigate}    Format String    ${Navigate_Schedule}    name=${name}
+    Wait Until Element is present then click the element    ${Navigate}
+
+Add data to PPG Schedule 
+    [Documentation]    Using this keywork we can Add data to PPG Schedule
+    [Arguments]    ${description}    ${name}    ${name1}    ${name3}    ${name5}
+    Wait Until Element is present then click the element    ${BTN_Add_Data_PPG_Sch}
+    Input Text    ${Input_Des_AD_Sch_PPG}    ${description}
+    Wait Until Element is present then click the element    ${FA_AD_Sch_PPG}
+    ${financearea}    Format String    ${DD_FA_AD_Sch}    name=${name}
+    Wait Until Element is present then click the element    ${financearea}
+    Wait Until Element is present then click the element    ${Build_run}
+    ${buildrun}    Format String    ${DD_Build_run}    name=${name1}
+    Wait Until Element is present then click the element    ${buildrun}
+    Wait Until Element is present then click the element    ${Category_AD_Sch_PPG}
+    ${Category}    Format String    ${DD_Category_AD_Sch_PPG}    name=${name3}
+    Wait Until Element is present then click the element    ${Category}
+    Wait Until Element is present then click the element    ${Spend_Type_AD_Sch_PPG}
+    ${spend}    Format String    ${DD_Spend_Type_AD_Sch}    name=${name5}
+    Wait Until Element is present then click the element    ${spend}
+
+Navigate to Product/Platform
+    [Documentation]    Using this keywork we can navigate to PPG schedule
+    [Arguments]    ${name}    
+    ${Navigate}    Format String    ${Navigate_Product}    name=${name}
+    Wait Until Element is present then click the element    ${Navigate}
+
+Add Schedule to Product Finance
+    [Documentation]    Using this keywork we can Add Schedule to Product Finance
+    Wait Until Element is present then click the element    ${BTN_Add_Schedule_Product}
+    [Arguments]    ${name}    ${description}    ${date}
+    Input Text    ${Input_Schedule_Product}    ${name}
+    Input Text    ${Input_Sch_Des_Product}    ${description}
+    Press Keys    ${Input_Sch_Date_PPG}    ${date}
+
+Add data to Product Schedule 
+    [Documentation]    Using this keywork we can Add data to Product Schedule
+    [Arguments]    ${description}    ${name}    ${name1}    ${name3}    ${name4}    ${name5}
+    Wait Until Element is present then click the element    ${BTN_Add_Data_Product_Sch}
+    Input Text    ${Input_Des_AD_Sch_Product}    ${description}
+    Wait Until Element is present then click the element    ${FA_AD_Sch_Product}
+    ${financearea}    Format String    ${DD_FA_AD_Sch}    name=${name}
+    Wait Until Element is present then click the element    ${financearea}
+    Wait Until Element is present then click the element    ${Build_run_Product}
+    ${buildrun}    Format String    ${DD_Build_run}    name=${name1}
+    Wait Until Element is present then click the element    ${buildrun}
+    Wait Until Element is present then click the element    ${Category_AD_Sch_Product}
+    ${Category}    Format String    ${DD_Category_AD_Sch_PPG}    name=${name3}
+    Wait Until Element is present then click the element    ${Category}
+    Wait Until Element is present then click the element    ${Squad_AD_Sch_Product}
+    ${sqaud}    Format String    ${DD_Squad_AD_Sch_Product}    name=${name4}
+    Wait Until Element is present then click the element    ${sqaud}
+    Wait Until Element is present then click the element    ${Spend_Type_AD_Sch_Product}
+    ${spend}    Format String    ${DD_Spend_Type_AD_Sch}    name=${name5}
+    Wait Until Element is present then click the element    ${spend}
+
+Verify Deteletd Financial Area should not Display in PPG and Product Finanace
+    [Documentation]    Using this keywork we can Verify Deteletd Financial Area should not Display in PPG and Product Finanace 
+    [Arguments]    ${element}    ${Edit}    ${element2}    ${element3}
+    ${Verify}    Format String    ${element}    name=${Edit}
+    Wait Until Element is present then click the element    ${Verify}
+    Double Click Element    ${element2}
+    Double Click Element    ${element3}
+    # Wait Until Element is present then click the element    ${element2}
+    # Wait Until Element is present then click the element    ${element2}
+    # Wait Until Element is present then click the element    ${element3}
+    # Wait Until Element is present then click the element    ${element3}
+    # @{list}    Create List    ${element1}    ${element2}    ${element3}
+    # FOR    ${element}    IN    @{list}
+    #     Wait Until Element is present then click the element    ${element}
+    # END
+    
+
+
+
+
+
+    
+    
+
+
+    
+
+
 
 
 
