@@ -29,12 +29,12 @@ PROD_7_budget_description_update = 'Custom Budget description Update'
 # PROD-8 Product Squad Role 
 PROD_8_Product_Squad_Role = 'Create Produt Squad Role'
 PROD_8_Produt_Squad_Role_Description ='Produt Squad Role description'
-PROD_8_Product_Squad_Role_Invalid = 'Produt Squad Invalid'
+PROD_8_Product_Squad_Role_Invalid = 'Product Squad Invalid'
 PROD_8_Produt_Squad_Role_Update = 'Update Product Squad Role'
-PROD_8_Product_Squad_Role_Description_Update = 'Product Squad Role Description Update'
+PROD_8_Product_Squad_Role_Description_Update = 'Product Squad Description Update'
 
 # PROD-6 PRODUCT / PLATFORM OKR and Squad
-portfolio_create_pp = 'OKR Squad portfolio 04'
+portfolio_create_pp = 'OKR Squad portfolio 05'
 PROD_6_description =  'OKR Squad portfolio description'
 PROD_6_PPG = 'OKR Squad ppg 04'
 PROD_6_pp = 'OKR Squad pp 04'
@@ -112,6 +112,33 @@ PROD_16_Invalid_Name = 'Invalid'
 PROD_16_Portfolio_name = 'User Access create '
 PROD_16_Portfolio_Description = 'Portfolio User Access Description'
 
+# ROADMAP PPG-Product/Platform
+RM_Portfolio = 'RM_Portfolio_r09'
+RM_Portfolio_Description = 'RM_Portfolio_Description_N2'
+RM_PPG = 'RM_PPG_N2'
+RM_PPG_Description = 'RM_PPG_Description_N2'
+RM_Owner = 'Tom Parthi'
+RM_PPG_Update = 'RM_PPG_Update_N2'
+RM_Portfolio_Description_Update = 'RM_Portfolio_Description_Update_N2'
+RM_PPG_Invalid = 'RM_PPG_Invalid'
+#ROADMAP Product/Platform
+RM_Product_Platform = 'RM_Product_Platform_N09'
+RM_Product_Platform_description = 'RM_Product_Platform_description_N2'
+RM_Product_Platform_Invalid = 'RM_Product_Platform_Invalid'
+choose_color1 = '#E8E8E8'
+choose_color2 = '#FFB7B7'
+choose_color3 = '#ECA9A5'
+edit_task_name = 'bag'
+#ROADMAP
+RM_Roadmap = "RM_Roadmap_N6"
+RM_Edit_Roadmap = "RM_Edit_Roadmap_N2"
+RM_Roadmap_Invalid = "RM_Roadmap_invalid"
+RM_Category = "RM_Category_bag"
+RM_Edit_Category = "RM_Edit_Category_laptop"
+RM_task = "RM_New_task"
+RM_Edit_Task = "RM_Edit_Task"
+RM_milestone = "RM_Milestone_Name"
+RM_Edit_milestone = "RM_Edit_Milestone_Name"
 
 # Portfolio-Settings-Finance Settings
 FS_Category = 'Cate'
@@ -129,6 +156,4 @@ FS_Product_Platform = 'FS_Product_Platform009'
 FS_Product_Schedule = 'FS_Product_Schedule09'
 FS_Product_Squad = 'FS_Pro'
 Finance_Set_Search_Invalid = 'Text'
-
-
 

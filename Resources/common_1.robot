@@ -654,8 +654,130 @@ Click the Kebab button on User Access
     ${UA_more_option}    Format String    ${BTN_More_UA}    name=${user_name}
     Wait Until Element is present then click the element    ${UA_more_option}
     ${UA_Delete}    Format String    ${UA_More_Delete}    name=${user_name}
-    Wait Until Element is present then click the element    ${UA_Delete}    
+    Wait Until Element is present then click the element    ${UA_Delete}  
+
+
+# roadmap   
+Navigate to Product/Platform and Click on Roadmap Tab
+    [Documentation]    Using this keyword we can Navigate Roadmap   
+    [Arguments]    ${name}    ${Element}  
+    ${PPG}    Format String    ${Navigate_PPG}    name=${name}
+    Wait Until Element is present then click the element    ${PPG}
+    Wait Until Element is present then click the element    ${Element}
+click on edit icon in roadmap
+    [Arguments]    ${name}    
+    ${edit icon}    Format String    ${BTN_Edit_Icon}    name=${name}
+    Wait Until Element is present then click the element    ${edit icon} 
+
+ADD and EDIT Category
+    [Arguments]    ${Category_name}    ${color}    ${button}
+    Press Keys    ${INPUT_CATEGORY_NAME}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_CATEGORY_NAME}    ${Category_name}
+    ${color_choose_category}    Format String    ${INPUT_CHOOSE_COLOR}    color=${color}
+    Wait Until Element is present then click the element    ${color_choose_category}
+    Wait Until Element is present then click the element    ${button}    
+
+
+Create and edit task
+    [Arguments]    ${task_name}    ${button}
+    Press Keys    ${INPUT_TASK_NAME}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_TASK_NAME}    ${task_name}
+    ${current_date}=    Get Current Date    result_format=%m/%d/%Y        
+    Log    ${current_date}
+    ${change_date}    Get Current Date    increment=7day    result_format=%m/%d/%Y 
+    Press Keys    ${INPUT_TASK_START_DATE}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_TASK_START_DATE}    ${current_date}   
+    Press Keys    ${INPUT_TASK_END_DATE}    CTRL+A+BACKSPACE               
+    Press Keys    ${INPUT_TASK_END_DATE}    ${change_date}    
+    Wait Until Element is present then click the element    ${button}
     
+
+Add and edit milestone
+    [Arguments]    ${milestone_name}    ${Type}    ${element}       
+    Press Keys    ${INPUT_Milestone_Name}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_Milestone_Name}    ${milestone_name}
+    Press Keys    ${Dropdown_Milestone_Select_Type}    ${Type}
+    ${current_date}=    Get Current Date    result_format=%m/%d/%Y 
+    Press Keys    ${INPUT_MILESTONE_DATE}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_MILESTONE_DATE}    ${current_date}
+    Wait Until Element is present then click the element    ${element}
+
+
+#create roadmap
+Create roadmap
+    [Documentation]    Using this keyword we can Create Roadmap   
+    [Arguments]    ${name}    ${Element}  
+    Wait Until Element is present then click the element    ${BTN_Add_Road_Map}
+    Wait Until Element is present then click the element    ${DropDown_Select_Create_New_Roadmap}
+    Press Keys    ${INPUT_Create_Roadmap}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_Create_Roadmap}    ${name}
+    Wait Until Element is present then click the element    ${Element}
+
+navigate to roadmap
+    [Documentation]    Using this keyword we can navigate to Roadmap   
+    [Arguments]    ${name}  
+    ${Roadmap}    Format String    ${Navigate_Roadmap}    name=${name}
+    Wait Until Element is present then click the element    ${Roadmap}
+
+click milestone icon
+    [Documentation]    Using this keyword we can click milestone icon   
+    [Arguments]    ${name}  
+    ${milestone}    Format String    ${ICON_Milestone_Minor}    name=${name}
+    Wait Until Element is present then click the element    ${milestone}
+
+click on add icon in roadmap   
+    [Documentation]    Using this keyword we can click on add icon in roadmap  
+    [Arguments]    ${name}  
+    ${Add icon}    Format String    ${BTN_Add_Icon}    name=${name}
+    Wait Until Element is present then click the element    ${Add icon}
+
+click on delete icon in roadmap   
+    [Documentation]    Using this keyword we can click on add icon in roadmap  
+    [Arguments]    ${name}  
+    ${Delete icon}    Format String    ${BTN_Delete_Icon}    name=${name}
+    Wait Until Element is present then click the element    ${Delete icon}
+
+mouse over on category 
+    [Documentation]    Using this keyword we can mouse over on category in roadmap  
+    [Arguments]    ${name}  
+    ${mouse over}    Format String    ${Mouse_over_category}    name=${name}
+    Wait Until Keyword Succeeds    3    3    Mouse Over    ${mouse over}
+    # ${cat name}    Format String    ${BTN_Add_Icon}    name=${name}
+    # Wait Until Element is present then click the element    ${cat name}
+
+
+Click the Kebab button on Roadmap
+    [Documentation]    Using this keywork we can click kebab button
+    [Arguments]    ${name}
+    ${roadmap_more_option}    Format String    ${BTN_Kebab_Roadmap}    name=${name}
+    Wait Until Element is present then click the element    ${roadmap_more_option}
+
+Edit Roadmap  
+    [Documentation]    Using this keywork we can edit roadmap
+    [Arguments]    ${name}    ${element}
+    Wait Until Element Is Visible    ${INPUT_Create_Roadmap}
+
+    Wait Until Element is present then click the element    ${Element} 
+Delete Roadmap
+    [Documentation]    Using this keyword delete Roadmap
+    [Arguments]    ${name}    ${element}
+    ${roadmap_more_option}    Format String    ${BTN_Kebab_Roadmap}    name=${name}
+    Wait Until Element is present then click the element    ${roadmap_more_option}
+    ${Roadmap_More_delete}    Format String    ${BTN_More_Delete_Roadmap}    name=${name}
+    Wait Until Element is present then click the element    ${Roadmap_More_delete}
+    Wait Until Element is present then click the element    ${element}
+
+Edit
+    [Documentation]    Using this keyword we can click Edit  
+    [Arguments]    ${name}    ${name1}    ${Element} 
+    ${Kebab}    Format String    ${BTN_Kebab_Roadmap}    name=${name}
+    Wait Until Element is present then click the element    ${Kebab}  
+    ${Edit}    Format String    ${BTN_More_Edit_Roadmap}    name=${name}
+    Wait Until Element is present then click the element    ${Edit}
+    Press Keys    ${INPUT_Create_Roadmap}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_Create_Roadmap}    ${name1}
+    Wait Until Element is present then click the element    ${Element}
+
 
 # Portfolio-Settings-Finance Settings
 Add Finance Area
@@ -778,8 +900,7 @@ Verify Deteletd Financial Area should not Display in PPG and Product Finanace
     # @{list}    Create List    ${element1}    ${element2}    ${element3}
     # FOR    ${element}    IN    @{list}
     #     Wait Until Element is present then click the element    ${element}
-    # END
-    
+    # ENDz
 
 
 

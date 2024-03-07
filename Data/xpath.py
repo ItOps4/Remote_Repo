@@ -10,6 +10,7 @@ BTN_Confirm = '//p[text()="Confirm"]/parent::button'
 TXT_NO_DATA = '//p[text()="No records to display"]'
 Input_Created_Data = '//td[@id="custom-id-{name}"]/parent::tr'
 BTN_ADD = '//p[text()="Add"]/parent::button'
+BTN_UPDATE = '//p[text()="Update"]/parent::button'
 
 
 # PROD-4 Portfolio management
@@ -285,6 +286,60 @@ BTN_Assign_Role_Admin = "//li[@id=' Portfolio-useraccess-assgin-role-admin-{name
 BTN_Assign_Role_Viewer = "//li[@id=' Portfolio-useraccess-assgin-role-viewer-{name}']"
 UA_More_Delete = "//li[@id=' Portfolio-useraccess-delete-{name}']"
 
+#Roadmap
+Roadmap_Tab = "//p[@id='tabs-name-Road Map']"
+INPUT_Search_Roadmap = "//input[@id='roadmap-search-input']"
+BTN_Add_Road_Map = "//button[@id='roadmap-nullstate-btn']"
+DropDown_Select_Create_New_Roadmap = "//li[@id='Create-New-Roadmap']"
+INPUT_Create_Roadmap = '//input[@id="portfolio-management-roadmap-name"]'
+Navigate_Roadmap = '//td[@id="custom-id-{name}"]'
+Dropdown_Link_Roadmap = "//li[@id='Link-Roadmap']"
+Dropdown_Attach_Roadmap = "//li[@id='Attach-Roadmap']"
+BTN_Add_Category_Roadmap = "//button[@id='add-category-roadmap-btn']"
+# BTN_Add_Milestone = "//button[@id='add-milestone-roadmap-btn']"
+INPUT_Category_Name = "//input[@id='road-map-tg-add-category-name']"
+CHOOSE_COLOR_Purple = "//div[@id='road-map-tg-tl-add-category-color-#A38EF4']"
+CHOOSE_COLOR_Pink = "//div[@id='road-map-tg-tl-add-category-color-#FBB6F0']"
+Dropdown_default_Daily = "//div[@id='roadmap-view-dp']"
+Dropdown_Yearly = "//li[@id='Yearly']"
+Dropdown_Quartly = "//li[@id='Quarter']"
+Dropdown_Monthly = "//li[@id='Monthly']"
+Dropdown_Weekly = "//li[@id='Weekly']"
+Dropdown_Daily = "//li[@id='Daily']"
+# BTN_Add_Milestone = "//button[@id='roadmap-add-milestone']"
+INPUT_Milestone_Name = "//input[@id='road-map-tg-add-milestone-name']"
+Dropdown_Milestone_Select_Type = "//div[@id='road-map-tg-add-milestone-release']"
+Dropdown_Minor_Release = "//li[@id='Minor Release']"
+Dropdown_Major_Release = "//li[@id='Major Release']"
+ICON_Milestone_Minor = "//span[@id='roadmap-milestone-release-{name}']"
+BTN_Add_Icon = "//div[@id='road-map-tg-cat-group-add-{name}']"
+BTN_Edit_Icon = "//div[@id='road-map-tg-cat-group-edit-{name}']"
+BTN_Delete_Icon = "//div[@id='road-map-tg-cat-group-delete-{name}']"
+Task_Name = "//input[@id='road-sc-task-roadmap-name']"
+BTN_Roadmap_Back_btn = "//i[@id='roadmap-scheduler-backaButton-arrow']"
+Breadcrums_Product = "//p[@id='breadcrums-Sample Product']"
+Breadcrums_PPG = "//p[@id='breadcrums-Sample PPG']"
+Breadcrums_portfolio = "//p[@id='breadcrums-NARESH S']"
+Breadcrums_Portfolio_Management = "//p[@id='breadcrums-Portfolio Management']"
+Mouse_over_category = '//p[@id="roadmap-category-{name}"]'
+BTN_Kebab_Roadmap = "//div[@id='roadmap-action-{name}']"
+BTN_More_Edit_Roadmap = '//li[@id="roadmap-edit-{name}"]'
+BTN_More_Delete_Roadmap ='//li[@id="roadmap-delete-{name}"]' 
+# roadmap
+BTN_ROADMAP_ADD_CATEGORY = '//button[@id="roadmap-add-category"]'
+BTN_ROADMAP_EDIT_CATEGORY = '//div[@id="road-map-tg-cat-group-edit-{name1}"]'
+BTN_ROADMAP_ADD = '//div[@id="road-map-tg-cat-group-add-{name}"]'
+BTN_ROADMAP_EDIT_TASK = '//div[@id="roadmap-items-task-{name2}"]'
+BTN_ROADMAP_DELETE ='//div[@id="road-map-tg-cat-group-delete-{name}"]'
+INPUT_CATEGORY_NAME = '//input[@id="road-map-tg-add-category-name"]'
+INPUT_CHOOSE_COLOR = '//div[@id="road-map-tg-tl-add-category-color-{color}"]'
+INPUT_TASK_NAME = '//input[@id="road-sc-task-roadmap-name"]'
+INPUT_TASK_START_DATE = '//div[@id="road-sc-task-start-date"]/parent::div/descendant::input'
+INPUT_TASK_END_DATE = '//div[@id="road-sc-task-end-date"]/parent::div/descendant::input'
+BTN_ADD_MILESTONE = '//button[@id="roadmap-add-milestone"]'
+BTN_EDIT_MILESTONE = '//span[@id="roadmap-milestone-release-{name}"]'
+INPUT_MILESTONE_DATE = '//div[@id="road-map-tg-add-milestone-date"]/parent::div/descendant::input'
+
 # Portfolio-Settings-Finance Settings
 TAB_Finance_Settings = '//div[@id="portfolio-setting-Finance SettingsFinance Area"]'
 BTN_New_Area = '//button[@id="finance-area-add-area"]'
@@ -317,7 +372,6 @@ DD_Category_AD_Sch_PPG = '//li[@id="{name}"]'
 Spend_Type_AD_Sch_PPG = '//div[@id="ppg-finance-add-data-spend-type"]'
 DD_Spend_Type_AD_Sch = '//li[@id="{name}"]'
 Kebab_AD_Sch_PPG = '//div[@id="latest-thinking-more-btn-0"]'
-
 # Product Finance 
 Navigate_Product = '//td[@id="custom-id-{name}"]'
 TAB_Product_Finance = '//div[@id="product-finance"]'
@@ -334,3 +388,4 @@ DD_Squad_AD_Sch_Product = '//li[@id="{name}"]'
 Spend_Type_AD_Sch_Product = '//div[@id="ppg-product-finance-add-data-spend-type"]'
 Kebab_AD_Sch_Product_PPG = '//div[@id="latest-thinking-more-btn-0"]'
 BTN_Edit_AD_Sch_Product_PPG = '//li[@id="edit-latest-thinking-{name}-0"]'
+
