@@ -80,6 +80,8 @@ And Close the Browser
 
 
 
+
+
 Verify an application should be opened
     [Arguments]    ${username}
     Login Application    ${username}

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.0 on win32)" generated="20240309 12:16:27.789" rpa="false" schemaversion="3">
+<suite id="s1" name="PROD-17" source="C:\Productor\Testcase\PROD-17.robot">
+<test id="s1-t1" name="Custom fields" line="7">
+<kw name="Given Login into application" library="PROD-17_Support">
+<arg>${username001}</arg>
+<msg timestamp="20240309 12:16:28.217" level="FAIL">Variable '${username001}' not found.</msg>
+<status status="FAIL" starttime="20240309 12:16:28.214" endtime="20240309 12:16:28.217"/>
+</kw>
+<kw name="When Click on Portfolio Management icon ." library="PROD-17_Support">
+<status status="NOT RUN" starttime="20240309 12:16:28.218" endtime="20240309 12:16:28.218"/>
+</kw>
+<kw name="Then Navigate to Portfolio." library="PROD-17_Support">
+<status status="NOT RUN" starttime="20240309 12:16:28.218" endtime="20240309 12:16:28.218"/>
+</kw>
+<kw name="Then Navigate to PPG Menu" library="PROD-17_Support">
+<status status="NOT RUN" starttime="20240309 12:16:28.218" endtime="20240309 12:16:28.218"/>
+</kw>
+<kw name="Then Click on Add PPG button, Enter all mandatory fields and Click save it." library="PROD-17_Support">
+<status status="NOT RUN" starttime="20240309 12:16:28.218" endtime="20240309 12:16:28.218"/>
+</kw>
+<kw name="Then Navigate to created ppg" library="PROD-17_Support">
+<status status="NOT RUN" starttime="20240309 12:16:28.218" endtime="20240309 12:16:28.218"/>
+</kw>
+<kw name="Then Navigate to Product/Platform Tab" library="PROD-17_Support">
+<status status="NOT RUN" starttime="20240309 12:16:28.218" endtime="20240309 12:16:28.219"/>
+</kw>
+<doc>Portfolio_custom fields JIRA ID - PROD-17</doc>
+<tag>Name:Abitha</tag>
+<tag>PROD-17</tag>
+<tag>Test</tag>
+<status status="FAIL" starttime="20240309 12:16:28.214" endtime="20240309 12:16:28.219">Variable '${username001}' not found.</status>
+</test>
+<doc>Portfolio_custom fields</doc>
+<status status="FAIL" starttime="20240309 12:16:27.791" endtime="20240309 12:16:28.219"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Name:Abitha</stat>
+<stat pass="0" fail="1" skip="0">PROD-17</stat>
+<stat pass="0" fail="1" skip="0">Test</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="PROD-17">PROD-17</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240309 12:16:27.814" level="ERROR">Error in file 'C:\Productor\Testcase\PROD-17_Support.robot' on line 41: Creating keyword 'Then Click on OKRs Tab in PPG' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20240309 12:16:27.817" level="ERROR">Error in file 'C:\Productor\Testcase\PROD-17_Support.robot' on line 120: Creating keyword 'Verify OKRs should created along with Custom fields.' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20240309 12:16:27.818" level="ERROR">Error in file 'C:\Productor\Testcase\PROD-17_Support.robot' on line 131: Creating keyword 'Verify PPG page should be displayed.' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20240309 12:16:28.040" level="ERROR">Error in file 'C:\Productor\Resources\common_1.robot' on line 6: Processing variable file 'C:\Productor\Data\data.py' failed: Importing variable file 'C:\Productor\Data\data.py' failed: NameError: name 'Pro' is not defined
+Traceback (most recent call last):
+  File "C:\Productor\Data\data.py", line 134, in &lt;module&gt;
+    Pro
+PYTHONPATH:
+  C:\Productor\Data
+  C:\Users\crazy\AppData\Roaming\JetBrains\PyCharmCE2023.3\plugins\robotframework-intellij\lib\robotframework_debug_adapter
+  C:\Productor
+  C:\Users\crazy\AppData\Roaming\JetBrains\PyCharmCE2023.3\plugins\robotframework-intellij\lib
+  C:\Users\crazy\AppData\Roaming\JetBrains\PyCharmCE2023.3\plugins\robotframework-intellij\lib\robotframework_ls\vendored
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310
+  C:\Users\crazy\python virtual environment\rpavirtualenvironment
+  C:\Users\crazy\python virtual environment\rpavirtualenvironment\lib\site-packages
+  C:\Users\crazy\python virtual environment\rpavirtualenvironment\lib\site-packages\win32
+  C:\Users\crazy\python virtual environment\rpavirtualenvironment\lib\site-packages\win32\lib
+  C:\Users\crazy\python virtual environment\rpavirtualenvironment\lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

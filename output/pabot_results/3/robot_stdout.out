@@ -1,0 +1,20 @@
+==============================================================================
+Productor                                                                     
+==============================================================================
+Productor.Testcase                                                            
+==============================================================================
+Productor.Testcase.PROD-8 :: Create,Search,Edit and Delete Product Squad Ro...
+==============================================================================
+Product Sqad Role :: Product Squad Role Create,Search,Edit and Delete | FAIL |
+No keyword with name 'Use Encryption Key' found.
+------------------------------------------------------------------------------
+Productor.Testcase.PROD-8 :: Create,Search,Edit and Delete Product... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor.Testcase                                                    | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Productor\output\pabot_results\3\output.xml

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Product/platform OKR and squad     JIRA ID - PROD-6
 Resource    PROD-6_Support.robot
-Force Tags      PROD-6    Test    Name:Gayathri
+#Force Tags      PROD-6    Test    Name:Gayathri
 
 
 *** Test Cases ***

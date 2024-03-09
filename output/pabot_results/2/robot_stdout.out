@@ -1,0 +1,20 @@
+==============================================================================
+Productor                                                                     
+==============================================================================
+Productor.Testcase                                                            
+==============================================================================
+Productor.Testcase.PROD-7 :: System Finance Customize Budget JIRA ID - PROD-7 
+==============================================================================
+Finance Customize Budget :: System Finance Customize Budget           | FAIL |
+No keyword with name 'Use Encryption Key' found.
+------------------------------------------------------------------------------
+Productor.Testcase.PROD-7 :: System Finance Customize Budget JIRA ... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor.Testcase                                                    | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Productor\output\pabot_results\2\output.xml

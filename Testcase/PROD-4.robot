@@ -8,7 +8,7 @@ Resource    PROD-4_Support.robot
 *** Test Cases ***
 Portfolio Management
     [Documentation]    Portfolio Create,Edit,Search,Delete
-    Given Login into Productor Application    ${username002}
+    Given Login into Productor Application    ${username001}
     When Navigate to Portfolio Management Menu
     Then Click on Create portfolio button, Enter the mandatory details and click on cancel button
     Then Click on Create portfolio button and Enter the mandatory details and click on Save button

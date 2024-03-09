@@ -1,0 +1,20 @@
+==============================================================================
+Productor                                                                     
+==============================================================================
+Productor.Testcase                                                            
+==============================================================================
+Productor.Testcase.PROD-17 :: Portfolio_custom fields                         
+==============================================================================
+Custom fields :: Portfolio_custom fields JIRA ID - PROD-17            | FAIL |
+No keyword with name 'Use Encryption Key' found.
+------------------------------------------------------------------------------
+Productor.Testcase.PROD-17 :: Portfolio_custom fields                 | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor.Testcase                                                    | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Productor\output\pabot_results\0\output.xml

@@ -116,6 +116,24 @@ PROD_16_Invalid_Name = 'PROD_16_invalid_name'
 PROD_16_Portfolio_name = 'PROD_16_Portfolio_name'
 PROD_16_Portfolio_Description = 'PROD_16_Portfolio_Description'
 
+# PROD-17 Custom fields
+PROD_17_Portfolio = 'PROD_17_Portfolio_dont delete'
+PROD_17_Portfolio_Description = 'PROD_17_Portfolio_Description'
+PROD_17_Name = 'PROD_17_Teamleader'
+PROD_17_Addto = 'finance'
+PROD_17_Tooltip = 'PROD_17_teamleadername'
+PROD_17_Type = 'PROD17_Cust_Text'
+PROD_17_Placeholder = 'PROD17_Cust_Team'
+PROD_17_Strageticoutcome = 'PROD_17_strageticoutcome_add'
+PROD_17_Description='Prod_17_description'
+PROD_17_OKR = 'PROD_17_OKR'
+PROD_17_PPG = 'PROD_17_PPPPGG'
+PROD_17_Owner = 'Tom Parthi'
+PROD_17_product_text = 'PROD17_Text'
+PROD_17_product_custom = ' PROD_17_name'
+Pro
+
+
 
 
 

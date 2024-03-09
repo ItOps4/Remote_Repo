@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    OperatingSystem
-Library    JSONLibrary
+Library    RPA.JSON
 Library    RPA.Crypto
 Library    String
 Variables    ../Data/data.py
@@ -20,8 +20,8 @@ Login Application
     ${encry}    Set Variable    ${object['${username}']}
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].EdgeOptions()    sys,selenium.webdriver
     Call Method    ${options}    add_argument    inprivate
-    # Call Method    ${options}    add_argument    --headless    
-    ${driver}    Create Webdriver    Edge    options=${options}    
+    Call Method    ${options}    add_argument    --headless
+    ${driver}    Create Webdriver    Edge    options=${options}
     Set Window Size    1920    1080
     Go To    ${Productor_Url}
     Maximize Browser Window

@@ -254,7 +254,7 @@ Create PPG
         Wait Until Element is present then click the element    ${BTN_Create_PPG}
     END   
     Wait Until Page Contains Element    ${Input_PPG_name}    50
-    Input Text    ${Input_PPG_name}    ${name2}    
+    Input Text    ${Input_PPG_name}    ${name2}
     Press Keys    ${Input_PPG_Description}    ${description}
     Wait Until Element is present then click the element    ${BTN_PPG_Owner}
     Press Keys    ${Input_Search_Owner}    ${Owner}
@@ -655,7 +655,164 @@ Click the Kebab button on User Access
     ${UA_more_option}    Format String    ${BTN_More_UA}    name=${user_name}
     Wait Until Element is present then click the element    ${UA_more_option}
     ${UA_Delete}    Format String    ${UA_More_Delete}    name=${user_name}
-    Wait Until Element is present then click the element    ${UA_Delete}    
+    Wait Until Element is present then click the element    ${UA_Delete}
+
+Create Custom fields
+    [Documentation]     Using this keyword we can create Custom fields
+    [Arguments]     ${name}       ${search}        ${Tooltip}    ${type}
+    Wait Until Element is present then click the element    ${Custom_create_name}
+    Input Text    ${name}    ${PROD_17_Name}
+    Input Text    ${Tooltip}     ${PROD_17_Tooltip}
+    @{list}    Create List    Finance   Strategic Outcome   Key Results     Product     Squad   Product group   OKR
+    FOR    ${element}    IN    @{list}
+        Press Keys    ${Custom_Addto}    CTRL+A+BACKSPACE
+        Press Keys    ${Custom_Addto}     ${element}
+        ${dropdown}    Format String    ${Custom_Addto_dropdown}    name=${element}
+        Wait Until Element is present then click the element    ${dropdown}
+        Press Keys    ${Custom_Addto}     TAB
+    END
+    Click Element   ${Custom_text}
+    Wait Until Element is present then click the element    ${Custom_add_type}
+    click element    ${Custom_add_type_text}
+    Wait Until Element is present then click the element    ${Custom_placeholder}
+    Input Text    ${Custom_placeholder}     ${PROD_17_Placeholder}
+
+create,edit strategic outcome with custom fields
+    [Documentation]    Using this keyword we can create strategic outcome
+    [Arguments]    ${name}    ${description}    ${Element}
+    Press Keys    ${INPUT_Strategic_Outcome_Name}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_Strategic_Outcome_Name}    ${name}
+    Input Text    ${Custom_strageticoutcome_add}    ${PROD_17_Strageticoutcome}
+    Press Keys    ${INPUT_Strategic_Outcome_Description}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_Strategic_Outcome_Description}    ${description}
+    ${current_date}=    Get Current Date    result_format=%m/%d/%Y
+    Log    ${current_date}
+    Press Keys    ${INPUT_SO_Start_Date}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_SO_Start_Date}    ${current_date}
+    Press Keys    ${INPUT_SO_End_Date}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_SO_End_Date}    ${current_date}
+    Wait Until Element is present then click the element    ${Drop_Down_Select_Manager}
+    Press Keys    ${Drop_Down_Input_Select_Manager}    ${TXT_manager_Iyyappan}
+    Wait Until Element is present then click the element    ${Drop_Down_LI_Iyyappan}
+    Wait Until Element is present then click the element    ${Element}
+
+Create,edit OKR with custom field
+    [Documentation]    Using this keyword we can create,edit OKR
+    [Arguments]    ${name}    ${description}    ${Select_element_ppg_platform}  ${Element}
+    Press Keys    ${INPUT_OKR_name}    CTRL+A+BACKSPACE
+    Input Text    ${INPUT_OKR_name}    ${name}
+    Input Text    ${Custom_OKR_PROD_17}     ${PROD_17_OKR}
+    Press Keys    ${INPUT_OKR_Description}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_OKR_Description}    ${description}
+    ${current_date}=    Get Current Date    result_format=%m/%d/%Y
+    Log    ${current_date}
+    Press Keys    ${INPUT_OKR_Start_Date}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_OKR_Start_Date}    ${current_date}
+    Press Keys    ${INPUT_OKR_End_Date}    CTRL+A+BACKSPACE
+    Press Keys    ${INPUT_OKR_End_Date}    ${current_date}
+    Wait Until Element is present then click the element    ${Drop_Down_Add_Under}
+    Click Element    ${Drop_Down_Select_ppg}
+    Wait Until Element is present then click the element    ${Drop_Down_Assign_To}
+    Press Keys    ${Drop_Down_Input_Select_Manager}    ${TXT_manager_Iyyappan}
+    Wait Until Element is present then click the element    ${Drop_Down_LI_Iyyappan}
+    Wait Until Element is present then click the element    ${Select_element_ppg_platform}
+    Click Element   ${Custom_okr_Link_SO}
+    Wait Until Element is present then click the element    ${Element}
+
+Create PPG with custom fields
+    [Documentation]    Using this keyword we can create PPG with custom fields
+    [Arguments]    ${name}    ${description}    ${custom_ppg}    ${Owner}    ${Type}    ${Element}
+    Wait Until Page Contains Element    ${Input_PPG_name}    50
+    Input Text    ${Input_PPG_name}    ${name}
+    Press Keys    ${Input_PPG_Description}    ${description}
+    Wait Until Element is present then click the element    ${BTN_PPG_Owner}
+    Press Keys    ${Input_Search_Owner}    ${Owner}
+    ${Owner}    Format String    ${BTN_Select_Owner}    name=${Owner}
+    Wait Until Element is present then click the element    ${Owner}
+    Wait Until Element is present then click the element    ${Input_PPG_Type}
+    Wait Until Element is present then click the element    ${Type}
+    Scroll Element Into View   ${Custom_PPG_Field}
+    Input Text    ${Custom_PPG_Field}   ${custom_ppg}
+    Wait Until Element is present then click the element    ${Element}
+
+Create Product/Platform for custom fields
+    [Documentation]    Using this keyword we can create Product/Platform
+    [Arguments]    ${name2}    ${description}    ${Owner}    ${Type}    ${Text}  ${Element}
+    Wait Until Element is present then click the element    ${BTN_Add_Product_Platform}
+    Wait Until Page Contains Element    ${Input_Product_Platform}    50
+    Input Text    ${Input_Product_Platform}    ${name2}
+    Press Keys    ${Input_Product_Platform_Description}    ${description}
+    Wait Until Element is present then click the element    ${Input_Product_Platform_Owner}
+    Press Keys    ${BTN_Search_Product_Platform_Owner}    ${Owner}
+    ${Owner}    Format String    ${BTN_Select_Owner}    name=${Owner}
+    Wait Until Element is present then click the element    ${Owner}
+    Wait Until Element is present then click the element    ${Drop_Down_Product_Platform_Type}
+    Wait Until Element is present then click the element    ${Type}
+    Input Text    ${PROD_17_PPG}    ${PROD_17_product_text}
+    Wait Until Element is present then click the element    ${Element}
+
+Add Schedule to PPG Finance for custom fields
+    [Documentation]    Using this keywork we can Add Schedule to PPG Finance
+    [Arguments]    ${name}    ${description}    ${year}
+    Wait Until Element is present then click the element    ${BTN_Add_Schedule_PPG}
+    Input Text    ${Input_Schedule_PPG}    ${name}
+    Input Text    ${Input_Sch_Des_PPG}    ${description}
+    Press Keys    ${Input_Sch_Date_PPG}    ${year}
+
+Add data to PPG Schedule for custom fields
+    [Documentation]    Using this keywork we can Add data to PPG Schedule
+    [Arguments]    ${description}    ${name}    ${name1}    ${name3}    ${name5}
+    Wait Until Element is present then click the element    ${BTN_Add_Data_Sch_PPG}
+    Input Text    ${Input_Des_AD_Sch_PPG}    ${description}
+    Wait Until Element is present then click the element    ${DD_FA_AD_Sch_PPG}
+    ${financearea}    Format String    ${Select_FA_AD_Sch}    name=${name}
+    Wait Until Element is present then click the element    ${financearea}
+    Wait Until Element is present then click the element    ${DD_Build_run}
+    ${buildrun}    Format String    ${Select_Build_run}    name=${name1}
+    Wait Until Element is present then click the element    ${buildrun}
+    Wait Until Element is present then click the element    ${DD_Category_AD_Sch_PPG}
+    ${Category}    Format String    ${Select_Category_AD_Sch}    name=${name3}
+    Wait Until Element is present then click the element    ${Category}
+    Wait Until Element is present then click the element    ${DD_Spend_Type_AD_Sch_PPG}
+    ${spend}    Format String    ${Select_Spend_Type_AD_Sch}    name=${name5}
+    Wait Until Element is present then click the element    ${spend}
+
+Add Schedule to Product Finance for custom fields
+    [Documentation]    Using this keywork we can Add Schedule to Product Finance
+    Wait Until Element is present then click the element    ${BTN_Add_Schedule_Product}
+    [Arguments]    ${name}    ${description}    ${year}
+    Input Text    ${Input_Schedule_Product}    ${name}
+    Input Text    ${Input_Sch_Des_Product}    ${description}
+    Press Keys    ${Input_Sch_Date_PPG}    ${year}
+
+Add data to Product Schedule for custom fields
+    [Documentation]    Using this keywork we can Add data to Product Schedule
+    [Arguments]    ${description}    ${name}    ${name1}    ${name3}    ${name4}    ${name5}
+    Wait Until Element is present then click the element    ${BTN_Add_Data_Product_Sch}
+    Input Text    ${Input_Des_AD_Sch_Product}    ${description}
+    Wait Until Element is present then click the element    ${DD_FA_AD_Sch_Product}
+    ${financearea}    Format String    ${Select_FA_AD_Sch}    name=${name}
+    Wait Until Element is present then click the element    ${financearea}
+    Wait Until Element is present then click the element    ${DD_Build_run_Product}
+    ${buildrun}    Format String    ${Select_Build_run}    name=${name1}
+    Wait Until Element is present then click the element    ${buildrun}
+    Wait Until Element is present then click the element    ${DD_Category_AD_Sch_Product}
+    ${Category}    Format String    ${Select_Category_AD_Sch}    name=${name3}
+    Wait Until Element is present then click the element    ${Category}
+    Wait Until Element is present then click the element    ${DD_Squad_AD_Sch_Product}
+    ${sqaud}    Format String    ${Select_Squad_AD_Sch_Product}    name=${name4}
+    Wait Until Element is present then click the element    ${sqaud}
+    Wait Until Element is present then click the element    ${DD_Spend_Type_AD_Sch_Product}
+    ${spend}    Format String    ${Select_Spend_Type_AD_Sch}    name=${name5}
+    Wait Until Element is present then click the element    ${spend}
+
+Navigate to PPG
+    [Arguments]   ${name}
+    ${element}  Format String    ${TXT_Portfolio_PPG}   text=${name}
+    Wait Until Element is present then click the element    ${element}
+
+
+
     
 
 
