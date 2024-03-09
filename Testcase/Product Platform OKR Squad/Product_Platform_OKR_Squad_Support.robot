@@ -154,114 +154,114 @@ Verify if user should be able to login successfully
 
 verify it should display ppg page
     Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
-    Create Portfolio    ${portfolio_create_pp}    ${PROD_6_description}    ${BTN_Save}
-    Search Data    ${Input_Portfolio_Search}    ${portfolio_create_pp}
-    Navigate to portfolio data    ${portfolio_create_pp}
+    Create Portfolio    ${PPOS_Portfolio}    ${PPOS_description}    ${BTN_Save}
+    Search Data    ${Input_Portfolio_Search}    ${PPOS_Portfolio}
+    Navigate to portfolio data    ${PPOS_Portfolio}
     Wait Until Element is present then click the element    ${Strategic_outcome_Tab}
     Wait Until Element is present then click the element    ${BTN_Add_Strategic_outcome}
-    Create,edit Strategic Outcome    ${PROD_6_SO}    ${PROD_6_SO_Description}    ${BTN_Save}
+    Create,edit Strategic Outcome    ${PPOS_SO}    ${PPOS_SO_Description}    ${BTN_Save}
     Wait Until Element is present then click the element    ${TAB_PPG}
-    Create PPG    ${PROD_6_PPG}    ${PROD_6_description}    ${TXT_manager_Iyyappan}    ${Input_Type_Platform}    ${BTN_SAVE}
-    Navigate to portfolio data    ${PROD_6_PPG}
+    Create PPG    ${PPOS_PPG}    ${PPOS_description}    ${TXT_manager_Iyyappan}    ${Input_Type_Platform}    ${BTN_SAVE}
+    Navigate to portfolio data    ${PPOS_PPG}
     Wait Until Element is present then click the element    ${TAB_Product_Platform}
-    Create Product/Platform    ${PROD_6_pp}    ${PROD_6_description}    ${TXT_manager_Iyyappan}    ${Input_Type_Platform}    ${BTN_Save}                    
+    Create Product/Platform    ${PPOS_pp}    ${PPOS_description}    ${TXT_manager_Iyyappan}    ${Input_Type_Platform}    ${BTN_Save}                    
 
 
 verify it should display product page and OKR page should be displayed
-    Navigate to portfolio data    ${PROD_6_pp}
+    Navigate to portfolio data    ${PPOS_pp}
     Wait Until Element is present then click the element    ${BTN_prod_OKR}
 
 Verify a OKRs shouldn't be created
-    create PLatform OKR    ${PROD_6_OKR}    ${TXT_manager_Iyyappan}    ${PROD_6_SO}    ${BTN_Cancel}
+    create PLatform OKR    ${PPOS_OKR}    ${TXT_manager_Iyyappan}    ${PPOS_SO}    ${BTN_Cancel}
 
 Verify a OKRs should be created
-    create PLatform OKR    ${PROD_6_OKR}    ${TXT_manager_Iyyappan}    ${PROD_6_SO}    ${BTN_Save}
+    create PLatform OKR    ${PPOS_OKR}    ${TXT_manager_Iyyappan}    ${PPOS_SO}    ${BTN_Save}
 
 verify if it should not display any result , it display message as " No records to display "
-    Search Data    ${BTN_okr_search}    ${PROD_6_OKR_UPDATE}
+    Search Data    ${BTN_okr_search}    ${PPOS_OKR_UPDATE}
     Check element is present    ${TXT_NO_DATA}
 
 verify if it should display resullt as per input search
-    Search Data    ${BTN_okr_search}    ${PROD_6_OKR}
-    Verify a Portfolio is displayed    ${PROD_6_OKR}
+    Search Data    ${BTN_okr_search}    ${PPOS_OKR}
+    Verify a Portfolio is displayed    ${PPOS_OKR}
 
 verify a Result shouldn't be created
-    Click on add result button    ${PROD_6_OKR}
-    Create key result    ${PROD_6_Keyresult}    ${PROD_6_keyresult_descript}    ${TXT_manager_Iyyappan}    ${TXT_baseline}    ${TXT_uom}    ${BTN_Cancel}
+    Click on add result button    ${PPOS_OKR}
+    Create key result    ${PPOS_Keyresult}    ${PPOS_keyresult_descript}    ${TXT_manager_Iyyappan}    ${TXT_baseline}    ${TXT_uom}    ${BTN_Cancel}
 
 
 verify a Result should be created
-    Click on add result button    ${PROD_6_OKR}
-    Create key result    ${PROD_6_Keyresult}    ${PROD_6_keyresult_descript}    ${TXT_manager_Iyyappan}    ${TXT_baseline}    ${TXT_uom}    ${BTN_Save}
+    Click on add result button    ${PPOS_OKR}
+    Create key result    ${PPOS_Keyresult}    ${PPOS_keyresult_descript}    ${TXT_manager_Iyyappan}    ${TXT_baseline}    ${TXT_uom}    ${BTN_Save}
 
 
 Verify it should displays OKR key result page
-    Navigate to portfolio data    ${PROD_6_OKR}
+    Navigate to portfolio data    ${PPOS_OKR}
 
 
 Verify a key result data can not be changed
-    click key result kebab button    ${PROD_6_Keyresult}
-    edit key result    ${PROD_6_Keyresult}    ${PROD_6_KEY_RESULT_UPDATE}    ${PROD_6_keyDescription_UPDATE}    ${PROD_6_BASELINE}    ${PROD_6_UOM}    ${BTN_Cancel}
+    click key result kebab button    ${PPOS_Keyresult}
+    edit key result    ${PPOS_Keyresult}    ${PPOS_KEY_RESULT_UPDATE}    ${PPOS_keyDescription_UPDATE}    ${PPOS_BASELINE}    ${PPOS_UOM}    ${BTN_Cancel}
 
 Verify a key result can be changed
-    click key result kebab button    ${PROD_6_Keyresult}
-    edit key result    ${PROD_6_Keyresult}    ${PROD_6_KEY_RESULT_UPDATE}    ${PROD_6_keyDescription_UPDATE}    ${PROD_6_BASELINE}    ${PROD_6_UOM}    ${BTN_Save}    
+    click key result kebab button    ${PPOS_Keyresult}
+    edit key result    ${PPOS_Keyresult}    ${PPOS_KEY_RESULT_UPDATE}    ${PPOS_keyDescription_UPDATE}    ${PPOS_BASELINE}    ${PPOS_UOM}    ${BTN_Save}    
 
  Verify it should displays Key result overview page and contains edit button
-    Navigate to portfolio data    ${PROD_6_KEY_RESULT_UPDATE}
+    Navigate to portfolio data    ${PPOS_KEY_RESULT_UPDATE}
     Check element is present    ${BTN_OVERVIEW_edit}
     Wait Until Element is present then click the element    ${BTN_BACKARROW_KEY_OVERVIEW}
 
 Verify a key result shouldn't be deleted
-    click key result kebab button    ${PROD_6_KEY_RESULT_UPDATE}
-    Delete Key result    ${PROD_6_KEY_RESULT_UPDATE}    ${BTN_Cancel}
+    click key result kebab button    ${PPOS_KEY_RESULT_UPDATE}
+    Delete Key result    ${PPOS_KEY_RESULT_UPDATE}    ${BTN_Cancel}
     
 Verify a key result should be deleted
-    click key result kebab button    ${PROD_6_KEY_RESULT_UPDATE}
-    Delete Key result    ${PROD_6_KEY_RESULT_UPDATE}    ${BTN_Confirm}
-    click backarrow    ${PROD_6_OKR}
+    click key result kebab button    ${PPOS_KEY_RESULT_UPDATE}
+    Delete Key result    ${PPOS_KEY_RESULT_UPDATE}    ${BTN_Confirm}
+    click backarrow    ${PPOS_OKR}
 
 verify OKR fields can not be changed
-    click on okr kebab button    ${PROD_6_OKR}
-    Edit OKR    ${PROD_6_OKR}    ${PROD_6_OKR_UPDATE}    ${TXT_manager_Iyyappan}    ${BTN_Cancel}
+    click on okr kebab button    ${PPOS_OKR}
+    Edit OKR    ${PPOS_OKR}    ${PPOS_OKR_UPDATE}    ${TXT_manager_Iyyappan}    ${BTN_Cancel}
 
 
 verify OKR fields can be changed
-    click on okr kebab button    ${PROD_6_OKR}
-    Edit OKR    ${PROD_6_OKR}    ${PROD_6_OKR_UPDATE}    ${TXT_manager_Iyyappan}    ${BTN_Save}
+    click on okr kebab button    ${PPOS_OKR}
+    Edit OKR    ${PPOS_OKR}    ${PPOS_OKR_UPDATE}    ${TXT_manager_Iyyappan}    ${BTN_Save}
 
       
 verify a OKR shouldn't be delete
-    click on okr kebab button    ${PROD_6_OKR_UPDATE}
-    Delete platform OKR    ${PROD_6_OKR_UPDATE}    ${BTN_Cancel} 
+    click on okr kebab button    ${PPOS_OKR_UPDATE}
+    Delete platform OKR    ${PPOS_OKR_UPDATE}    ${BTN_Cancel} 
 verify a OKR should be delete
-    click on okr kebab button    ${PROD_6_OKR_UPDATE}
-    Delete platform OKR    ${PROD_6_OKR_UPDATE}    ${BTN_Confirm}
+    click on okr kebab button    ${PPOS_OKR_UPDATE}
+    Delete platform OKR    ${PPOS_OKR_UPDATE}    ${BTN_Confirm}
 
 
 Verify it should display ppg 
-    Click Breadcrums    ${PROD_6_PPG}
-    Create PPG    ${PROD_6_product}    ${PROD_6_description}    ${TXT_manager_Iyyappan}    ${Input_Type_Product}    ${BTN_Save}
+    Click Breadcrums    ${PPOS_PPG}
+    Create PPG    ${PPOS_product}    ${PPOS_description}    ${TXT_manager_Iyyappan}    ${Input_Type_Product}    ${BTN_Save}
 
 Verify it should display product page and it should display squad page
-    Navigate to portfolio data    ${PROD_6_product}
+    Navigate to portfolio data    ${PPOS_product}
     Wait Until Element is present then click the element    ${TAB_Product_Platform}
-    Create Product/Platform    ${PROD_6_PP_product}    ${PROD_6_PP_description}    ${TXT_manager_Iyyappan}    ${Input_Type_Product}    ${BTN_Save}
-    Navigate to portfolio data    ${PROD_6_PP_product}
+    Create Product/Platform    ${PPOS_PP_product}    ${PPOS_PP_description}    ${TXT_manager_Iyyappan}    ${Input_Type_Product}    ${BTN_Save}
+    Navigate to portfolio data    ${PPOS_PP_product}
 
 
 
 Verify if squad shouldn't be Created
     Wait Until Element is present then click the element    ${TAB_squad}
-    Create Squad    ${PROD_6_SQUAD}    ${TXT_manager_Iyyappan}    ${BTN_NEXT}    ${BTN_BACK}
+    Create Squad    ${PPOS_SQUAD}    ${TXT_manager_Iyyappan}    ${BTN_NEXT}    ${BTN_BACK}
     Wait Until Element is present then click the element    ${BTN_squad_Cancel}       
     
 verify if squad should be created
-    Create Squad    ${PROD_6_SQUAD}    ${TXT_manager_Iyyappan}    ${BTN_NEXT}    ${BTN_Save}
+    Create Squad    ${PPOS_SQUAD}    ${TXT_manager_Iyyappan}    ${BTN_NEXT}    ${BTN_Save}
     
 
 Verfiy it should display added squad member
-    Navigate to portfolio data    ${PROD_6_SQUAD}
+    Navigate to portfolio data    ${PPOS_SQUAD}
     Check element is present    ${product_mem}
 
 Verify if it should display message as " No records to display "
@@ -287,21 +287,21 @@ Verify it should display product squad
     Wait Until Element is present then click the element    ${BTN_BACKARROW_squad}    
 
 Verify if it should not display any result , it should display message as " No records to display "
-    Search Data    ${INPUT_SEARCH_SQUAD}    ${PROD_6_SO}
+    Search Data    ${INPUT_SEARCH_SQUAD}    ${PPOS_SO}
     Check element is present    ${TXT_NO_DATA}
 
 Verify it should display result as per input search
-    Search Data    ${INPUT_SEARCH_SQUAD}    ${PROD_6_SQUAD}
-    Verify a Portfolio is displayed    ${PROD_6_SQUAD}
+    Search Data    ${INPUT_SEARCH_SQUAD}    ${PPOS_SQUAD}
+    Verify a Portfolio is displayed    ${PPOS_SQUAD}
 
 Verify it shouldn't be changed in squad product
-    click squad member kebab button    ${PROD_6_SQUAD}    ${BTN_MORE_product_squad}
-    Edit squad product    ${PROD_6_SQUAD_2}    ${TXT_manager_Iyyappan}    ${Drop_Down_Manager}
+    click squad member kebab button    ${PPOS_SQUAD}    ${BTN_MORE_product_squad}
+    Edit squad product    ${PPOS_SQUAD_2}    ${TXT_manager_Iyyappan}    ${Drop_Down_Manager}
     Wait Until Element is present then click the element    ${BTN_Cancel}
    
 Verify it should be changed in squad product
-    click squad member kebab button    ${PROD_6_SQUAD}    ${BTN_MORE_product_squad}
-    Edit squad product    ${PROD_6_SQUAD_2}    ${TXT_manager_Iyyappan}    ${Drop_Down_Manager}
+    click squad member kebab button    ${PPOS_SQUAD}    ${BTN_MORE_product_squad}
+    Edit squad product    ${PPOS_SQUAD_2}    ${TXT_manager_Iyyappan}    ${Drop_Down_Manager}
     Wait Until Element is present then click the element    ${BTN_Save}
 
 Verify it should display a Product member page
@@ -349,10 +349,10 @@ Verify it should display Product squad page
 
 
 Verify a product squad member shouldn't be deleted in product squad 
-    Search Data    ${INPUT_SEARCH_SQUAD}    ${PROD_6_SQUAD_2}
-    click squad member kebab button    ${PROD_6_SQUAD_2}    ${BTN_MORE_product_squad}
-    delete product squad    ${PROD_6_SQUAD_2}    ${BTN_DELETE_SQUAD_PRODUCT}    ${BTN_Cancel}
+    Search Data    ${INPUT_SEARCH_SQUAD}    ${PPOS_SQUAD_2}
+    click squad member kebab button    ${PPOS_SQUAD_2}    ${BTN_MORE_product_squad}
+    delete product squad    ${PPOS_SQUAD_2}    ${BTN_DELETE_SQUAD_PRODUCT}    ${BTN_Cancel}
 
 Verify a product squad member should be deleted in product squad 
-    click squad member kebab button    ${PROD_6_SQUAD_2}    ${BTN_MORE_product_squad}
-    delete product squad    ${PROD_6_SQUAD_2}    ${BTN_DELETE_SQUAD_PRODUCT}    ${BTN_Confirm}
+    click squad member kebab button    ${PPOS_SQUAD_2}    ${BTN_MORE_product_squad}
+    delete product squad    ${PPOS_SQUAD_2}    ${BTN_DELETE_SQUAD_PRODUCT}    ${BTN_Confirm}

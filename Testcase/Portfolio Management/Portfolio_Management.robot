@@ -1,7 +1,7 @@
 *** Settings ***
-Documentation    Portfolio Create,Edit,Search,Delete    JIRA ID - PROD-4
-Resource    PROD-4_Support.robot
-Force Tags      PROD-4    Test    Name:Gayathri
+Documentation    Portfolio Create,Edit,Search,Delete    
+Resource    Portfolio_Management_Support.robot
+Force Tags      Portfolio_Managament    Test    Name:Gayathri
 
 
 

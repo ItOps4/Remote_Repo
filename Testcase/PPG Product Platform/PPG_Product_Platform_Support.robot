@@ -5,7 +5,8 @@ Variables    ../Data/data.py
 
 *** Keywords ***
 Given Login into application
-    Verify an application should be opened    ${username001}
+    [Arguments]    ${username}
+    Verify an application should be opened    ${username}
 
 Then Navigate to Portfolio, Click on PPG Tab
     Verify a PPG Page should be displayed
@@ -86,106 +87,106 @@ Verify an application should be opened
 
 Verify a PPG Page should be displayed
     Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
-    Create Portfolio    ${PROD_14_Portfolio}    ${PROD_14_Portfolio_Description}    ${BTN_Save}
-    Search Data    ${Input_Portfolio_Search}    ${PROD_14_Portfolio}
-    Navigate to Portfolio and Click on PPG tab    ${PROD_14_Portfolio}    ${TAB_PPG}
+    Create Portfolio    ${PPGPP_Portfolio}    ${PPGPP_Portfolio_Description}    ${BTN_Save}
+    Search Data    ${Input_Portfolio_Search}    ${PPGPP_Portfolio}
+    Navigate to Portfolio and Click on PPG tab    ${PPGPP_Portfolio}    ${TAB_PPG}
 
 Verify a PPG shouldn't be created
-    Create PPG    ${PROD_14_PPG}    ${PROD_14_PPG_Description}    ${PROD_14_Owner}    ${Input_Type_Platform}    ${BTN_Cancel}
+    Create PPG    ${PPGPP_PPG}    ${PPGPP_PPG_Description}    ${PPGPP_Owner}    ${Input_Type_Platform}    ${BTN_Cancel}
 
 Verify a PPG should be Created
-    Create PPG    ${PROD_14_PPG}    ${PROD_14_PPG_Description}    ${PROD_14_Owner}    ${Input_Type_Platform}    ${BTN_Save} 
+    Create PPG    ${PPGPP_PPG}    ${PPGPP_PPG_Description}    ${PPGPP_Owner}    ${Input_Type_Platform}    ${BTN_Save} 
 
 Verify PPG Fields should not be Changed
-    Click the Kebab button     ${PROD_14_PPG}    ${BTN_PPG_Kebab}
-    Edit PPG    ${PROD_14_PPG}    ${Input_Type_Product}    ${BTN_Cancel}
+    Click the Kebab button     ${PPGPP_PPG}    ${BTN_PPG_Kebab}
+    Edit PPG    ${PPGPP_PPG}    ${Input_Type_Product}    ${BTN_Cancel}
 
 Verify PPG Fields should be Changed
-    Click the Kebab button     ${PROD_14_PPG}    ${BTN_PPG_Kebab}
-    Edit PPG    ${PROD_14_PPG}    ${Input_Type_Product}    ${BTN_Save}
+    Click the Kebab button     ${PPGPP_PPG}    ${BTN_PPG_Kebab}
+    Edit PPG    ${PPGPP_PPG}    ${Input_Type_Product}    ${BTN_Save}
 
 Verify a Another PPG Fields should be Changed
-    Create PPG    ${PROD_14_PPG_Update}    ${PROD_14_Portfolio_Description_Update}    ${PROD_14_Owner}    ${Input_Type_Product}    ${BTN_Save} 
-    Click the Kebab button     ${PROD_14_PPG_Update}    ${BTN_PPG_Kebab}
-    Edit PPG    ${PROD_14_PPG_Update}    ${Input_Type_Platform}    ${BTN_Save}
+    Create PPG    ${PPGPP_PPG_Update}    ${PPGPP_Portfolio_Description_Update}    ${PPGPP_Owner}    ${Input_Type_Product}    ${BTN_Save} 
+    Click the Kebab button     ${PPGPP_PPG_Update}    ${BTN_PPG_Kebab}
+    Edit PPG    ${PPGPP_PPG_Update}    ${Input_Type_Platform}    ${BTN_Save}
 
 Verify an error message shouble be display as " No results found".
-    Search Data    ${Input_Search_PPG}    ${PROD_14_PPG_Invalid}
+    Search Data    ${Input_Search_PPG}    ${PPGPP_PPG_Invalid}
     Check element is present    ${TXT_NO_DATA} 
 
 Verify if the PPG should be Filtered and Displayed
-    Search Data    ${Input_Search_PPG}    ${PROD_14_PPG}
-    Verify a Created Data is displayed    ${PROD_14_PPG}    
+    Search Data    ${Input_Search_PPG}    ${PPGPP_PPG}
+    Verify a Created Data is displayed    ${PPGPP_PPG}    
 
 Verify a Product/Platform Page should be displayed
-    Navigate to PPG and Click on Product/Platform Tab   ${PROD_14_PPG}    ${TAB_Product_Platform}
+    Navigate to PPG and Click on Product/Platform Tab   ${PPGPP_PPG}    ${TAB_Product_Platform}
 
 Verify a Product/Platform shouldn't be created
-    Create Product/Platform    ${PROD_14_Product_Platform}    ${PROD_14_Product_Platform_description}    ${PROD_14_Owner}    ${Input_Type_Product}    ${BTN_Cancel}
+    Create Product/Platform    ${PPGPP_Product_Platform}    ${PPGPP_Product_Platform_description}    ${PPGPP_Owner}    ${Input_Type_Product}    ${BTN_Cancel}
 
 Verify a Product/Platform should be created
-    Create Product/Platform    ${PROD_14_Product_Platform_}    ${PROD_14_Product_Platform_description}    ${PROD_14_Owner}    ${Input_Type_Product}    ${BTN_Save}
+    Create Product/Platform    ${PPGPP_Product_Platform}    ${PPGPP_Product_Platform_description}    ${PPGPP_Owner}    ${Input_Type_Product}    ${BTN_Save}
 
 Verify Platform Fields should not be Changed
-    Click the Kebab button     ${PROD_14_Product_Platform}    ${BTN_Product_Platform_Kebab}
-    Edit Product/Platform    ${PROD_14_Product_Platform}    ${Input_Type_Platform}    ${BTN_Cancel}
+    Click the Kebab button     ${PPGPP_Product_Platform}    ${BTN_Product_Platform_Kebab}
+    Edit Product/Platform    ${PPGPP_Product_Platform}    ${Input_Type_Platform}    ${BTN_Cancel}
 
 Verify Platform Fields should be Changed
-    Click the Kebab button     ${PROD_14_Product_Platform}    ${BTN_Product_Platform_Kebab}
-    Edit Product/Platform    ${PROD_14_Product_Platform}    ${Input_Type_Platform}    ${BTN_Save}
+    Click the Kebab button     ${PPGPP_Product_Platform}    ${BTN_Product_Platform_Kebab}
+    Edit Product/Platform    ${PPGPP_Product_Platform}    ${Input_Type_Platform}    ${BTN_Save}
 
 Verify an error message shouble be display as " No results found"
-    Search Data    ${Input_Search_Product_Platform}    ${PROD_14_Product_Platform_Invalid}
+    Search Data    ${Input_Search_Product_Platform}    ${PPGPP_Product_Platform_Invalid}
     Check element is present    ${TXT_NO_DATA}
 
 Verify if the Platform should be Filtered and Displayed
-    Search Data    ${Input_Search_Product_Platform}    ${PROD_14_Product_Platform}
-    Verify a Created Data is displayed    ${PROD_14_Product_Platform}    
+    Search Data    ${Input_Search_Product_Platform}    ${PPGPP_Product_Platform}
+    Verify a Created Data is displayed    ${PPGPP_Product_Platform}    
 
 Verify a Platform and Product PPG Should be deleted
-    Click the Kebab button     ${PROD_14_Product_Platform}    ${BTN_Product_Platform_Kebab}
-    Delete    ${PROD_14_Product_Platform}    ${BTN_Product_Platform_Delete}    ${BTN_Cancel}
-    Click the Kebab button     ${PROD_14_Product_Platform}    ${BTN_Product_Platform_Kebab}
-    Delete    ${PROD_14_Product_Platform}    ${BTN_Product_Platform_Delete}    ${BTN_Confirm}
+    Click the Kebab button     ${PPGPP_Product_Platform}    ${BTN_Product_Platform_Kebab}
+    Delete Created data    ${PPGPP_Product_Platform}    ${BTN_Product_Platform_Delete}    ${BTN_Cancel}
+    Click the Kebab button     ${PPGPP_Product_Platform}    ${BTN_Product_Platform_Kebab}
+    Delete Created data    ${PPGPP_Product_Platform}    ${BTN_Product_Platform_Delete}    ${BTN_Confirm}
     Press Keys    ${Input_Search_Product_Platform}    CTRL+A+BACKSPACE
-    Click Breadcrums    ${PROD_14_PPG}
-    Search Data    ${Input_Search_PPG}    ${PROD_14_PPG}
-    Click the Kebab button     ${PROD_14_PPG}    ${BTN_PPG_Kebab}
-    Delete    ${PROD_14_PPG}    ${BTN_PPG_Delete}    ${BTN_Cancel}
-    Click the Kebab button     ${PROD_14_PPG}    ${BTN_PPG_Kebab}
-    Delete    ${PROD_14_PPG}    ${BTN_PPG_Delete}    ${BTN_Confirm}
+    Click Breadcrums    ${PPGPP_PPG}
+    Search Data    ${Input_Search_PPG}    ${PPGPP_PPG}
+    Click the Kebab button     ${PPGPP_PPG}    ${BTN_PPG_Kebab}
+    Delete Created data    ${PPGPP_PPG}    ${BTN_PPG_Delete}    ${BTN_Cancel}
+    Click the Kebab button     ${PPGPP_PPG}    ${BTN_PPG_Kebab}
+    Delete Created data    ${PPGPP_PPG}    ${BTN_PPG_Delete}    ${BTN_Confirm}
 
 
 Verify a Product/Platform(for Platform) Page should be Displayed
-    Search Data    ${Input_Search_PPG}    ${PROD_14_PPG_Update}
-    Navigate to PPG and Click on Product/Platform Tab    ${PROD_14_PPG_Update}    ${TAB_Product_Platform}
+    Search Data    ${Input_Search_PPG}    ${PPGPP_PPG_Update}
+    Navigate to PPG and Click on Product/Platform Tab    ${PPGPP_PPG_Update}    ${TAB_Product_Platform}
 
 Verify Product Fields should be Changed
-    Create Product/Platform    ${PROD_14_Product_Platform}    ${PROD_14_Product_Platform_description}    ${PROD_14_Owner}    ${Input_Type_Platform}    ${BTN_Save}
-    Click the Kebab button     ${PROD_14_Product_Platform}    ${BTN_Product_Platform_Kebab}
-    Edit Product/Platform    ${PROD_14_Product_Platform}    ${Input_Type_Product}    ${BTN_Save}
+    Create Product/Platform    ${PPGPP_Product_Platform}    ${PPGPP_Product_Platform_description}    ${PPGPP_Owner}    ${Input_Type_Platform}    ${BTN_Save}
+    Click the Kebab button     ${PPGPP_Product_Platform}    ${BTN_Product_Platform_Kebab}
+    Edit Product/Platform    ${PPGPP_Product_Platform}    ${Input_Type_Product}    ${BTN_Save}
 
 Verify an error message shouble be display as " No search results found"
-    Search Data    ${Input_Search_Product_Platform}    ${PROD_14_Product_Platform__Invalid}
+    Search Data    ${Input_Search_Product_Platform}    ${PPGPP_Product_Platform__Invalid}
     Check element is present    ${TXT_NO_DATA}
 
 Verify if the Product should be Filtered and Displayed
-    Search Data    ${Input_Search_Product_Platform}    ${PROD_14_Product_Platform}
-    Verify a Created Data is displayed    ${PROD_14_Product_Platform}
+    Search Data    ${Input_Search_Product_Platform}    ${PPGPP_Product_Platform}
+    Verify a Created Data is displayed    ${PPGPP_Product_Platform}
 
 Verify a Product and Platform PPG Should be deleted
-    Click the Kebab button     ${PROD_14_Product_Platform}    ${BTN_Product_Platform_Kebab}
-    Delete    ${PROD_14_Product_Platform}    ${BTN_Product_Platform_Delete}    ${BTN_Confirm}
+    Click the Kebab button     ${PPGPP_Product_Platform}    ${BTN_Product_Platform_Kebab}
+    Delete Created data    ${PPGPP_Product_Platform}    ${BTN_Product_Platform_Delete}    ${BTN_Confirm}
     Press Keys    ${Input_Search_Product_Platform}    CTRL+A+BACKSPACE
-    Click Breadcrums    ${PROD_14_PPG_Update}
-    Search Data    ${Input_Search_PPG}    ${PROD_14_PPG_Update}
-    Click the Kebab button     ${PROD_14_PPG_Update}    ${BTN_PPG_Kebab}
-    Delete    ${PROD_14_PPG_Update}    ${BTN_PPG_Delete}    ${BTN_Confirm}
+    Click Breadcrums    ${PPGPP_PPG_Update}
+    Search Data    ${Input_Search_PPG}    ${PPGPP_PPG_Update}
+    Click the Kebab button     ${PPGPP_PPG_Update}    ${BTN_PPG_Kebab}
+    Delete Created data    ${PPGPP_PPG_Update}    ${BTN_PPG_Delete}    ${BTN_Confirm}
     Press Keys    ${Input_Search_PPG}    CTRL+A+BACKSPACE
     Wait Until Element is present then click the element    ${BreadCrums_Portfolio}
-    Search Data    ${Input_Portfolio_Search}    ${PROD_14_Portfolio}
-    Click the Kebab button on portfolio    ${PROD_14_Portfolio}
-    Delete Potfolio    ${PROD_14_Portfolio}    ${BTN_Confirm}
+    Search Data    ${Input_Portfolio_Search}    ${PPGPP_Portfolio}
+    Click the Kebab button on portfolio    ${PPGPP_Portfolio}
+    Delete Potfolio    ${PPGPP_Portfolio}    ${BTN_Confirm}
     Press Keys    ${Input_Portfolio_Search}    CTRL+A+BACKSPACE
     
 Verify Application should be Close

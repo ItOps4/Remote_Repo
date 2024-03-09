@@ -3,6 +3,7 @@ Resource    ../Resources/common_1.robot
 Resource    ../Resources/Login.robot
 Variables    ../Data/data.py
 
+
 *** Keywords ***
 Given Login into Productor Application
     [Arguments]    ${username}
@@ -48,41 +49,41 @@ Verify Finance customize Budget page should be displayed
 
 
 Verify Save Button should be disabled and Category shouldn't be created
-    Create Finance    ${PROD_7_budget}    ${PROD_7_budget_description}  
+    Create Finance    ${FCB_budget}    ${FCB_budget_description}  
     wait Until Element is present then click the element    ${BTN_Cancel}  
 
 Verify Save button should be enabled and Category should be created
-    Create finance    ${PROD_7_budget}    ${PROD_7_budget_description}
+    Create finance    ${FCB_budget}    ${FCB_budget_description}
     Wait Until Element is present then click the element    ${BTN_Save}
 
 
 verify an error message displayed as "No results found"
-    search Data    ${INPUT_budget_search }    ${PROD_7_budget_update}
+    search Data    ${INPUT_budget_search }    ${FCB_budget_update}
     Check text is present    ${TXT_NO_Record_Data}    
 
 verify if category Record should be Filtered and Displayed
     Set Selenium Implicit Wait    1
-    Search Data    ${INPUT_budget_search }    ${PROD_7_budget}    
-    Verify Finance Budget is displayed   ${PROD_7_budget}   
+    Search Data    ${INPUT_budget_search }    ${FCB_budget}    
+    Verify Finance Budget is displayed   ${FCB_budget}   
     Capture Page Screenshot  
 
 
 verify category Fields should not be changed
-    Click the Kebab button on budget    ${PROD_7_budget}
-    Edit budget    ${PROD_7_budget}    ${PROD_7_budget_update}    ${PROD_7_budget_description_update}    ${BTN_Cancel}
+    Click the Kebab button on budget    ${FCB_budget}
+    Edit budget    ${FCB_budget}    ${FCB_budget_update}    ${FCB_budget_description_update}    ${BTN_Cancel}
 
 verify category name should be changed    
-    Click the Kebab button on budget    ${PROD_7_budget}    
-    Edit budget    ${PROD_7_budget}    ${PROD_7_budget_update}    ${PROD_7_budget_description_update}    ${BTN_Save}   
+    Click the Kebab button on budget    ${FCB_budget}    
+    Edit budget    ${FCB_budget}    ${FCB_budget_update}    ${FCB_budget_description_update}    ${BTN_Save}   
 
 Verify a Category name Should not be deleted
-    Search Data    ${INPUT_budget_search}    ${PROD_7_budget_update}
-    Click the Kebab button on budget    ${PROD_7_budget_update}
-    Delete Budget    ${PROD_7_budget_update}    ${BTN_Cancel}      
+    Search Data    ${INPUT_budget_search}    ${FCB_budget_update}
+    Click the Kebab button on budget    ${FCB_budget_update}
+    Delete Budget    ${FCB_budget_update}    ${BTN_Cancel}      
 
 Verify a Category name Should be deleted
-    Click the Kebab button on budget    ${PROD_7_budget_update}
-    Delete Budget    ${PROD_7_budget_update}    ${BTN_Confirm}      
+    Click the Kebab button on budget    ${FCB_budget_update}
+    Delete Budget    ${FCB_budget_update}    ${BTN_Confirm}      
 
 verify application is closed
     "Close the Browser"

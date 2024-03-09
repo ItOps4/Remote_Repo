@@ -1,14 +1,12 @@
 *** Settings ***
-Documentation    Create,Search,Edit and Delete Financial Area     JIRA ID
-Resource    Finance-Set_Support.robot
-# Force Tags    Finance-Set    Test    Name:Amritha
+Documentation    Create,Search,Edit and Delete Financial Area     
+Resource    Portfolio_Finance_Settings_Support.robot
+# Force Tags    Portfolio_Finance_Settings    Test    Name:Amritha
 
 
 *** Test Cases ***
-
 Finance Area 
-    
-    Given Login into application
+    Given Login into application    ${username001}
     When Click on Portfolio Management Icon, Navigate to portfolio and Click on Settings tab
     Then Click on Finance settings tab
     Then Click on New Area button, Select the Finance Area then Search and Select Category.Click on cancel button
@@ -28,6 +26,7 @@ Finance Area
     Then Navigate to PPG Schedule, click on Add Data, select Finance Area and Category, then click on Cancel button
     Then Navigate to Product/Platform Schedule, click on Add Data, select Finance Area and Category, then click on Cancel button
     And Close the Browser
+    
 
 
 

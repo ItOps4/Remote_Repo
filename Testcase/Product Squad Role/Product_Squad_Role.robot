@@ -1,10 +1,10 @@
 *** Settings ***
-Documentation    Create,Search,Edit and Delete Product Sqad Role    JIRA ID - PROD-8
-Resource    PROD-8_Support.robot
-Force Tags    PROD-8    Test    Name:Amritha
+Documentation    Create,Search,Edit and Delete Product Sqad Role   
+Resource    Product_Squad_Role_Support.robot
+Force Tags    Product_Squad_Role    Test    Name:Amritha
 
 *** Test Cases ***
-Product Sqad Role 
+Product Squad Role 
     
     [Documentation]    Product Squad Role Create,Search,Edit and Delete
     Given Login into application    ${username001}

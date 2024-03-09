@@ -13,7 +13,7 @@ BTN_ADD = '//p[text()="Add"]/parent::button'
 BTN_UPDATE = '//p[text()="Update"]/parent::button'
 
 
-# PROD-4 Portfolio management
+# Portfolio_Management
 BTN_Create_Portfolio = '//button[@id="portfolio-create-btn"]'
 Input_Portfolio = '//input[@id="portfolio-management-portfolio-name"]'
 Input_error_name  = '//p[@id="Name-input-box-name-field-err-msg"]'
@@ -30,7 +30,7 @@ BTN_Portfolio_Edit = '//li[@id="portfolio-edit-{name}"]'
 Input_Portfolio_Search = '//input[@id="portfolio-search-input"]'
 CHBOX_portfolio = '//td[@id="custom-id-{checkbox_name}"]/parent::tr/td[1]/span/input'
 
-# PROD-5 Finance Configuration
+# Finance_Configuration
 Icon_SystemSettings = '//span[@id="icon-System Settings"]'
 BTN_Add_Category = '//button[@id="finance-config-add-category"]'    
 Input_Category = '//input[@id="finance-config-category-name"]'
@@ -41,7 +41,7 @@ BTN_Category_Kebab = '//div[@id="finance-config-more-btn-{name}"]'
 BTN_Category_Edit = '//li[@id="finance-config-edit-{name}"]'
 BTN_Category_Delete = '//li[@id="finance-config-delete-{name}"]'
 
-# PROD-7 Finance Customize Budget
+# Finance_Customize_Budget
 BTN_System_setting = '//span[@id="icon-System Settings"]'
 BTN_Finance_custom_budget = '//p[@id="tabs-name-Finance Customize Budget"]'
 BTN_New_finance = '//button[@id="customize-finance-add-new-budget"]'
@@ -60,7 +60,7 @@ Restore_cancel_btn = '//button[@id="recycbin-restore-cancel-btn"]'
 Restore_confirm_btn = '//button[@id="recycbin-restore-confirm-btn"]'
 name_profile ='//td[@id="custom-id-gayathri  portfolio"]'
 
-# PROD-8 Product Squad Role
+# Product_Squad_Role
 TAB_Product_Squad_Role = '//div[@id="system-settings-product-squad-roles"]'
 BTN_Add_Role = '//button[@id="product-squad-add-role"]'
 Input_Product_Squad_Role = '//input[@id="product-squad-role-name"]'
@@ -72,14 +72,14 @@ BTN_Product_Squad_Role_Kebab = '//div[@id="product-squad-role-more-btn-{name}"]'
 BTN_Product_Squad_Role_Edit = '//li[@id="product-squad-role-edit-{name}"]'
 BTN_Product_Squad_Role_Delete = '//li[@id="product-squad-role-delete-{name}"]'
 
-# PROD-6 PRODUCT/PLATFORM OKR and SQUAD
+# PRODUCT_PLATFORM_OKR_SQUAD
 BTN_prod_OKR = '//div[@id="product-okrs"]'
 BTN_Add_OKR_platform = '//button[@id="create-okr-nullstate-btn"]'
 INPUT_OKR_PLATFORM = '//input[@id="okr-name"]'
 INPUT_start_date = '//p[@id="okr-edit-start-date"]/parent::div/descendant::input'
 INPUT_END_date = '//p[@id="okr-edit-end-date"]/parent::div/descendant::input'
 INPUT_assign_to = '//div[@id="okr-owner"]'
-INPT_okr_owner = '//li[@id="Neeraj Patel"]'
+INPT_okr_owner = '//li[@id="Iyyappan"]'
 INPT_link_SO = '//div[@id="okr-SO"]'
 INPUT_strat_out_name = '//li[@id="{name}"]'
 BTN_okr_search = '//input[@id="okr-search-input"]'
@@ -130,7 +130,7 @@ BTN_DELETE_SQUAD_MEMBER = '//li[@id="{name}-product-squad-member-delete"]'
 BTN_DELETE_SQUAD_PRODUCT = '//li[@id="product-squad-delete-{name}"]'
 TAB_SQUAD1 ='(//div[@id="product-squad"])[2]'
 
-# PROD-14 PPG
+# PPG
 TAB_PPG = '//a[@id="PPG-tabs"]'
 BTN_Add_PPG = '//p[text()="Add PPG"]/ancestor::button'
 BTN_Create_PPG = '//button[@id="ppg-create"]'
@@ -148,7 +148,7 @@ BTN_PPG_Delete = '//li[@id="ppg-delete-{name}"]'
 Input_Search_PPG = '//input[@id="ppg-product/platform-search-input"]'
 Navigate_PPG = '//td[@id="custom-id-{name}"]'
 TAB_Product_Platform = '//a[@id="Products/Platforms-tabs"]'
-# PROD-14 Product/Platform
+# Product/Platform
 BTN_Add_Product_Platform = '//button[@id="add-product-platform"]'
 Input_Product_Platform = '//input[@id="product-platform-name"]'
 Input_Product_Platform_Description = '//textarea[@id="product-platform-description"]'
@@ -162,7 +162,7 @@ BTN_Product_Platform_Delete = '//li[@id="product-platform-delete-{name}"]'
 Bread_Crums = '//p[@id="breadcrums-{name}"]'
 BreadCrums_Portfolio = '//p[@id="breadcrums-Portfolio Management"]'
 
-#PROD-12 Strategic outcome
+# Strategic outcome
 INPUT_Search_Portfolio = "//input[@id='portfolio-search-input']"
 Icon_Portfolio_Management = '//span[@id="icon-Portfolio Management"]'
 Strategic_outcome_Tab = "//a[@id='Strategic Outcome-tabs']"
@@ -269,7 +269,7 @@ EK_Select_Quarter = "//li[@id='Quarter 1']"
 INPUT_EK_Target= "//input[@id='keyresult-details-target_0']"
 INPUT_EK_Actual = "//input[@id='keyresult-details-actual_0']"
 
-# PROD-16 portfolio - Settings - User Access
+# Portfolio_User_Access
 Settings_Tab = '//a[@id="Settings-tabs"]'
 User_Access_Tab = "//p[@id='tabs-name-User Access']"
 BTN_Add_User = "//button[@id=' Portfolio-setting-add-user-access']"
@@ -286,7 +286,7 @@ BTN_Assign_Role_Admin = "//li[@id=' Portfolio-useraccess-assgin-role-admin-{name
 BTN_Assign_Role_Viewer = "//li[@id=' Portfolio-useraccess-assgin-role-viewer-{name}']"
 UA_More_Delete = "//li[@id=' Portfolio-useraccess-delete-{name}']"
 
-#Roadmap
+# Product_Roadmap
 Roadmap_Tab = "//p[@id='tabs-name-Road Map']"
 INPUT_Search_Roadmap = "//input[@id='roadmap-search-input']"
 BTN_Add_Road_Map = "//button[@id='roadmap-nullstate-btn']"
@@ -340,7 +340,7 @@ BTN_ADD_MILESTONE = '//button[@id="roadmap-add-milestone"]'
 BTN_EDIT_MILESTONE = '//span[@id="roadmap-milestone-release-{name}"]'
 INPUT_MILESTONE_DATE = '//div[@id="road-map-tg-add-milestone-date"]/parent::div/descendant::input'
 
-# Portfolio-Settings-Finance Settings
+# Portfolio-Finance Settings
 TAB_Finance_Settings = '//div[@id="portfolio-setting-Finance SettingsFinance Area"]'
 BTN_New_Area = '//button[@id="finance-area-add-area"]'
 Financial_Area = '//div[@id="portfoilo-finacial-area-name"]'
@@ -361,16 +361,16 @@ Input_Schedule_PPG = '//input[@id="ppg-finance-schedule-name"]'
 Input_Sch_Des_PPG = '//input[@id="ppg-finance-schedule-description"]'
 Input_Sch_Date_PPG = '//input[@placeholder="YYYY"]'
 Navigate_Schedule = '//button[@id="vertical-tab-1"]'
-BTN_Add_Data_PPG_Sch = '//button[@id="product-finance-add-data"]'
+BTN_Add_Data_sch_PPG = '//button[@id="product-finance-add-data"]'
 Input_Des_AD_Sch_PPG = '//input[@id="ppg-finance-add-data-description"]'
-FA_AD_Sch_PPG = '//div[@id="ppg-finance-add-data-financial-area"]'
-DD_FA_AD_Sch = '//li[@id="{name} - Capital"]'
-Build_run = '//div[@id="ppg-finance-add-data-build"]'
-DD_Build_run = '//li[@id="{name}"]'
-Category_AD_Sch_PPG = '//div[@id="ppg-finance-add-data-category"]'
-DD_Category_AD_Sch_PPG = '//li[@id="{name}"]'
-Spend_Type_AD_Sch_PPG = '//div[@id="ppg-finance-add-data-spend-type"]'
-DD_Spend_Type_AD_Sch = '//li[@id="{name}"]'
+DD_FA_AD_Sch_PPG = '//div[@id="ppg-finance-add-data-financial-area"]'
+Select_FA_AD_Sch = '//li[@id="{name} - Capital"]'
+DD_Build_run = '//div[@id="ppg-finance-add-data-build"]'
+Select_Build_run = '//li[@id="{name}"]'
+DD_Category_AD_Sch_PPG = '//div[@id="ppg-finance-add-data-category"]'
+Select_Category_AD_Sch = '//li[@id="{name}"]'
+DD_Spend_Type_AD_Sch_PPG = '//div[@id="ppg-finance-add-data-spend-type"]'
+Select_Spend_Type_AD_Sch = '//li[@id="{name}"]'
 Kebab_AD_Sch_PPG = '//div[@id="latest-thinking-more-btn-0"]'
 # Product Finance 
 Navigate_Product = '//td[@id="custom-id-{name}"]'
@@ -380,12 +380,12 @@ Input_Schedule_Product = '//input[@id="ppg-product-finance-schedule-name"]'
 Input_Sch_Des_Product = '//input[@id="ppg-product-finance-schedule-description"]'
 BTN_Add_Data_Product_Sch  = '//button[@id="product-finance-add-data"]'
 Input_Des_AD_Sch_Product = '//input[@id="ppg-product-finance-add-data-description"]'
-FA_AD_Sch_Product = '//div[@id="ppg-product-finance-add-data-financial-area"]'
-Build_run_Product = '//div[@id="ppg-product-finance-add-data-build"]'
-Category_AD_Sch_Product = '//div[@id="ppg-product-finance-add-data-category"]'
-Squad_AD_Sch_Product = '//div[@id="ppg-product-finance-add-data-squad"]'
-DD_Squad_AD_Sch_Product = '//li[@id="{name}"]'
-Spend_Type_AD_Sch_Product = '//div[@id="ppg-product-finance-add-data-spend-type"]'
+DD_FA_AD_Sch_Product = '//div[@id="ppg-product-finance-add-data-financial-area"]'
+DD_Build_run_Product = '//div[@id="ppg-product-finance-add-data-build"]'
+DD_Category_AD_Sch_Product = '//div[@id="ppg-product-finance-add-data-category"]'
+DD_Squad_AD_Sch_Product = '//div[@id="ppg-product-finance-add-data-squad"]'
+Select_Squad_AD_Sch_Product = '//li[@id="{name}"]'
+DD_Spend_Type_AD_Sch_Product = '//div[@id="ppg-product-finance-add-data-spend-type"]'
 Kebab_AD_Sch_Product_PPG = '//div[@id="latest-thinking-more-btn-0"]'
 BTN_Edit_AD_Sch_Product_PPG = '//li[@id="edit-latest-thinking-{name}-0"]'
 

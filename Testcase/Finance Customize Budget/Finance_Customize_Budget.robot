@@ -1,7 +1,7 @@
 *** Settings ***
-Documentation    System Finance Customize Budget    JIRA ID - PROD-7    
-Resource    PROD-7_Support.robot
-Force Tags    PROD-7    Test    Name:Gayathri
+Documentation    System Finance Customize Budget       
+Resource    Finance_Customize_Budget_Support.robot
+Force Tags    Finance_Customize_Budget    Test    Name:Gayathri
 
 *** Test Cases ***
 Finance Customize Budget

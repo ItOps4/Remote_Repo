@@ -1,8 +1,7 @@
 *** Settings ***
-Documentation    Category Create,Search,Edit and Delete    JIRA ID - PROD-5   
-Resource    PROD-5_Support.robot
-Force Tags    PROD-5    Test    Name:Amritha 
-
+Documentation    Category Create,Search,Edit and Delete       
+Resource    Finance_Configuration_Support.robot
+Force Tags    Finance_Configuration    Test    Name:Amritha 
 
 
 *** Test Cases ***

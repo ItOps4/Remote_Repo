@@ -1,7 +1,7 @@
 *** Settings ***
-Documentation    Create,edit,delete roadmap    JIRA ID - roadmap
-Resource    roadmap_Support.robot
-# Force Tags    Roadmap    Test    Name:Naresh
+Documentation    Create,edit,delete roadmap   
+Resource    Product_Roadmap_Support.robot
+Force Tags    Product_Roadmap    Test    Name:Naresh
 
 *** Test Cases ***
 
