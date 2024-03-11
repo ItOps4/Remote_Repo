@@ -12,6 +12,6 @@ Set Tags=Test
 
 Set Thread=7
 
-pabot --suitesfrom .\Testcase\ --processes %Thread% -d .\output\ -i %Tags% --listener allure_robotframework .
+pabot --suitesfrom .\Testcase\ --processes %Thread% -d .\output\ -i %Tags%  .
 
 Timeout 2

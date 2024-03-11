@@ -2,6 +2,7 @@
 Documentation    Create,edit,delete roadmap   
 Resource    Product_Roadmap_Support.robot
 Force Tags    Product_Roadmap    Test    Name:Naresh
+Variables    ../../Data/data.py
 
 *** Test Cases ***
 

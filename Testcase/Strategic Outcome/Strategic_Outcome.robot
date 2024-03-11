@@ -2,6 +2,7 @@
 Documentation    Portfolio - Strategic Outcome   
 Resource    Strategic_Outcome_Support.robot
 # Force Tags    Strategic_Outcome    Test    name:Naresh  
+Variables    ../../Data/data.py
 
 
 

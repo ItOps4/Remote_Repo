@@ -2,6 +2,7 @@
 Documentation    Product/platform OKR and squad    
 Resource    Product_Platform_OKR_Squad_Support.robot
 Force Tags      Product_Platform_OKR_Squad    Test    Name:Gayathri
+Variables    ../../Data/data.py
 
 
 *** Test Cases ***

@@ -2,6 +2,7 @@
 Documentation    Portfolio Create,Edit,Search,Delete    
 Resource    Portfolio_Management_Support.robot
 Force Tags      Portfolio_Managament    Test    Name:Gayathri
+Variables    ../../Data/data.py
 
 
 

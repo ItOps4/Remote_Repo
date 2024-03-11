@@ -1,7 +1,8 @@
 *** Settings ***
 Documentation    Portfolio - Settings - User Access   
 Resource    Portfolio_User_Access_Support.robot
-# Force Tags    Portfolio_User_Access    Test    name:Naresh  
+Force Tags    Portfolio_User_Access    #Test    name:Naresh  
+Variables    ../../Data/data.py
 
 
 *** Test Cases ***
@@ -16,7 +17,7 @@ Portfolio - Settings - User Access
     Then Click on viewer radio button in Assign role Tab     
     Then Then click on Admin radio button in Assign role Tab
     Then Click on Delete button in the More icon and Click on Cancel Button in User Access
-    Then Click on Delete button in the More icon and Click on Confirm Button in User Access	
+    Then Click on Delete button in the More icon and Click on Confirm Button in User Access
 	
      
         

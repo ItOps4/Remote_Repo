@@ -1,7 +1,8 @@
 *** Settings ***
 Documentation    Create,Search,Edit and Delete Financial Area     
 Resource    Portfolio_Finance_Settings_Support.robot
-# Force Tags    Portfolio_Finance_Settings    Test    Name:Amritha
+Force Tags    Portfolio_Finance_Settings    Test    Name:Amritha
+Variables    ../../Data/data.py
 
 
 *** Test Cases ***
