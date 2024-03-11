@@ -1,7 +1,9 @@
 *** Settings ***
-Resource    ../Resources/common_1.robot
-Resource    ../Resources/Login.robot
-Variables    ../Data/data.py
+Resource    ../../Resources/common_1.robot
+Resource    ../../Resources/Login.robot
+Variables    ../../Data/data.py
+Variables    ../../Data/xpath.py
+
 
 *** Keywords ***
 
@@ -45,42 +47,42 @@ Verify an application should be opened
 
 Verify a Portfolio Managment Menu should be displayed
     Wait Until Element is present then click the element    ${Icon_Portfolio_Management}
-    Create Portfolio    ${PROD_16_Portfolio_name}    ${PROD_16_Portfolio_Description}    ${BTN_Save}
-    Search Data    ${INPUT_Search_Portfolio}    ${PROD_16_Portfolio_name}
+    Create Portfolio    ${PUA_Portfolio}    ${PUA_Portfolio_Description}    ${BTN_Save}
+    Search Data    ${INPUT_Search_Portfolio}    ${PUA_Portfolio}
 
 
 Verify a Settings Page should be displayed
-    click portfolio and navigate to Next page    ${Portfolio_Name}    ${PROD_16_Portfolio_name}    ${Settings_Tab}
+    click portfolio and navigate to Next page    ${Portfolio_Name}    ${PUA_Portfolio}    ${Settings_Tab}
     
 Verify cancel Button should be enabled and Category shouldn't be created
     Wait Until Element is present then click the element    ${BTN_Add_User}
-    Add User Access in setting Section    ${PROD_16_Iyyappan}    ${BTN_Add_user_Cancel}   
+    Add User Access in setting Section    ${PUA_Iyyappan}    ${BTN_Add_user_Cancel}   
 Verify Save button should be enabled and Category should be created
     Wait Until Element is present then click the element    ${BTN_Add_User}
-    Add User Access in setting Section    ${PROD_16_Iyyappan}    ${BTN_Add_user_Save}   
+    Add User Access in setting Section    ${PUA_Iyyappan}    ${BTN_Add_user_Save}   
 
 Verify an error message shouble be display as " No results found" and Verify if Category Record should be Filtered and Displayed in User Access
-    Search Data    ${INPUT_Search_User_Access}    ${PROD_16_Invalid_Name}
+    Search Data    ${INPUT_Search_User_Access}    ${PUA_Invalid}
     Check element is present    ${TXT_NO_Data}
-    Search Data    ${INPUT_Search_User_Access}    ${PROD_16_Iyyappan}
+    Search Data    ${INPUT_Search_User_Access}    ${PUA_Iyyappan}
     Press Keys    ${INPUT_Search_User_Access}    CTRL+A+BACKSPACE
 
 verify if user change as viewer 
-     Click the Kebab button on User Access and click on Admin    ${PROD_16_Iyyappan}    
+     Click the Kebab button on User Access and click on Admin    ${PUA_Iyyappan}    
 
 
 
 verify if user change as Admin
-    Click the Kebab button on User Access and click on viewer    ${PROD_16_Iyyappan}    
+    Click the Kebab button on User Access and click on viewer    ${PUA_Iyyappan}    
     
 
 
 Verify a Category name Should not be deleted in User Access page
-    Click the Kebab button on User Access    ${PROD_16_Iyyappan}   
+    Click the Kebab button on User Access    ${PUA_Iyyappan}   
     Wait Until Element is present then click the element    ${BTN_Cancel}      
 
 
 
 Verify a Category name Should be deleted in User Access Page
-    Click the Kebab button on User Access    ${PROD_16_Iyyappan}   
+    Click the Kebab button on User Access    ${PUA_Iyyappan}   
     Wait Until Element is present then click the element    ${BTN_Confirm}   

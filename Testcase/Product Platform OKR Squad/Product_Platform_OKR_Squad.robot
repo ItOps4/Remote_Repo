@@ -1,12 +1,13 @@
 *** Settings ***
-Documentation    Product/platform OKR and squad     JIRA ID - PROD-6
-Resource    PROD-6_Support.robot
-Force Tags      PROD-6    Test    Name:Gayathri
+Documentation    Product/platform OKR and squad    
+Resource    Product_Platform_OKR_Squad_Support.robot
+Force Tags      Product_Platform_OKR_Squad    Test    Name:Gayathri
+Variables    ../../Data/data.py
 
 
 *** Test Cases ***
 Product / platform OKR and Squad 
-    Given Login into Productor Application    ${username002}
+    Given Login into Productor Application    ${username001}
     When navigate to portfolio and click on ppg menu and navigate to ppg
     Then navigate to platform and click on OKR tab
     Then Click on add OKRs button and enter mandatory fields and click on cancel button
@@ -25,7 +26,6 @@ Product / platform OKR and Squad
     Then Click on more icon and click on Edit button , change the data and Save button
     Then Click on more icon and Click on delete button and click on cancel button
     Then Click on more icon , click on delete button and click on Save button
-
     Then click on ppg menu and navigate to ppg name
     Then Navigate to product , click on squad tab
     Then click on Add squad button and enter mandatory fields in step 1, click on next button, add squad member, click on back button and click on cancel button

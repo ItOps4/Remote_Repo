@@ -1,13 +1,14 @@
 *** Settings ***
-Documentation    Create,Search,Edit and Delete Product Sqad Role    JIRA ID - PROD-8
-Resource    PROD-8_Support.robot
-Force Tags    PROD-8    Test    Name:Amritha
+Documentation    Create,Search,Edit and Delete Product Sqad Role   
+Resource    Product_Squad_Role_Support.robot
+Force Tags    Product_Squad_Role    Test    Name:Amritha
+Variables    ../../Data/data.py
 
 *** Test Cases ***
-Product Sqad Role 
+Product Squad Role 
     
     [Documentation]    Product Squad Role Create,Search,Edit and Delete
-    Given Login into application    ${username002}
+    Given Login into application    ${username001}
     Then Click on System Settings Icon and Click on Product Squad Role Tab
     Then Click on Add Role button, Don't enter Mandatory fields and Click on cancel button
     Then Click on Add Role button, Enter Mandatory fields and click on save button

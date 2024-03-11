@@ -1,8 +1,8 @@
 *** Settings ***
-Resource    ../Resources/common_1.robot
-Resource    ../Resources/Login.robot
-Resource    PROD-4_Support.robot
-Variables    ../Data/data.py
+Resource    ../../Resources/common_1.robot
+Resource    ../../Resources/Login.robot
+Variables    ../../Data/data.py
+Variables    ../../Data/xpath.py
 
 *** Keywords ***
 Given Login into application
@@ -61,40 +61,42 @@ Verify that the Product Squad Role Page is displayed
     Wait Until Element is present then click the element    ${TAB_Product_Squad_Role}
 
 Verify Save should be Disabled and Category shouldn't be created.
-    Add Product Squad Role    ${PROD_8_Product_Squad_Role}    ${PROD_8_Produt_Squad_Role_Description}    ${BTN_Cancel}
+    Add Product Squad Role    ${PSR_Product_Squad_Role}    ${PSR_Produt_Squad_Role_Description}    ${BTN_Cancel}
 
 Verify Save button should be Enabled and Category should be created.
-    Add Product Squad Role    ${PROD_8_Product_Squad_Role}    ${PROD_8_Produt_Squad_Role_Description}    ${BTN_Save}
+    Add Product Squad Role    ${PSR_Product_Squad_Role}    ${PSR_Produt_Squad_Role_Description}    ${BTN_Save}
 
 Verify an error message shouble be display as " No results found".
-    Search Data    ${Input_Search_Product_Squad_Role}    ${PROD_8_Product_Squad_Role_Invalid}
+    Search Data    ${Input_Search_Product_Squad_Role}    ${PSR_Product_Squad_Role_Invalid}
     Check element is present    ${TXT_NO_DATA}  
 
 Verify if the Product Squad Role Record should be Filtered and Displayed 
-    Search Data    ${Input_Search_Product_Squad_Role}    ${PROD_8_Product_Squad_Role}  
-    Verify a Product Squad Role is displayed    ${PROD_8_Product_Squad_Role} 
+    Search Data    ${Input_Search_Product_Squad_Role}    ${PSR_Product_Squad_Role}  
+    Verify a Product Squad Role is displayed    ${PSR_Product_Squad_Role} 
 
 Verify if Product Squal Role name should not be changed
-    Click the Kebab button in Product Squad Role    ${PROD_8_Product_Squad_Role}
-    Edit Product Squad Role    ${PROD_8_Product_Squad_Role}    ${PROD_8_Produt_Squad_Role_Update}    ${PROD_8_Product_Squad_Role_Description_Update}    ${BTN_Cancel}
+    Click the Kebab button in Product Squad Role    ${PSR_Product_Squad_Role}
+    Edit Product Squad Role    ${PSR_Product_Squad_Role}    ${PSR_Produt_Squad_Role_Update}    ${PSR_Product_Squad_Role_Description_Update}    ${BTN_Cancel}
 
 Verify if Product Squal Role name should be changed
-    Click the Kebab button in Product Squad Role    ${PROD_8_Product_Squad_Role}
-    Edit Product Squad Role    ${PROD_8_Product_Squad_Role}    ${PROD_8_Produt_Squad_Role_Update}    ${PROD_8_Product_Squad_Role_Description_Update}    ${BTN_Save}
+    Click the Kebab button in Product Squad Role    ${PSR_Product_Squad_Role}
+    Edit Product Squad Role    ${PSR_Product_Squad_Role}    ${PSR_Produt_Squad_Role_Update}    ${PSR_Product_Squad_Role_Description_Update}    ${BTN_Save}
 
 Verify a Product Squal Role name Should not be deleted
-    Search Data    ${Input_Search_Product_Squad_Role}    ${PROD_8_Produt_Squad_Role_Update} 
-    Click the Kebab button in Product Squad Role    ${PROD_8_Produt_Squad_Role_Update} 
-    Delete Product Squad Role    ${PROD_8_Produt_Squad_Role_Update}
+    Search Data    ${Input_Search_Product_Squad_Role}    ${PSR_Produt_Squad_Role_Update} 
+    Click the Kebab button in Product Squad Role    ${PSR_Produt_Squad_Role_Update} 
+    Delete Product Squad Role    ${PSR_Produt_Squad_Role_Update}
     Wait Until Element is present then click the element    ${BTN_Cancel}  
 
 Verify a Product Squal Role name Should be deleted 
-    Click the Kebab button in Product Squad Role    ${PROD_8_Produt_Squad_Role_Update} 
-    Delete Product Squad Role    ${PROD_8_Produt_Squad_Role_Update}  
+    Click the Kebab button in Product Squad Role    ${PSR_Produt_Squad_Role_Update} 
+    Delete Product Squad Role    ${PSR_Produt_Squad_Role_Update}  
     Wait Until Element is present then click the element    ${BTN_Confirm}
 
 Verify Application should be Close
     "Close the Browser"
+
+
 
 
 

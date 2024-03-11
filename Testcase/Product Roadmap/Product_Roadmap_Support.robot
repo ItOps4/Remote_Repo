@@ -1,11 +1,14 @@
 *** Settings ***
-Resource    ../Resources/common_1.robot
-Resource    ../Resources/Login.robot
-Variables    ../Data/data.py
+Resource    ../../Resources/common_1.robot
+Resource    ../../Resources/Login.robot
+Variables    ../../Data/data.py
+Variables    ../../Data/xpath.py
+
 
 *** Keywords ***
 Given Login into application
-    Verify an application should be opened    ${username001}
+    [Arguments]    ${username}
+    Verify an application should be opened    ${username}
 When Click on Portfolio Management tab and navigate to Portfolio
     verify it should display portfolio
 
@@ -110,11 +113,11 @@ verify a Road-Map page should be display
 
 Verify category should not be created
     Wait Until Element is present then click the element    ${BTN_Add_Category_Roadmap}
-    ADD and EDIT Category    ${RM_Category}    ${choose_color1}    ${BTN_Cancel}
+    ADD and EDIT Category    ${RM_Category}    ${choose_color3}    ${BTN_Cancel}
 
 Verify category should be created
     Wait Until Element is present then click the element    ${BTN_Add_Category_Roadmap}
-    ADD and EDIT Category    ${RM_Category}    ${choose_color1}    ${BTN_Save}
+    ADD and EDIT Category    ${RM_Category}    ${choose_color2}    ${BTN_Save}
 
 verify milestone should not created
     Wait Until Element is present then click the element    ${BTN_ADD_MILESTONE}
@@ -158,12 +161,12 @@ Verify create Task pop up window is displayed and task should be created
 Verify Edit Category pop up window is displayed and category should not be changed
     mouse over on category    ${RM_Category}
     click on edit icon in roadmap    ${RM_Category}    
-    ADD and EDIT Category    ${RM_Edit_Category}    ${choose_color2}    ${BTN_Cancel}    
+    ADD and EDIT Category    ${RM_Edit_Category}    ${choose_color3}    ${BTN_Cancel}    
 
 Verify Edit Category pop up window is displayed and category should be created
     mouse over on category    ${RM_Category}
     click on edit icon in roadmap    ${RM_Category}    
-    ADD and EDIT Category    ${RM_Edit_Category}    ${choose_color2}    ${BTN_Save} 
+    ADD and EDIT Category    ${RM_Edit_Category}    ${choose_color3}    ${BTN_Save} 
 
 Verify Category name Should not be deleted
     mouse over on category    ${RM_Edit_Category}
@@ -186,11 +189,10 @@ Verify Roadmap Record should be Filtered and Displayed in Roadmap
     Press Keys    ${INPUT_Search_Roadmap}    CTRL+A+BACKSPACE
 
 Verify Roadmap should not be changed in Roadmap
-    Edit    ${RM_Roadmap}    ${RM_Edit_Roadmap}    ${BTN_Cancel}
+    Edit Roadmap    ${RM_Roadmap}    ${RM_Edit_Roadmap}    ${BTN_Cancel}
 
 Verify Roadmap should be changed in Roadmap
-
-    Edit    ${RM_Roadmap}    ${RM_Edit_Roadmap}    ${BTN_Save}
+    Edit Roadmap    ${RM_Roadmap}    ${RM_Edit_Roadmap}    ${BTN_Save}
 
 Verify a Roadmap Should not be deleted in Roadmap  
     Delete Roadmap    ${RM_Edit_Roadmap}    ${BTN_Cancel}
@@ -203,11 +205,11 @@ Verify a Roadmap Should be deleted in Roadmap
 Verify it should delete Product, PPG,Portfolio
     Click Breadcrums    ${RM_Product_Platform}
     Click the Kebab button     ${RM_Product_Platform }    ${BTN_Product_Platform_Kebab}
-    Delete    ${RM_Product_Platform }    ${BTN_Product_Platform_Delete}    ${BTN_Confirm}
+    Delete Created data    ${RM_Product_Platform }    ${BTN_Product_Platform_Delete}    ${BTN_Confirm}
     Click Breadcrums    ${RM_PPG}
     Search Data    ${Input_Search_PPG}    ${RM_PPG}
     Click the Kebab button     ${RM_PPG}    ${BTN_PPG_Kebab}
-    Delete    ${RM_PPG}    ${BTN_PPG_Delete}    ${BTN_Confirm}
+    Delete Created data    ${RM_PPG}    ${BTN_PPG_Delete}    ${BTN_Confirm}
     Wait Until Element is present then click the element    ${BreadCrums_Portfolio}
     Search Data    ${Input_Portfolio_Search}    ${RM_Portfolio}
     Click the Kebab button on portfolio    ${RM_Portfolio}
@@ -216,5 +218,6 @@ Verify it should delete Product, PPG,Portfolio
     
 Verify Application should be Close
     "Close the Browser"
+
 
 

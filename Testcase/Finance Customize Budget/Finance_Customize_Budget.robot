@@ -1,12 +1,13 @@
 *** Settings ***
-Documentation    System Finance Customize Budget    JIRA ID - PROD-7    
-Resource    PROD-7_Support.robot
-Force Tags    PROD-7    Test    Name:Gayathri
+Documentation    Finance Customize Budget      
+Resource    Finance_Customize_Budget_Support.robot
+Force Tags    Finance_Customize_Budget    Test    Name:Gayathri
+Variables    ../../Data/data.py
 
 *** Test Cases ***
 Finance Customize Budget
     [Documentation]    System Finance Customize Budget
-    Given Login into Productor Application    ${username002}
+    Given Login into Productor Application    ${username001}
     When Click on the System Settings Tab and click on Finance Customize Budget Menu
     Then click on New Budget button.Don't enter Mandatory fields
     Then Click on Add Category button and enter Mandatory fields and Click on Save button

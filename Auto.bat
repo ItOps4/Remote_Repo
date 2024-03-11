@@ -8,10 +8,10 @@ Timeout 2
 
 MKDIR "output"
 
-Set Tags=Roadmap
+Set Tags=Test
 
-Set Thread=5
+Set Thread=7
 
-pabot --suitesfrom .\Testcase\ --processes %Thread% -d .\output\ -i %Tags% --listener allure_robotframework .
+pabot --suitesfrom .\Testcase\ --processes %Thread% -d .\output\ -i %Tags%  .
 
 Timeout 2

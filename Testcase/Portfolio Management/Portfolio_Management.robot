@@ -1,14 +1,15 @@
 *** Settings ***
-Documentation    Portfolio Create,Edit,Search,Delete    JIRA ID - PROD-4
-Resource    PROD-4_Support.robot
-Force Tags      PROD-4    Test    Name:Gayathri
+Documentation    Portfolio Create,Edit,Search,Delete    
+Resource    Portfolio_Management_Support.robot
+Force Tags      Portfolio_Managament    Test    Name:Gayathri
+Variables    ../../Data/data.py
 
 
 
 *** Test Cases ***
 Portfolio Management
     [Documentation]    Portfolio Create,Edit,Search,Delete
-    Given Login into Productor Application    ${username002}
+    Given Login into Productor Application    ${username001}
     When Navigate to Portfolio Management Menu
     Then Click on Create portfolio button, Enter the mandatory details and click on cancel button
     Then Click on Create portfolio button and Enter the mandatory details and click on Save button

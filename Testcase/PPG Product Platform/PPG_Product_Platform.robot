@@ -1,13 +1,13 @@
 *** Settings ***
-Documentation    Create,Search,Edit and Delete PPG and Product/Platform    JIRA ID - PROD-14
-Resource    PROD-14_Support.robot
-Force Tags    PROD-14    Test    Name:Amritha
+Documentation    Create,Search,Edit and Delete PPG and Product/Platform    
+Resource    PPG_Product_Platform_Support.robot
+Force Tags    PPG_Product_Platform    Test    Name:Amritha
+Variables    ../../Data/data.py
 
 *** Test Cases ***
-
 PPG and Product/Platform
     [Documentation]    Create,Search,Edit and Delete PPG and Product/Platform
-    Given Login into application    
+    Given Login into application    ${username001}    
     Then Navigate to Portfolio, Click on PPG Tab
     Then Click on Add PPG button. Enter data, select type as Platform and Click on Cancel button
     Then Click on Add PPG button. Enter data, select type as Platform and Click on Save button

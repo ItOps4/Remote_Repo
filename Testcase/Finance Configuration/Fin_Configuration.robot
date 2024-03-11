@@ -1,14 +1,15 @@
 *** Settings ***
-Documentation    Category Create,Search,Edit and Delete    JIRA ID - PROD-5   
-Resource    PROD-5_Support.robot
-Force Tags    PROD-5    Test    Name:Amritha   
+Documentation    Finance Configuration - Category    
+Resource    Fin_Configuration_Support.robot
+Force Tags    Finance_Configuration    Test    Name:Amritha
+Variables    ../../Data/data.py
 
 
 
 *** Test Cases ***
 Category
     [Documentation]    Category Create,Search,Edit and Delete 
-    Given Login into application    ${username002}
+    Given Login into application    ${username001}
     When Click on the System Settings Icon
     Then Click on Add Category button, Don't enter Mandatory fields and Click on cancel button
     Then Click on Add Category button and enter Mandatory fields and Cick on Save button
