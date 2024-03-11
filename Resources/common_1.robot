@@ -721,7 +721,7 @@ Create,edit OKR with custom field
 
 Create PPG with custom fields
     [Documentation]    Using this keyword we can create PPG with custom fields
-    [Arguments]    ${name}    ${description}    ${custom_ppg}    ${Owner}    ${Type}    ${Element}
+    [Arguments]    ${name}    ${description}    ${Owner}    ${Type}    ${custom_ppg}    ${Element}
     Wait Until Page Contains Element    ${Input_PPG_name}    50
     Input Text    ${Input_PPG_name}    ${name}
     Press Keys    ${Input_PPG_Description}    ${description}
@@ -731,7 +731,8 @@ Create PPG with custom fields
     Wait Until Element is present then click the element    ${Owner}
     Wait Until Element is present then click the element    ${Input_PPG_Type}
     Wait Until Element is present then click the element    ${Type}
-    Scroll Element Into View   ${Custom_PPG_Field}
+    Scroll Element Into View   ${Custom_OKR_PROD_17}
+    Wait Until Page Contains Element    ${Custom_OKR_PROD_17}
     Input Text    ${Custom_PPG_Field}   ${custom_ppg}
     Wait Until Element is present then click the element    ${Element}
 

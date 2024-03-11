@@ -35,7 +35,7 @@ Then Navigate to Stragetic outcome
 Then Navigate to PPG
     Verify PPG page should be displayed.
 Then Click on OKRs Tab in PPG
-    Verify OKRs tab should be in PPG.
+    Verify OKRs tab should be in PPG
 Then Click Add OKRs Button, Enter the data and save it.
     Verify OKRs should created along with Custom fields.
 Then Click on OKRs Tab in PPG
@@ -100,8 +100,8 @@ Verify the Add PPG button should be displayed
     Wait Until Element is present then click the element    ${Custom_PPG_tab}
 Verify PPG should be created along with Custom fields.
     Wait Until Element is present then click the element    ${Custom_ADD_PPG}
-    Create PPG with custom fields    ${PROD_17_PPG}    ${PROD_17_Description}    ${PROD_17_Name}    ${PROD_17_Owner}   ${Input_Type_Product}    ${BTN_Save}
-Verify the Stragetic outcome menu should be displayed.
+    Create PPG with custom fields    ${PROD_17_PPG}    ${PROD_17_Description}    ${PROD_17_Owner}   ${Input_Type_Product}    ${PROD_17_Name}    ${BTN_Save}
+Verify the Stragetic outcome menu should be displayed
     Wait Until Element is present then click the element    ${Custom_strageticoutcome_tab}
 Verify Stragetic outcome should be created along with Custom fields.
     Wait Until Element is present then click the element    ${Custom_AddStragicoutcome}
