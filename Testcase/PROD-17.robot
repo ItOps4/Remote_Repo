@@ -15,15 +15,15 @@ Custom fields
     Then Navigate to PPG Menu
     Then Click on Add PPG button, Enter all mandatory fields and Click save it.
     Then Navigate to created ppg
-    Then Navigate to Product/Platform Tab
-   Then Click on Add Product/Platform, Enter the mandatory fields and Save it
-   Then Navigate to Finance Tab
-   Then Click on Add Schedule Button, Enter the mandatory fields and save it.
+#     Then Navigate to Product/Platform Tab
+#    Then Click on Add Product/Platform, Enter the mandatory fields and Save it
+#    Then Navigate to Finance Tab
+#    Then Click on Add Schedule Button, Enter the mandatory fields and save it.
 #
 #
 #
-#    Then Navigate to Stragetic outcome Menu.
-#    Then click on Add Stragetic outcome button, Enter all mandatory fields and save it.
+   Then Navigate to Stragetic outcome Menu.
+   Then click on Add Stragetic outcome button, Enter all mandatory fields and save it.
 ##    Then Click on OKRs Tab
 #    Then Click Add OKRs Button, Enter the data and save it.
 #    Then Navigate to PPG

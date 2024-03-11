@@ -23,7 +23,8 @@ Then Navigate to PPG Menu
 Then Click on Add PPG button, Enter all mandatory fields and Click save it.
     Verify PPG should be created along with Custom fields.
 Then Navigate to Stragetic outcome Menu.
-    Verify the Stragetic outcome menu should be displayed.
+    Verify the Stragetic outcome menu should be displayed
+
 Then click on Add Stragetic outcome button, Enter all mandatory fields and save it.
     Verify Stragetic outcome should be created along with Custom fields.
 Then Navigate to Stragetic outcome
@@ -100,7 +101,8 @@ Verify the Add PPG button should be displayed
     Wait Until Element is present then click the element    ${Custom_PPG_tab}
 Verify PPG should be created along with Custom fields.
     Wait Until Element is present then click the element    ${Custom_ADD_PPG}
-    Create PPG with custom fields    ${PROD_17_PPG}    ${PROD_17_Description}    ${PROD_17_Owner}   ${Input_Type_Product}    ${PROD_17_Name}    ${BTN_Save}
+    Create PPG with custom fields    ${PROD_17_Name}    ${PROD_17_PPG}    ${PROD_17_Description}    ${PROD_17_Owner}   ${Input_Type_Product}   
+    Wait Until Element is present then click the element    ${BTN_Save_ppg}
 Verify the Stragetic outcome menu should be displayed
     Wait Until Element is present then click the element    ${Custom_strageticoutcome_tab}
 Verify Stragetic outcome should be created along with Custom fields.
