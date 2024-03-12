@@ -19,11 +19,9 @@ Login Application
     ${object}=    Evaluate    json.loads('''${json_data}''')    json
     ${encry}    Set Variable    ${object['${username}']}
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].EdgeOptions()    sys,selenium.webdriver
-    Call Method    ${options}    add_argument    --inprivate
-    #Call Method    ${options}    add_argument    --headless    
-    ${driver}    Create Webdriver    Edge    options=${options}    
-    Set Window Size    1920    1080
-    Go To    ${Productor_Url}
+    Call Method    ${options}    add_argument    --inprivate   
+    Open Browser        ${Productor_Url}    edge    options=${options}    executable_path=C:/Users/infoh/AppData/Local/Programs/Python/Python310/msedgedriver.exe
+    Set Window Size    1920    1080   
     Maximize Browser Window
     Set Selenium Speed    700milliseconds
     Wait Until Page Contains Element    ${Input_Username}    50
