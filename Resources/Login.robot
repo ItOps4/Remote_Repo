@@ -20,7 +20,7 @@ Login Application
     ${encry}    Set Variable    ${object['${username}']}
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].EdgeOptions()    sys,selenium.webdriver
     Call Method    ${options}    add_argument    --inprivate   
-    Open Browser        ${Productor_Url}    edge    options=${options}    executable_path=C:/Users/infoh/AppData/Local/Programs/Python/Python310/msedgedriver.exe
+    Open Browser        ${Productor_Url}    edge    options=${options}
     Set Window Size    1920    1080   
     Maximize Browser Window
     Set Selenium Speed    700milliseconds
