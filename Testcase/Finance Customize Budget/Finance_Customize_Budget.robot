@@ -1,7 +1,8 @@
 *** Settings ***
-Documentation    System Finance Customize Budget       
+Documentation    Finance Customize Budget      
 Resource    Finance_Customize_Budget_Support.robot
 Force Tags    Finance_Customize_Budget    Test    Name:Gayathri
+Variables    ../../Data/data.py
 
 *** Test Cases ***
 Finance Customize Budget

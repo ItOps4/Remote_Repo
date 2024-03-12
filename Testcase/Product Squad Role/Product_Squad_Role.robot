@@ -2,6 +2,7 @@
 Documentation    Create,Search,Edit and Delete Product Sqad Role   
 Resource    Product_Squad_Role_Support.robot
 Force Tags    Product_Squad_Role    Test    Name:Amritha
+Variables    ../../Data/data.py
 
 *** Test Cases ***
 Product Squad Role 

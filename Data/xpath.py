@@ -3,7 +3,7 @@ Input_Username = '//input[@id="auth-email-id"]'
 Input_Password = '//input[@id="auth-password"]'
 BTN_Login = '//p[text()="Sign In"]/parent::button'
 
-# Common Button Xpath
+# Common Xpath
 BTN_Cancel = '//p[text()="Cancel"]/parent::button'
 BTN_Save = '//p[text()="Save"]/parent::button'
 BTN_Confirm = '//p[text()="Confirm"]/parent::button'

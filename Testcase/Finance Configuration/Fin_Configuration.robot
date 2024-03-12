@@ -1,7 +1,9 @@
 *** Settings ***
-Documentation    Category Create,Search,Edit and Delete       
-Resource    Finance_Configuration_Support.robot
-Force Tags    Finance_Configuration    Test    Name:Amritha 
+Documentation    Finance Configuration - Category    
+Resource    Fin_Configuration_Support.robot
+Force Tags    Finance_Configuration    Test    Name:Amritha
+Variables    ../../Data/data.py
+
 
 
 *** Test Cases ***
