@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Create,edit,delete roadmap   
+Documentation    Product Roadmap - Roadmap  
 Resource    Product_Roadmap_Support.robot
 Force Tags    Product_Roadmap    Test    Name:Naresh
 Variables    ../../Data/data.py
@@ -7,7 +7,7 @@ Variables    ../../Data/data.py
 *** Test Cases ***
 
 Roadmap
-    [Documentation]    Create,Search,Edit and Delete PPG and Product/Platform
+    [Documentation]    Roadmap Create,Search,Edit and Delete
     Given Login into application    ${username001} 
     When Click on Portfolio Management tab and navigate to Portfolio
     Then Then click on PPG Tab and navigate to PPG

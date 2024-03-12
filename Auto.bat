@@ -8,7 +8,7 @@ Timeout 2
 
 MKDIR "output"
 
-Set Tags=Test
+Set Tags=Product_Platform_OKR_Squad
 
 Set Thread=7
 

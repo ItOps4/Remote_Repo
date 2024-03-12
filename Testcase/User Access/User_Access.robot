@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Portfolio - Settings - User Access   
-Resource    Portfolio_User_Access_Support.robot
+Resource    User_Access_Support.robot
 Force Tags    Portfolio_User_Access    #Test    name:Naresh  
 Variables    ../../Data/data.py
 

@@ -1,12 +1,12 @@
 *** Settings ***
-Documentation    Portfolio - Strategic Outcome   
+Documentation    Strategic Outcome   
 Resource    Strategic_Outcome_Support.robot
 Force Tags    Strategic_Outcome    #Test    name:Naresh  
 Variables    ../../Data/data.py
 
 *** Test Cases ***
 Portfolio Management-Strategic Outcome
-    [Documentation]    Portfolio - Strategic Outcome
+    [Documentation]    Strategic Outcome
     Given Login into application    ${username001}
     When When Navigate to Portfolio Management Menu
     Then Navigate to Portfolio, Click on strategic outcome Tab
