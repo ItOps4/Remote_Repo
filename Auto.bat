@@ -8,7 +8,7 @@ Timeout 2
 
 MKDIR "output"
 
-Set Tags=Test
+Set Tags=Finance_Configuration
 
 Set Thread=7
 
