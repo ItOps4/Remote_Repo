@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f8e01f5-7764-47a0-8e7a-889b6c2d6dcd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Testcase/PROD-17.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Testcase/PROD-17_Support.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Auto.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/xpath.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/xpath.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Login.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Login.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/common_1.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/common_1.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-14.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/PROD-14.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-14_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/PROD-14_Support.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-4.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/PROD-4.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-6.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/PROD-6.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-8.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/PROD-8.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/PROD-17.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/PROD-17.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/log/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/log/report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,26 +29,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Robot Framework.run [Category].executor": "Run",
-    "Robot Framework.run [Create Dictionary Example].executor": "Run",
-    "Robot Framework.run [Currency settings].executor": "Run",
-    "Robot Framework.run [Custom fields].executor": "Run",
-    "Robot Framework.run [Finance Customize Budget].executor": "Run",
-    "Robot Framework.run [PPG and Product/Platform].executor": "Run",
-    "Robot Framework.run [Portfolio - Settings - User Access].executor": "Run",
-    "Robot Framework.run [Portfolio Management-Strategic Outcome].executor": "Run",
-    "Robot Framework.run [Portfolio Management].executor": "Run",
-    "Robot Framework.run [Product Sqad Role].executor": "Run",
-    "Robot Framework.run current file.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Setting__Custom__Field",
-    "last_opened_file_path": "C:/Productor",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Robot Framework.run [Category].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Create Dictionary Example].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Currency settings].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Custom fields].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Finance Customize Budget].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [PPG and Product/Platform].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Portfolio - Settings - User Access].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Portfolio Management-Strategic Outcome].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Portfolio Management].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Product Sqad Role].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run current file.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Setting__Custom__Field&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Productor&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
