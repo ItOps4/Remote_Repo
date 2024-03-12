@@ -3,8 +3,6 @@ Documentation    Portfolio - Strategic Outcome
 Resource    Strategic_Outcome_Support.robot
 # Force Tags    Strategic_Outcome    Test    name:Naresh  
 
-
-
 *** Test Cases ***
 Portfolio Management-Strategic Outcome
     [Documentation]    Portfolio - Strategic Outcome

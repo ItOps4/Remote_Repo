@@ -121,7 +121,7 @@ RM_Owner = 'Tom Parthi'
 RM_PPG_Update = 'RM_PPG_Update'
 RM_Portfolio_Description_Update = 'RM_Portfolio_Description_Update'
 RM_PPG_Invalid = 'RM_PPG_Invalid'
-#ROADMAP Product/Platform
+# ROADMAP Product/Platform
 RM_Product_Platform = 'RM_Product_Platform'
 RM_Product_Platform_description = 'RM_Product_Platform_description'
 RM_Product_Platform_Invalid = 'RM_Product_Platform_Invalid'
@@ -129,7 +129,7 @@ choose_color1 = '#E8E8E8'
 choose_color2 = '#FFB7B7'
 choose_color3 = '#ECA9A5'
 edit_task_name = 'bag'
-#ROADMAP
+# ROADMAP
 RM_Roadmap = "RM_Roadmap"
 RM_Edit_Roadmap = "RM_Edit_Roadmap"
 RM_Roadmap_Invalid = "RM_Roadmap_invalid"
