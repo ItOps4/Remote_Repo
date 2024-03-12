@@ -1,0 +1,25 @@
+==============================================================================
+Productor                                                                     
+==============================================================================
+Productor.Testcase                                                            
+==============================================================================
+Productor.Testcase.Portfolio Management                                       
+==============================================================================
+Productor.Testcase.Portfolio Management.Portfolio Management :: Portfolio C...
+==============================================================================
+Portfolio Management :: Portfolio Create,Edit,Search,Delete           | FAIL |
+No keyword with name 'Use Encryption Key' found.
+------------------------------------------------------------------------------
+Productor.Testcase.Portfolio Management.Portfolio Management :: Po... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor.Testcase.Portfolio Management                               | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor.Testcase                                                    | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Productor\output\pabot_results\3\output.xml

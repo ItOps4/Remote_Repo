@@ -20,12 +20,12 @@ Login Application
     ${encry}    Set Variable    ${object['${username}']}
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].EdgeOptions()    sys,selenium.webdriver
     Call Method    ${options}    add_argument    inprivate
-    # Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --headless
     ${driver}    Create Webdriver    Edge    options=${options}
     Set Window Size    1920    1080
     Go To    ${Productor_Url}
     Maximize Browser Window
-    Set Selenium Speed    1
+    Set Selenium Speed    700milliseconds
     Wait Until Page Contains Element    ${Input_Username}    50
     Press Keys    ${Input_Username}    ${username}
     Use Encryption Key    ${public_key}

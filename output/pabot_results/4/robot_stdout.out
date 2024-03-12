@@ -1,0 +1,25 @@
+==============================================================================
+Productor                                                                     
+==============================================================================
+Productor.Testcase                                                            
+==============================================================================
+Productor.Testcase.Product Platform OKR Squad                                 
+==============================================================================
+Productor.Testcase.Product Platform OKR Squad.Product Platform OKR Squad ::...
+==============================================================================
+Product / platform OKR and Squad                                      | FAIL |
+No keyword with name 'Use Encryption Key' found.
+------------------------------------------------------------------------------
+Productor.Testcase.Product Platform OKR Squad.Product Platform OKR... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor.Testcase.Product Platform OKR Squad                         | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor.Testcase                                                    | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Productor\output\pabot_results\4\output.xml

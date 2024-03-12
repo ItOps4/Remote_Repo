@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.0 on win32)" generated="20240312 12:32:44.929" rpa="false" schemaversion="3">
+<suite id="s1" name="Productor" source="C:\Productor">
+<suite id="s1-s1" name="Testcase" source="C:\Productor\Testcase">
+<suite id="s1-s1-s1" name="Portfolio Management" source="C:\Productor\Testcase\Portfolio Management">
+<suite id="s1-s1-s1-s1" name="Portfolio Management" source="C:\Productor\Testcase\Portfolio Management\Portfolio_Management.robot">
+<test id="s1-s1-s1-s1-t1" name="Portfolio Management" line="10">
+<kw name="Given Login into Productor Application" library="Portfolio_Management_Support">
+<arg>${username001}</arg>
+<kw name="Verify an application should be opened" library="Portfolio_Management_Support">
+<arg>${username}</arg>
+<kw name="Login Application" library="Login">
+<arg>${username}</arg>
+<doc>Using this keyword we can login Productor Application.</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${json_data}</var>
+<arg>Data/password.json</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20240312 12:32:45.570" level="INFO" html="true">Getting file '&lt;a href="file://C:\Productor\Data\password.json"&gt;C:\Productor\Data\password.json&lt;/a&gt;'.</msg>
+<msg timestamp="20240312 12:32:45.570" level="INFO">${json_data} = {
+    "Tparthi@valuefactors.io": "gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==",
+    "neeraj@codebyte.solutions": "gAAAAABlvf_wHd_s-rfaDVYJP09Sz...</msg>
+<status status="PASS" starttime="20240312 12:32:45.569" endtime="20240312 12:32:45.571"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${object}</var>
+<arg>json.loads('''${json_data}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240312 12:32:45.571" level="INFO">${object} = {'Tparthi@valuefactors.io': 'gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==', 'neeraj@codebyte.solutions': 'gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J...</msg>
+<status status="PASS" starttime="20240312 12:32:45.571" endtime="20240312 12:32:45.571"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${encry}</var>
+<arg>${object['${username}']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240312 12:32:45.576" level="INFO">${encry} = gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==</msg>
+<status status="PASS" starttime="20240312 12:32:45.571" endtime="20240312 12:32:45.576"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
+<arg>sys,selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240312 12:32:45.577" level="INFO">${options} = &lt;selenium.webdriver.edge.options.Options object at 0x0000023500980490&gt;</msg>
+<status status="PASS" starttime="20240312 12:32:45.576" endtime="20240312 12:32:45.577"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>inprivate</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240312 12:32:45.577" endtime="20240312 12:32:45.577"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240312 12:32:45.577" endtime="20240312 12:32:45.579"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<var>${driver}</var>
+<arg>Edge</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240312 12:32:45.579" level="INFO">Creating an instance of the Edge WebDriver.</msg>
+<msg timestamp="20240312 12:32:45.590" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
+<msg timestamp="20240312 12:32:47.055" level="INFO">${driver} = 1</msg>
+<status status="PASS" starttime="20240312 12:32:45.579" endtime="20240312 12:32:47.055"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20240312 12:32:47.055" endtime="20240312 12:32:47.174"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Productor_Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240312 12:32:47.175" level="INFO">Opening url 'https://predev-productor.valuefactors.io/auth/login/'</msg>
+<status status="PASS" starttime="20240312 12:32:47.174" endtime="20240312 12:33:02.099"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240312 12:33:02.100" endtime="20240312 12:33:02.227"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>700milliseconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20240312 12:33:02.227" endtime="20240312 12:33:02.227"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_Username}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240312 12:33:02.227" endtime="20240312 12:33:02.956"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Username}</arg>
+<arg>${username}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240312 12:33:02.958" level="INFO">Sending key(s) ('Tparthi@valuefactors.io',) to //input[@id="auth-email-id"] element.</msg>
+<msg timestamp="20240312 12:33:04.695" level="INFO">Sending keys Tparthi@valuefactors.io</msg>
+<status status="PASS" starttime="20240312 12:33:02.957" endtime="20240312 12:33:05.499"/>
+</kw>
+<kw name="Use Encryption Key">
+<arg>${public_key}</arg>
+<msg timestamp="20240312 12:33:05.506" level="FAIL">No keyword with name 'Use Encryption Key' found.</msg>
+<status status="FAIL" starttime="20240312 12:33:05.506" endtime="20240312 12:33:05.506"/>
+</kw>
+<kw name="Decrypt String">
+<var>${Decry}</var>
+<arg>${encry}</arg>
+<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Decry}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Password}</arg>
+<arg>${Decry}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Login}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+</kw>
+<status status="FAIL" starttime="20240312 12:32:45.569" endtime="20240312 12:33:05.510"/>
+</kw>
+<status status="FAIL" starttime="20240312 12:32:45.569" endtime="20240312 12:33:05.510"/>
+</kw>
+<status status="FAIL" starttime="20240312 12:32:45.557" endtime="20240312 12:33:05.510"/>
+</kw>
+<kw name="When Navigate to Portfolio Management Menu" library="Portfolio_Management_Support">
+<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+</kw>
+<kw name="Then Click on Create portfolio button, Enter the mandatory details and click on cancel button" library="Portfolio_Management_Support">
+<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+</kw>
+<kw name="Then Click on Create portfolio button and Enter the mandatory details and click on Save button" library="Portfolio_Management_Support">
+<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+</kw>
+<kw name="Then Click on Search bar and Enter invalid portfolio name" library="Portfolio_Management_Support">
+<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+</kw>
+<kw name="Then Click on Search bar and search with valid portfolio in the portfolio page" library="Portfolio_Management_Support">
+<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+</kw>
+<kw name="Then Click on More icon in portfolio name, Click on Edit button,Enter Data and click on cancel button" library="Portfolio_Management_Support">
+<status status="NOT RUN" starttime="20240312 12:33:05.511" endtime="20240312 12:33:05.511"/>
+</kw>
+<kw name="Then Click on More icon in portfolio name, click on Edit button, Enter the data and click on save button" library="Portfolio_Management_Support">
+<status status="NOT RUN" starttime="20240312 12:33:05.511" endtime="20240312 12:33:05.511"/>
+</kw>
+<kw name="Then Click on More icon in Portfolio name, click on Delete Button and Click on Cancel Button" library="Portfolio_Management_Support">
+<status status="NOT RUN" starttime="20240312 12:33:05.511" endtime="20240312 12:33:05.511"/>
+</kw>
+<kw name="Then Click on More icon in Portfolio name, click on Delete Button and Click on Confirm button" library="Portfolio_Management_Support">
+<status status="NOT RUN" starttime="20240312 12:33:05.511" endtime="20240312 12:33:05.511"/>
+</kw>
+<kw name="Then Close the Browser" library="Portfolio_Management_Support">
+<status status="NOT RUN" starttime="20240312 12:33:05.511" endtime="20240312 12:33:05.511"/>
+</kw>
+<doc>Portfolio Create,Edit,Search,Delete</doc>
+<tag>Name:Gayathri</tag>
+<tag>Portfolio_Managament</tag>
+<tag>Test</tag>
+<status status="FAIL" starttime="20240312 12:32:45.556" endtime="20240312 12:33:05.511">No keyword with name 'Use Encryption Key' found.</status>
+</test>
+<doc>Portfolio Create,Edit,Search,Delete</doc>
+<status status="FAIL" starttime="20240312 12:32:45.014" endtime="20240312 12:33:05.512"/>
+</suite>
+<status status="FAIL" starttime="20240312 12:32:45.009" endtime="20240312 12:33:05.512"/>
+</suite>
+<status status="FAIL" starttime="20240312 12:32:45.005" endtime="20240312 12:33:05.513"/>
+</suite>
+<status status="FAIL" starttime="20240312 12:32:44.966" endtime="20240312 12:33:05.513"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Name:Gayathri</stat>
+<stat pass="0" fail="1" skip="0">Portfolio_Managament</stat>
+<stat pass="0" fail="1" skip="0">Test</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Productor">Productor</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Testcase">Productor.Testcase</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Portfolio Management">Productor.Testcase.Portfolio Management</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Portfolio Management">Productor.Testcase.Portfolio Management.Portfolio Management</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240312 12:32:44.930" level="ERROR">Taking listener 'RobotStackTracer' into use failed: Importing listener 'RobotStackTracer' failed: ModuleNotFoundError: No module named 'RobotStackTracer'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Productor\.venv\Scripts\robot.exe
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310
+  C:\Productor\.venv
+  C:\Productor\.venv\lib\site-packages</msg>
+<msg timestamp="20240312 12:32:45.103" level="ERROR">Error in file 'C:\Productor\Resources\common_1.robot' on line 887: Creating keyword 'Navigate to PPG' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20240312 12:32:45.540" level="ERROR">Error in file 'C:\Productor\Resources\Login.robot' on line 4: Importing library 'RPA.JSON' failed: ModuleNotFoundError: No module named 'RPA'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Productor\.venv\Scripts\robot.exe
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310
+  C:\Productor\.venv
+  C:\Productor\.venv\lib\site-packages</msg>
+<msg timestamp="20240312 12:32:45.544" level="ERROR">Error in file 'C:\Productor\Resources\Login.robot' on line 5: Importing library 'RPA.Crypto' failed: ModuleNotFoundError: No module named 'RPA'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Productor\.venv\Scripts\robot.exe
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310\python310.zip
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310\DLLs
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib
+  C:\Users\crazy\AppData\Local\Programs\Python\Python310
+  C:\Productor\.venv
+  C:\Productor\.venv\lib\site-packages</msg>
+</errors>
+</robot>

@@ -1,0 +1,25 @@
+==============================================================================
+Productor                                                                     
+==============================================================================
+Productor.Testcase                                                            
+==============================================================================
+Productor.Testcase.PPG Product Platform                                       
+==============================================================================
+Productor.Testcase.PPG Product Platform.PPG Product Platform :: Create,Sear...
+==============================================================================
+PPG and Product/Platform :: Create,Search,Edit and Delete PPG and ... | FAIL |
+No keyword with name 'Use Encryption Key' found.
+------------------------------------------------------------------------------
+Productor.Testcase.PPG Product Platform.PPG Product Platform :: Cr... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor.Testcase.PPG Product Platform                               | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor.Testcase                                                    | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Productor                                                             | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Productor\output\pabot_results\2\output.xml
