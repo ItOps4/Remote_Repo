@@ -18,10 +18,10 @@ Login Application
     ${json_data}    Get File    Data/password.json
     ${object}=    Evaluate    json.loads('''${json_data}''')    json
     ${encry}    Set Variable    ${object['${username}']}
-    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys,selenium.webdriver
-    Call Method    ${options}    add_argument    incognito
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].EdgeOptions()    sys,selenium.webdriver
+    Call Method    ${options}    add_argument    --inprivate
     Call Method    ${options}    add_argument    --headless    
-    ${driver}    Create Webdriver    Chrome    options=${options}    
+    ${driver}    Create Webdriver    Edge    options=${options}    
     Set Window Size    1920    1080
     Go To    ${Productor_Url}
     Maximize Browser Window
