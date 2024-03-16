@@ -14,23 +14,23 @@ PM_Portfolio_Description ='Portfolio description'
 PM_Portfolio_Description_Update ='Portfolio description Update'
 
 # Finance Configuration
-FC_Category = 'Create Category'
+FC_Category = 'Create Category 59'
 FC_Category_Description = 'Category description'
 FC_Invalid_Category = 'Category Invalid'
-FC_Category_Update = 'Update Category '
+FC_Category_Update = 'Update Category 59'
 FC_Category_Description_Update = 'Category description Update'
 
 # Finance Customize Budget
-FCB_budget= 'Create Custom Budget'
+FCB_budget= 'Create Custom Budget 59'
 FCB_budget_description = 'Custom Budget description'
-FCB_budget_update = 'Update Custom Budget'
+FCB_budget_update = 'Update Custom Budget 59'
 FCB_budget_description_update = 'Custom Budget description Update'
 
 # Product Squad Role 
-PSR_Product_Squad_Role = 'Create Produt Squad Role'
+PSR_Product_Squad_Role = 'Create Produt Squad Role 59'
 PSR_Produt_Squad_Role_Description ='Produt Squad Role description'
 PSR_Product_Squad_Role_Invalid = 'Product Squad Invalid'
-PSR_Produt_Squad_Role_Update = 'Update Product Squad Role'
+PSR_Produt_Squad_Role_Update = 'Update Product Squad Role 59'
 PSR_Product_Squad_Role_Description_Update = 'Product Squad Description Update'
 
 # Product_Platform_OKR_Squad

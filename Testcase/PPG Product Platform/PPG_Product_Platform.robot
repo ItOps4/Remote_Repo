@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Create,Search,Edit and Delete PPG and Product/Platform    
 Resource    PPG_Product_Platform_Support.robot
-Force Tags    PPG_Product_Platform    Test    Name:Amritha
+Force Tags    PPG_Product_Platform    #Test    Name:Amritha
 Variables    ../../Data/data.py
 
 *** Test Cases ***
