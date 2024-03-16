@@ -4,6 +4,7 @@ Resource    ../../Resources/Login.robot
 Variables    ../../Data/data.py
 Variables   ../../Data/xpath.py
 
+
 *** Keywords ***
 Given Login into application
     [Arguments]    ${username}
@@ -27,7 +28,7 @@ Then Navigate to Stragetic outcome Menu.
 
 Then click on Add Stragetic outcome button, Enter all mandatory fields and save it.
     Verify Stragetic outcome should be created along with Custom fields.
-Then Navigate to Stragetic outcome
+Then Navigate to created Stragetic outcome
     Verify it should display Stragetic outcome page
 #Then Click Add OKRs Button, Enter the data and save it.
 #    Verify OKRs should created along with Custom fields.
@@ -78,13 +79,13 @@ Verify if user should be able to login successfully
     Login Application    ${username}
 #verify if user navigate to portfolio management tab.
 #    Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
-#    Create Portfolio    ${PROD_17_Portfolio}    ${PROD_17_Portfolio_Description}    ${BTN_Save}
-#    Search Data    $#{Input_Portfolio_Search}    ${PROD_17_Portfolio}
+#    Create Portfolio    ${CF_Portfolio}    ${CF_Portfolio}    ${BTN_Save}
+#    Search Data    $#{Input_Portfolio_Search}    ${CF_Portfolio}
 Verify it should display the portfolio management page
   Wait Until Element is present then click the element    ${Custom_Portfolio_icon }
 verify it should display the porfolio page and by default it should display the dasboard page.
 #    Create Portfolio    ${PROD_17_Portfolio}    ${PROD_17_Portfolio_Description}    ${BTN_Save}
-    Search Data    ${Input_Portfolio_Search}    ${PROD_17_Portfolio}
+    Search Data    ${Input_Portfolio_Search}    ${CF_Portfolio}
     Wait Until Element is present then click the element    ${Custom_portfolio}
 Verify it should display the custom fields tab.
     Wait Until Element is present then click the element    ${Custom_Settings}
@@ -95,7 +96,7 @@ Verify it should display the Create New Custom Field For Portfolio Popup, Save B
     Wait Until Element is present then click the element    ${Custom_cancel}
 Verify Save button should be enabled and custom fields should be created.
     Wait Until Element is present then click the element    ${Custom_create}
-    Create Custom fields    ${Custom_create_name}    ${Custom_Addto}    ${Custom_Tooltip}    ${Custom_add_type}
+    Create Custom fields for text   ${CF_Name}    ${CF_Tooltip}    ${CF_Type}   ${CF_Placeholder}
     wait Until Element is present then click the element    ${BTN_Save}
 Verify the Add PPG button should be displayed
     Wait Until Element is present then click the element    ${Custom_PPG_tab}
@@ -137,3 +138,4 @@ Verify it should display Product and Platform Page .
 Verify Product should be created along with Custom fields.
     Wait Until Element is present then click the element    ${Custom_ADD_Product_platform}
     Create Product/Platform for custom fields  ${PROD_17_PPG}    ${PROD_17_Portfolio_Description}    ${PROD_17_Owner}    ${PROD_17_Type}  ${Custom_product_text}  ${BTN_Save}
+

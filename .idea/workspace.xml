@@ -5,38 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f8e01f5-7764-47a0-8e7a-889b6c2d6dcd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Testcase/PPG Product Platform/PPG_Product_Platform_Support.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Testcase/Portfolio Finance Settings/Portfolio_Finance_Settings.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Testcase/Portfolio Finance Settings/Portfolio_Finance_Settings_Support.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Testcase/Product Roadmap/Product_Roadmap.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Testcase/Product Roadmap/Product_Roadmap_Support.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.pabotsuitenames" beforeDir="false" afterPath="$PROJECT_DIR$/.pabotsuitenames" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Auto.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/xpath.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/xpath.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Login.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Login.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/common_1.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/common_1.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Custom fields/PROD-17.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Custom fields/PROD-17.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Custom fields/PROD-17_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Custom fields/PROD-17_Support.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Testcase/PPG Product Platform/PPG_Product_Platform.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/PPG Product Platform/PPG_Product_Platform.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-12.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Strategic Outcome/Strategic_Outcome.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-12_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Strategic Outcome/Strategic_Outcome_Support.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-14.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-14_Support.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-16.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Portfolio User Access/Portfolio_User_Access.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-16_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Portfolio User Access/Portfolio_User_Access_Support.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-17.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Custom fields/PROD-17.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-17_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Custom fields/PROD-17_Support.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-4.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Portfolio Management/Portfolio_Management.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-4_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Portfolio Management/Portfolio_Management_Support.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-5.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Finance Configuration/Fin_Configuration.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-5_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Finance Configuration/Fin_Configuration_Support.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-6.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-6_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Product Platform OKR Squad/Product_Platform_OKR_Squad_Support.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-7.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Finance Customize Budget/Finance_Customize_Budget.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-7_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Finance Customize Budget/Finance_Customize_Budget_Support.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-8.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PROD-8_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Product Squad Role/Product_Squad_Role_Support.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/PPG Product Platform/PPG_Product_Platform_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/PPG Product Platform/PPG_Product_Platform_Support.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Portfolio Management/Portfolio_Management.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Portfolio Management/Portfolio_Management.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Testcase/Product Platform OKR Squad/Product_Platform_OKR_Squad.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Product Platform OKR Squad/Product_Platform_OKR_Squad.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Product Roadmap/Product_Roadmap.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Product Roadmap/Product_Roadmap.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Testcase/Product Squad Role/Product_Squad_Role.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Product Squad Role/Product_Squad_Role.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/log/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/log/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/0/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/0/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/0/robot_stderr.out" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/0/robot_stderr.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/0/robot_stdout.out" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/0/robot_stdout.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/1/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/1/robot_stderr.out" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/1/robot_stderr.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/1/robot_stdout.out" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/1/robot_stdout.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/2/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/2/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/2/robot_stderr.out" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/2/robot_stderr.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/2/robot_stdout.out" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/2/robot_stdout.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/3/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/3/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/3/robot_stderr.out" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/3/robot_stderr.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/3/robot_stdout.out" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/3/robot_stdout.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/4/output.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/4/robot_stderr.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/4/robot_stdout.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/5/output.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/5/robot_stderr.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/5/robot_stdout.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/6/output.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/6/robot_stderr.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/pabot_results/6/robot_stdout.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +69,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.data.executor": "Debug",
     "Robot Framework.run [Category].executor": "Run",
     "Robot Framework.run [Create Dictionary Example].executor": "Run",
     "Robot Framework.run [Currency settings].executor": "Run",
@@ -73,9 +83,9 @@
     "Robot Framework.run current file.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging Setting__Custom__Field",
+    "git-widget-placeholder": "Setting__Custom__Field",
     "last_opened_file_path": "C:/Productor/Testcase/Custom fields",
-    "settings.editor.selected.configurable": "preferences.keymap"
+    "settings.editor.selected.configurable": "advanced.settings"
   }
 }]]></component>
   <component name="RecentsManager">

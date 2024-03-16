@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.0 on win32)" generated="20240312 12:32:44.929" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.0 on win32)" generated="20240314 12:20:00.070" rpa="false" schemaversion="3">
 <suite id="s1" name="Productor" source="C:\Productor">
 <suite id="s1-s1" name="Testcase" source="C:\Productor\Testcase">
-<suite id="s1-s1-s1" name="Portfolio Management" source="C:\Productor\Testcase\Portfolio Management">
-<suite id="s1-s1-s1-s1" name="Portfolio Management" source="C:\Productor\Testcase\Portfolio Management\Portfolio_Management.robot">
-<test id="s1-s1-s1-s1-t1" name="Portfolio Management" line="10">
-<kw name="Given Login into Productor Application" library="Portfolio_Management_Support">
+<suite id="s1-s1-s1" name="Product Squad Role" source="C:\Productor\Testcase\Product Squad Role">
+<suite id="s1-s1-s1-s1" name="Product Squad Role" source="C:\Productor\Testcase\Product Squad Role\Product_Squad_Role.robot">
+<test id="s1-s1-s1-s1-t1" name="Product Squad Role" line="8">
+<kw name="Given Login into application" library="Product_Squad_Role_Support">
 <arg>${username001}</arg>
-<kw name="Verify an application should be opened" library="Portfolio_Management_Support">
+<kw name="Verify an application should be opened" library="Product_Squad_Role_Support">
 <arg>${username}</arg>
 <kw name="Login Application" library="Login">
 <arg>${username}</arg>
@@ -16,221 +16,1215 @@
 <var>${json_data}</var>
 <arg>Data/password.json</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20240312 12:32:45.570" level="INFO" html="true">Getting file '&lt;a href="file://C:\Productor\Data\password.json"&gt;C:\Productor\Data\password.json&lt;/a&gt;'.</msg>
-<msg timestamp="20240312 12:32:45.570" level="INFO">${json_data} = {
+<msg timestamp="20240314 12:20:00.755" level="INFO" html="true">Getting file '&lt;a href="file://C:\Productor\Data\password.json"&gt;C:\Productor\Data\password.json&lt;/a&gt;'.</msg>
+<msg timestamp="20240314 12:20:00.756" level="INFO">${json_data} = {
     "Tparthi@valuefactors.io": "gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==",
     "neeraj@codebyte.solutions": "gAAAAABlvf_wHd_s-rfaDVYJP09Sz...</msg>
-<status status="PASS" starttime="20240312 12:32:45.569" endtime="20240312 12:32:45.571"/>
+<status status="PASS" starttime="20240314 12:20:00.755" endtime="20240314 12:20:00.756"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${object}</var>
 <arg>json.loads('''${json_data}''')</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240312 12:32:45.571" level="INFO">${object} = {'Tparthi@valuefactors.io': 'gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==', 'neeraj@codebyte.solutions': 'gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J...</msg>
-<status status="PASS" starttime="20240312 12:32:45.571" endtime="20240312 12:32:45.571"/>
+<msg timestamp="20240314 12:20:00.756" level="INFO">${object} = {'Tparthi@valuefactors.io': 'gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==', 'neeraj@codebyte.solutions': 'gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J...</msg>
+<status status="PASS" starttime="20240314 12:20:00.756" endtime="20240314 12:20:00.756"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${encry}</var>
 <arg>${object['${username}']}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240312 12:32:45.576" level="INFO">${encry} = gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==</msg>
-<status status="PASS" starttime="20240312 12:32:45.571" endtime="20240312 12:32:45.576"/>
+<msg timestamp="20240314 12:20:00.760" level="INFO">${encry} = gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==</msg>
+<status status="PASS" starttime="20240314 12:20:00.756" endtime="20240314 12:20:00.760"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
 <arg>sys,selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240312 12:32:45.577" level="INFO">${options} = &lt;selenium.webdriver.edge.options.Options object at 0x0000023500980490&gt;</msg>
-<status status="PASS" starttime="20240312 12:32:45.576" endtime="20240312 12:32:45.577"/>
+<msg timestamp="20240314 12:20:00.760" level="INFO">${options} = &lt;selenium.webdriver.edge.options.Options object at 0x000001D8BD21B130&gt;</msg>
+<status status="PASS" starttime="20240314 12:20:00.760" endtime="20240314 12:20:00.760"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>inprivate</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240312 12:32:45.577" endtime="20240312 12:32:45.577"/>
+<status status="PASS" starttime="20240314 12:20:00.760" endtime="20240314 12:20:00.761"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--headless</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240312 12:32:45.577" endtime="20240312 12:32:45.579"/>
+<status status="PASS" starttime="20240314 12:20:00.761" endtime="20240314 12:20:00.761"/>
 </kw>
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <var>${driver}</var>
 <arg>Edge</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20240312 12:32:45.579" level="INFO">Creating an instance of the Edge WebDriver.</msg>
-<msg timestamp="20240312 12:32:45.590" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<msg timestamp="20240312 12:32:47.055" level="INFO">${driver} = 1</msg>
-<status status="PASS" starttime="20240312 12:32:45.579" endtime="20240312 12:32:47.055"/>
+<msg timestamp="20240314 12:20:00.762" level="INFO">Creating an instance of the Edge WebDriver.</msg>
+<msg timestamp="20240314 12:20:02.397" level="INFO">${driver} = 1</msg>
+<status status="PASS" starttime="20240314 12:20:00.761" endtime="20240314 12:20:02.397"/>
 </kw>
 <kw name="Set Window Size" library="SeleniumLibrary">
 <arg>1920</arg>
 <arg>1080</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" starttime="20240312 12:32:47.055" endtime="20240312 12:32:47.174"/>
+<status status="PASS" starttime="20240314 12:20:02.397" endtime="20240314 12:20:02.521"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${Productor_Url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240312 12:32:47.175" level="INFO">Opening url 'https://predev-productor.valuefactors.io/auth/login/'</msg>
-<status status="PASS" starttime="20240312 12:32:47.174" endtime="20240312 12:33:02.099"/>
+<msg timestamp="20240314 12:20:02.521" level="INFO">Opening url 'https://predev-productor.valuefactors.io/auth/login/'</msg>
+<status status="PASS" starttime="20240314 12:20:02.521" endtime="20240314 12:20:05.913"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240312 12:33:02.100" endtime="20240312 12:33:02.227"/>
+<status status="PASS" starttime="20240314 12:20:05.913" endtime="20240314 12:20:06.036"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>700milliseconds</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20240312 12:33:02.227" endtime="20240312 12:33:02.227"/>
+<status status="PASS" starttime="20240314 12:20:06.037" endtime="20240314 12:20:06.038"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${Input_Username}</arg>
 <arg>50</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20240312 12:33:02.227" endtime="20240312 12:33:02.956"/>
+<status status="PASS" starttime="20240314 12:20:06.039" endtime="20240314 12:20:06.771"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>${Input_Username}</arg>
 <arg>${username}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20240312 12:33:02.958" level="INFO">Sending key(s) ('Tparthi@valuefactors.io',) to //input[@id="auth-email-id"] element.</msg>
-<msg timestamp="20240312 12:33:04.695" level="INFO">Sending keys Tparthi@valuefactors.io</msg>
-<status status="PASS" starttime="20240312 12:33:02.957" endtime="20240312 12:33:05.499"/>
+<msg timestamp="20240314 12:20:06.773" level="INFO">Sending key(s) ('Tparthi@valuefactors.io',) to //input[@id="auth-email-id"] element.</msg>
+<msg timestamp="20240314 12:20:08.468" level="INFO">Sending keys Tparthi@valuefactors.io</msg>
+<status status="PASS" starttime="20240314 12:20:06.771" endtime="20240314 12:20:09.262"/>
 </kw>
-<kw name="Use Encryption Key">
+<kw name="Use Encryption Key" library="RPA.Crypto">
 <arg>${public_key}</arg>
-<msg timestamp="20240312 12:33:05.506" level="FAIL">No keyword with name 'Use Encryption Key' found.</msg>
-<status status="FAIL" starttime="20240312 12:33:05.506" endtime="20240312 12:33:05.506"/>
+<doc>Set key for all following encryption/decryption operations.</doc>
+<msg timestamp="20240314 12:20:09.265" level="INFO">Protecting keyword: RPA.Crypto.Use Encryption Key</msg>
+<msg timestamp="20240314 12:20:09.267" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240314 12:20:09.263" endtime="20240314 12:20:09.267"/>
 </kw>
-<kw name="Decrypt String">
+<kw name="Decrypt String" library="RPA.Crypto">
 <var>${Decry}</var>
 <arg>${encry}</arg>
-<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+<doc>Decrypt a string.</doc>
+<msg timestamp="20240314 12:20:09.269" level="INFO">${Decry} = Productor@01</msg>
+<status status="PASS" starttime="20240314 12:20:09.267" endtime="20240314 12:20:09.269"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${Decry}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+<msg timestamp="20240314 12:20:09.270" level="INFO">Productor@01</msg>
+<status status="PASS" starttime="20240314 12:20:09.270" endtime="20240314 12:20:09.270"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>${Input_Password}</arg>
 <arg>${Decry}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+<msg timestamp="20240314 12:20:09.271" level="INFO">Sending key(s) ('Productor@01',) to //input[@id="auth-password"] element.</msg>
+<msg timestamp="20240314 12:20:10.987" level="INFO">Sending keys Productor@01</msg>
+<status status="PASS" starttime="20240314 12:20:09.270" endtime="20240314 12:20:11.747"/>
 </kw>
 <kw name="Wait Until Element is present then click the element" library="common_1">
 <arg>${BTN_Login}</arg>
 <doc>Using this keyword we can perform click Element</doc>
-<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:11.749" endtime="20240314 12:20:12.477"/>
 </kw>
-<status status="FAIL" starttime="20240312 12:32:45.569" endtime="20240312 12:33:05.510"/>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:12.482" level="INFO">Clicking element '//p[text()="Sign In"]/parent::button'.</msg>
+<status status="PASS" starttime="20240314 12:20:12.479" endtime="20240314 12:20:14.033"/>
 </kw>
-<status status="FAIL" starttime="20240312 12:32:45.569" endtime="20240312 12:33:05.510"/>
+<status status="PASS" starttime="20240314 12:20:12.477" endtime="20240314 12:20:14.034"/>
 </kw>
-<status status="FAIL" starttime="20240312 12:32:45.557" endtime="20240312 12:33:05.510"/>
+<status status="PASS" starttime="20240314 12:20:11.748" endtime="20240314 12:20:14.034"/>
 </kw>
-<kw name="When Navigate to Portfolio Management Menu" library="Portfolio_Management_Support">
-<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+<status status="PASS" starttime="20240314 12:20:00.755" endtime="20240314 12:20:14.035"/>
 </kw>
-<kw name="Then Click on Create portfolio button, Enter the mandatory details and click on cancel button" library="Portfolio_Management_Support">
-<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+<status status="PASS" starttime="20240314 12:20:00.755" endtime="20240314 12:20:14.035"/>
 </kw>
-<kw name="Then Click on Create portfolio button and Enter the mandatory details and click on Save button" library="Portfolio_Management_Support">
-<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+<status status="PASS" starttime="20240314 12:20:00.754" endtime="20240314 12:20:14.035"/>
 </kw>
-<kw name="Then Click on Search bar and Enter invalid portfolio name" library="Portfolio_Management_Support">
-<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+<kw name="Then Click on System Settings Icon and Click on Product Squad Role Tab" library="Product_Squad_Role_Support">
+<kw name="Verify that the Product Squad Role Page is displayed" library="Product_Squad_Role_Support">
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Icon_SystemSettings}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:14.039" endtime="20240314 12:20:20.319"/>
 </kw>
-<kw name="Then Click on Search bar and search with valid portfolio in the portfolio page" library="Portfolio_Management_Support">
-<status status="NOT RUN" starttime="20240312 12:33:05.510" endtime="20240312 12:33:05.510"/>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:20.320" level="INFO">Clicking element '//span[@id="icon-System Settings"]'.</msg>
+<msg timestamp="20240314 12:20:23.018" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240314 12:20:23.019" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;span id="icon-System Settings" class="icon icon-settings " style="height: 21.3px; width: 21.3px; font-size: 21.3px;"&gt;...&lt;/span&gt; is not clickable at point (31, 1005). Other element would receive the click: &lt;div class="fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-[10000] overflow-hidden bg-black bg-opacity-75 flex flex-col items-center justify-center"&gt;...&lt;/div&gt;
+  (Session info: edge-headless-shell=122.0.2365.80)
+Stacktrace:
+	GetHandleVerifier [0x00007FF7E7C0B7F2+63538]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7E7B8F672+238306]
+	(No symbol) [0x00007FF7E79C3407]
+	(No symbol) [0x00007FF7E7A0FD22]
+	(No symbol) [0x00007FF7E7A0DF86]
+	(No symbol) [0x00007FF7E7A0BC9B]
+	(No symbol) [0x00007FF7E7A0ACB0]
+	(No symbol) [0x00007FF7E79FF796]
+	(No symbol) [0x00007FF7E7A28E1A]
+	(No symbol) [0x00007FF7E79FF037]
+	(No symbol) [0x00007FF7E79FEEFD]
+	(No symbol) [0x00007FF7E7A29100]
+	(No symbol) [0x00007FF7E79FF037]
+	(No symbol) [0x00007FF7E7A41F49]
+	(No symbol) [0x00007FF7E7A28A83]
+	(No symbol) [0x00007FF7E79FE55E]
+	(No symbol) [0x00007FF7E79FD71C]
+	(No symbol) [0x00007FF7E79FE111]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7E7DE1CDC+1102764]
+	(No symbol) [0x00007FF7E7A725F6]
+	(No symbol) [0x00007FF7E7B03DAC]
+	(No symbol) [0x00007FF7E7AFBDA8]
+	Microsoft::Applications::Events::EventProperty::to_string [0x00007FF7E7DE0C25+1098485]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7E7B99E31+281249]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7E7B945B4+258596]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7E7B946EF+258911]
+	Microsoft::Applications::Events::ILogConfiguration::operator* [0x00007FF7E7B88EC1+211761]
+	BaseThreadInitThunk [0x00007FF9E82B257D+29]
+	RtlUserThreadStart [0x00007FF9E99AAA58+40]
+</msg>
+<status status="FAIL" starttime="20240314 12:20:20.320" endtime="20240314 12:20:23.026"/>
 </kw>
-<kw name="Then Click on More icon in portfolio name, Click on Edit button,Enter Data and click on cancel button" library="Portfolio_Management_Support">
-<status status="NOT RUN" starttime="20240312 12:33:05.511" endtime="20240312 12:33:05.511"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:30.035" level="INFO">Clicking element '//span[@id="icon-System Settings"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:30.034" endtime="20240314 12:20:31.506"/>
 </kw>
-<kw name="Then Click on More icon in portfolio name, click on Edit button, Enter the data and click on save button" library="Portfolio_Management_Support">
-<status status="NOT RUN" starttime="20240312 12:33:05.511" endtime="20240312 12:33:05.511"/>
+<status status="PASS" starttime="20240314 12:20:20.319" endtime="20240314 12:20:31.506"/>
 </kw>
-<kw name="Then Click on More icon in Portfolio name, click on Delete Button and Click on Cancel Button" library="Portfolio_Management_Support">
-<status status="NOT RUN" starttime="20240312 12:33:05.511" endtime="20240312 12:33:05.511"/>
+<status status="PASS" starttime="20240314 12:20:14.038" endtime="20240314 12:20:31.506"/>
 </kw>
-<kw name="Then Click on More icon in Portfolio name, click on Delete Button and Click on Confirm button" library="Portfolio_Management_Support">
-<status status="NOT RUN" starttime="20240312 12:33:05.511" endtime="20240312 12:33:05.511"/>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${TAB_Product_Squad_Role}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:31.507" endtime="20240314 12:20:32.236"/>
 </kw>
-<kw name="Then Close the Browser" library="Portfolio_Management_Support">
-<status status="NOT RUN" starttime="20240312 12:33:05.511" endtime="20240312 12:33:05.511"/>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:32.237" level="INFO">Clicking element '//div[@id="system-settings-product-squad-roles"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:32.237" endtime="20240314 12:20:33.788"/>
 </kw>
-<doc>Portfolio Create,Edit,Search,Delete</doc>
-<tag>Name:Gayathri</tag>
-<tag>Portfolio_Managament</tag>
+<status status="PASS" starttime="20240314 12:20:32.236" endtime="20240314 12:20:33.788"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:31.506" endtime="20240314 12:20:33.789"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:14.037" endtime="20240314 12:20:33.789"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:14.036" endtime="20240314 12:20:33.789"/>
+</kw>
+<kw name="Then Click on Add Role button, Don't enter Mandatory fields and Click on cancel button" library="Product_Squad_Role_Support">
+<kw name="Verify Save should be Disabled and Category shouldn't be created." library="Product_Squad_Role_Support">
+<kw name="Add Product Squad Role" library="common_1">
+<arg>${PSR_Product_Squad_Role}</arg>
+<arg>${PSR_Produt_Squad_Role_Description}</arg>
+<arg>${BTN_Cancel}</arg>
+<doc>Using this Keyword we can add Product Squad Role</doc>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Add_Role}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:33.793" endtime="20240314 12:20:34.518"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:34.521" level="INFO">Clicking element '//button[@id="product-squad-add-role"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:34.521" endtime="20240314 12:20:35.995"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:34.519" endtime="20240314 12:20:35.996"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:33.791" endtime="20240314 12:20:35.996"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_Product_Squad_Role}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:35.997" endtime="20240314 12:20:36.716"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Product_Squad_Role}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:36.717" level="INFO">Typing text 'Create Product Squad Role 52' into text field '//input[@id="product-squad-role-name"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:36.717" endtime="20240314 12:20:39.693"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_Product_Squad_Role_Description}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:39.694" endtime="20240314 12:20:40.419"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Product_Squad_Role_Description}</arg>
+<arg>${Description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:40.419" level="INFO">Typing text 'Product Squad Role description' into text field '//textarea[@id="product-squad-role-description"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:40.419" endtime="20240314 12:20:43.394"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:43.396" endtime="20240314 12:20:44.123"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:44.124" level="INFO">Clicking element '//p[text()="Cancel"]/parent::button'.</msg>
+<status status="PASS" starttime="20240314 12:20:44.124" endtime="20240314 12:20:45.630"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:44.123" endtime="20240314 12:20:45.631"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:43.395" endtime="20240314 12:20:45.631"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:33.791" endtime="20240314 12:20:45.633"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:33.789" endtime="20240314 12:20:45.633"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:33.789" endtime="20240314 12:20:45.634"/>
+</kw>
+<kw name="Then Click on Add Role button, Enter Mandatory fields and click on save button" library="Product_Squad_Role_Support">
+<kw name="Verify Save button should be Enabled and Category should be created." library="Product_Squad_Role_Support">
+<kw name="Add Product Squad Role" library="common_1">
+<arg>${PSR_Product_Squad_Role}</arg>
+<arg>${PSR_Produt_Squad_Role_Description}</arg>
+<arg>${BTN_Save}</arg>
+<doc>Using this Keyword we can add Product Squad Role</doc>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Add_Role}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:45.637" endtime="20240314 12:20:46.348"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:46.353" level="INFO">Clicking element '//button[@id="product-squad-add-role"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:46.351" endtime="20240314 12:20:47.826"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:46.349" endtime="20240314 12:20:47.826"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:45.636" endtime="20240314 12:20:47.827"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_Product_Squad_Role}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:47.827" endtime="20240314 12:20:48.550"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Product_Squad_Role}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:48.553" level="INFO">Typing text 'Create Product Squad Role 52' into text field '//input[@id="product-squad-role-name"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:48.551" endtime="20240314 12:20:51.467"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_Product_Squad_Role_Description}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:51.467" endtime="20240314 12:20:52.191"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Product_Squad_Role_Description}</arg>
+<arg>${Description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:52.194" level="INFO">Typing text 'Product Squad Role description' into text field '//textarea[@id="product-squad-role-description"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:52.193" endtime="20240314 12:20:55.116"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:55.117" endtime="20240314 12:20:55.842"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:55.845" level="INFO">Clicking element '//p[text()="Save"]/parent::button'.</msg>
+<status status="PASS" starttime="20240314 12:20:55.844" endtime="20240314 12:20:57.359"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:55.843" endtime="20240314 12:20:57.359"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:55.116" endtime="20240314 12:20:57.359"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:45.636" endtime="20240314 12:20:57.359"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:45.635" endtime="20240314 12:20:57.359"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:45.634" endtime="20240314 12:20:57.359"/>
+</kw>
+<kw name="Then Click on the Search bar and Enter Invalid product Squad Role name" library="Product_Squad_Role_Support">
+<kw name="Verify an error message shouble be display as &quot; No results found&quot;." library="Product_Squad_Role_Support">
+<kw name="Search Data" library="common_1">
+<arg>${Input_Search_Product_Squad_Role}</arg>
+<arg>${PSR_Product_Squad_Role_Invalid}</arg>
+<doc>using this keyword we can search portfolio</doc>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:57.361" endtime="20240314 12:20:58.075"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:58.077" level="INFO">Clicking element '//input[@id="product-squad-roles-search-input"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:58.077" endtime="20240314 12:20:59.549"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:58.076" endtime="20240314 12:20:59.549"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:57.361" endtime="20240314 12:20:59.551"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:20:59.551" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id="product-squad-roles-search-input"] element.</msg>
+<msg timestamp="20240314 12:21:01.261" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240314 12:21:01.261" level="INFO">Sending key A</msg>
+<msg timestamp="20240314 12:21:01.261" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240314 12:21:01.261" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240314 12:21:01.261" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240314 12:20:59.551" endtime="20240314 12:21:01.990"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240314 12:21:02.994" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240314 12:21:01.991" endtime="20240314 12:21:02.994"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Name}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:02.995" level="INFO">Sending key(s) ('Product Squad Invalid',) to //input[@id="product-squad-roles-search-input"] element.</msg>
+<msg timestamp="20240314 12:21:04.691" level="INFO">Sending keys Product Squad Invalid</msg>
+<status status="PASS" starttime="20240314 12:21:02.994" endtime="20240314 12:21:05.661"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:57.361" endtime="20240314 12:21:05.661"/>
+</kw>
+<kw name="Check element is present" library="common_1">
+<arg>${TXT_NO_DATA}</arg>
+<doc>using this keyword we can check element is present</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:05.663" endtime="20240314 12:21:08.226"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240314 12:21:08.956" level="INFO">Current page contains element '//p[text()="No records to display"]'.</msg>
+<status status="PASS" starttime="20240314 12:21:08.228" endtime="20240314 12:21:08.956"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:05.662" endtime="20240314 12:21:08.956"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:57.359" endtime="20240314 12:21:08.957"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:57.359" endtime="20240314 12:21:08.957"/>
+</kw>
+<kw name="Then Click on the Search bar and Enter Valid Product Squad role name" library="Product_Squad_Role_Support">
+<kw name="Verify if the Product Squad Role Record should be Filtered and Displayed" library="Product_Squad_Role_Support">
+<kw name="Search Data" library="common_1">
+<arg>${Input_Search_Product_Squad_Role}</arg>
+<arg>${PSR_Product_Squad_Role}</arg>
+<doc>using this keyword we can search portfolio</doc>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:08.961" endtime="20240314 12:21:09.674"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:21:09.675" level="INFO">Clicking element '//input[@id="product-squad-roles-search-input"]'.</msg>
+<status status="PASS" starttime="20240314 12:21:09.675" endtime="20240314 12:21:11.153"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:09.674" endtime="20240314 12:21:11.153"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:08.961" endtime="20240314 12:21:11.153"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:11.154" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id="product-squad-roles-search-input"] element.</msg>
+<msg timestamp="20240314 12:21:12.853" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240314 12:21:12.853" level="INFO">Sending key A</msg>
+<msg timestamp="20240314 12:21:12.853" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240314 12:21:12.853" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240314 12:21:12.853" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240314 12:21:11.153" endtime="20240314 12:21:13.582"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240314 12:21:14.595" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240314 12:21:13.582" endtime="20240314 12:21:14.595"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Name}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:14.596" level="INFO">Sending key(s) ('Create Product Squad Role 52',) to //input[@id="product-squad-roles-search-input"] element.</msg>
+<msg timestamp="20240314 12:21:16.302" level="INFO">Sending keys Create Product Squad Role 52</msg>
+<status status="PASS" starttime="20240314 12:21:14.595" endtime="20240314 12:21:17.454"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:08.960" endtime="20240314 12:21:17.455"/>
+</kw>
+<kw name="Verify a Product Squad Role is displayed" library="common_1">
+<arg>${PSR_Product_Squad_Role}</arg>
+<doc>Using this keyword we can display Product Squad Role</doc>
+<kw name="Format String" library="String">
+<var>${Product_Squad_Role}</var>
+<arg>${Navigate_Product_Squad_Role}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:21:17.456" level="INFO">${Product_Squad_Role} = //td[@id="custom-id-Create Product Squad Role 52"]/parent::tr</msg>
+<status status="PASS" starttime="20240314 12:21:17.456" endtime="20240314 12:21:17.456"/>
+</kw>
+<kw name="Check element is present" library="common_1">
+<arg>${Product_Squad_Role}</arg>
+<doc>using this keyword we can check element is present</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:17.457" endtime="20240314 12:21:18.172"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240314 12:21:18.890" level="INFO">Current page contains element '//td[@id="custom-id-Create Product Squad Role 52"]/parent::tr'.</msg>
+<status status="PASS" starttime="20240314 12:21:18.172" endtime="20240314 12:21:18.890"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:17.457" endtime="20240314 12:21:18.891"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:17.455" endtime="20240314 12:21:18.892"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:08.958" endtime="20240314 12:21:18.892"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:08.957" endtime="20240314 12:21:18.893"/>
+</kw>
+<kw name="Then Click on Edit button in Kebab button,Enter the data and Click on Cancel button" library="Product_Squad_Role_Support">
+<kw name="Verify if Product Squal Role name should not be changed" library="Product_Squad_Role_Support">
+<kw name="Click the Kebab button in Product Squad Role" library="common_1">
+<arg>${PSR_Product_Squad_Role}</arg>
+<doc>Using this keyword we can click kebab</doc>
+<kw name="Format String" library="String">
+<var>${Product_Squad_Role}</var>
+<arg>${BTN_Product_Squad_Role_Kebab}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:21:18.898" level="INFO">${Product_Squad_Role} = //div[@id="product-squad-role-more-btn-Create Product Squad Role 52"]</msg>
+<status status="PASS" starttime="20240314 12:21:18.896" endtime="20240314 12:21:18.898"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Product_Squad_Role}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:18.899" endtime="20240314 12:21:20.542"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:21:20.544" level="INFO">Clicking element '//div[@id="product-squad-role-more-btn-Create Product Squad Role 52"]'.</msg>
+<status status="PASS" starttime="20240314 12:21:20.544" endtime="20240314 12:21:21.998"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:20.543" endtime="20240314 12:21:21.999"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:18.898" endtime="20240314 12:21:21.999"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:18.895" endtime="20240314 12:21:22.000"/>
+</kw>
+<kw name="Edit Product Squad Role" library="common_1">
+<arg>${PSR_Product_Squad_Role}</arg>
+<arg>${PSR_Produt_Squad_Role_Update}</arg>
+<arg>${PSR_Product_Squad_Role_Description_Update}</arg>
+<arg>${BTN_Cancel}</arg>
+<doc>Using this we can Click Edit Category</doc>
+<kw name="Format String" library="String">
+<var>${Product_Squad_Role_edit}</var>
+<arg>${BTN_Product_Squad_Role_Edit}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:21:22.004" level="INFO">${Product_Squad_Role_edit} = //li[@id="product-squad-role-edit-Create Product Squad Role 52"]</msg>
+<status status="PASS" starttime="20240314 12:21:22.003" endtime="20240314 12:21:22.004"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Product_Squad_Role_edit}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:22.005" endtime="20240314 12:21:22.732"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:21:22.735" level="INFO">Clicking element '//li[@id="product-squad-role-edit-Create Product Squad Role 52"]'.</msg>
+<status status="PASS" starttime="20240314 12:21:22.733" endtime="20240314 12:21:24.224"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:22.732" endtime="20240314 12:21:24.225"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:22.004" endtime="20240314 12:21:24.225"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Product_Squad_Role}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:24.228" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id="product-squad-role-name"] element.</msg>
+<msg timestamp="20240314 12:21:25.929" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240314 12:21:25.929" level="INFO">Sending key A</msg>
+<msg timestamp="20240314 12:21:25.929" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240314 12:21:25.929" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240314 12:21:25.929" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240314 12:21:24.225" endtime="20240314 12:21:26.673"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Product_Squad_Role}</arg>
+<arg>${name1}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:26.675" level="INFO">Sending key(s) ('Update Product Squad Role 52',) to //input[@id="product-squad-role-name"] element.</msg>
+<msg timestamp="20240314 12:21:28.367" level="INFO">Sending keys Update Product Squad Role 52</msg>
+<status status="PASS" starttime="20240314 12:21:26.673" endtime="20240314 12:21:29.551"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Product_Squad_Role_Description}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:29.553" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //textarea[@id="product-squad-role-description"] element.</msg>
+<msg timestamp="20240314 12:21:31.274" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240314 12:21:31.274" level="INFO">Sending key A</msg>
+<msg timestamp="20240314 12:21:31.274" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240314 12:21:31.274" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240314 12:21:31.274" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240314 12:21:29.551" endtime="20240314 12:21:32.027"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Product_Squad_Role_Description}</arg>
+<arg>${Description2}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:32.030" level="INFO">Sending key(s) ('Product Squad Description Update',) to //textarea[@id="product-squad-role-description"] element.</msg>
+<msg timestamp="20240314 12:21:33.753" level="INFO">Sending keys Product Squad Description Update</msg>
+<status status="PASS" starttime="20240314 12:21:32.028" endtime="20240314 12:21:34.982"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:34.982" endtime="20240314 12:21:35.701"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:21:35.704" level="INFO">Clicking element '//p[text()="Cancel"]/parent::button'.</msg>
+<status status="PASS" starttime="20240314 12:21:35.703" endtime="20240314 12:21:37.205"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:35.701" endtime="20240314 12:21:37.206"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:34.982" endtime="20240314 12:21:37.206"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:22.001" endtime="20240314 12:21:37.207"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:18.894" endtime="20240314 12:21:37.207"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:18.893" endtime="20240314 12:21:37.207"/>
+</kw>
+<kw name="Then Click on Edit button in Kebab button, Enter the data and Click on Save button" library="Product_Squad_Role_Support">
+<kw name="Verify if Product Squal Role name should be changed" library="Product_Squad_Role_Support">
+<kw name="Click the Kebab button in Product Squad Role" library="common_1">
+<arg>${PSR_Product_Squad_Role}</arg>
+<doc>Using this keyword we can click kebab</doc>
+<kw name="Format String" library="String">
+<var>${Product_Squad_Role}</var>
+<arg>${BTN_Product_Squad_Role_Kebab}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:21:37.212" level="INFO">${Product_Squad_Role} = //div[@id="product-squad-role-more-btn-Create Product Squad Role 52"]</msg>
+<status status="PASS" starttime="20240314 12:21:37.211" endtime="20240314 12:21:37.212"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Product_Squad_Role}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:37.213" endtime="20240314 12:21:37.925"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:21:37.928" level="INFO">Clicking element '//div[@id="product-squad-role-more-btn-Create Product Squad Role 52"]'.</msg>
+<status status="PASS" starttime="20240314 12:21:37.927" endtime="20240314 12:21:39.414"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:37.926" endtime="20240314 12:21:39.414"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:37.212" endtime="20240314 12:21:39.415"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:37.209" endtime="20240314 12:21:39.415"/>
+</kw>
+<kw name="Edit Product Squad Role" library="common_1">
+<arg>${PSR_Product_Squad_Role}</arg>
+<arg>${PSR_Produt_Squad_Role_Update}</arg>
+<arg>${PSR_Product_Squad_Role_Description_Update}</arg>
+<arg>${BTN_Save}</arg>
+<doc>Using this we can Click Edit Category</doc>
+<kw name="Format String" library="String">
+<var>${Product_Squad_Role_edit}</var>
+<arg>${BTN_Product_Squad_Role_Edit}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:21:39.418" level="INFO">${Product_Squad_Role_edit} = //li[@id="product-squad-role-edit-Create Product Squad Role 52"]</msg>
+<status status="PASS" starttime="20240314 12:21:39.417" endtime="20240314 12:21:39.418"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Product_Squad_Role_edit}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:39.419" endtime="20240314 12:21:40.131"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:21:40.131" level="INFO">Clicking element '//li[@id="product-squad-role-edit-Create Product Squad Role 52"]'.</msg>
+<status status="PASS" starttime="20240314 12:21:40.131" endtime="20240314 12:21:41.628"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:40.131" endtime="20240314 12:21:41.628"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:39.418" endtime="20240314 12:21:41.629"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Product_Squad_Role}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:41.630" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id="product-squad-role-name"] element.</msg>
+<msg timestamp="20240314 12:21:43.333" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240314 12:21:43.333" level="INFO">Sending key A</msg>
+<msg timestamp="20240314 12:21:43.333" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240314 12:21:43.333" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240314 12:21:43.333" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240314 12:21:41.629" endtime="20240314 12:21:44.082"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Product_Squad_Role}</arg>
+<arg>${name1}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:44.084" level="INFO">Sending key(s) ('Update Product Squad Role 52',) to //input[@id="product-squad-role-name"] element.</msg>
+<msg timestamp="20240314 12:21:45.781" level="INFO">Sending keys Update Product Squad Role 52</msg>
+<status status="PASS" starttime="20240314 12:21:44.082" endtime="20240314 12:21:47.025"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Product_Squad_Role_Description}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:47.026" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //textarea[@id="product-squad-role-description"] element.</msg>
+<msg timestamp="20240314 12:21:48.763" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240314 12:21:48.763" level="INFO">Sending key A</msg>
+<msg timestamp="20240314 12:21:48.763" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240314 12:21:48.763" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240314 12:21:48.764" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240314 12:21:47.025" endtime="20240314 12:21:49.505"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Product_Squad_Role_Description}</arg>
+<arg>${Description2}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:49.508" level="INFO">Sending key(s) ('Product Squad Description Update',) to //textarea[@id="product-squad-role-description"] element.</msg>
+<msg timestamp="20240314 12:21:51.231" level="INFO">Sending keys Product Squad Description Update</msg>
+<status status="PASS" starttime="20240314 12:21:49.505" endtime="20240314 12:21:52.555"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:52.556" endtime="20240314 12:21:53.288"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:21:53.293" level="INFO">Clicking element '//p[text()="Save"]/parent::button'.</msg>
+<status status="PASS" starttime="20240314 12:21:53.292" endtime="20240314 12:21:54.778"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:53.290" endtime="20240314 12:21:54.779"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:52.555" endtime="20240314 12:21:54.779"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:39.416" endtime="20240314 12:21:54.779"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:37.208" endtime="20240314 12:21:54.780"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:37.208" endtime="20240314 12:21:54.780"/>
+</kw>
+<kw name="Then Click on Delete Button in Kebab button and Click on Cancel Button" library="Product_Squad_Role_Support">
+<kw name="Verify a Product Squal Role name Should not be deleted" library="Product_Squad_Role_Support">
+<kw name="Search Data" library="common_1">
+<arg>${Input_Search_Product_Squad_Role}</arg>
+<arg>${PSR_Produt_Squad_Role_Update}</arg>
+<doc>using this keyword we can search portfolio</doc>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:54.785" endtime="20240314 12:21:55.497"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:21:55.498" level="INFO">Clicking element '//input[@id="product-squad-roles-search-input"]'.</msg>
+<status status="PASS" starttime="20240314 12:21:55.498" endtime="20240314 12:21:56.971"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:55.497" endtime="20240314 12:21:56.971"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:54.784" endtime="20240314 12:21:56.971"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:56.972" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id="product-squad-roles-search-input"] element.</msg>
+<msg timestamp="20240314 12:21:58.674" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240314 12:21:58.674" level="INFO">Sending key A</msg>
+<msg timestamp="20240314 12:21:58.675" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240314 12:21:58.675" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240314 12:21:58.675" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240314 12:21:56.972" endtime="20240314 12:21:59.406"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240314 12:22:00.416" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240314 12:21:59.407" endtime="20240314 12:22:00.417"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Name}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:22:00.419" level="INFO">Sending key(s) ('Update Product Squad Role 52',) to //input[@id="product-squad-roles-search-input"] element.</msg>
+<msg timestamp="20240314 12:22:02.133" level="INFO">Sending keys Update Product Squad Role 52</msg>
+<status status="PASS" starttime="20240314 12:22:00.417" endtime="20240314 12:22:03.211"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:54.783" endtime="20240314 12:22:03.211"/>
+</kw>
+<kw name="Click the Kebab button in Product Squad Role" library="common_1">
+<arg>${PSR_Produt_Squad_Role_Update}</arg>
+<doc>Using this keyword we can click kebab</doc>
+<kw name="Format String" library="String">
+<var>${Product_Squad_Role}</var>
+<arg>${BTN_Product_Squad_Role_Kebab}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:22:03.212" level="INFO">${Product_Squad_Role} = //div[@id="product-squad-role-more-btn-Update Product Squad Role 52"]</msg>
+<status status="PASS" starttime="20240314 12:22:03.211" endtime="20240314 12:22:03.212"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Product_Squad_Role}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:22:03.212" endtime="20240314 12:22:04.872"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:22:04.874" level="INFO">Clicking element '//div[@id="product-squad-role-more-btn-Update Product Squad Role 52"]'.</msg>
+<status status="PASS" starttime="20240314 12:22:04.873" endtime="20240314 12:22:06.326"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:04.873" endtime="20240314 12:22:06.326"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:03.212" endtime="20240314 12:22:06.326"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:03.211" endtime="20240314 12:22:06.327"/>
+</kw>
+<kw name="Delete Product Squad Role" library="common_1">
+<arg>${PSR_Produt_Squad_Role_Update}</arg>
+<doc>Using this keyword we can click delete button</doc>
+<kw name="Format String" library="String">
+<var>${Product_Squad_Role_Delete}</var>
+<arg>${BTN_Product_Squad_Role_Delete}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:22:06.328" level="INFO">${Product_Squad_Role_Delete} = //li[@id="product-squad-role-delete-Update Product Squad Role 52"]</msg>
+<status status="PASS" starttime="20240314 12:22:06.327" endtime="20240314 12:22:06.328"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Product_Squad_Role_Delete}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:22:06.329" endtime="20240314 12:22:07.046"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:22:07.047" level="INFO">Clicking element '//li[@id="product-squad-role-delete-Update Product Squad Role 52"]'.</msg>
+<status status="PASS" starttime="20240314 12:22:07.047" endtime="20240314 12:22:08.522"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:07.046" endtime="20240314 12:22:08.522"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:06.329" endtime="20240314 12:22:08.522"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:06.327" endtime="20240314 12:22:08.523"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Cancel}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:22:08.524" endtime="20240314 12:22:09.237"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:22:09.238" level="INFO">Clicking element '//p[text()="Cancel"]/parent::button'.</msg>
+<status status="PASS" starttime="20240314 12:22:09.238" endtime="20240314 12:22:10.710"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:09.237" endtime="20240314 12:22:10.710"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:08.523" endtime="20240314 12:22:10.711"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:54.782" endtime="20240314 12:22:10.711"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:54.782" endtime="20240314 12:22:10.712"/>
+</kw>
+<kw name="Then Click on Delete Button in Kebab button and Click on Save Button" library="Product_Squad_Role_Support">
+<kw name="Verify a Product Squal Role name Should be deleted" library="Product_Squad_Role_Support">
+<kw name="Click the Kebab button in Product Squad Role" library="common_1">
+<arg>${PSR_Produt_Squad_Role_Update}</arg>
+<doc>Using this keyword we can click kebab</doc>
+<kw name="Format String" library="String">
+<var>${Product_Squad_Role}</var>
+<arg>${BTN_Product_Squad_Role_Kebab}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:22:10.715" level="INFO">${Product_Squad_Role} = //div[@id="product-squad-role-more-btn-Update Product Squad Role 52"]</msg>
+<status status="PASS" starttime="20240314 12:22:10.715" endtime="20240314 12:22:10.715"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Product_Squad_Role}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:22:10.716" endtime="20240314 12:22:11.424"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:22:11.426" level="INFO">Clicking element '//div[@id="product-squad-role-more-btn-Update Product Squad Role 52"]'.</msg>
+<status status="PASS" starttime="20240314 12:22:11.425" endtime="20240314 12:22:12.889"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:11.425" endtime="20240314 12:22:12.889"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:10.715" endtime="20240314 12:22:12.890"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:10.714" endtime="20240314 12:22:12.890"/>
+</kw>
+<kw name="Delete Product Squad Role" library="common_1">
+<arg>${PSR_Produt_Squad_Role_Update}</arg>
+<doc>Using this keyword we can click delete button</doc>
+<kw name="Format String" library="String">
+<var>${Product_Squad_Role_Delete}</var>
+<arg>${BTN_Product_Squad_Role_Delete}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:22:12.891" level="INFO">${Product_Squad_Role_Delete} = //li[@id="product-squad-role-delete-Update Product Squad Role 52"]</msg>
+<status status="PASS" starttime="20240314 12:22:12.891" endtime="20240314 12:22:12.891"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Product_Squad_Role_Delete}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:22:12.891" endtime="20240314 12:22:13.617"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:22:13.619" level="INFO">Clicking element '//li[@id="product-squad-role-delete-Update Product Squad Role 52"]'.</msg>
+<status status="PASS" starttime="20240314 12:22:13.619" endtime="20240314 12:22:15.113"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:13.618" endtime="20240314 12:22:15.113"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:12.891" endtime="20240314 12:22:15.114"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:12.890" endtime="20240314 12:22:15.114"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Confirm}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:22:15.115" endtime="20240314 12:22:15.834"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:22:15.836" level="INFO">Clicking element '//p[text()="Confirm"]/parent::button'.</msg>
+<status status="PASS" starttime="20240314 12:22:15.835" endtime="20240314 12:22:17.343"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:15.834" endtime="20240314 12:22:17.344"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:15.114" endtime="20240314 12:22:17.344"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:10.712" endtime="20240314 12:22:17.345"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:10.712" endtime="20240314 12:22:17.345"/>
+</kw>
+<kw name="And Close the Browser" library="Product_Squad_Role_Support">
+<kw name="Verify Application should be Close" library="Product_Squad_Role_Support">
+<kw name="&quot;Close the Browser&quot;" library="common_1">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240314 12:22:17.348" endtime="20240314 12:22:20.118"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:17.347" endtime="20240314 12:22:20.119"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:17.346" endtime="20240314 12:22:20.119"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:17.345" endtime="20240314 12:22:20.120"/>
+</kw>
+<doc>Product Squad Role Create,Search,Edit and Delete</doc>
+<tag>Name:Amritha</tag>
+<tag>Product_Squad_Role</tag>
 <tag>Test</tag>
-<status status="FAIL" starttime="20240312 12:32:45.556" endtime="20240312 12:33:05.511">No keyword with name 'Use Encryption Key' found.</status>
+<status status="PASS" starttime="20240314 12:20:00.752" endtime="20240314 12:22:20.121"/>
 </test>
-<doc>Portfolio Create,Edit,Search,Delete</doc>
-<status status="FAIL" starttime="20240312 12:32:45.014" endtime="20240312 12:33:05.512"/>
+<doc>Create,Search,Edit and Delete Product Sqad Role</doc>
+<status status="PASS" starttime="20240314 12:20:00.108" endtime="20240314 12:22:20.123"/>
 </suite>
-<status status="FAIL" starttime="20240312 12:32:45.009" endtime="20240312 12:33:05.512"/>
+<status status="PASS" starttime="20240314 12:20:00.103" endtime="20240314 12:22:20.125"/>
 </suite>
-<status status="FAIL" starttime="20240312 12:32:45.005" endtime="20240312 12:33:05.513"/>
+<status status="PASS" starttime="20240314 12:20:00.101" endtime="20240314 12:22:20.126"/>
 </suite>
-<status status="FAIL" starttime="20240312 12:32:44.966" endtime="20240312 12:33:05.513"/>
+<status status="PASS" starttime="20240314 12:20:00.084" endtime="20240314 12:22:20.127"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">Name:Gayathri</stat>
-<stat pass="0" fail="1" skip="0">Portfolio_Managament</stat>
-<stat pass="0" fail="1" skip="0">Test</stat>
+<stat pass="1" fail="0" skip="0">Name:Amritha</stat>
+<stat pass="1" fail="0" skip="0">Product_Squad_Role</stat>
+<stat pass="1" fail="0" skip="0">Test</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Productor">Productor</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Testcase">Productor.Testcase</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Portfolio Management">Productor.Testcase.Portfolio Management</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Portfolio Management">Productor.Testcase.Portfolio Management.Portfolio Management</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Productor">Productor</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Testcase">Productor.Testcase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Product Squad Role">Productor.Testcase.Product Squad Role</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Product Squad Role">Productor.Testcase.Product Squad Role.Product Squad Role</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20240312 12:32:44.930" level="ERROR">Taking listener 'RobotStackTracer' into use failed: Importing listener 'RobotStackTracer' failed: ModuleNotFoundError: No module named 'RobotStackTracer'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Productor\.venv\Scripts\robot.exe
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\python310.zip
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\DLLs
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310
-  C:\Productor\.venv
-  C:\Productor\.venv\lib\site-packages</msg>
-<msg timestamp="20240312 12:32:45.103" level="ERROR">Error in file 'C:\Productor\Resources\common_1.robot' on line 887: Creating keyword 'Navigate to PPG' failed: Keyword with same name defined multiple times.</msg>
-<msg timestamp="20240312 12:32:45.540" level="ERROR">Error in file 'C:\Productor\Resources\Login.robot' on line 4: Importing library 'RPA.JSON' failed: ModuleNotFoundError: No module named 'RPA'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Productor\.venv\Scripts\robot.exe
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\python310.zip
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\DLLs
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310
-  C:\Productor\.venv
-  C:\Productor\.venv\lib\site-packages</msg>
-<msg timestamp="20240312 12:32:45.544" level="ERROR">Error in file 'C:\Productor\Resources\Login.robot' on line 5: Importing library 'RPA.Crypto' failed: ModuleNotFoundError: No module named 'RPA'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Productor\.venv\Scripts\robot.exe
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\python310.zip
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\DLLs
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310
-  C:\Productor\.venv
-  C:\Productor\.venv\lib\site-packages</msg>
+<msg timestamp="20240314 12:20:00.163" level="ERROR">Error in file 'C:\Productor\Resources\common_1.robot' on line 887: Creating keyword 'Navigate to PPG' failed: Keyword with same name defined multiple times.</msg>
 </errors>
 </robot>

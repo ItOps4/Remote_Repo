@@ -1,11 +1,8 @@
-datasources:6570a80fcc42f6467309e807e74e922b00d2caa0
+datasources:5d4cd79a793099823994c2629cb97f832da353d0
 commandlineoptions:7fe781a07a837c213f2b0d35d4f6d40f9a6557de
 suitesfrom:da39a3ee5e6b4b0d3255bfef95601890afd80709
-file:0a6017a59fdf87db92e128f18c479f66a325f44e
+file:0285cd86780afb07ed5edd904540e3ddd7a43f78
 --suite Productor.Testcase.Finance Configuration.Fin Configuration
 --suite Productor.Testcase.Finance Customize Budget.Finance Customize Budget
---suite Productor.Testcase.PPG Product Platform.PPG Product Platform
 --suite Productor.Testcase.Portfolio Management.Portfolio Management
---suite Productor.Testcase.Product Platform OKR Squad.Product Platform OKR Squad
---suite Productor.Testcase.Product Roadmap.Product Roadmap
 --suite Productor.Testcase.Product Squad Role.Product Squad Role

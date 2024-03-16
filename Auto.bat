@@ -10,7 +10,7 @@ MKDIR "output"
 
 Set Tags=Test
 
-Set Thread=4
+Set Thread=7
 
 pabot --suitesfrom .\Testcase\ --processes %Thread% -d .\output\ -i %Tags%  .
 

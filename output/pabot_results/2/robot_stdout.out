@@ -3,23 +3,22 @@ Productor
 ==============================================================================
 Productor.Testcase                                                            
 ==============================================================================
-Productor.Testcase.PPG Product Platform                                       
+Productor.Testcase.Portfolio Management                                       
 ==============================================================================
-Productor.Testcase.PPG Product Platform.PPG Product Platform :: Create,Sear...
+Productor.Testcase.Portfolio Management.Portfolio Management :: Portfolio C...
 ==============================================================================
-PPG and Product/Platform :: Create,Search,Edit and Delete PPG and ... | FAIL |
-No keyword with name 'Use Encryption Key' found.
+Portfolio Management :: Portfolio Create,Edit,Search,Delete           | PASS |
 ------------------------------------------------------------------------------
-Productor.Testcase.PPG Product Platform.PPG Product Platform :: Cr... | FAIL |
-1 test, 0 passed, 1 failed
+Productor.Testcase.Portfolio Management.Portfolio Management :: Po... | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
-Productor.Testcase.PPG Product Platform                               | FAIL |
-1 test, 0 passed, 1 failed
+Productor.Testcase.Portfolio Management                               | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
-Productor.Testcase                                                    | FAIL |
-1 test, 0 passed, 1 failed
+Productor.Testcase                                                    | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
-Productor                                                             | FAIL |
-1 test, 0 passed, 1 failed
+Productor                                                             | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
 Output:  C:\Productor\output\pabot_results\2\output.xml

@@ -7,19 +7,18 @@ Productor.Testcase.Finance Customize Budget
 ==============================================================================
 Productor.Testcase.Finance Customize Budget.Finance Customize Budget :: Fin...
 ==============================================================================
-Finance Customize Budget :: System Finance Customize Budget           | FAIL |
-No keyword with name 'Use Encryption Key' found.
+Finance Customize Budget :: System Finance Customize Budget           | PASS |
 ------------------------------------------------------------------------------
-Productor.Testcase.Finance Customize Budget.Finance Customize Budg... | FAIL |
-1 test, 0 passed, 1 failed
+Productor.Testcase.Finance Customize Budget.Finance Customize Budg... | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
-Productor.Testcase.Finance Customize Budget                           | FAIL |
-1 test, 0 passed, 1 failed
+Productor.Testcase.Finance Customize Budget                           | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
-Productor.Testcase                                                    | FAIL |
-1 test, 0 passed, 1 failed
+Productor.Testcase                                                    | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
-Productor                                                             | FAIL |
-1 test, 0 passed, 1 failed
+Productor                                                             | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
 Output:  C:\Productor\output\pabot_results\1\output.xml

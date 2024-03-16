@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.0 on win32)" generated="20240312 12:32:44.950" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.0 on win32)" generated="20240314 12:20:00.076" rpa="false" schemaversion="3">
 <suite id="s1" name="Productor" source="C:\Productor">
 <suite id="s1-s1" name="Testcase" source="C:\Productor\Testcase">
 <suite id="s1-s1-s1" name="Finance Configuration" source="C:\Productor\Testcase\Finance Configuration">
@@ -16,221 +16,1152 @@
 <var>${json_data}</var>
 <arg>Data/password.json</arg>
 <doc>Returns the contents of a specified file.</doc>
-<msg timestamp="20240312 12:32:45.557" level="INFO" html="true">Getting file '&lt;a href="file://C:\Productor\Data\password.json"&gt;C:\Productor\Data\password.json&lt;/a&gt;'.</msg>
-<msg timestamp="20240312 12:32:45.557" level="INFO">${json_data} = {
+<msg timestamp="20240314 12:20:00.756" level="INFO" html="true">Getting file '&lt;a href="file://C:\Productor\Data\password.json"&gt;C:\Productor\Data\password.json&lt;/a&gt;'.</msg>
+<msg timestamp="20240314 12:20:00.756" level="INFO">${json_data} = {
     "Tparthi@valuefactors.io": "gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==",
     "neeraj@codebyte.solutions": "gAAAAABlvf_wHd_s-rfaDVYJP09Sz...</msg>
-<status status="PASS" starttime="20240312 12:32:45.557" endtime="20240312 12:32:45.557"/>
+<status status="PASS" starttime="20240314 12:20:00.756" endtime="20240314 12:20:00.756"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${object}</var>
 <arg>json.loads('''${json_data}''')</arg>
 <arg>json</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240312 12:32:45.558" level="INFO">${object} = {'Tparthi@valuefactors.io': 'gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==', 'neeraj@codebyte.solutions': 'gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J...</msg>
-<status status="PASS" starttime="20240312 12:32:45.557" endtime="20240312 12:32:45.558"/>
+<msg timestamp="20240314 12:20:00.757" level="INFO">${object} = {'Tparthi@valuefactors.io': 'gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==', 'neeraj@codebyte.solutions': 'gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J...</msg>
+<status status="PASS" starttime="20240314 12:20:00.757" endtime="20240314 12:20:00.757"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${encry}</var>
 <arg>${object['${username}']}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20240312 12:32:45.563" level="INFO">${encry} = gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==</msg>
-<status status="PASS" starttime="20240312 12:32:45.558" endtime="20240312 12:32:45.563"/>
+<msg timestamp="20240314 12:20:00.762" level="INFO">${encry} = gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==</msg>
+<status status="PASS" starttime="20240314 12:20:00.758" endtime="20240314 12:20:00.762"/>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
 <arg>sys,selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<msg timestamp="20240312 12:32:45.564" level="INFO">${options} = &lt;selenium.webdriver.edge.options.Options object at 0x0000017E6BC48DF0&gt;</msg>
-<status status="PASS" starttime="20240312 12:32:45.563" endtime="20240312 12:32:45.564"/>
+<msg timestamp="20240314 12:20:00.764" level="INFO">${options} = &lt;selenium.webdriver.edge.options.Options object at 0x0000020B37142EC0&gt;</msg>
+<status status="PASS" starttime="20240314 12:20:00.764" endtime="20240314 12:20:00.764"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>inprivate</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240312 12:32:45.565" endtime="20240312 12:32:45.565"/>
+<status status="PASS" starttime="20240314 12:20:00.764" endtime="20240314 12:20:00.765"/>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--headless</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" starttime="20240312 12:32:45.565" endtime="20240312 12:32:45.565"/>
+<status status="PASS" starttime="20240314 12:20:00.765" endtime="20240314 12:20:00.765"/>
 </kw>
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <var>${driver}</var>
 <arg>Edge</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20240312 12:32:45.566" level="INFO">Creating an instance of the Edge WebDriver.</msg>
-<msg timestamp="20240312 12:32:45.577" level="INFO">Applicable driver not found; attempting to install with Selenium Manager (Beta)</msg>
-<msg timestamp="20240312 12:32:49.882" level="INFO">${driver} = 1</msg>
-<status status="PASS" starttime="20240312 12:32:45.565" endtime="20240312 12:32:49.882"/>
+<msg timestamp="20240314 12:20:00.766" level="INFO">Creating an instance of the Edge WebDriver.</msg>
+<msg timestamp="20240314 12:20:04.502" level="INFO">${driver} = 1</msg>
+<status status="PASS" starttime="20240314 12:20:00.765" endtime="20240314 12:20:04.502"/>
 </kw>
 <kw name="Set Window Size" library="SeleniumLibrary">
 <arg>1920</arg>
 <arg>1080</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" starttime="20240312 12:32:49.884" endtime="20240312 12:32:50.008"/>
+<status status="PASS" starttime="20240314 12:20:04.502" endtime="20240314 12:20:04.618"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${Productor_Url}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240312 12:32:50.009" level="INFO">Opening url 'https://predev-productor.valuefactors.io/auth/login/'</msg>
-<status status="PASS" starttime="20240312 12:32:50.008" endtime="20240312 12:32:51.712"/>
+<msg timestamp="20240314 12:20:04.619" level="INFO">Opening url 'https://predev-productor.valuefactors.io/auth/login/'</msg>
+<status status="PASS" starttime="20240314 12:20:04.618" endtime="20240314 12:20:09.261"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240312 12:32:51.712" endtime="20240312 12:32:54.273"/>
+<status status="PASS" starttime="20240314 12:20:09.262" endtime="20240314 12:20:09.372"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>700milliseconds</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20240312 12:32:54.273" endtime="20240312 12:32:54.273"/>
+<status status="PASS" starttime="20240314 12:20:09.373" endtime="20240314 12:20:09.373"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${Input_Username}</arg>
 <arg>50</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20240312 12:32:54.273" endtime="20240312 12:32:55.006"/>
+<status status="PASS" starttime="20240314 12:20:09.373" endtime="20240314 12:20:10.087"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>${Input_Username}</arg>
 <arg>${username}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20240312 12:32:55.010" level="INFO">Sending key(s) ('Tparthi@valuefactors.io',) to //input[@id="auth-email-id"] element.</msg>
-<msg timestamp="20240312 12:32:56.728" level="INFO">Sending keys Tparthi@valuefactors.io</msg>
-<status status="PASS" starttime="20240312 12:32:55.007" endtime="20240312 12:32:57.537"/>
+<msg timestamp="20240314 12:20:10.088" level="INFO">Sending key(s) ('Tparthi@valuefactors.io',) to //input[@id="auth-email-id"] element.</msg>
+<msg timestamp="20240314 12:20:11.793" level="INFO">Sending keys Tparthi@valuefactors.io</msg>
+<status status="PASS" starttime="20240314 12:20:10.087" endtime="20240314 12:20:12.583"/>
 </kw>
-<kw name="Use Encryption Key">
+<kw name="Use Encryption Key" library="RPA.Crypto">
 <arg>${public_key}</arg>
-<msg timestamp="20240312 12:32:57.545" level="FAIL">No keyword with name 'Use Encryption Key' found.</msg>
-<status status="FAIL" starttime="20240312 12:32:57.545" endtime="20240312 12:32:57.545"/>
+<doc>Set key for all following encryption/decryption operations.</doc>
+<msg timestamp="20240314 12:20:12.584" level="INFO">Protecting keyword: RPA.Crypto.Use Encryption Key</msg>
+<msg timestamp="20240314 12:20:12.584" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240314 12:20:12.583" endtime="20240314 12:20:12.584"/>
 </kw>
-<kw name="Decrypt String">
+<kw name="Decrypt String" library="RPA.Crypto">
 <var>${Decry}</var>
 <arg>${encry}</arg>
-<status status="NOT RUN" starttime="20240312 12:32:57.554" endtime="20240312 12:32:57.554"/>
+<doc>Decrypt a string.</doc>
+<msg timestamp="20240314 12:20:12.586" level="INFO">${Decry} = Productor@01</msg>
+<status status="PASS" starttime="20240314 12:20:12.584" endtime="20240314 12:20:12.586"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${Decry}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" starttime="20240312 12:32:57.554" endtime="20240312 12:32:57.554"/>
+<msg timestamp="20240314 12:20:12.587" level="INFO">Productor@01</msg>
+<status status="PASS" starttime="20240314 12:20:12.586" endtime="20240314 12:20:12.587"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>${Input_Password}</arg>
 <arg>${Decry}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="NOT RUN" starttime="20240312 12:32:57.554" endtime="20240312 12:32:57.554"/>
+<msg timestamp="20240314 12:20:12.587" level="INFO">Sending key(s) ('Productor@01',) to //input[@id="auth-password"] element.</msg>
+<msg timestamp="20240314 12:20:14.437" level="INFO">Sending keys Productor@01</msg>
+<status status="PASS" starttime="20240314 12:20:12.587" endtime="20240314 12:20:15.191"/>
 </kw>
 <kw name="Wait Until Element is present then click the element" library="common_1">
 <arg>${BTN_Login}</arg>
 <doc>Using this keyword we can perform click Element</doc>
-<status status="NOT RUN" starttime="20240312 12:32:57.554" endtime="20240312 12:32:57.554"/>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:15.195" endtime="20240314 12:20:15.929"/>
 </kw>
-<status status="FAIL" starttime="20240312 12:32:45.556" endtime="20240312 12:32:57.554"/>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:15.934" level="INFO">Clicking element '//p[text()="Sign In"]/parent::button'.</msg>
+<status status="PASS" starttime="20240314 12:20:15.931" endtime="20240314 12:20:17.484"/>
 </kw>
-<status status="FAIL" starttime="20240312 12:32:45.555" endtime="20240312 12:32:57.554"/>
+<status status="PASS" starttime="20240314 12:20:15.931" endtime="20240314 12:20:17.484"/>
 </kw>
-<status status="FAIL" starttime="20240312 12:32:45.539" endtime="20240312 12:32:57.555"/>
+<status status="PASS" starttime="20240314 12:20:15.192" endtime="20240314 12:20:17.485"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:00.755" endtime="20240314 12:20:17.486"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:00.755" endtime="20240314 12:20:17.487"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:00.754" endtime="20240314 12:20:17.487"/>
 </kw>
 <kw name="When Click on the System Settings Icon" library="Fin_Configuration_Support">
-<status status="NOT RUN" starttime="20240312 12:32:57.555" endtime="20240312 12:32:57.555"/>
+<kw name="Verify it should display Finance Configuration Tab by Default" library="Fin_Configuration_Support">
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Icon_SystemSettings}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:17.490" endtime="20240314 12:20:28.914"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:28.915" level="INFO">Clicking element '//span[@id="icon-System Settings"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:28.915" endtime="20240314 12:20:30.390"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:28.914" endtime="20240314 12:20:30.391"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:17.490" endtime="20240314 12:20:30.391"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:17.487" endtime="20240314 12:20:30.393"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:17.487" endtime="20240314 12:20:30.393"/>
 </kw>
 <kw name="Then Click on Add Category button, Don't enter Mandatory fields and Click on cancel button" library="Fin_Configuration_Support">
-<status status="NOT RUN" starttime="20240312 12:32:57.555" endtime="20240312 12:32:57.555"/>
+<kw name="Verify Save Button should be disabled and Category shouldn't be created" library="Fin_Configuration_Support">
+<kw name="Add Category" library="common_1">
+<arg>${FC_Category}</arg>
+<arg>${FC_Category_Description}</arg>
+<arg>${BTN_Cancel}</arg>
+<doc>Using this keyword we can add category</doc>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Add_Category}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:30.401" endtime="20240314 12:20:32.981"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:32.982" level="INFO">Clicking element '//button[@id="finance-config-add-category"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:32.982" endtime="20240314 12:20:34.471"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:32.981" endtime="20240314 12:20:34.472"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:30.400" endtime="20240314 12:20:34.473"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_Category}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:34.473" endtime="20240314 12:20:35.196"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Category}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:35.197" level="INFO">Typing text 'Create Category 52' into text field '//input[@id="finance-config-category-name"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:35.197" endtime="20240314 12:20:37.895"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_Category_Description}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:37.896" endtime="20240314 12:20:38.629"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Category_Description}</arg>
+<arg>${Description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:38.629" level="INFO">Typing text 'Category description' into text field '//textarea[@id="finance-config-description"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:38.629" endtime="20240314 12:20:41.309"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:41.311" endtime="20240314 12:20:42.026"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:42.027" level="INFO">Clicking element '//p[text()="Cancel"]/parent::button'.</msg>
+<status status="PASS" starttime="20240314 12:20:42.027" endtime="20240314 12:20:43.518"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:42.026" endtime="20240314 12:20:43.519"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:41.309" endtime="20240314 12:20:43.520"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:30.398" endtime="20240314 12:20:43.520"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:30.396" endtime="20240314 12:20:43.521"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:30.394" endtime="20240314 12:20:43.521"/>
 </kw>
 <kw name="Then Click on Add Category button and enter Mandatory fields and Cick on Save button" library="Fin_Configuration_Support">
-<status status="NOT RUN" starttime="20240312 12:32:57.555" endtime="20240312 12:32:57.555"/>
+<kw name="Verify Save button should be enabled and Category should be created" library="Fin_Configuration_Support">
+<kw name="Add Category" library="common_1">
+<arg>${FC_Category}</arg>
+<arg>${FC_Category_Description}</arg>
+<arg>${BTN_Save}</arg>
+<doc>Using this keyword we can add category</doc>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Add_Category}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:43.527" endtime="20240314 12:20:44.247"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:44.249" level="INFO">Clicking element '//button[@id="finance-config-add-category"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:44.249" endtime="20240314 12:20:45.739"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:44.248" endtime="20240314 12:20:45.739"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:43.526" endtime="20240314 12:20:45.741"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_Category}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:45.741" endtime="20240314 12:20:46.469"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Category}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:46.471" level="INFO">Typing text 'Create Category 52' into text field '//input[@id="finance-config-category-name"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:46.470" endtime="20240314 12:20:49.094"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_Category_Description}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:49.095" endtime="20240314 12:20:49.811"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Category_Description}</arg>
+<arg>${Description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:49.813" level="INFO">Typing text 'Category description' into text field '//textarea[@id="finance-config-description"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:49.811" endtime="20240314 12:20:52.486"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:52.489" endtime="20240314 12:20:53.207"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:53.211" level="INFO">Clicking element '//p[text()="Save"]/parent::button'.</msg>
+<status status="PASS" starttime="20240314 12:20:53.209" endtime="20240314 12:20:54.712"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:53.207" endtime="20240314 12:20:54.712"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:52.488" endtime="20240314 12:20:54.713"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:43.525" endtime="20240314 12:20:54.713"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:43.524" endtime="20240314 12:20:54.714"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:43.521" endtime="20240314 12:20:54.714"/>
 </kw>
 <kw name="Then Click on the Search bar and Search by invalid Data" library="Fin_Configuration_Support">
-<status status="NOT RUN" starttime="20240312 12:32:57.555" endtime="20240312 12:32:57.555"/>
+<kw name="Verify an error message shouble be display as &quot; No results found&quot;." library="Fin_Configuration_Support">
+<kw name="Search Data" library="common_1">
+<arg>${Input_Search_FinanceConfiguration}</arg>
+<arg>${FC_Invalid_Category}</arg>
+<doc>using this keyword we can search portfolio</doc>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:20:54.718" endtime="20240314 12:20:55.441"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:20:55.443" level="INFO">Clicking element '//input[@id="finance-config-search-input"]'.</msg>
+<status status="PASS" starttime="20240314 12:20:55.443" endtime="20240314 12:20:56.972"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:55.442" endtime="20240314 12:20:56.973"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:54.717" endtime="20240314 12:20:56.974"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:20:56.975" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id="finance-config-search-input"] element.</msg>
+<msg timestamp="20240314 12:20:58.677" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240314 12:20:58.677" level="INFO">Sending key A</msg>
+<msg timestamp="20240314 12:20:58.677" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240314 12:20:58.677" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240314 12:20:58.677" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240314 12:20:56.974" endtime="20240314 12:20:59.411"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240314 12:21:00.421" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240314 12:20:59.413" endtime="20240314 12:21:00.421"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Name}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:00.422" level="INFO">Sending key(s) ('Category Invalid',) to //input[@id="finance-config-search-input"] element.</msg>
+<msg timestamp="20240314 12:21:02.131" level="INFO">Sending keys Category Invalid</msg>
+<status status="PASS" starttime="20240314 12:21:00.421" endtime="20240314 12:21:03.100"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:54.716" endtime="20240314 12:21:03.100"/>
+</kw>
+<kw name="Check element is present" library="common_1">
+<arg>${TXT_NO_DATA}</arg>
+<doc>using this keyword we can check element is present</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:03.101" endtime="20240314 12:21:05.661"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240314 12:21:06.379" level="INFO">Current page contains element '//p[text()="No records to display"]'.</msg>
+<status status="PASS" starttime="20240314 12:21:05.661" endtime="20240314 12:21:06.379"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:03.101" endtime="20240314 12:21:06.379"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:54.716" endtime="20240314 12:21:06.380"/>
+</kw>
+<status status="PASS" starttime="20240314 12:20:54.714" endtime="20240314 12:21:06.380"/>
 </kw>
 <kw name="Then Click on the Search bar and Search by which is created previously" library="Fin_Configuration_Support">
-<status status="NOT RUN" starttime="20240312 12:32:57.555" endtime="20240312 12:32:57.555"/>
+<kw name="Verify if Category Record should be Filtered and Displayed" library="Fin_Configuration_Support">
+<kw name="Search Data" library="common_1">
+<arg>${Input_Search_FinanceConfiguration}</arg>
+<arg>${FC_Category}</arg>
+<doc>using this keyword we can search portfolio</doc>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:06.393" endtime="20240314 12:21:07.111"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:21:07.113" level="INFO">Clicking element '//input[@id="finance-config-search-input"]'.</msg>
+<status status="PASS" starttime="20240314 12:21:07.113" endtime="20240314 12:21:08.585"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:07.111" endtime="20240314 12:21:08.585"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:06.392" endtime="20240314 12:21:08.585"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:08.586" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id="finance-config-search-input"] element.</msg>
+<msg timestamp="20240314 12:21:10.289" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240314 12:21:10.289" level="INFO">Sending key A</msg>
+<msg timestamp="20240314 12:21:10.289" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240314 12:21:10.289" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240314 12:21:10.289" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240314 12:21:08.586" endtime="20240314 12:21:11.044"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240314 12:21:12.057" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240314 12:21:11.044" endtime="20240314 12:21:12.057"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Name}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:12.058" level="INFO">Sending key(s) ('Create Category 52',) to //input[@id="finance-config-search-input"] element.</msg>
+<msg timestamp="20240314 12:21:13.783" level="INFO">Sending keys Create Category 52</msg>
+<status status="PASS" starttime="20240314 12:21:12.058" endtime="20240314 12:21:14.757"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:06.392" endtime="20240314 12:21:14.757"/>
+</kw>
+<kw name="Verify a Category is displayed" library="common_1">
+<arg>${FC_Category}</arg>
+<doc>Using this keyword we can Filter Category</doc>
+<kw name="Format String" library="String">
+<var>${Category}</var>
+<arg>${Navigate_Category}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:21:14.758" level="INFO">${Category} = //td[@id="custom-id-Create Category 52"]/parent::tr</msg>
+<status status="PASS" starttime="20240314 12:21:14.758" endtime="20240314 12:21:14.758"/>
+</kw>
+<kw name="Check element is present" library="common_1">
+<arg>${Category}</arg>
+<doc>using this keyword we can check element is present</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:14.758" endtime="20240314 12:21:15.474"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240314 12:21:16.193" level="INFO">Current page contains element '//td[@id="custom-id-Create Category 52"]/parent::tr'.</msg>
+<status status="PASS" starttime="20240314 12:21:15.474" endtime="20240314 12:21:16.193"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:14.758" endtime="20240314 12:21:16.194"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:14.757" endtime="20240314 12:21:16.194"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:06.391" endtime="20240314 12:21:16.195"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:06.380" endtime="20240314 12:21:16.195"/>
 </kw>
 <kw name="Then Click on Edit button in the More icon and Click on Cancel Button" library="Fin_Configuration_Support">
-<status status="NOT RUN" starttime="20240312 12:32:57.555" endtime="20240312 12:32:57.555"/>
+<kw name="Verify if category Fields should not be changed" library="Fin_Configuration_Support">
+<kw name="Click the Kebab button Category" library="common_1">
+<arg>${FC_Category}</arg>
+<doc>Using this keyword we can click the kebab button</doc>
+<kw name="Format String" library="String">
+<var>${Category_more_option}</var>
+<arg>${BTN_Category_Kebab}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:21:16.200" level="INFO">${Category_more_option} = //div[@id="finance-config-more-btn-Create Category 52"]</msg>
+<status status="PASS" starttime="20240314 12:21:16.198" endtime="20240314 12:21:16.201"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Category_more_option}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:16.202" endtime="20240314 12:21:16.925"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:21:16.926" level="INFO">Clicking element '//div[@id="finance-config-more-btn-Create Category 52"]'.</msg>
+<status status="PASS" starttime="20240314 12:21:16.926" endtime="20240314 12:21:18.391"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:16.925" endtime="20240314 12:21:18.391"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:16.201" endtime="20240314 12:21:18.391"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:16.197" endtime="20240314 12:21:18.391"/>
+</kw>
+<kw name="Edit Category" library="common_1">
+<arg>${FC_Category}</arg>
+<arg>${FC_Category_Update}</arg>
+<arg>${FC_Category_Description_Update}</arg>
+<arg>${BTN_Cancel}</arg>
+<doc>Using this Keyword we can Edit Category</doc>
+<kw name="Format String" library="String">
+<var>${Category_edit}</var>
+<arg>${BTN_Category_Edit}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:21:18.393" level="INFO">${Category_edit} = //li[@id="finance-config-edit-Create Category 52"]</msg>
+<status status="PASS" starttime="20240314 12:21:18.392" endtime="20240314 12:21:18.393"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Category_edit}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:18.393" endtime="20240314 12:21:19.107"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:21:19.111" level="INFO">Clicking element '//li[@id="finance-config-edit-Create Category 52"]'.</msg>
+<status status="PASS" starttime="20240314 12:21:19.110" endtime="20240314 12:21:20.604"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:19.108" endtime="20240314 12:21:20.605"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:18.393" endtime="20240314 12:21:20.606"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Category}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:20.607" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id="finance-config-category-name"] element.</msg>
+<msg timestamp="20240314 12:21:22.310" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240314 12:21:22.311" level="INFO">Sending key A</msg>
+<msg timestamp="20240314 12:21:22.311" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240314 12:21:22.311" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240314 12:21:22.311" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240314 12:21:20.606" endtime="20240314 12:21:23.058"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Category}</arg>
+<arg>${name_update}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:23.061" level="INFO">Sending key(s) ('Update Category 52',) to //input[@id="finance-config-category-name"] element.</msg>
+<msg timestamp="20240314 12:21:24.768" level="INFO">Sending keys Update Category 52</msg>
+<status status="PASS" starttime="20240314 12:21:23.059" endtime="20240314 12:21:25.774"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Category_Description}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:25.775" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //textarea[@id="finance-config-description"] element.</msg>
+<msg timestamp="20240314 12:21:27.502" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240314 12:21:27.502" level="INFO">Sending key A</msg>
+<msg timestamp="20240314 12:21:27.502" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240314 12:21:27.502" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240314 12:21:27.502" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240314 12:21:25.774" endtime="20240314 12:21:28.243"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Category_Description}</arg>
+<arg>${Description_Update}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:28.246" level="INFO">Sending key(s) ('Category description Update',) to //textarea[@id="finance-config-description"] element.</msg>
+<msg timestamp="20240314 12:21:29.970" level="INFO">Sending keys Category description Update</msg>
+<status status="PASS" starttime="20240314 12:21:28.244" endtime="20240314 12:21:31.121"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:31.124" endtime="20240314 12:21:31.856"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:21:31.859" level="INFO">Clicking element '//p[text()="Cancel"]/parent::button'.</msg>
+<status status="PASS" starttime="20240314 12:21:31.858" endtime="20240314 12:21:33.359"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:31.856" endtime="20240314 12:21:33.359"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:31.122" endtime="20240314 12:21:33.359"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:18.391" endtime="20240314 12:21:33.359"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:16.197" endtime="20240314 12:21:33.359"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:16.196" endtime="20240314 12:21:33.359"/>
 </kw>
 <kw name="Then Click on Edit button in the More icon and Click on Save Button" library="Fin_Configuration_Support">
-<status status="NOT RUN" starttime="20240312 12:32:57.555" endtime="20240312 12:32:57.555"/>
+<kw name="verify if category Fields should be changed" library="Fin_Configuration_Support">
+<kw name="Click the Kebab button Category" library="common_1">
+<arg>${FC_Category}</arg>
+<doc>Using this keyword we can click the kebab button</doc>
+<kw name="Format String" library="String">
+<var>${Category_more_option}</var>
+<arg>${BTN_Category_Kebab}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:21:33.362" level="INFO">${Category_more_option} = //div[@id="finance-config-more-btn-Create Category 52"]</msg>
+<status status="PASS" starttime="20240314 12:21:33.362" endtime="20240314 12:21:33.363"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Category_more_option}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:33.363" endtime="20240314 12:21:34.075"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:21:34.076" level="INFO">Clicking element '//div[@id="finance-config-more-btn-Create Category 52"]'.</msg>
+<status status="PASS" starttime="20240314 12:21:34.075" endtime="20240314 12:21:35.545"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:34.075" endtime="20240314 12:21:35.545"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:33.363" endtime="20240314 12:21:35.545"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:33.361" endtime="20240314 12:21:35.547"/>
+</kw>
+<kw name="Edit Category" library="common_1">
+<arg>${FC_Category}</arg>
+<arg>${FC_Category_Update}</arg>
+<arg>${FC_Category_Description_Update}</arg>
+<arg>${BTN_Save}</arg>
+<doc>Using this Keyword we can Edit Category</doc>
+<kw name="Format String" library="String">
+<var>${Category_edit}</var>
+<arg>${BTN_Category_Edit}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:21:35.549" level="INFO">${Category_edit} = //li[@id="finance-config-edit-Create Category 52"]</msg>
+<status status="PASS" starttime="20240314 12:21:35.549" endtime="20240314 12:21:35.549"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Category_edit}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:35.551" endtime="20240314 12:21:36.259"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:21:36.262" level="INFO">Clicking element '//li[@id="finance-config-edit-Create Category 52"]'.</msg>
+<status status="PASS" starttime="20240314 12:21:36.262" endtime="20240314 12:21:37.752"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:36.260" endtime="20240314 12:21:37.752"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:35.551" endtime="20240314 12:21:37.753"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Category}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:37.755" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id="finance-config-category-name"] element.</msg>
+<msg timestamp="20240314 12:21:39.478" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240314 12:21:39.479" level="INFO">Sending key A</msg>
+<msg timestamp="20240314 12:21:39.479" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240314 12:21:39.479" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240314 12:21:39.479" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240314 12:21:37.753" endtime="20240314 12:21:40.224"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Category}</arg>
+<arg>${name_update}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:40.225" level="INFO">Sending key(s) ('Update Category 52',) to //input[@id="finance-config-category-name"] element.</msg>
+<msg timestamp="20240314 12:21:41.917" level="INFO">Sending keys Update Category 52</msg>
+<status status="PASS" starttime="20240314 12:21:40.224" endtime="20240314 12:21:42.944"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Category_Description}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:42.945" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //textarea[@id="finance-config-description"] element.</msg>
+<msg timestamp="20240314 12:21:44.679" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240314 12:21:44.679" level="INFO">Sending key A</msg>
+<msg timestamp="20240314 12:21:44.679" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240314 12:21:44.679" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240314 12:21:44.679" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240314 12:21:42.944" endtime="20240314 12:21:45.425"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Category_Description}</arg>
+<arg>${Description_Update}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:45.429" level="INFO">Sending key(s) ('Category description Update',) to //textarea[@id="finance-config-description"] element.</msg>
+<msg timestamp="20240314 12:21:47.133" level="INFO">Sending keys Category description Update</msg>
+<status status="PASS" starttime="20240314 12:21:45.427" endtime="20240314 12:21:48.263"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:48.265" endtime="20240314 12:21:48.985"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:21:48.989" level="INFO">Clicking element '//p[text()="Save"]/parent::button'.</msg>
+<status status="PASS" starttime="20240314 12:21:48.987" endtime="20240314 12:21:50.483"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:48.986" endtime="20240314 12:21:50.483"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:48.264" endtime="20240314 12:21:50.484"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:35.548" endtime="20240314 12:21:50.484"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:33.361" endtime="20240314 12:21:50.484"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:33.361" endtime="20240314 12:21:50.485"/>
 </kw>
 <kw name="Then Click on Delete button in the More icon and Click on Cancel Button" library="Fin_Configuration_Support">
-<status status="NOT RUN" starttime="20240312 12:32:57.555" endtime="20240312 12:32:57.555"/>
+<kw name="Verify a Category name Should not be deleted" library="Fin_Configuration_Support">
+<kw name="Search Data" library="common_1">
+<arg>${Input_Search_FinanceConfiguration}</arg>
+<arg>${FC_Category_Update}</arg>
+<doc>using this keyword we can search portfolio</doc>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:50.490" endtime="20240314 12:21:51.215"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:21:51.218" level="INFO">Clicking element '//input[@id="finance-config-search-input"]'.</msg>
+<status status="PASS" starttime="20240314 12:21:51.217" endtime="20240314 12:21:52.681"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:51.216" endtime="20240314 12:21:52.682"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:50.488" endtime="20240314 12:21:52.683"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:52.684" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id="finance-config-search-input"] element.</msg>
+<msg timestamp="20240314 12:21:54.389" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240314 12:21:54.389" level="INFO">Sending key A</msg>
+<msg timestamp="20240314 12:21:54.389" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240314 12:21:54.389" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240314 12:21:54.389" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240314 12:21:52.683" endtime="20240314 12:21:55.123"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240314 12:21:56.133" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240314 12:21:55.124" endtime="20240314 12:21:56.133"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Name}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240314 12:21:56.135" level="INFO">Sending key(s) ('Update Category 52',) to //input[@id="finance-config-search-input"] element.</msg>
+<msg timestamp="20240314 12:21:57.848" level="INFO">Sending keys Update Category 52</msg>
+<status status="PASS" starttime="20240314 12:21:56.134" endtime="20240314 12:21:58.784"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:50.487" endtime="20240314 12:21:58.784"/>
+</kw>
+<kw name="Click the Kebab button Category" library="common_1">
+<arg>${FC_Category_Update}</arg>
+<doc>Using this keyword we can click the kebab button</doc>
+<kw name="Format String" library="String">
+<var>${Category_more_option}</var>
+<arg>${BTN_Category_Kebab}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:21:58.787" level="INFO">${Category_more_option} = //div[@id="finance-config-more-btn-Update Category 52"]</msg>
+<status status="PASS" starttime="20240314 12:21:58.786" endtime="20240314 12:21:58.787"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Category_more_option}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:21:58.788" endtime="20240314 12:22:00.431"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:22:00.432" level="INFO">Clicking element '//div[@id="finance-config-more-btn-Update Category 52"]'.</msg>
+<status status="PASS" starttime="20240314 12:22:00.432" endtime="20240314 12:22:01.885"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:00.431" endtime="20240314 12:22:01.885"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:58.787" endtime="20240314 12:22:01.886"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:58.785" endtime="20240314 12:22:01.886"/>
+</kw>
+<kw name="Delete Category" library="common_1">
+<arg>${FC_Category_Update}</arg>
+<arg>${BTN_Cancel}</arg>
+<doc>Using this keyword we can click delete button</doc>
+<kw name="Format String" library="String">
+<var>${Category}</var>
+<arg>${BTN_Category_Delete}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:22:01.888" level="INFO">${Category} = //li[@id="finance-config-delete-Update Category 52"]</msg>
+<status status="PASS" starttime="20240314 12:22:01.888" endtime="20240314 12:22:01.888"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Category}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:22:01.889" endtime="20240314 12:22:02.613"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:22:02.618" level="INFO">Clicking element '//li[@id="finance-config-delete-Update Category 52"]'.</msg>
+<status status="PASS" starttime="20240314 12:22:02.617" endtime="20240314 12:22:04.081"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:02.615" endtime="20240314 12:22:04.081"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:01.889" endtime="20240314 12:22:04.081"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:22:04.084" endtime="20240314 12:22:04.808"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:22:04.813" level="INFO">Clicking element '//p[text()="Cancel"]/parent::button'.</msg>
+<status status="PASS" starttime="20240314 12:22:04.812" endtime="20240314 12:22:06.311"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:04.809" endtime="20240314 12:22:06.311"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:04.082" endtime="20240314 12:22:06.312"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:01.886" endtime="20240314 12:22:06.313"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:50.486" endtime="20240314 12:22:06.313"/>
+</kw>
+<status status="PASS" starttime="20240314 12:21:50.485" endtime="20240314 12:22:06.313"/>
 </kw>
 <kw name="Then Click on Delete button in the More icon and Click on Confirm Button" library="Fin_Configuration_Support">
-<status status="NOT RUN" starttime="20240312 12:32:57.555" endtime="20240312 12:32:57.555"/>
+<kw name="Verify a Category name Should be deleted" library="Fin_Configuration_Support">
+<kw name="Click the Kebab button Category" library="common_1">
+<arg>${FC_Category_Update}</arg>
+<doc>Using this keyword we can click the kebab button</doc>
+<kw name="Format String" library="String">
+<var>${Category_more_option}</var>
+<arg>${BTN_Category_Kebab}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:22:06.315" level="INFO">${Category_more_option} = //div[@id="finance-config-more-btn-Update Category 52"]</msg>
+<status status="PASS" starttime="20240314 12:22:06.314" endtime="20240314 12:22:06.315"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Category_more_option}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:22:06.315" endtime="20240314 12:22:07.030"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:22:07.033" level="INFO">Clicking element '//div[@id="finance-config-more-btn-Update Category 52"]'.</msg>
+<status status="PASS" starttime="20240314 12:22:07.032" endtime="20240314 12:22:08.507"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:07.030" endtime="20240314 12:22:08.507"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:06.315" endtime="20240314 12:22:08.508"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:06.314" endtime="20240314 12:22:08.508"/>
+</kw>
+<kw name="Delete Category" library="common_1">
+<arg>${FC_Category_Update}</arg>
+<arg>${BTN_Confirm}</arg>
+<doc>Using this keyword we can click delete button</doc>
+<kw name="Format String" library="String">
+<var>${Category}</var>
+<arg>${BTN_Category_Delete}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240314 12:22:08.511" level="INFO">${Category} = //li[@id="finance-config-delete-Update Category 52"]</msg>
+<status status="PASS" starttime="20240314 12:22:08.509" endtime="20240314 12:22:08.511"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Category}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:22:08.511" endtime="20240314 12:22:09.222"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:22:09.224" level="INFO">Clicking element '//li[@id="finance-config-delete-Update Category 52"]'.</msg>
+<status status="PASS" starttime="20240314 12:22:09.224" endtime="20240314 12:22:10.710"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:09.223" endtime="20240314 12:22:10.710"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:08.511" endtime="20240314 12:22:10.710"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240314 12:22:10.712" endtime="20240314 12:22:11.424"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240314 12:22:11.426" level="INFO">Clicking element '//p[text()="Confirm"]/parent::button'.</msg>
+<status status="PASS" starttime="20240314 12:22:11.425" endtime="20240314 12:22:12.889"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:11.425" endtime="20240314 12:22:12.889"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:10.711" endtime="20240314 12:22:12.890"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:08.508" endtime="20240314 12:22:12.890"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:06.313" endtime="20240314 12:22:12.890"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:06.313" endtime="20240314 12:22:12.890"/>
 </kw>
 <kw name="And Close the Browser" library="Fin_Configuration_Support">
-<status status="NOT RUN" starttime="20240312 12:32:57.555" endtime="20240312 12:32:57.555"/>
+<kw name="Verify Application should be Close" library="Fin_Configuration_Support">
+<kw name="&quot;Close the Browser&quot;" library="common_1">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240314 12:22:12.891" endtime="20240314 12:22:15.691"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:12.891" endtime="20240314 12:22:15.692"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:12.891" endtime="20240314 12:22:15.693"/>
+</kw>
+<status status="PASS" starttime="20240314 12:22:12.890" endtime="20240314 12:22:15.694"/>
 </kw>
 <doc>Category Create,Search,Edit and Delete</doc>
 <tag>Finance_Configuration</tag>
 <tag>Name:Amritha</tag>
 <tag>Test</tag>
-<status status="FAIL" starttime="20240312 12:32:45.538" endtime="20240312 12:32:57.555">No keyword with name 'Use Encryption Key' found.</status>
+<status status="PASS" starttime="20240314 12:20:00.752" endtime="20240314 12:22:15.694"/>
 </test>
 <doc>Finance Configuration - Category</doc>
-<status status="FAIL" starttime="20240312 12:32:45.017" endtime="20240312 12:32:57.557"/>
+<status status="PASS" starttime="20240314 12:20:00.120" endtime="20240314 12:22:15.696"/>
 </suite>
-<status status="FAIL" starttime="20240312 12:32:45.013" endtime="20240312 12:32:57.558"/>
+<status status="PASS" starttime="20240314 12:20:00.117" endtime="20240314 12:22:15.697"/>
 </suite>
-<status status="FAIL" starttime="20240312 12:32:45.009" endtime="20240312 12:32:57.558"/>
+<status status="PASS" starttime="20240314 12:20:00.113" endtime="20240314 12:22:15.700"/>
 </suite>
-<status status="FAIL" starttime="20240312 12:32:44.966" endtime="20240312 12:32:57.559"/>
+<status status="PASS" starttime="20240314 12:20:00.091" endtime="20240314 12:22:15.700"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">Finance_Configuration</stat>
-<stat pass="0" fail="1" skip="0">Name:Amritha</stat>
-<stat pass="0" fail="1" skip="0">Test</stat>
+<stat pass="1" fail="0" skip="0">Finance_Configuration</stat>
+<stat pass="1" fail="0" skip="0">Name:Amritha</stat>
+<stat pass="1" fail="0" skip="0">Test</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Productor">Productor</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Testcase">Productor.Testcase</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Finance Configuration">Productor.Testcase.Finance Configuration</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Fin Configuration">Productor.Testcase.Finance Configuration.Fin Configuration</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Productor">Productor</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Testcase">Productor.Testcase</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Finance Configuration">Productor.Testcase.Finance Configuration</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Fin Configuration">Productor.Testcase.Finance Configuration.Fin Configuration</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20240312 12:32:44.953" level="ERROR">Taking listener 'RobotStackTracer' into use failed: Importing listener 'RobotStackTracer' failed: ModuleNotFoundError: No module named 'RobotStackTracer'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Productor\.venv\Scripts\robot.exe
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\python310.zip
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\DLLs
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310
-  C:\Productor\.venv
-  C:\Productor\.venv\lib\site-packages</msg>
-<msg timestamp="20240312 12:32:45.105" level="ERROR">Error in file 'C:\Productor\Resources\common_1.robot' on line 887: Creating keyword 'Navigate to PPG' failed: Keyword with same name defined multiple times.</msg>
-<msg timestamp="20240312 12:32:45.528" level="ERROR">Error in file 'C:\Productor\Resources\Login.robot' on line 4: Importing library 'RPA.JSON' failed: ModuleNotFoundError: No module named 'RPA'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Productor\.venv\Scripts\robot.exe
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\python310.zip
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\DLLs
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310
-  C:\Productor\.venv
-  C:\Productor\.venv\lib\site-packages</msg>
-<msg timestamp="20240312 12:32:45.530" level="ERROR">Error in file 'C:\Productor\Resources\Login.robot' on line 5: Importing library 'RPA.Crypto' failed: ModuleNotFoundError: No module named 'RPA'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Productor\.venv\Scripts\robot.exe
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\python310.zip
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\DLLs
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310\lib
-  C:\Users\crazy\AppData\Local\Programs\Python\Python310
-  C:\Productor\.venv
-  C:\Productor\.venv\lib\site-packages</msg>
+<msg timestamp="20240314 12:20:00.184" level="ERROR">Error in file 'C:\Productor\Resources\common_1.robot' on line 887: Creating keyword 'Navigate to PPG' failed: Keyword with same name defined multiple times.</msg>
 </errors>
 </robot>

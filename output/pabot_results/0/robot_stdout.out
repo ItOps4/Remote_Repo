@@ -7,19 +7,18 @@ Productor.Testcase.Finance Configuration
 ==============================================================================
 Productor.Testcase.Finance Configuration.Fin Configuration :: Finance Confi...
 ==============================================================================
-Category :: Category Create,Search,Edit and Delete                    | FAIL |
-No keyword with name 'Use Encryption Key' found.
+Category :: Category Create,Search,Edit and Delete                    | PASS |
 ------------------------------------------------------------------------------
-Productor.Testcase.Finance Configuration.Fin Configuration :: Fina... | FAIL |
-1 test, 0 passed, 1 failed
+Productor.Testcase.Finance Configuration.Fin Configuration :: Fina... | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
-Productor.Testcase.Finance Configuration                              | FAIL |
-1 test, 0 passed, 1 failed
+Productor.Testcase.Finance Configuration                              | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
-Productor.Testcase                                                    | FAIL |
-1 test, 0 passed, 1 failed
+Productor.Testcase                                                    | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
-Productor                                                             | FAIL |
-1 test, 0 passed, 1 failed
+Productor                                                             | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
 Output:  C:\Productor\output\pabot_results\0\output.xml

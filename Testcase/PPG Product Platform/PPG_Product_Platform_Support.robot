@@ -88,7 +88,7 @@ Verify an application should be opened
 
 Verify a PPG Page should be displayed
     Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
-    Create Portfolio    ${PPGPP_Portfolio}    ${PPGPP_Portfolio_Description}    ${BTN_Save}
+#    Create Portfolio    ${PPGPP_Portfolio}    ${PPGPP_Portfolio_Description}    ${BTN_Save}
     Search Data    ${Input_Portfolio_Search}    ${PPGPP_Portfolio}
     Navigate to Portfolio and Click on PPG tab    ${PPGPP_Portfolio}    ${TAB_PPG}
 

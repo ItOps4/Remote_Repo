@@ -2,6 +2,7 @@
 Library         SeleniumLibrary
 Library         String
 Library        DateTime
+Library    RPA.FileSystem
 Variables       ../Data/xpath.py
 Variables       ../Data/data.py
 
@@ -247,7 +248,7 @@ Navigate to Portfolio and Click on PPG tab
 Create PPG 
     [Documentation]    Using this keyword we can create PPG 
     [Arguments]    ${name2}    ${description}    ${Owner}    ${Type}    ${Element} 
-    ${Status}    Run Keyword And Return Status    Page Should Contain Element    ${BTN_Add_PPG} 
+    ${Status}    Run Keyword And Return Status    Page Should Contain Element    ${BTN_Add_PPG}
     IF    '${Status}' == '${True}'
         Wait Until Element is present then click the element    ${BTN_Add_PPG}
     ELSE
@@ -897,25 +898,186 @@ Verify Deteletd Financial Area should not Display in PPG and Product Finanace
     Double Click Element    ${element3}
 
 #Custom fields
-Create Custom fields
-    [Documentation]     Using this keyword we can create Custom fields
-    [Arguments]     ${name}       ${search}        ${Tooltip}    ${type}
-    Wait Until Element is present then click the element    ${Custom_create_name}
-    Input Text    ${name}    ${PROD_17_Name}
-    Input Text    ${Tooltip}     ${PROD_17_Tooltip}
+Create Custom Fields for Text
+    [Documentation]     Using this keyword we can create Custom fields for text type
+    [Arguments]     ${name}     ${Tooltip}   ${type}     ${Placeholder}     ${mand}     ${visi}
+    Wait Until Element is present then click the element    ${BTN_Create_Custom_Fields}
+    Input Text   ${Input_custom_field_name}   ${name}
+    Input Text   ${Input_CF_Tooltip}     ${Tooltip}
     @{list}    Create List    Finance   Strategic Outcome   Key Results     Product     Squad   Product group   OKR
     FOR    ${element}    IN    @{list}
-        Press Keys    ${Custom_Addto}    CTRL+A+BACKSPACE
-        Press Keys    ${Custom_Addto}     ${element}
-        ${dropdown}    Format String    ${Custom_Addto_dropdown}    name=${element}
-        Wait Until Element is present then click the element    ${dropdown}
-        Press Keys    ${Custom_Addto}     TAB
+        Press Keys    ${Search_CF_Addto}    CTRL+A+BACKSPACE
+        Press Keys    ${Search_CF_Addto}     ${element}
+        ${Select}    Format String    ${Select_CF_Addto}    name=${element}
+        Wait Until Element is present then click the element    ${Select}
+        Press Keys    ${Search_CF_Addto}     TAB
     END
-    Click Element   ${Custom_text}
-    Wait Until Element is present then click the element    ${Custom_add_type}
-    click element    ${Custom_add_type_text}
-    Wait Until Element is present then click the element    ${Custom_placeholder}
-    Input Text    ${Custom_placeholder}     ${PROD_17_Placeholder}
+    Wait Until Element is present then click the element    ${Dropdown_CF_add_type}
+    ${add_type}     Format String   ${Select_CF_add_type_text}    name=${type}
+    Wait Until Element is present then click the element    ${add_type}
+    Input Text  ${Input_CF_placeholder}     ${Placeholder}
+    Wait Until Element is present then click the element   ${mand}
+    Wait Until Element is present then click the element   ${visi}
+
+Create Custom fields for Text area
+    [Documentation]     Using this keyword we can create Custom fields for Text area type
+    [Arguments]     ${name}       ${search}        ${Tooltip}    ${type}    ${mand}     ${visi}
+    Wait Until Element is present then click the element    ${BTN_Create_Custom_Fields}
+    Input Text    ${name}    ${CF_Name}
+    Input Text    ${Tooltip}     ${CF_Tooltip}
+    @{list}    Create List    Finance   Strategic Outcome   Key Results     Product     Squad   Product group   OKR
+    FOR    ${element}    IN    @{list}
+        Press Keys    ${Search_CF_Addto}    CTRL+A+BACKSPACE
+        Press Keys    ${Search_CF_Addto}     ${element}
+        ${dropdown}    Format String    ${Search_CF_Addto}    name=${element}
+        Wait Until Element is present then click the element    ${dropdown}
+        Press Keys    ${Select_CF_Addto}     TAB
+    END
+#    Click Element   ${Custom_text}
+    Wait Until Element is present then click the element    ${Dropdown_CF_add_type}
+    ${add_type_area}     Format String   ${Select_CF_add_type_text}    name=${type}
+    Wait Until Element is present then click the element   ${add_type_area}
+    Wait Until Element is present then click the element   ${Input_CF_placeholder}
+    Input Text    ${Input_CF_placeholder}     ${CF_Placeholder}
+    Wait Until Element is present then click the element   ${mand}
+    Wait Until Element is present then click the element   ${visi}
+
+Create Custom fields for Radio button
+    [Documentation]     Using this keyword we can create Custom fields for Radio button type
+    [Arguments]     ${name}       ${search}        ${Tooltip}    ${type}    ${radio1}   ${radio2}   ${mand}     ${visi}
+    Wait Until Element is present then click the element    ${Input_custom_field_name}
+    Input Text    ${name}    ${CF_Name}
+    Input Text    ${Tooltip}     ${CF_Tooltip}
+    @{list}    Create List    Finance   Strategic Outcome   Key Results     Product     Squad   Product group   OKR
+    FOR    ${element}    IN    @{list}
+        Press Keys    ${Search_CF_Addto}    CTRL+A+BACKSPACE
+        Press Keys    ${Search_CF_Addto}     ${element}
+        ${dropdown}    Format String    ${Select_CF_Addto}    name=${element}
+        Wait Until Element is present then click the element    ${dropdown}
+        Press Keys    ${Search_CF_Addto}     TAB
+    END
+    Wait Until Element is present then click the element    ${Dropdown_CF_add_type}
+    ${add_type_Radiobox}     Format String   ${Select_CF_add_type_text}    name=${type}
+    Wait Until Element is present then click the element    ${add_type_Radiobox}
+    Input Text   ${CF_Enter_options}   ${radio1}
+    Press Keys   ${CF_Enter_options}   ENTER
+    Press Keys    ${CF_Enter_options}    CTRL+A+BACKSPACE
+    Input Text   ${CF_Enter_options}   ${radio2}
+    Press Keys   ${CF_Enter_options}   ENTER
+    Wait Until Element is present then click the element   ${mand}
+    Wait Until Element is present then click the element   ${visi}
+
+Create Custom fields for Check box
+    [Documentation]     Using this keyword we can create Custom fields for checkbox type
+    [Arguments]     ${name}       ${search}        ${Tooltip}    ${type}    ${checkbox1}    ${checkbox2}    ${mand}     ${visi}
+    Wait Until Element is present then click the element    ${Input_custom_field_name}
+    Input Text    ${name}    ${CF_Name}
+    Input Text    ${Tooltip}     ${CF_Tooltip}
+    @{list}    Create List    Finance   Strategic Outcome   Key Results     Product     Squad   Product group   OKR
+    FOR    ${element}    IN    @{list}
+        Press Keys    ${Search_CF_Addto}    CTRL+A+BACKSPACE
+        Press Keys    ${Search_CF_Addto}     ${element}
+        ${dropdown}    Format String    ${Select_CF_Addto}    name=${element}
+        Wait Until Element is present then click the element    ${dropdown}
+        Press Keys    ${Select_CF_Addto}     TAB
+    END
+#    Click Element   ${Custom_text}
+    Wait Until Element is present then click the element    ${Dropdown_CF_add_type}
+    ${add_type_Checkbox}     Format String   ${Select_CF_add_type_text}    name=${type}
+    Wait Until Element is present then click the element    ${add_type_Checkbox}
+    Input Text   ${CF_Enter_options}   ${checkbox1}
+    Press Keys   ${CF_Enter_options}   ENTER
+    Press Keys   ${CF_Enter_options}    CTRL+A+BACKSPACE
+    Input Text   ${CF_Enter_options}   ${checkbox2}
+    Press Keys   ${CF_Enter_options}   ENTER
+    Wait Until Element is present then click the element    ${mand}
+    Wait Until Element is present then click the element    ${visi}
+
+Create Custom fields for Number
+    [Documentation]     Using this keyword we can create Custom fields for Number type
+    [Arguments]     ${name}       ${search}        ${Tooltip}    ${type}    ${mand}     ${visi}
+    Wait Until Element is present then click the element    ${Input_custom_field_name}
+    Input Text    ${name}    ${CF_Name}
+    Input Text    ${Tooltip}     ${CF_Tooltip}
+    @{list}    Create List    Finance   Strategic Outcome   Key Results     Product     Squad   Product group   OKR
+    FOR    ${element}    IN    @{list}
+        Press Keys    ${Search_CF_Addto}    CTRL+A+BACKSPACE
+        Press Keys    ${Search_CF_Addto}     ${element}
+        ${dropdown}    Format String    ${Select_CF_Addto}    name=${element}
+        Wait Until Element is present then click the element    ${dropdown}
+        Press Keys    ${Select_CF_Addto}     TAB
+    END
+#    Click Element   ${Custom_text}
+    Wait Until Element is present then click the element    ${Dropdown_CF_add_type}
+    ${add_type_Number}     Format String   ${Select_CF_add_type_text}    name=${type}
+    Wait Until Element is present then click the element   ${add_type_Number}
+    Wait Until Element is present then click the element   ${Input_CF_placeholder}
+    Input Text    ${Input_CF_placeholder}     ${CF_Placeholder}
+    Wait Until Element is present then click the element    ${mand}
+    Wait Until Element is present then click the element    ${visi}
+
+
+
+Create Custom fields for Select
+    [Documentation]     Using this keyword we can create Custom fields for Select type
+    [Arguments]     ${name}       ${search}        ${Tooltip}    ${type}    ${Select1}    ${Select2}    ${mand}     ${visi}
+    Wait Until Element is present then click the element    ${Input_custom_field_name}
+    Input Text    ${name}    ${CF_Name}
+    Input Text    ${Tooltip}     ${CF_Tooltip}
+    @{list}    Create List    Finance   Strategic Outcome   Key Results     Product     Squad   Product group   OKR
+    FOR    ${element}    IN    @{list}
+        Press Keys    ${Search_CF_Addto}    CTRL+A+BACKSPACE
+        Press Keys    ${Search_CF_Addto}     ${element}
+        ${dropdown}    Format String    ${Select_CF_Addto}    name=${element}
+        Wait Until Element is present then click the element    ${dropdown}
+        Press Keys    ${Select_CF_Addto}     TAB
+    END
+#    Click Element   ${Custom_text}
+    Wait Until Element is present then click the element    ${Dropdown_CF_add_type}
+    ${add_type_Select}     Format String   ${Select_CF_add_type_text}    name=${type}
+    Wait Until Element is present then click the element   ${add_type_Select}
+    Input Text  ${CF_Enter_options}   ${Select1}
+    Press Keys  ${CF_Enter_options}   ENTER
+    Press Keys  ${CF_Enter_options}    CTRL+A+BACKSPACE
+    Input Text  ${CF_Enter_options}   ${Select2}
+    Press Keys  ${CF_Enter_options}   ENTER
+    Wait Until Element is present then click the element   ${Input_CF_placeholder}
+    Input Text    ${Input_CF_placeholder}     ${CF_Placeholder}
+    Wait Until Element is present then click the element   ${mand}
+    Wait Until Element is present then click the element   ${visi}
+
+Create Custom fields for Multiselect
+    [Documentation]     Using this keyword we can create Custom fields for checkbox type
+    [Arguments]     ${name}       ${search}        ${Tooltip}    ${type}    ${M.Select1}    ${M.Select2}    ${M.Select3}      ${M.Select4}    ${mand}     ${visi}
+    Wait Until Element is present then click the element    ${Input_custom_field_name}
+    Input Text    ${name}    ${CF_Name}
+    Input Text    ${Tooltip}     ${CF_Tooltip}
+    @{list}    Create List    Finance   Strategic Outcome   Key Results     Product     Squad   Product group   OKR
+    FOR    ${element}    IN    @{list}
+        Press Keys    ${Search_CF_Addto}    CTRL+A+BACKSPACE
+        Press Keys    ${Search_CF_Addto}     ${element}
+        ${dropdown}    Format String    ${Select_CF_Addto}    name=${element}
+        Wait Until Element is present then click the element    ${dropdown}
+        Press Keys    ${Select_CF_Addto}     TAB
+    END
+#    Click Element   ${Custom_text}
+    Wait Until Element is present then click the element    ${Dropdown_CF_add_type}
+    ${add_type_Checkbox}     Format String   ${Select_CF_add_type_text}    name=${type}
+    Wait Until Element is present then click the element    ${add_type_Checkbox}
+    Input Text   ${CF_Enter_options}   ${M.Select1}
+    Press Keys   ${CF_Enter_options}   ENTER
+    Press Keys   ${CF_Enter_options}    CTRL+A+BACKSPACE
+    Input Text   ${CF_Enter_options}   ${M.Select2}
+    Press Keys   ${CF_Enter_options}   ENTER
+    Press Keys   ${CF_Enter_options}    CTRL+A+BACKSPACE
+    Input Text   ${CF_Enter_options}   ${M.Select3}
+    Press Keys   ${CF_Enter_options}   ENTER
+    Press Keys   ${CF_Enter_options}    CTRL+A+BACKSPACE
+    Input Text   ${CF_Enter_options}   ${M.Select4}
+    Press Keys   ${CF_Enter_options}   ENTER
+    Wait Until Element is present then click the element    ${mand}
+    Wait Until Element is present then click the element    ${visi}
+
 
 create,edit strategic outcome with custom fields
     [Documentation]    Using this keyword we can create strategic outcome
@@ -993,8 +1155,16 @@ Create Product/Platform for custom fields
     Input Text    ${PROD_17_PPG}    ${PROD_17_product_text}
     Wait Until Element is present then click the element    ${Element}
 
-Add Schedule to PPG Finance for custom fields
-    Wait Until Element is present then click the element    ${UA_Delete}
+
+
+
+
+
+
+
+
+
+
 
 
 
