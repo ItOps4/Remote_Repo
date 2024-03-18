@@ -1,5 +1,7 @@
 public_key = '58m6kWLkFLw0srrHpI1s_5iNeoD3sGccNsFExGu0zig='
 
+Authorization = ''
+
 username001 = 'Tparthi@valuefactors.io'
 username002 = 'neeraj@codebyte.solutions'
 
@@ -157,3 +159,9 @@ FS_Product_Schedule = 'FS Product_Schedule'
 FS_Product_Squad = 'FS Squad'
 FS_Search_Invalid = 'Invalid'
 
+
+
+### Roadmap Link and Attachment
+Roadmap_Link = 'Roadmap_Link'
+Roadmap_Attachment = 'Roadmap_Attachement'
+PROD_21_Portfolio = 'PROD_21_Portfolio'
