@@ -2,11 +2,54 @@
 Library         SeleniumLibrary
 Library         String
 Library        DateTime
+Library    RequestsLibrary
+Library    JSONLibrary
+Library    Collections
 Variables       ../Data/xpath.py
 Variables       ../Data/data.py
+Variables    ../Data/url.py
 
+
+*** Variables ***
+${url}    https://predev-productor.valuefactors.io
+ 
 
 *** Keywords ***
+Delete Portfolio
+    [Arguments]    ${Portfolio_Name}
+    ${data}    Set Variable    ${Portfolio_Name}
+    Create Session    Baseurl   ${url}
+    ${headers}    Create Dictionary    Accept=application/json    Content-Type=application/json    charset=utf-8    Authorization=Bearer ${Authorization}
+    ${Portfolio_Get}    Get Request    Baseurl    /api/v1/portfolio/?per_page=5&page=1&filterby=created&s=${Portfolio_Name}&timeZone=Asia%2FCalcutta    headers=${headers}
+    Should Be Equal As Integers    ${Portfolio_Get.status_code}    200
+    ${Portfolio_Json}    Evaluate    json.loads($Portfolio_Get.content)    json
+    ${status}    Run Keyword And Return Status    Set Variable    ${Portfolio_Json["data"][0]["name"]}
+    IF    ${status} == True
+        ${Json_Response}    Get Value From Json    ${Portfolio_Json}    data
+        FOR    ${jsArray}    IN    @{Json_Response}
+            FOR    ${element}    IN    @{jsArray}
+                IF    "${element['name']}" == "${data}"
+                ${Final_Id}    Set Variable    ${element['uuid']}
+                Set Global Variable      ${Final_Id}
+                ${Del_Port}    Delete Request    Baseurl    /api/v1/portfolio/${Final_Id}/    headers=${headers}
+                Should Be Equal As Integers    ${Del_Port.status_code}    200
+                ${Del_Port_Recyle}    Delete Request    Baseurl    /api/v1/recycleBin/${Final_Id}/portf/    headers=${headers}
+                Should Be Equal As Integers    ${Del_Port_Recyle.status_code}    200
+                ELSE
+                    Log    There is no portfolio which is mentioned above
+                END
+            END
+        END
+   
+    ELSE
+       Log    Delete API isn't start
+    END
+    
+
+
+
+
+
 Wait Until Element is present then click the element
     [Documentation]    Using this keyword we can perform click Element
     [Arguments]    ${Element}
