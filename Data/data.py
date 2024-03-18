@@ -8,39 +8,39 @@ TXT_NO_Record_Data = 'No records to display'
 
 # Portfolio management
 TXT_manager_Iyyappan = 'Iyyappan'
-PM_Portfolio = 'Create Porfolio'
-PM_Portfolio_Update = 'Update Porfolio'
-PM_Portfolio_Description ='Portfolio description'
-PM_Portfolio_Description_Update ='Portfolio description Update'
+PM_Portfolio = 'Create Porfolio 90'
+PM_Portfolio_Update = 'Update Porfolio 90'
+PM_Portfolio_Description = 'Portfolio description'
+PM_Portfolio_Description_Update = 'Portfolio description Update'
 
 # Finance Configuration
-FC_Category = 'Create Category 59'
+FC_Category = 'Create Category 90'
 FC_Category_Description = 'Category description'
 FC_Invalid_Category = 'Category Invalid'
-FC_Category_Update = 'Update Category 59'
+FC_Category_Update = 'Update Category 90'
 FC_Category_Description_Update = 'Category description Update'
 
 # Finance Customize Budget
-FCB_budget= 'Create Custom Budget 59'
+FCB_budget= 'Create Custom Budget 90'
 FCB_budget_description = 'Custom Budget description'
-FCB_budget_update = 'Update Custom Budget 59'
+FCB_budget_update = 'Update Custom Budget 75'
 FCB_budget_description_update = 'Custom Budget description Update'
 
 # Product Squad Role 
-PSR_Product_Squad_Role = 'Create Produt Squad Role 59'
-PSR_Produt_Squad_Role_Description ='Produt Squad Role description'
+PSR_Product_Squad_Role = 'Create Produt Squad Role 90'
+PSR_Produt_Squad_Role_Description = 'Produt Squad Role description'
 PSR_Product_Squad_Role_Invalid = 'Product Squad Invalid'
-PSR_Produt_Squad_Role_Update = 'Update Product Squad Role 59'
+PSR_Produt_Squad_Role_Update = 'Update Product Squad Role 90'
 PSR_Product_Squad_Role_Description_Update = 'Product Squad Description Update'
 
 # Product_Platform_OKR_Squad
-PPOS_Portfolio = 'OKR Squad portfolio'
-PPOS_description =  'OKR Squad portfolio description'
-PPOS_PPG = 'OKR Squad ppg '
-PPOS_pp = 'OKR Squad pp '
+PPOS_Portfolio = 'OKR Squad portfolio 7'
+PPOS_description = 'OKR Squad portfolio description'
+PPOS_PPG = 'OKR Squad ppg 7 '
+PPOS_pp = 'OKR Squad pp 7'
 PPOS_OKR = 'OKR '
 PPOS_OKR_UPDATE= 'OKR_Update'
-PPOS_SO = 'OKR Squad SO '
+PPOS_SO = 'OKR Squad So '
 PPOS_SO_Description = 'OKR Squad SO Description'
 INPUT_DATA = 'L'
 PPOS_Keyresult = 'OKR keyresult'
@@ -121,7 +121,7 @@ RM_Owner = 'Tom Parthi'
 RM_PPG_Update = 'RM_PPG_Update'
 RM_Portfolio_Description_Update = 'RM_Portfolio_Description_Update'
 RM_PPG_Invalid = 'RM_PPG_Invalid'
-#ROADMAP Product/Platform
+# ROADMAP Product/Platform
 RM_Product_Platform = 'RM_Product_Platform'
 RM_Product_Platform_description = 'RM_Product_Platform_description'
 RM_Product_Platform_Invalid = 'RM_Product_Platform_Invalid'
@@ -129,7 +129,7 @@ choose_color1 = '#E8E8E8'
 choose_color2 = '#FFB7B7'
 choose_color3 = '#ECA9A5'
 edit_task_name = 'bag'
-#ROADMAP
+# ROADMAP
 RM_Roadmap = "RM_Roadmap"
 RM_Edit_Roadmap = "RM_Edit_Roadmap"
 RM_Roadmap_Invalid = "RM_Roadmap_invalid"

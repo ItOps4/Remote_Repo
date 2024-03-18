@@ -1,0 +1,2201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 5.0.1 (Python 3.10.0 on win32)" generated="20240316 17:35:33.240" rpa="false" schemaversion="3">
+<suite id="s1" name="Productor" source="C:\Productor">
+<suite id="s1-s1" name="Testcase" source="C:\Productor\Testcase">
+<suite id="s1-s1-s1" name="Product Platform OKR Squad" source="C:\Productor\Testcase\Product Platform OKR Squad">
+<suite id="s1-s1-s1-s1" name="Product Platform OKR Squad" source="C:\Productor\Testcase\Product Platform OKR Squad\Product_Platform_OKR_Squad.robot">
+<test id="s1-s1-s1-s1-t1" name="Product / platform OKR and Squad" line="9">
+<kw name="Given Login into Productor Application" library="Product_Platform_OKR_Squad_Support">
+<arg>${username001}</arg>
+<kw name="Verify if user should be able to login successfully" library="Product_Platform_OKR_Squad_Support">
+<arg>${username}</arg>
+<kw name="Login Application" library="Login">
+<arg>${username}</arg>
+<doc>Using this keyword we can login Productor Application.</doc>
+<kw name="Get File" library="OperatingSystem">
+<var>${json_data}</var>
+<arg>Data/password.json</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20240316 17:30:39.824" level="INFO" html="true">Getting file '&lt;a href="file://C:\Productor\Data\password.json"&gt;C:\Productor\Data\password.json&lt;/a&gt;'.</msg>
+<msg timestamp="20240316 17:30:39.825" level="INFO">${json_data} = {
+    "Tparthi@valuefactors.io": "gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==",
+    "neeraj@codebyte.solutions": "gAAAAABlvf_wHd_s-rfaDVYJP09Sz...</msg>
+<status status="PASS" starttime="20240316 17:30:39.823" endtime="20240316 17:30:39.825"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${object}</var>
+<arg>json.loads('''${json_data}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240316 17:30:39.826" level="INFO">${object} = {'Tparthi@valuefactors.io': 'gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==', 'neeraj@codebyte.solutions': 'gAAAAABlvf_wHd_s-rfaDVYJP09SzZmO4H8t5J...</msg>
+<status status="PASS" starttime="20240316 17:30:39.825" endtime="20240316 17:30:39.826"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${encry}</var>
+<arg>${object['${username}']}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240316 17:30:39.829" level="INFO">${encry} = gAAAAABlrkVsEdFMiMlTdK5zUdkIrh2gW0m7VKitqu1yc05zjvhEtgtLf1WAMAOHRJpwgI8mhU9rPO9To7wrVhBmzNtn6JJSqg==</msg>
+<status status="PASS" starttime="20240316 17:30:39.826" endtime="20240316 17:30:39.829"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys,selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240316 17:30:39.831" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001A8955FE0E0&gt;</msg>
+<status status="PASS" starttime="20240316 17:30:39.830" endtime="20240316 17:30:39.831"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20240316 17:30:39.831" endtime="20240316 17:30:39.831"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<var>${driver}</var>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20240316 17:30:39.832" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20240316 17:30:42.231" level="INFO">${driver} = 1</msg>
+<status status="PASS" starttime="20240316 17:30:39.831" endtime="20240316 17:30:42.231"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20240316 17:30:42.231" endtime="20240316 17:30:42.355"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${Productor_Url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240316 17:30:42.356" level="INFO">Opening url 'https://predev-productor.valuefactors.io/auth/login/'</msg>
+<status status="PASS" starttime="20240316 17:30:42.355" endtime="20240316 17:30:44.665"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240316 17:30:44.665" endtime="20240316 17:30:44.794"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>700milliseconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20240316 17:30:44.794" endtime="20240316 17:30:44.795"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_Username}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:30:44.795" endtime="20240316 17:30:45.559"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Username}</arg>
+<arg>${username}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:30:45.560" level="INFO">Sending key(s) ('Tparthi@valuefactors.io',) to //input[@id="auth-email-id"] element.</msg>
+<msg timestamp="20240316 17:30:47.303" level="INFO">Sending keys Tparthi@valuefactors.io</msg>
+<status status="PASS" starttime="20240316 17:30:45.559" endtime="20240316 17:30:48.183"/>
+</kw>
+<kw name="Use Encryption Key" library="RPA.Crypto">
+<arg>${public_key}</arg>
+<doc>Set key for all following encryption/decryption operations.</doc>
+<msg timestamp="20240316 17:30:48.183" level="INFO">Protecting keyword: RPA.Crypto.Use Encryption Key</msg>
+<msg timestamp="20240316 17:30:48.183" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20240316 17:30:48.183" endtime="20240316 17:30:48.183"/>
+</kw>
+<kw name="Decrypt String" library="RPA.Crypto">
+<var>${Decry}</var>
+<arg>${encry}</arg>
+<doc>Decrypt a string.</doc>
+<msg timestamp="20240316 17:30:48.206" level="INFO">${Decry} = Productor@01</msg>
+<status status="PASS" starttime="20240316 17:30:48.183" endtime="20240316 17:30:48.206"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${Decry}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240316 17:30:48.206" level="INFO">Productor@01</msg>
+<status status="PASS" starttime="20240316 17:30:48.206" endtime="20240316 17:30:48.206"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Password}</arg>
+<arg>${Decry}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:30:48.208" level="INFO">Sending key(s) ('Productor@01',) to //input[@id="auth-password"] element.</msg>
+<msg timestamp="20240316 17:30:49.919" level="INFO">Sending keys Productor@01</msg>
+<status status="PASS" starttime="20240316 17:30:48.207" endtime="20240316 17:30:50.689"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Login}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:30:50.691" endtime="20240316 17:30:51.419"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:30:51.419" level="INFO">Clicking element '//p[text()="Sign In"]/parent::button'.</msg>
+<status status="PASS" starttime="20240316 17:30:51.419" endtime="20240316 17:30:53.011"/>
+</kw>
+<status status="PASS" starttime="20240316 17:30:51.419" endtime="20240316 17:30:53.011"/>
+</kw>
+<status status="PASS" starttime="20240316 17:30:50.690" endtime="20240316 17:30:53.012"/>
+</kw>
+<status status="PASS" starttime="20240316 17:30:39.823" endtime="20240316 17:30:53.012"/>
+</kw>
+<status status="PASS" starttime="20240316 17:30:39.823" endtime="20240316 17:30:53.012"/>
+</kw>
+<status status="PASS" starttime="20240316 17:30:39.822" endtime="20240316 17:30:53.012"/>
+</kw>
+<kw name="When navigate to portfolio and click on ppg menu and navigate to ppg" library="Product_Platform_OKR_Squad_Support">
+<kw name="verify it should display ppg page" library="Product_Platform_OKR_Squad_Support">
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Portfolio_Man_Menu}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:30:53.016" endtime="20240316 17:30:57.442"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:30:57.446" level="INFO">Clicking element '//span[@id="icon-Portfolio Management"]/ancestor::a'.</msg>
+<status status="PASS" starttime="20240316 17:30:57.445" endtime="20240316 17:30:59.105"/>
+</kw>
+<status status="PASS" starttime="20240316 17:30:57.443" endtime="20240316 17:30:59.106"/>
+</kw>
+<status status="PASS" starttime="20240316 17:30:53.015" endtime="20240316 17:30:59.107"/>
+</kw>
+<kw name="Create Portfolio" library="common_1">
+<arg>${PPOS_Portfolio}</arg>
+<arg>${PPOS_description}</arg>
+<arg>${BTN_Save}</arg>
+<doc>Using this keyword we can create portfolio</doc>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Create_Portfolio}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:30:59.112" endtime="20240316 17:30:59.844"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:30:59.846" level="INFO">Clicking element '//button[@id="portfolio-create-btn"]'.</msg>
+<status status="PASS" starttime="20240316 17:30:59.845" endtime="20240316 17:31:01.386"/>
+</kw>
+<status status="PASS" starttime="20240316 17:30:59.844" endtime="20240316 17:31:01.387"/>
+</kw>
+<status status="PASS" starttime="20240316 17:30:59.110" endtime="20240316 17:31:01.387"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_Portfolio}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:31:01.387" endtime="20240316 17:31:02.104"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Portfolio}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240316 17:31:02.105" level="INFO">Typing text 'OKR Squad portfolio 7' into text field '//input[@id="portfolio-management-portfolio-name"]'.</msg>
+<status status="PASS" starttime="20240316 17:31:02.104" endtime="20240316 17:31:05.214"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${INput_Portfolio_Description}</arg>
+<arg>${description}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:31:05.220" level="INFO">Sending key(s) ('OKR Squad portfolio description',) to //textarea[@id="portfolio-management-portfolio-description"] element.</msg>
+<msg timestamp="20240316 17:31:06.970" level="INFO">Sending keys OKR Squad portfolio description</msg>
+<status status="PASS" starttime="20240316 17:31:05.215" endtime="20240316 17:31:09.005"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Input_Portfolio_Manager}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:31:09.006" endtime="20240316 17:31:09.730"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:31:09.730" level="INFO">Clicking element '//div[@id="portfolio-management-manager"]'.</msg>
+<status status="PASS" starttime="20240316 17:31:09.730" endtime="20240316 17:31:11.272"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:09.730" endtime="20240316 17:31:11.272"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:09.005" endtime="20240316 17:31:11.272"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Search_Manager}</arg>
+<arg>${TXT_manager_Iyyappan}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:31:11.273" level="INFO">Sending key(s) ('Iyyappan',) to //input[@id="search-field"] element.</msg>
+<msg timestamp="20240316 17:31:13.000" level="INFO">Sending keys Iyyappan</msg>
+<status status="PASS" starttime="20240316 17:31:11.273" endtime="20240316 17:31:13.752"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Drop_Down_Manager}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:31:13.753" endtime="20240316 17:31:16.354"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:31:16.355" level="INFO">Clicking element '//li[text()="Iyyappan"]'.</msg>
+<status status="PASS" starttime="20240316 17:31:16.355" endtime="20240316 17:31:17.883"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:16.354" endtime="20240316 17:31:17.884"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:13.752" endtime="20240316 17:31:17.886"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240316 17:31:18.725" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="0-selenium-screenshot-1.png"&gt;&lt;img src="0-selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240316 17:31:17.887" endtime="20240316 17:31:18.725"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:31:18.726" endtime="20240316 17:31:19.447"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:31:19.449" level="INFO">Clicking element '//p[text()="Save"]/parent::button'.</msg>
+<status status="PASS" starttime="20240316 17:31:19.448" endtime="20240316 17:31:20.935"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:19.447" endtime="20240316 17:31:20.935"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:18.726" endtime="20240316 17:31:20.935"/>
+</kw>
+<status status="PASS" starttime="20240316 17:30:59.107" endtime="20240316 17:31:20.937"/>
+</kw>
+<kw name="Search Data" library="common_1">
+<arg>${Input_Portfolio_Search}</arg>
+<arg>${PPOS_Portfolio}</arg>
+<doc>using this keyword we can search portfolio</doc>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:31:20.940" endtime="20240316 17:31:21.672"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:31:21.673" level="INFO">Clicking element '//input[@id="portfolio-search-input"]'.</msg>
+<status status="PASS" starttime="20240316 17:31:21.673" endtime="20240316 17:31:23.167"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:21.672" endtime="20240316 17:31:23.167"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:20.938" endtime="20240316 17:31:23.167"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:31:23.168" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id="portfolio-search-input"] element.</msg>
+<msg timestamp="20240316 17:31:24.876" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240316 17:31:24.876" level="INFO">Sending key A</msg>
+<msg timestamp="20240316 17:31:24.876" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240316 17:31:24.876" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240316 17:31:24.876" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240316 17:31:23.168" endtime="20240316 17:31:25.618"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240316 17:31:26.626" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20240316 17:31:25.619" endtime="20240316 17:31:26.626"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>${Name}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:31:26.627" level="INFO">Sending key(s) ('OKR Squad portfolio 7',) to //input[@id="portfolio-search-input"] element.</msg>
+<msg timestamp="20240316 17:31:28.331" level="INFO">Sending keys OKR Squad portfolio 7</msg>
+<status status="PASS" starttime="20240316 17:31:26.626" endtime="20240316 17:31:29.485"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:20.937" endtime="20240316 17:31:29.485"/>
+</kw>
+<kw name="Navigate to portfolio data" library="common_1">
+<arg>${PPOS_Portfolio}</arg>
+<doc>Using this keywork we can navigate to Portfolio</doc>
+<kw name="Format String" library="String">
+<var>${Portfolio}</var>
+<arg>${BTN_Portfolio_CUSTOM}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240316 17:31:29.491" level="INFO">${Portfolio} = //td[@id="custom-id-OKR Squad portfolio 7"]</msg>
+<status status="PASS" starttime="20240316 17:31:29.488" endtime="20240316 17:31:29.492"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Portfolio}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:31:29.494" endtime="20240316 17:31:30.224"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:31:30.230" level="INFO">Clicking element '//td[@id="custom-id-OKR Squad portfolio 7"]'.</msg>
+<status status="PASS" starttime="20240316 17:31:30.228" endtime="20240316 17:31:31.733"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:30.225" endtime="20240316 17:31:31.733"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:29.492" endtime="20240316 17:31:31.733"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:29.486" endtime="20240316 17:31:31.733"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Strategic_outcome_Tab}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:31:31.736" endtime="20240316 17:31:32.457"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:31:32.459" level="INFO">Clicking element '//a[@id='Strategic Outcome-tabs']'.</msg>
+<status status="PASS" starttime="20240316 17:31:32.458" endtime="20240316 17:31:33.997"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:32.457" endtime="20240316 17:31:33.997"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:31.733" endtime="20240316 17:31:33.998"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Add_Strategic_outcome}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:31:33.999" endtime="20240316 17:31:34.753"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:31:34.756" level="INFO">Clicking element '//button[@id='create-strategic-outcome-nullstate-btn']'.</msg>
+<status status="PASS" starttime="20240316 17:31:34.756" endtime="20240316 17:31:36.302"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:34.755" endtime="20240316 17:31:36.302"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:33.998" endtime="20240316 17:31:36.303"/>
+</kw>
+<kw name="create,edit strategic outcome" library="common_1">
+<arg>${PPOS_SO}</arg>
+<arg>${PPOS_SO_Description}</arg>
+<arg>${BTN_Save}</arg>
+<doc>Using this keyword we can create strategic outcome</doc>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${INPUT_Strategic_Outcome_Name}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:31:36.305" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id='strategy-outcome-name'] element.</msg>
+<msg timestamp="20240316 17:31:38.021" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240316 17:31:38.021" level="INFO">Sending key A</msg>
+<msg timestamp="20240316 17:31:38.021" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240316 17:31:38.021" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240316 17:31:38.021" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240316 17:31:36.304" endtime="20240316 17:31:38.750"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_Strategic_Outcome_Name}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240316 17:31:38.751" level="INFO">Typing text 'OKR Squad So ' into text field '//input[@id='strategy-outcome-name']'.</msg>
+<status status="PASS" starttime="20240316 17:31:38.750" endtime="20240316 17:31:41.120"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${INPUT_Strategic_Outcome_Description}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:31:41.123" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //textarea[@id='strategy-outcome-description'] element.</msg>
+<msg timestamp="20240316 17:31:42.864" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240316 17:31:42.864" level="INFO">Sending key A</msg>
+<msg timestamp="20240316 17:31:42.864" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240316 17:31:42.864" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240316 17:31:42.864" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240316 17:31:41.121" endtime="20240316 17:31:43.580"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${INPUT_Strategic_Outcome_Description}</arg>
+<arg>${description}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:31:43.584" level="INFO">Sending key(s) ('OKR Squad SO Description',) to //textarea[@id='strategy-outcome-description'] element.</msg>
+<msg timestamp="20240316 17:31:45.287" level="INFO">Sending keys OKR Squad SO Description</msg>
+<status status="PASS" starttime="20240316 17:31:43.580" endtime="20240316 17:31:46.289"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${current_date}</var>
+<arg>result_format=%m/%d/%Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20240316 17:31:46.290" level="INFO">${current_date} = 03/16/2024</msg>
+<status status="PASS" starttime="20240316 17:31:46.289" endtime="20240316 17:31:46.290"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${current_date}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240316 17:31:46.291" level="INFO">03/16/2024</msg>
+<status status="PASS" starttime="20240316 17:31:46.291" endtime="20240316 17:31:46.291"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${INPUT_SO_Start_Date}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:31:46.292" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //p[@id="strategy-outcome-start-date"]/parent::div/descendant::input element.</msg>
+<msg timestamp="20240316 17:31:48.054" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240316 17:31:48.054" level="INFO">Sending key A</msg>
+<msg timestamp="20240316 17:31:48.054" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240316 17:31:48.055" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240316 17:31:48.055" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240316 17:31:46.292" endtime="20240316 17:31:48.795"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${INPUT_SO_Start_Date}</arg>
+<arg>${current_date}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:31:48.798" level="INFO">Sending key(s) ('03/16/2024',) to //p[@id="strategy-outcome-start-date"]/parent::div/descendant::input element.</msg>
+<msg timestamp="20240316 17:31:50.530" level="INFO">Sending keys 03/16/2024</msg>
+<status status="PASS" starttime="20240316 17:31:48.796" endtime="20240316 17:31:51.448"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${INPUT_SO_End_Date}</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:31:51.448" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //p[@id="strategy-outcome-end-date"]/parent::div/descendant::input element.</msg>
+<msg timestamp="20240316 17:31:53.215" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20240316 17:31:53.215" level="INFO">Sending key A</msg>
+<msg timestamp="20240316 17:31:53.215" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20240316 17:31:53.216" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20240316 17:31:53.216" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20240316 17:31:51.448" endtime="20240316 17:31:53.964"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${INPUT_SO_End_Date}</arg>
+<arg>${current_date}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:31:53.966" level="INFO">Sending key(s) ('03/16/2024',) to //p[@id="strategy-outcome-end-date"]/parent::div/descendant::input element.</msg>
+<msg timestamp="20240316 17:31:55.680" level="INFO">Sending keys 03/16/2024</msg>
+<status status="PASS" starttime="20240316 17:31:53.964" endtime="20240316 17:31:56.520"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Drop_Down_Select_Manager}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:31:56.522" endtime="20240316 17:31:57.250"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:31:57.254" level="INFO">Clicking element '//div[@id='strategy-outcome-assign-to']'.</msg>
+<status status="PASS" starttime="20240316 17:31:57.253" endtime="20240316 17:31:58.814"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:57.251" endtime="20240316 17:31:58.814"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:56.521" endtime="20240316 17:31:58.814"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Drop_Down_Input_Select_Manager}</arg>
+<arg>${TXT_manager_Iyyappan}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:31:58.816" level="INFO">Sending key(s) ('Iyyappan',) to //input[@id='search-field'] element.</msg>
+<msg timestamp="20240316 17:32:00.522" level="INFO">Sending keys Iyyappan</msg>
+<status status="PASS" starttime="20240316 17:31:58.815" endtime="20240316 17:32:01.273"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Drop_Down_LI_Iyyappan}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:01.275" endtime="20240316 17:32:03.886"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:03.889" level="INFO">Clicking element '//li[@id='Iyyappan']'.</msg>
+<status status="PASS" starttime="20240316 17:32:03.888" endtime="20240316 17:32:05.398"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:03.887" endtime="20240316 17:32:05.398"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:01.274" endtime="20240316 17:32:05.399"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:05.400" endtime="20240316 17:32:06.136"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:06.138" level="INFO">Clicking element '//p[text()="Save"]/parent::button'.</msg>
+<status status="PASS" starttime="20240316 17:32:06.138" endtime="20240316 17:32:07.613"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:06.137" endtime="20240316 17:32:07.614"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:05.399" endtime="20240316 17:32:07.615"/>
+</kw>
+<status status="PASS" starttime="20240316 17:31:36.303" endtime="20240316 17:32:07.615"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${TAB_PPG}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:07.617" endtime="20240316 17:32:08.344"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:08.345" level="INFO">Clicking element '//a[@id="PPG-tabs"]'.</msg>
+<status status="PASS" starttime="20240316 17:32:08.345" endtime="20240316 17:32:09.822"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:08.344" endtime="20240316 17:32:09.822"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:07.616" endtime="20240316 17:32:09.824"/>
+</kw>
+<kw name="Create PPG" library="common_1">
+<arg>${PPOS_PPG}</arg>
+<arg>${PPOS_description}</arg>
+<arg>${TXT_manager_Iyyappan}</arg>
+<arg>${Input_Type_Platform}</arg>
+<arg>${BTN_SAVE}</arg>
+<doc>Using this keyword we can create PPG</doc>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Status}</var>
+<arg>Page Should Contain Element</arg>
+<arg>${BTN_Add_PPG}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${BTN_Add_PPG}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240316 17:32:10.558" level="INFO">Current page contains element '//p[text()="Add PPG"]/ancestor::button'.</msg>
+<status status="PASS" starttime="20240316 17:32:09.826" endtime="20240316 17:32:10.558"/>
+</kw>
+<msg timestamp="20240316 17:32:10.558" level="INFO">${Status} = True</msg>
+<status status="PASS" starttime="20240316 17:32:09.825" endtime="20240316 17:32:10.558"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Status}' == '${True}'">
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Add_PPG}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:10.560" endtime="20240316 17:32:11.276"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:11.279" level="INFO">Clicking element '//p[text()="Add PPG"]/ancestor::button'.</msg>
+<status status="PASS" starttime="20240316 17:32:11.278" endtime="20240316 17:32:12.776"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:11.277" endtime="20240316 17:32:12.776"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:10.559" endtime="20240316 17:32:12.777"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:10.558" endtime="20240316 17:32:12.777"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Create_PPG}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<status status="NOT RUN" starttime="20240316 17:32:12.778" endtime="20240316 17:32:12.778"/>
+</kw>
+<status status="NOT RUN" starttime="20240316 17:32:12.778" endtime="20240316 17:32:12.779"/>
+</branch>
+<status status="PASS" starttime="20240316 17:32:10.558" endtime="20240316 17:32:12.779"/>
+</if>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_PPG_name}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:12.779" endtime="20240316 17:32:13.510"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_PPG_name}</arg>
+<arg>${name2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:13.511" level="INFO">Typing text 'OKR Squad ppg 7 ' into text field '//input[@id="ppg-name"]'.</msg>
+<status status="PASS" starttime="20240316 17:32:13.510" endtime="20240316 17:32:15.859"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_PPG_Description}</arg>
+<arg>${description}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:32:15.862" level="INFO">Sending key(s) ('OKR Squad portfolio description',) to //textarea[@id="ppg-description"] element.</msg>
+<msg timestamp="20240316 17:32:17.596" level="INFO">Sending keys OKR Squad portfolio description</msg>
+<status status="PASS" starttime="20240316 17:32:15.860" endtime="20240316 17:32:18.612"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_PPG_Owner}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:18.615" endtime="20240316 17:32:19.343"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:19.347" level="INFO">Clicking element '//div[@id="ppg-owner"]'.</msg>
+<status status="PASS" starttime="20240316 17:32:19.345" endtime="20240316 17:32:20.862"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:19.344" endtime="20240316 17:32:20.862"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:18.613" endtime="20240316 17:32:20.862"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Search_Owner}</arg>
+<arg>${Owner}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:32:20.864" level="INFO">Sending key(s) ('Iyyappan',) to //input[@id="search-field"] element.</msg>
+<msg timestamp="20240316 17:32:22.585" level="INFO">Sending keys Iyyappan</msg>
+<status status="PASS" starttime="20240316 17:32:20.862" endtime="20240316 17:32:23.345"/>
+</kw>
+<kw name="Format String" library="String">
+<var>${Owner}</var>
+<arg>${BTN_Select_Owner}</arg>
+<arg>name=${Owner}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240316 17:32:23.347" level="INFO">${Owner} = //li[@id="Iyyappan"]</msg>
+<status status="PASS" starttime="20240316 17:32:23.345" endtime="20240316 17:32:23.347"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Owner}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:23.349" endtime="20240316 17:32:25.946"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:25.947" level="INFO">Clicking element '//li[@id="Iyyappan"]'.</msg>
+<status status="PASS" starttime="20240316 17:32:25.947" endtime="20240316 17:32:27.476"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:25.946" endtime="20240316 17:32:27.476"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:23.348" endtime="20240316 17:32:27.477"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Input_PPG_Type}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:27.479" endtime="20240316 17:32:28.208"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:28.210" level="INFO">Clicking element '//div[@id="ppg-type"]'.</msg>
+<status status="PASS" starttime="20240316 17:32:28.210" endtime="20240316 17:32:29.709"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:28.209" endtime="20240316 17:32:29.710"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:27.478" endtime="20240316 17:32:29.710"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Type}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:29.713" endtime="20240316 17:32:30.440"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:30.443" level="INFO">Clicking element '//li[@id="Platform"]'.</msg>
+<status status="PASS" starttime="20240316 17:32:30.442" endtime="20240316 17:32:31.958"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:30.441" endtime="20240316 17:32:31.959"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:29.710" endtime="20240316 17:32:31.959"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:31.961" endtime="20240316 17:32:32.695"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:32.696" level="INFO">Clicking element '//p[text()="Save"]/parent::button'.</msg>
+<status status="PASS" starttime="20240316 17:32:32.696" endtime="20240316 17:32:34.218"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:32.695" endtime="20240316 17:32:34.219"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:31.960" endtime="20240316 17:32:34.219"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:09.824" endtime="20240316 17:32:34.219"/>
+</kw>
+<kw name="Navigate to portfolio data" library="common_1">
+<arg>${PPOS_PPG}</arg>
+<doc>Using this keywork we can navigate to Portfolio</doc>
+<kw name="Format String" library="String">
+<var>${Portfolio}</var>
+<arg>${BTN_Portfolio_CUSTOM}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240316 17:32:34.221" level="INFO">${Portfolio} = //td[@id="custom-id-OKR Squad ppg 7 "]</msg>
+<status status="PASS" starttime="20240316 17:32:34.220" endtime="20240316 17:32:34.221"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Portfolio}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:34.221" endtime="20240316 17:32:36.840"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:36.842" level="INFO">Clicking element '//td[@id="custom-id-OKR Squad ppg 7 "]'.</msg>
+<status status="PASS" starttime="20240316 17:32:36.842" endtime="20240316 17:32:38.321"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:36.841" endtime="20240316 17:32:38.321"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:34.221" endtime="20240316 17:32:38.321"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:34.219" endtime="20240316 17:32:38.322"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${TAB_Product_Platform}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:38.323" endtime="20240316 17:32:39.049"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:39.050" level="INFO">Clicking element '//a[@id="Products/Platforms-tabs"]'.</msg>
+<status status="PASS" starttime="20240316 17:32:39.050" endtime="20240316 17:32:40.559"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:39.050" endtime="20240316 17:32:40.560"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:38.322" endtime="20240316 17:32:40.560"/>
+</kw>
+<kw name="Create Product/Platform" library="common_1">
+<arg>${PPOS_pp}</arg>
+<arg>${PPOS_description}</arg>
+<arg>${TXT_manager_Iyyappan}</arg>
+<arg>${Input_Type_Platform}</arg>
+<arg>${BTN_Save}</arg>
+<doc>Using this keyword we can create Product/Platform</doc>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Add_Product_Platform}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:40.564" endtime="20240316 17:32:41.284"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:41.290" level="INFO">Clicking element '//button[@id="add-product-platform"]'.</msg>
+<status status="PASS" starttime="20240316 17:32:41.288" endtime="20240316 17:32:42.791"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:41.285" endtime="20240316 17:32:42.792"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:40.562" endtime="20240316 17:32:42.792"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_Product_Platform}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:42.793" endtime="20240316 17:32:43.525"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Product_Platform}</arg>
+<arg>${name2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:43.527" level="INFO">Typing text 'OKR Squad pp 7' into text field '//input[@id="product-platform-name"]'.</msg>
+<status status="PASS" starttime="20240316 17:32:43.526" endtime="20240316 17:32:45.865"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Product_Platform_Description}</arg>
+<arg>${description}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:32:45.866" level="INFO">Sending key(s) ('OKR Squad portfolio description',) to //textarea[@id="product-platform-description"] element.</msg>
+<msg timestamp="20240316 17:32:47.622" level="INFO">Sending keys OKR Squad portfolio description</msg>
+<status status="PASS" starttime="20240316 17:32:45.865" endtime="20240316 17:32:48.609"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Input_Product_Platform_Owner}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:48.610" endtime="20240316 17:32:49.325"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:49.326" level="INFO">Clicking element '//div[@id="product-platform-owner"]'.</msg>
+<status status="PASS" starttime="20240316 17:32:49.326" endtime="20240316 17:32:50.829"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:49.325" endtime="20240316 17:32:50.830"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:48.610" endtime="20240316 17:32:50.831"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${BTN_Search_Product_Platform_Owner}</arg>
+<arg>${Owner}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:32:50.833" level="INFO">Sending key(s) ('Iyyappan',) to //input[@id="search-field"] element.</msg>
+<msg timestamp="20240316 17:32:52.546" level="INFO">Sending keys Iyyappan</msg>
+<status status="PASS" starttime="20240316 17:32:50.831" endtime="20240316 17:32:53.307"/>
+</kw>
+<kw name="Format String" library="String">
+<var>${Owner}</var>
+<arg>${BTN_Select_Owner}</arg>
+<arg>name=${Owner}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240316 17:32:53.310" level="INFO">${Owner} = //li[@id="Iyyappan"]</msg>
+<status status="PASS" starttime="20240316 17:32:53.308" endtime="20240316 17:32:53.310"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Owner}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:53.313" endtime="20240316 17:32:55.906"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:55.909" level="INFO">Clicking element '//li[@id="Iyyappan"]'.</msg>
+<status status="PASS" starttime="20240316 17:32:55.909" endtime="20240316 17:32:57.390"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:55.906" endtime="20240316 17:32:57.390"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:53.311" endtime="20240316 17:32:57.391"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Drop_Down_Product_Platform_Type}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:57.392" endtime="20240316 17:32:58.126"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:32:58.127" level="INFO">Clicking element '//div[@id="product-platform-type"]'.</msg>
+<status status="PASS" starttime="20240316 17:32:58.127" endtime="20240316 17:32:59.607"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:58.127" endtime="20240316 17:32:59.607"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:57.391" endtime="20240316 17:32:59.607"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Type}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:32:59.608" endtime="20240316 17:33:00.327"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:00.327" level="INFO">Clicking element '//li[@id="Platform"]'.</msg>
+<status status="PASS" starttime="20240316 17:33:00.327" endtime="20240316 17:33:01.807"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:00.327" endtime="20240316 17:33:01.807"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:59.608" endtime="20240316 17:33:01.807"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:01.809" endtime="20240316 17:33:02.529"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:02.529" level="INFO">Clicking element '//p[text()="Save"]/parent::button'.</msg>
+<status status="PASS" starttime="20240316 17:33:02.529" endtime="20240316 17:33:04.011"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:02.529" endtime="20240316 17:33:04.011"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:01.808" endtime="20240316 17:33:04.011"/>
+</kw>
+<status status="PASS" starttime="20240316 17:32:40.560" endtime="20240316 17:33:04.011"/>
+</kw>
+<status status="PASS" starttime="20240316 17:30:53.014" endtime="20240316 17:33:04.011"/>
+</kw>
+<status status="PASS" starttime="20240316 17:30:53.013" endtime="20240316 17:33:04.011"/>
+</kw>
+<kw name="Then click on ppg menu and navigate to ppg name" library="Product_Platform_OKR_Squad_Support">
+<kw name="Verify it should display ppg" library="Product_Platform_OKR_Squad_Support">
+<kw name="Click Breadcrums" library="common_1">
+<arg>${PPOS_PPG}</arg>
+<doc>Using this keyword we canNavigate Breadcrums</doc>
+<kw name="Format String" library="String">
+<var>${Breadcrums}</var>
+<arg>${Bread_Crums}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240316 17:33:04.011" level="INFO">${Breadcrums} = //p[@id="breadcrums-OKR Squad ppg 7 "]</msg>
+<status status="PASS" starttime="20240316 17:33:04.011" endtime="20240316 17:33:04.011"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Breadcrums}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:04.011" endtime="20240316 17:33:04.742"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:04.744" level="INFO">Clicking element '//p[@id="breadcrums-OKR Squad ppg 7 "]'.</msg>
+<status status="PASS" starttime="20240316 17:33:04.744" endtime="20240316 17:33:06.227"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:04.743" endtime="20240316 17:33:06.227"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:04.011" endtime="20240316 17:33:06.228"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:04.011" endtime="20240316 17:33:06.228"/>
+</kw>
+<kw name="Create PPG" library="common_1">
+<arg>${PPOS_product}</arg>
+<arg>${PPOS_description}</arg>
+<arg>${TXT_manager_Iyyappan}</arg>
+<arg>${Input_Type_Product}</arg>
+<arg>${BTN_Save}</arg>
+<doc>Using this keyword we can create PPG</doc>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Status}</var>
+<arg>Page Should Contain Element</arg>
+<arg>${BTN_Add_PPG}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${BTN_Add_PPG}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240316 17:33:08.500" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="0-selenium-screenshot-2.png"&gt;&lt;img src="0-selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240316 17:33:08.502" level="FAIL">Page should have contained element '//p[text()="Add PPG"]/ancestor::button' but did not.</msg>
+<status status="FAIL" starttime="20240316 17:33:06.232" endtime="20240316 17:33:08.600"/>
+</kw>
+<msg timestamp="20240316 17:33:08.606" level="INFO">${Status} = False</msg>
+<status status="PASS" starttime="20240316 17:33:06.231" endtime="20240316 17:33:08.606"/>
+</kw>
+<if>
+<branch type="IF" condition="'${Status}' == '${True}'">
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Add_PPG}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<status status="NOT RUN" starttime="20240316 17:33:08.608" endtime="20240316 17:33:08.608"/>
+</kw>
+<status status="NOT RUN" starttime="20240316 17:33:08.607" endtime="20240316 17:33:08.608"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Create_PPG}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:08.611" endtime="20240316 17:33:09.339"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:09.341" level="INFO">Clicking element '//button[@id="ppg-create"]'.</msg>
+<status status="PASS" starttime="20240316 17:33:09.340" endtime="20240316 17:33:10.842"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:09.339" endtime="20240316 17:33:10.842"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:08.610" endtime="20240316 17:33:10.842"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:08.609" endtime="20240316 17:33:10.843"/>
+</branch>
+<status status="PASS" starttime="20240316 17:33:08.606" endtime="20240316 17:33:10.843"/>
+</if>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_PPG_name}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:10.843" endtime="20240316 17:33:11.574"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_PPG_name}</arg>
+<arg>${name2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:11.575" level="INFO">Typing text 'OKR Squad product' into text field '//input[@id="ppg-name"]'.</msg>
+<status status="PASS" starttime="20240316 17:33:11.574" endtime="20240316 17:33:14.225"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_PPG_Description}</arg>
+<arg>${description}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:33:14.228" level="INFO">Sending key(s) ('OKR Squad portfolio description',) to //textarea[@id="ppg-description"] element.</msg>
+<msg timestamp="20240316 17:33:16.004" level="INFO">Sending keys OKR Squad portfolio description</msg>
+<status status="PASS" starttime="20240316 17:33:14.226" endtime="20240316 17:33:17.535"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_PPG_Owner}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:17.538" endtime="20240316 17:33:18.269"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:18.273" level="INFO">Clicking element '//div[@id="ppg-owner"]'.</msg>
+<status status="PASS" starttime="20240316 17:33:18.272" endtime="20240316 17:33:19.776"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:18.269" endtime="20240316 17:33:19.776"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:17.536" endtime="20240316 17:33:19.776"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Search_Owner}</arg>
+<arg>${Owner}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:33:19.778" level="INFO">Sending key(s) ('Iyyappan',) to //input[@id="search-field"] element.</msg>
+<msg timestamp="20240316 17:33:21.489" level="INFO">Sending keys Iyyappan</msg>
+<status status="PASS" starttime="20240316 17:33:19.777" endtime="20240316 17:33:22.238"/>
+</kw>
+<kw name="Format String" library="String">
+<var>${Owner}</var>
+<arg>${BTN_Select_Owner}</arg>
+<arg>name=${Owner}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240316 17:33:22.239" level="INFO">${Owner} = //li[@id="Iyyappan"]</msg>
+<status status="PASS" starttime="20240316 17:33:22.239" endtime="20240316 17:33:22.239"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Owner}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:22.239" endtime="20240316 17:33:24.788"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:24.789" level="INFO">Clicking element '//li[@id="Iyyappan"]'.</msg>
+<status status="PASS" starttime="20240316 17:33:24.789" endtime="20240316 17:33:26.268"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:24.788" endtime="20240316 17:33:26.268"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:22.239" endtime="20240316 17:33:26.269"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Input_PPG_Type}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:26.270" endtime="20240316 17:33:26.990"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:26.993" level="INFO">Clicking element '//div[@id="ppg-type"]'.</msg>
+<status status="PASS" starttime="20240316 17:33:26.992" endtime="20240316 17:33:28.477"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:26.991" endtime="20240316 17:33:28.477"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:26.269" endtime="20240316 17:33:28.478"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Type}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:28.479" endtime="20240316 17:33:29.208"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:29.211" level="INFO">Clicking element '//li[@id="Product"]'.</msg>
+<status status="PASS" starttime="20240316 17:33:29.210" endtime="20240316 17:33:30.725"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:29.209" endtime="20240316 17:33:30.726"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:28.478" endtime="20240316 17:33:30.726"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:30.727" endtime="20240316 17:33:31.458"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:31.460" level="INFO">Clicking element '//p[text()="Save"]/parent::button'.</msg>
+<status status="PASS" starttime="20240316 17:33:31.458" endtime="20240316 17:33:32.934"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:31.458" endtime="20240316 17:33:32.934"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:30.727" endtime="20240316 17:33:32.935"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:06.228" endtime="20240316 17:33:32.935"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:04.011" endtime="20240316 17:33:32.935"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:04.011" endtime="20240316 17:33:32.936"/>
+</kw>
+<kw name="Then Navigate to product , click on squad tab" library="Product_Platform_OKR_Squad_Support">
+<kw name="Verify it should display product page and it should display squad page" library="Product_Platform_OKR_Squad_Support">
+<kw name="Navigate to portfolio data" library="common_1">
+<arg>${PPOS_product}</arg>
+<doc>Using this keywork we can navigate to Portfolio</doc>
+<kw name="Format String" library="String">
+<var>${Portfolio}</var>
+<arg>${BTN_Portfolio_CUSTOM}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240316 17:33:32.937" level="INFO">${Portfolio} = //td[@id="custom-id-OKR Squad product"]</msg>
+<status status="PASS" starttime="20240316 17:33:32.937" endtime="20240316 17:33:32.937"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Portfolio}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:32.937" endtime="20240316 17:33:35.534"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:35.536" level="INFO">Clicking element '//td[@id="custom-id-OKR Squad product"]'.</msg>
+<status status="PASS" starttime="20240316 17:33:35.534" endtime="20240316 17:33:37.043"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:35.534" endtime="20240316 17:33:37.043"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:32.937" endtime="20240316 17:33:37.044"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:32.937" endtime="20240316 17:33:37.044"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${TAB_Product_Platform}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:37.045" endtime="20240316 17:33:37.778"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:37.782" level="INFO">Clicking element '//a[@id="Products/Platforms-tabs"]'.</msg>
+<status status="PASS" starttime="20240316 17:33:37.781" endtime="20240316 17:33:39.269"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:37.779" endtime="20240316 17:33:39.270"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:37.044" endtime="20240316 17:33:39.271"/>
+</kw>
+<kw name="Create Product/Platform" library="common_1">
+<arg>${PPOS_PP_product}</arg>
+<arg>${PPOS_PP_description}</arg>
+<arg>${TXT_manager_Iyyappan}</arg>
+<arg>${Input_Type_Product}</arg>
+<arg>${BTN_Save}</arg>
+<doc>Using this keyword we can create Product/Platform</doc>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_Add_Product_Platform}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:39.276" endtime="20240316 17:33:40.001"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:40.003" level="INFO">Clicking element '//button[@id="add-product-platform"]'.</msg>
+<status status="PASS" starttime="20240316 17:33:40.003" endtime="20240316 17:33:41.487"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:40.002" endtime="20240316 17:33:41.487"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:39.274" endtime="20240316 17:33:41.487"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Input_Product_Platform}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:41.487" endtime="20240316 17:33:42.208"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Input_Product_Platform}</arg>
+<arg>${name2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:42.208" level="INFO">Typing text 'OKR Squad PP product' into text field '//input[@id="product-platform-name"]'.</msg>
+<status status="PASS" starttime="20240316 17:33:42.208" endtime="20240316 17:33:44.602"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Product_Platform_Description}</arg>
+<arg>${description}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:33:44.603" level="INFO">Sending key(s) ('OKR Squad PP product description',) to //textarea[@id="product-platform-description"] element.</msg>
+<msg timestamp="20240316 17:33:46.325" level="INFO">Sending keys OKR Squad PP product description</msg>
+<status status="PASS" starttime="20240316 17:33:44.602" endtime="20240316 17:33:47.318"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Input_Product_Platform_Owner}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:47.320" endtime="20240316 17:33:48.051"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:48.052" level="INFO">Clicking element '//div[@id="product-platform-owner"]'.</msg>
+<status status="PASS" starttime="20240316 17:33:48.052" endtime="20240316 17:33:49.549"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:48.051" endtime="20240316 17:33:49.549"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:47.318" endtime="20240316 17:33:49.550"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${BTN_Search_Product_Platform_Owner}</arg>
+<arg>${Owner}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:33:49.551" level="INFO">Sending key(s) ('Iyyappan',) to //input[@id="search-field"] element.</msg>
+<msg timestamp="20240316 17:33:51.273" level="INFO">Sending keys Iyyappan</msg>
+<status status="PASS" starttime="20240316 17:33:49.550" endtime="20240316 17:33:52.033"/>
+</kw>
+<kw name="Format String" library="String">
+<var>${Owner}</var>
+<arg>${BTN_Select_Owner}</arg>
+<arg>name=${Owner}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240316 17:33:52.034" level="INFO">${Owner} = //li[@id="Iyyappan"]</msg>
+<status status="PASS" starttime="20240316 17:33:52.034" endtime="20240316 17:33:52.034"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Owner}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:52.036" endtime="20240316 17:33:54.611"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:54.612" level="INFO">Clicking element '//li[@id="Iyyappan"]'.</msg>
+<status status="PASS" starttime="20240316 17:33:54.612" endtime="20240316 17:33:56.097"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:54.611" endtime="20240316 17:33:56.097"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:52.034" endtime="20240316 17:33:56.098"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Drop_Down_Product_Platform_Type}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:56.100" endtime="20240316 17:33:56.817"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:56.819" level="INFO">Clicking element '//div[@id="product-platform-type"]'.</msg>
+<status status="PASS" starttime="20240316 17:33:56.818" endtime="20240316 17:33:58.318"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:56.817" endtime="20240316 17:33:58.319"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:56.098" endtime="20240316 17:33:58.319"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Type}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:33:58.324" endtime="20240316 17:33:59.053"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:33:59.053" level="INFO">Clicking element '//li[@id="Product"]'.</msg>
+<status status="PASS" starttime="20240316 17:33:59.053" endtime="20240316 17:34:00.579"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:59.053" endtime="20240316 17:34:00.579"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:58.321" endtime="20240316 17:34:00.580"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:34:00.581" endtime="20240316 17:34:01.284"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:34:01.284" level="INFO">Clicking element '//p[text()="Save"]/parent::button'.</msg>
+<status status="PASS" starttime="20240316 17:34:01.284" endtime="20240316 17:34:02.791"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:01.284" endtime="20240316 17:34:02.792"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:00.580" endtime="20240316 17:34:02.792"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:39.271" endtime="20240316 17:34:02.792"/>
+</kw>
+<kw name="Navigate to portfolio data" library="common_1">
+<arg>${PPOS_PP_product}</arg>
+<doc>Using this keywork we can navigate to Portfolio</doc>
+<kw name="Format String" library="String">
+<var>${Portfolio}</var>
+<arg>${BTN_Portfolio_CUSTOM}</arg>
+<arg>name=${name}</arg>
+<doc>Formats a ``template`` using the given ``positional`` and ``named`` arguments.</doc>
+<msg timestamp="20240316 17:34:02.793" level="INFO">${Portfolio} = //td[@id="custom-id-OKR Squad PP product"]</msg>
+<status status="PASS" starttime="20240316 17:34:02.793" endtime="20240316 17:34:02.793"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Portfolio}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:34:02.793" endtime="20240316 17:34:05.382"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:34:05.383" level="INFO">Clicking element '//td[@id="custom-id-OKR Squad PP product"]'.</msg>
+<status status="PASS" starttime="20240316 17:34:05.383" endtime="20240316 17:34:06.894"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:05.382" endtime="20240316 17:34:06.894"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:02.793" endtime="20240316 17:34:06.894"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:02.793" endtime="20240316 17:34:06.895"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:32.937" endtime="20240316 17:34:06.895"/>
+</kw>
+<status status="PASS" starttime="20240316 17:33:32.937" endtime="20240316 17:34:06.895"/>
+</kw>
+<kw name="Then click on Add squad button and enter mandatory fields in step 1, click on next button, add squad member, click on back button and click on cancel button" library="Product_Platform_OKR_Squad_Support">
+<kw name="Verify if squad shouldn't be Created" library="Product_Platform_OKR_Squad_Support">
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${TAB_squad}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:34:06.899" endtime="20240316 17:34:08.564"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:34:08.567" level="INFO">Clicking element '//div[@id="product-squad"]'.</msg>
+<status status="PASS" starttime="20240316 17:34:08.566" endtime="20240316 17:34:10.150"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:08.565" endtime="20240316 17:34:10.151"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:06.898" endtime="20240316 17:34:10.153"/>
+</kw>
+<kw name="Create Squad" library="common_1">
+<arg>${PPOS_SQUAD}</arg>
+<arg>${TXT_manager_Iyyappan}</arg>
+<arg>${BTN_NEXT}</arg>
+<arg>${BTN_BACK}</arg>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_ADD_SQUAD}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:34:10.159" endtime="20240316 17:34:10.882"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:34:10.883" level="INFO">Clicking element '//button[@id="add-squad-btn"]'.</msg>
+<status status="PASS" starttime="20240316 17:34:10.883" endtime="20240316 17:34:12.364"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:10.882" endtime="20240316 17:34:12.365"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:10.156" endtime="20240316 17:34:12.365"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_SQUAD}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240316 17:34:12.366" level="INFO">Typing text 'OKR PP product SQUAD' into text field '//input[@id="squad-name"]'.</msg>
+<status status="PASS" starttime="20240316 17:34:12.365" endtime="20240316 17:34:14.709"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${INPUT_SQUAD_LEAD}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:34:14.710" endtime="20240316 17:34:15.431"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:34:15.432" level="INFO">Clicking element '//div[@id="squad-lead"]'.</msg>
+<status status="PASS" starttime="20240316 17:34:15.432" endtime="20240316 17:34:16.924"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:15.431" endtime="20240316 17:34:16.924"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:14.709" endtime="20240316 17:34:16.924"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Search_Manager}</arg>
+<arg>${lead}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:34:16.925" level="INFO">Sending key(s) ('Iyyappan',) to //input[@id="search-field"] element.</msg>
+<msg timestamp="20240316 17:34:18.632" level="INFO">Sending keys Iyyappan</msg>
+<status status="PASS" starttime="20240316 17:34:16.925" endtime="20240316 17:34:19.397"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Drop_Down_Manager}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:34:19.398" endtime="20240316 17:34:21.978"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:34:21.979" level="INFO">Clicking element '//li[text()="Iyyappan"]'.</msg>
+<status status="PASS" starttime="20240316 17:34:21.979" endtime="20240316 17:34:23.464"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:21.978" endtime="20240316 17:34:23.464"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:19.398" endtime="20240316 17:34:23.464"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:34:23.465" endtime="20240316 17:34:24.189"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:34:24.192" level="INFO">Clicking element '//button[@id="create-squad-next"]'.</msg>
+<status status="PASS" starttime="20240316 17:34:24.191" endtime="20240316 17:34:25.719"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:24.190" endtime="20240316 17:34:25.720"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:23.464" endtime="20240316 17:34:25.720"/>
+</kw>
+<kw name="Check element is present" library="common_1">
+<arg>${Input_Search_Manager}</arg>
+<doc>using this keyword we can check element is present</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:34:25.721" endtime="20240316 17:34:27.357"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20240316 17:34:28.081" level="INFO">Current page contains element '//input[@id="search-field"]'.</msg>
+<status status="PASS" starttime="20240316 17:34:27.357" endtime="20240316 17:34:28.082"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:25.720" endtime="20240316 17:34:28.082"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Search_Manager}</arg>
+<arg>${INPUT_DATA}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20240316 17:34:28.084" level="INFO">Sending key(s) ('L',) to //input[@id="search-field"] element.</msg>
+<msg timestamp="20240316 17:34:29.807" level="INFO">Sending key L</msg>
+<status status="PASS" starttime="20240316 17:34:28.082" endtime="20240316 17:34:30.545"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Label_1}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:34:30.547" endtime="20240316 17:34:31.279"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:34:31.280" level="INFO">Clicking element '//input[@id="checkbox-laragon"]'.</msg>
+<status status="PASS" starttime="20240316 17:34:31.280" endtime="20240316 17:34:32.824"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:31.279" endtime="20240316 17:34:32.824"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:30.545" endtime="20240316 17:34:32.825"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${TXT_create_new_squad}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:34:32.825" endtime="20240316 17:34:33.563"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:34:33.565" level="INFO">Clicking element '//p[@id="popup-header-Create New Squad"]'.</msg>
+<status status="PASS" starttime="20240316 17:34:33.564" endtime="20240316 17:34:35.046"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:33.563" endtime="20240316 17:34:35.046"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:32.825" endtime="20240316 17:34:35.046"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${element1}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:34:35.048" endtime="20240316 17:34:35.778"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:34:35.779" level="INFO">Clicking element '//button[@id="create-squad-step-2-back"]'.</msg>
+<status status="PASS" starttime="20240316 17:34:35.778" endtime="20240316 17:34:37.254"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:35.778" endtime="20240316 17:34:37.254"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:35.047" endtime="20240316 17:34:37.254"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:10.153" endtime="20240316 17:34:37.254"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_squad_Cancel}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240316 17:34:37.256" endtime="20240316 17:34:37.977"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240316 17:34:37.979" level="INFO">Clicking element '//button[@id="create-squad-cancel"]'.</msg>
+<status status="PASS" starttime="20240316 17:34:37.978" endtime="20240316 17:34:39.455"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:37.978" endtime="20240316 17:34:39.455"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:37.255" endtime="20240316 17:34:39.455"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:06.897" endtime="20240316 17:34:39.455"/>
+</kw>
+<status status="PASS" starttime="20240316 17:34:06.896" endtime="20240316 17:34:39.455"/>
+</kw>
+<kw name="Then Click on Add squad button and enter mandatory fields in step1 , click on next button , add squad member and click on save button" library="Product_Platform_OKR_Squad_Support">
+<kw name="verify if squad should be created" library="Product_Platform_OKR_Squad_Support">
+<kw name="Create Squad" library="common_1">
+<arg>${PPOS_SQUAD}</arg>
+<arg>${TXT_manager_Iyyappan}</arg>
+<arg>${BTN_NEXT}</arg>
+<arg>${BTN_Save}</arg>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${BTN_ADD_SQUAD}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Element}</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<msg timestamp="20240316 17:35:30.538" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="0-selenium-screenshot-3.png"&gt;&lt;img src="0-selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20240316 17:35:30.540" level="FAIL">Element '//button[@id="add-squad-btn"]' did not appear in 50 seconds.</msg>
+<status status="FAIL" starttime="20240316 17:34:39.455" endtime="20240316 17:35:30.555"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>6</arg>
+<arg>7</arg>
+<arg>Click Element</arg>
+<arg>${Element}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="NOT RUN" starttime="20240316 17:35:30.555" endtime="20240316 17:35:30.555"/>
+</kw>
+<status status="FAIL" starttime="20240316 17:34:39.455" endtime="20240316 17:35:30.555"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_SQUAD}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240316 17:35:30.555" endtime="20240316 17:35:30.555"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${INPUT_SQUAD_LEAD}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<status status="NOT RUN" starttime="20240316 17:35:30.555" endtime="20240316 17:35:30.555"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Search_Manager}</arg>
+<arg>${lead}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240316 17:35:30.555" endtime="20240316 17:35:30.555"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Drop_Down_Manager}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<status status="NOT RUN" starttime="20240316 17:35:30.555" endtime="20240316 17:35:30.555"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${element}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<status status="NOT RUN" starttime="20240316 17:35:30.555" endtime="20240316 17:35:30.555"/>
+</kw>
+<kw name="Check element is present" library="common_1">
+<arg>${Input_Search_Manager}</arg>
+<doc>using this keyword we can check element is present</doc>
+<status status="NOT RUN" starttime="20240316 17:35:30.555" endtime="20240316 17:35:30.555"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${Input_Search_Manager}</arg>
+<arg>${INPUT_DATA}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" starttime="20240316 17:35:30.555" endtime="20240316 17:35:30.555"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${Label_1}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<status status="NOT RUN" starttime="20240316 17:35:30.555" endtime="20240316 17:35:30.555"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${TXT_create_new_squad}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<status status="NOT RUN" starttime="20240316 17:35:30.555" endtime="20240316 17:35:30.555"/>
+</kw>
+<kw name="Wait Until Element is present then click the element" library="common_1">
+<arg>${element1}</arg>
+<doc>Using this keyword we can perform click Element</doc>
+<status status="NOT RUN" starttime="20240316 17:35:30.555" endtime="20240316 17:35:30.555"/>
+</kw>
+<status status="FAIL" starttime="20240316 17:34:39.455" endtime="20240316 17:35:30.555"/>
+</kw>
+<status status="FAIL" starttime="20240316 17:34:39.455" endtime="20240316 17:35:30.570"/>
+</kw>
+<status status="FAIL" starttime="20240316 17:34:39.455" endtime="20240316 17:35:30.570"/>
+</kw>
+<kw name="Then Navigate to created product squad and view squad member" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.571" endtime="20240316 17:35:30.571"/>
+</kw>
+<kw name="Then Click on search and enter invalid squad member" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.573" endtime="20240316 17:35:30.573"/>
+</kw>
+<kw name="Then Click on search and enter valid squad member" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.573" endtime="20240316 17:35:30.573"/>
+</kw>
+<kw name="Then Click on edit button ,Enter mandatory fields and click on cancel button in squad member" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.574" endtime="20240316 17:35:30.574"/>
+</kw>
+<kw name="Then Click on edit button , Enter mandatory fields and click on save button in squad member" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.574" endtime="20240316 17:35:30.574"/>
+</kw>
+<kw name="Then navigate to product squad" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.574" endtime="20240316 17:35:30.575"/>
+</kw>
+<kw name="Then Click on search and enter invalid squad" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.575" endtime="20240316 17:35:30.575"/>
+</kw>
+<kw name="Then Click on search and enter valid squad" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.575" endtime="20240316 17:35:30.575"/>
+</kw>
+<kw name="Then Click on edit button ,Enter mandatory fields and click on cancel button in squad product" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.576" endtime="20240316 17:35:30.576"/>
+</kw>
+<kw name="Then Click on edit button , Enter mandatory fields and click on save button in squad product" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.576" endtime="20240316 17:35:30.576"/>
+</kw>
+<kw name="Then Click on product member tab" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.576" endtime="20240316 17:35:30.577"/>
+</kw>
+<kw name="Then Click on Add member button, enter member and Click on cancel button" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.577" endtime="20240316 17:35:30.577"/>
+</kw>
+<kw name="Then Click on Add member button , enter member and Click on Save button" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.577" endtime="20240316 17:35:30.577"/>
+</kw>
+<kw name="Then Click on search and enter invalid member in product member" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.577" endtime="20240316 17:35:30.578"/>
+</kw>
+<kw name="Then Click on Search and enter valid member in product member" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.578" endtime="20240316 17:35:30.578"/>
+</kw>
+<kw name="Then Click on edit button , enter mandatory fields and click on cancel button in product member" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.578" endtime="20240316 17:35:30.578"/>
+</kw>
+<kw name="Then Click on edit button , enter mandatory fields and click on Save button in product member" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.578" endtime="20240316 17:35:30.579"/>
+</kw>
+<kw name="Then Click on delete button and click on cancel button in product member" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.579" endtime="20240316 17:35:30.579"/>
+</kw>
+<kw name="Then Click on delete button and click on confirm button in product member" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.579" endtime="20240316 17:35:30.579"/>
+</kw>
+<kw name="Then navigate to product squad tab" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.579" endtime="20240316 17:35:30.580"/>
+</kw>
+<kw name="Then Click on delete button and click on cancel button in product squad" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.580" endtime="20240316 17:35:30.580"/>
+</kw>
+<kw name="Then Click on delete button and click on Confirm button in product squad" library="Product_Platform_OKR_Squad_Support">
+<status status="NOT RUN" starttime="20240316 17:35:30.580" endtime="20240316 17:35:30.580"/>
+</kw>
+<tag>Name:Gayathri</tag>
+<tag>Product_Platform_OKR_Squad</tag>
+<tag>Test</tag>
+<status status="FAIL" starttime="20240316 17:30:39.821" endtime="20240316 17:35:30.581">Element '//button[@id="add-squad-btn"]' did not appear in 50 seconds.</status>
+</test>
+<doc>Product/platform OKR and squad</doc>
+<status status="FAIL" starttime="20240316 17:30:38.718" endtime="20240316 17:35:30.582"/>
+</suite>
+<status status="FAIL" starttime="20240316 17:30:38.716" endtime="20240316 17:35:30.583"/>
+</suite>
+<status status="FAIL" starttime="20240316 17:30:38.713" endtime="20240316 17:35:30.584"/>
+</suite>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 1 executions.</doc>
+<status status="FAIL" starttime="20240316 17:30:38.698" endtime="20240316 17:35:30.585"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Name:Gayathri</stat>
+<stat pass="0" fail="1" skip="0">Product_Platform_OKR_Squad</stat>
+<stat pass="0" fail="1" skip="0">Test</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Productor">Productor</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Testcase">Productor.Testcase</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Product Platform OKR Squad">Productor.Testcase.Product Platform OKR Squad</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Product Platform OKR Squad">Productor.Testcase.Product Platform OKR Squad.Product Platform OKR Squad</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

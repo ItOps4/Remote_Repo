@@ -353,6 +353,7 @@ create PLatform OKR
     Press Keys    ${INPUT_END_date}    ${cd1}
     Wait Until Element is present then click the element    ${INPT_link_SO}
     ${strategic_out_link}    Format String    ${INPUT_strat_out_name}    name=${name}
+    Sleep   2
     Wait Until Element is present then click the element    ${strategic_out_link}
     Wait Until Element is present then click the element    ${element}
 
@@ -446,6 +447,7 @@ Create Squad
     Press Keys    ${Input_Search_Manager}    ${lead}
     Wait Until Element is present then click the element    ${Drop_Down_Manager}
     Wait Until Element is present then click the element    ${element} 
+    Check element is present    ${Input_Search_Manager}
     Press Keys    ${Input_Search_Manager}    ${INPUT_DATA}
     # Wait Until Element is present then click the element    ${Drop_Down_Manager}
     Wait Until Element is present then click the element    ${Label_1}
