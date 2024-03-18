@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Finance Customize Budget - Budget       
-Resource    Fin_Cus_Budget_Support.robot
+Resource    Fin_Cus_Budg_Support.robot
 Force Tags    Finance_Customize_Budget    Test    Name:Gayathri
 Variables    ../../Data/data.py
 

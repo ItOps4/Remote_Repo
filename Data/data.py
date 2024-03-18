@@ -8,33 +8,33 @@ TXT_NO_Record_Data = 'No records to display'
 
 # Portfolio management
 TXT_manager_Iyyappan = 'Iyyappan'
-PM_Portfolio = 'Create Porfolio 42'
-PM_Portfolio_Update = 'Update Porfolio 42'
+PM_Portfolio = 'Create Porfolio 96'
+PM_Portfolio_Update = 'Update Porfolio'
 PM_Portfolio_Description ='Portfolio description'
 PM_Portfolio_Description_Update ='Portfolio description Update'
 
 # Finance Configuration
-FC_Category = 'Create Category 42'
+FC_Category = 'Create Category 96'
 FC_Category_Description = 'Category description'
 FC_Invalid_Category = 'Category Invalid'
-FC_Category_Update = 'Update Category 42'
+FC_Category_Update = 'Update Category'
 FC_Category_Description_Update = 'Category description Update'
 
 # Finance Customize Budget
-FCB_budget= 'Create Custom Budget 42'
+FCB_budget= 'Create Custom Budget'
 FCB_budget_description = 'Custom Budget description'
-FCB_budget_update = 'Update Custom Budget 42'
+FCB_budget_update = 'Update Custom Budget'
 FCB_budget_description_update = 'Custom Budget description Update'
 
 # Product Squad Role 
-PSR_Product_Squad_Role = 'Create Produt Squad Role 42'
+PSR_Product_Squad_Role = 'Create Produt Squad Role'
 PSR_Produt_Squad_Role_Description ='Produt Squad Role description'
 PSR_Product_Squad_Role_Invalid = 'Product Squad Invalid'
-PSR_Produt_Squad_Role_Update = 'Update Product Squad Role 42'
+PSR_Produt_Squad_Role_Update = 'Update Product Squad Role'
 PSR_Product_Squad_Role_Description_Update = 'Product Squad Description Update'
 
 # Product_Platform_OKR_Squad
-PPOS_Portfolio = 'OKR Squad portfolio 0043'
+PPOS_Portfolio = 'OKR Squad portfolio'
 PPOS_description =  'OKR Squad portfolio description'
 PPOS_PPG = 'OKR Squad ppg'
 PPOS_pp = 'OKR Squad pp '
@@ -62,7 +62,7 @@ INPUT_VALUE_2 = '40'
 PPOS_SQUAD_2 = 'Product SQUAD'
 
 # PPG_Product_Platform
-PPGPP_Portfolio = 'PPG Create 42'
+PPGPP_Portfolio = 'PPG Create'
 PPGPP_Portfolio_Description = 'Portfolio PPG Create Description'
 PPGPP_PPG = 'Create PPG'
 PPGPP_PPG_Description = 'PPG Create Description'
@@ -113,7 +113,7 @@ PUA_Portfolio = 'User Access create '
 PUA_Portfolio_Description = 'Portfolio User Access Description'
 
 # ROADMAP PPG-Product/Platform
-RM_Portfolio = 'RM_Portfolio 42'
+RM_Portfolio = 'RM_Portfolio'
 RM_Portfolio_Description = 'RM_Portfolio_Description'
 RM_PPG = 'RM_PPG'
 RM_PPG_Description = 'RM_PPG_Description'
