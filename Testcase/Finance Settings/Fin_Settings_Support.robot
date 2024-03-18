@@ -93,7 +93,7 @@ Verify an application should be opened
 
 Verify it should display the user access tab as default 
     Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
-    Create Portfolio    ${FS_Portfolio}    ${FS_Portfolio}    ${BTN_Save}
+    Create Portfolio    ${FS_Portfolio}    ${FS_Portfolio}    ${PM_Manager}    ${BTN_Save}
     Search Data    ${Input_Portfolio_Search}    ${FS_Portfolio}
     Navigate to portfolio data    ${FS_Portfolio}
     Wait Until Element is present then click the element    ${Settings_Tab}
@@ -155,8 +155,6 @@ Verify Schedule page should display with Add button
     Wait Until Element is present then click the element    ${TAB_Product_Platform}
     Create Product/Platform    ${FS_Product_Platform}    ${FS_Product_Platform}    ${PPGPP_Owner}    ${Input_Type_Product}    ${BTN_Save}
     Navigate to Product/Platform    ${FS_Product_Platform}
-    Wait Until Element is present then click the element    ${TAB_squad}
-    Create Squad    ${FS_Product_Squad}    ${TXT_manager_Iyyappan}    ${BTN_NEXT}    ${BTN_Save}
     Wait Until Element is present then click the element    ${TAB_Product_Finance}
     Add Schedule to Product Finance    ${FS_Product_Schedule}    ${FS_Product_Schedule}    ${FS_Schedule_Date}
     Wait Until Element is present then click the element    ${BTN_Save}
@@ -171,11 +169,11 @@ Verify Financial Area Should not be deleted
     Wait Until Element is present then click the element    ${Settings_Tab}
     Wait Until Element is present then click the element    ${TAB_Finance_Settings}
     Click the Kebab button    ${FS_Finance_Budget}    ${Kebab_Financial_Area}
-    Delete Created data    ${FS_Finance_Budget}    ${BTN_Financial_Area_Detele}    ${BTN_Cancel}
+    Delete Created data    ${BTN_Financial_Area_Detele}    ${FS_Finance_Budget}    ${BTN_Cancel}
 
 Verify Financial Area Should be deleted  
     Click the Kebab button    ${FS_Finance_Budget}    ${Kebab_Financial_Area}
-    Delete Created data    ${FS_Finance_Budget}    ${BTN_Financial_Area_Detele}    ${BTN_Confirm}
+    Delete Created data    ${BTN_Financial_Area_Detele}    ${FS_Finance_Budget}    ${BTN_Confirm}
 
 Verify Finance area,Category dropdown should not display
     Wait Until Element is present then click the element    ${TAB_PPG}
@@ -200,10 +198,10 @@ Verify Finance area and Category dropdown should not be displayed
 Verify Application should be Close
     Click Breadcrums    ${FS_Product_Platform}
     Click the Kebab button    ${FS_Product_Platform}    ${BTN_Product_Platform_Kebab}
-    Delete Created data    ${FS_Product_Platform}    ${BTN_Product_Platform_Delete}    ${BTN_Confirm}
+    Delete Created data    ${BTN_Product_Platform_Delete}    ${FS_Product_Platform}    ${BTN_Confirm}
     Click Breadcrums    ${FS_PPG}
     Click the Kebab button     ${FS_PPG}    ${BTN_PPG_Kebab}
-    Delete Created data    ${FS_PPG}    ${BTN_PPG_Delete}    ${BTN_Confirm}
+    Delete Created data    ${BTN_PPG_Delete}    ${FS_PPG}    ${BTN_Confirm}
     Wait Until Element is present then click the element    ${BreadCrums_Portfolio}
     Search Data    ${Input_Portfolio_Search}    ${FS_Portfolio}
     Click the Kebab button on portfolio    ${FS_Portfolio}

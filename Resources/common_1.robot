@@ -59,14 +59,15 @@ Wait Until Element is present then click the element
 # Portfolio_Management
 Create Portfolio
     [Documentation]    Using this keyword we can create portfolio
-    [Arguments]    ${name}    ${description}    ${Element}
+    [Arguments]    ${name}    ${description}    ${manager}    ${Element}
     Wait Until Element is present then click the element    ${BTN_Create_Portfolio}
     Wait Until Page Contains Element    ${Input_Portfolio}    50
     Input Text    ${Input_Portfolio}    ${name}
     Press Keys    ${INput_Portfolio_Description}    ${description}
     Wait Until Element is present then click the element    ${Input_Portfolio_Manager}
-    Press Keys    ${Input_Search_Manager}    ${TXT_manager_Iyyappan}
-    Wait Until Element is present then click the element    ${Drop_Down_Manager}
+    Press Keys    ${Input_Search_Manager}    ${manager}
+    ${Select}    Format String    ${Select_Manager}    name=${manager}
+    Wait Until Element is present then click the element    ${Select}
     Capture Page Screenshot
     Wait Until Element is present then click the element    ${Element}
 
@@ -361,7 +362,7 @@ Edit Product/Platform
 
 Delete Created data
     [Documentation]    Using this keyword we can click delete  
-    [Arguments]    ${name}    ${Element}    ${Element2}    
+    [Arguments]    ${Element}    ${name}    ${Element2}    
     ${Delete}    Format String    ${Element}    name=${name}
     Wait Until Element is present then click the element    ${Delete}
     Wait Until Element is present then click the element    ${Element2}

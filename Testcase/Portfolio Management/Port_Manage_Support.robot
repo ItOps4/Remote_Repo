@@ -39,8 +39,19 @@ Then Click on More icon in Portfolio name, click on Delete Button and Click on C
 Then Click on More icon in Portfolio name, click on Delete Button and Click on Confirm button    
     verify if it display edit and delete button as dropdown,it Deleted Portfolio should not display in the portfolio page
 
+Then Click on System Settings icon,then click on Recycle Bin tab, and search for the deleted portfolio
+    Verify deleted portfolio should be display in recycle bin 
+
+Then Click on Delete Button and Click on confirm Button
+    Verify deleted portfolio should be deleted in recycle bin
+
 Then Close the Browser 
     Verify an Application should be closed
+
+
+
+
+
 
 Verify an application should be opened
     [Arguments]    ${username}
@@ -50,10 +61,10 @@ Verify a Portfolio Managment Menu should be displayed
     Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
 
 Verify a Save button should be disabled by default and Portfolio shouldn't be created.
-    Create Portfolio    ${PM_Portfolio}     ${PM_Portfolio_Description}    ${BTN_Cancel}
+    Create Portfolio    ${PM_Portfolio}     ${PM_Portfolio_Description}    ${PM_Manager}    ${BTN_Cancel}
 
 Verify a mandatory fields should be entered, a Save should be enabled, a Portfolio should be created
-    Create Portfolio    ${PM_Portfolio}     ${PM_Portfolio_Description}    ${BTN_Save}
+    Create Portfolio    ${PM_Portfolio}     ${PM_Portfolio_Description}    ${PM_Manager}    ${BTN_Save}
 
 
 verify if it should not display any result , it display message as " No records to display "    
@@ -83,5 +94,16 @@ verify if it display edit and delete button as dropdown,it Deleted Portfolio sho
     Click the Kebab button on portfolio    ${PM_Portfolio_Update}
     Delete Potfolio   ${PM_Portfolio_Update}    ${BTN_Confirm}
 
+Verify deleted portfolio should be display in recycle bin 
+    Wait Until Element is present then click the element    ${Icon_SystemSettings}
+    Wait Until Element is present then click the element    ${Icon_Recycle_Bin}
+    Search Data    ${Input_Search_RB}    ${PM_Portfolio_Update}
+    Verify a Created Data is displayed    ${PM_Portfolio_Update}
+
+Verify deleted portfolio should be deleted in recycle bin
+    Delete Created data    ${BTN_Delete_RB}    ${PM_Portfolio_Update}    ${BTN_Confirm}
+    Check text is present    ${TXT_NO_Record_Data}
+    Press Keys    ${Input_Search_RB}    CTRL+A+BACKSPACE
+    
 Verify an Application should be closed
     "Close the Browser"

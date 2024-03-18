@@ -125,7 +125,7 @@ Verify an application should be opened
 
 Verify a Portfolio Managment Menu should be displayed
     Wait Until Element is present then click the element    ${Icon_Portfolio_Management}
-    Create Portfolio    ${SO_Portfolio}    ${SO_Portfolio_Description}    ${BTN_Save}
+    Create Portfolio    ${SO_Portfolio}    ${SO_Portfolio_Description}    ${PM_Manager}    ${BTN_Save}
     Search Data    ${INPUT_Search_Portfolio}    ${SO_Portfolio}
   
 

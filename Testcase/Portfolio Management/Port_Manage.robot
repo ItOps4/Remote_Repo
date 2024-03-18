@@ -20,8 +20,11 @@ Portfolio Management
     Then Click on More icon in portfolio name, Click on Edit button,Enter Data and click on cancel button
     Then Click on More icon in portfolio name, click on Edit button, Enter the data and click on save button
     Then Click on More icon in Portfolio name, click on Delete Button and Click on Cancel Button  
-    Then Click on More icon in Portfolio name, click on Delete Button and Click on Confirm button    
+    Then Click on More icon in Portfolio name, click on Delete Button and Click on Confirm button
+    Then Click on System Settings icon,then click on Recycle Bin tab, and search for the deleted portfolio
+    Then Click on Delete Button and Click on confirm Button    
     Then Close the Browser
+    
     
     
     

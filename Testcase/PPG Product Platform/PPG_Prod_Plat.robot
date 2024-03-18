@@ -1,9 +1,10 @@
 *** Settings ***
 Documentation    PPG and Product/Platform    
 Resource    PPG_Prod_Plat_Support.robot
-Force Tags    PPG_Product_Platform    Test    Name:Amritha
+Force Tags    PPG_Product_Platform    #Test    Name:Amritha
 Variables    ../../Data/data.py
-
+Suite Setup    Delete Portfolio API
+Suite Teardown    Delete Portfolio API
 *** Test Cases ***
 PPG and Product/Platform
     [Documentation]    PPG and Product/Platform Create,Search,Edit and Delete

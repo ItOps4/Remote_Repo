@@ -1,8 +1,11 @@
 *** Settings ***
 Documentation    Product Roadmap - Roadmap  
 Resource    Prod_Roadmap_Support.robot
-Force Tags    Product_Roadmap    Test    Name:Naresh
+Force Tags    Product_Roadmap    #Test    Name:Naresh
 Variables    ../../Data/data.py
+Suite Setup    Delete Portfolio API    
+Suite Teardown    Delete Portfolio API
+
 
 *** Test Cases ***
 Roadmap
@@ -14,7 +17,7 @@ Roadmap
     Then Click on Roadmap tab
     Then Click on Add RoadMap Button,Select Create new roadmap and don't enter mandatory fields and click on Cancel button
     Then Click on Add RoadMap Button,Select Create new roadmap and enter mandatory fields and click on Save button
-    Then navigate to Roadmap
+    Then Navigate to Roadmap Created
     Then click on Add Category button and don't enter mandatory fields and click on cancel button
     Then click on Add Category button and enter mandatory fields and click on Save button
     Then click on Add Milestone button,don't enter mandatory Fields and click on cancel button

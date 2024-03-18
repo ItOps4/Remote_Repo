@@ -1,7 +1,6 @@
 public_key = '58m6kWLkFLw0srrHpI1s_5iNeoD3sGccNsFExGu0zig='
 
-Authorization = 'eyJraWQiOiJ4aXBzcXYrdUdaV3lseG9iblBiOVhxMXZDcnNqUWdqVkNuak93NGpKYURBPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJlMGEwZGM5Yi02MDJmLTRiNmItOWEwOS01ZGExNTQ3YTM3YjkiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl8xdXBCTmdQUmIiLCJjbGllbnRfaWQiOiIzZTNjbHN1bm1ram0wZHNydHBnNmhkbzV2NCIsIm9yaWdpbl9qdGkiOiJkZWE1OWMzZC02YWNmLTQ2ZTMtOTJmOC0yY2I5ZWM1ZWVkMjYiLCJldmVudF9pZCI6ImE2MjdkZDI4LWRkMDEtNDliYi1hYjQzLWFmNWZlMTYwNTMwZiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE3MDk5NzU5MTEsImV4cCI6MTcxMDc2NjcyOSwiaWF0IjoxNzEwNzYzMTI5LCJqdGkiOiI2YWEyMTc3Mi0xMTYwLTRiMjAtODUzMS1mY2Q1MzM1Nzc2NDEiLCJ1c2VybmFtZSI6ImUwYTBkYzliLTYwMmYtNGI2Yi05YTA5LTVkYTE1NDdhMzdiOSJ9.QXstvjVOYB-cZBPUUghW5w6lpKrsG6wkPJOB1_fRfj1QcKGZp-aqE44awCc8YSY6-AzOWPDYxR-bM-1Yw5s6cJmVRiMAXSBbXTD7b5jm2Q6DJRiU4brD-xeaLNep0eSgGLsT7CXjhxosyI-D_8zF_sjt3xd1g5SNULqHH3tSfSIjVvy0ZVC2e_W2k4gcUqVESoORbWrsUXERE7r4y2rt7BH7jyHPBFuEfSOC7XO2CCn3ZHI4BmiGtz6V5OfJEeEfpPKum64X-nyRRkNSpCBjAf3Jy5QKHmgeRFjvKFIHdIdB0vuIGfQRabVOYSe7TNwVMq5Kf_pqbLdcqiU-ybTUDw'
-
+Authorization = ''
 username001 = 'Tparthi@valuefactors.io'
 username002 = 'neeraj@codebyte.solutions'
 
@@ -14,6 +13,7 @@ PM_Portfolio = 'PROD_0001_Porfolio'
 PM_Portfolio_Update = 'PROD-0001_Update_Porfolio'
 PM_Portfolio_Description ='PROD-0001_Portfolio_description'
 PM_Portfolio_Description_Update ='PROD-0001_Portfolio_description_Update'
+PM_Manager = 'Iyyappan'
 
 # Finance Configuration
 FC_Category = 'PROD-0002_Create_Category'
@@ -61,7 +61,7 @@ TXT_squad_member = 'Laragon'
 TXT_select_role = 'deveops squad'
 INPUT_value = '20'
 INPUT_VALUE_2 = '40'
-PPOS_SQUAD_2 = 'Product SQUAD'
+PPOS_SQUAD_2 = 'PROD-0005_Product_SQUAD'
 
 # PPG_Product_Platform
 PPGPP_Portfolio = 'PPG Create'

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Finance Settings - Finance Area      
 Resource    Fin_Settings_Support.robot
-Force Tags    Portfolio_Finance_Settings    Test    Name:Amritha
+Force Tags    Portfolio_Finance_Settings    #Test    Name:Amritha
 Variables    ../../Data/data.py
 
 
