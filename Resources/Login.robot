@@ -1,7 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    OperatingSystem
-Library    JSONLibrary
+Library    RPA.JSON
 Library    RPA.Crypto
 Library    String
 Variables    ../Data/data.py

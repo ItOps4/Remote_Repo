@@ -5,12 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f8e01f5-7764-47a0-8e7a-889b6c2d6dcd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Auto.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Auto.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Login.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Login.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/common_1.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/common_1.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/Portfolio Finance Settings/Portfolio_Finance_Settings.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Portfolio Finance Settings/Portfolio_Finance_Settings.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/Product Platform OKR Squad/Product_Platform_OKR_Squad.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Product Platform OKR Squad/Product_Platform_OKR_Squad.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Finance Configuration/Fin_Configuration.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Finance Configuration/Fin_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Finance Configuration/Fin_Configuration_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Finance Configuration/Fin_Config_Support.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Finance Customize Budget/Finance_Customize_Budget.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Finance Customize Budget/Fin_Cus_Budg.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Finance Customize Budget/Finance_Customize_Budget_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Finance Customize Budget/Fin_Cus_Budg_Support.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Finance Settings/Fin_Settings.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Finance Settings/Fin_Settings.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/PPG Product Platform/PPG_Product_Platform.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/PPG Product Platform/PPG_Prod_Plat.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/PPG Product Platform/PPG_Product_Platform_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/PPG Product Platform/PPG_Prod_Plat_Support.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Portfolio Finance Settings/Portfolio_Finance_Settings.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Portfolio Finance Settings/Portfolio_Finance_Settings_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Finance Settings/Fin_Settings_Support.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Portfolio Management/Portfolio_Management.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Portfolio Management/Port_Manage.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Portfolio Management/Portfolio_Management_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Portfolio Management/Port_Manage_Support.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Portfolio User Access/Portfolio_User_Access.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/User Access/User_Access.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Portfolio User Access/Portfolio_User_Access_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/User Access/User_Access_Support.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Product Platform OKR Squad/Prod_Plat_OKR_Sqd.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Product Platform OKR Squad/Prod_Plat_OKR_Sqd.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Product Platform OKR Squad/Product_Platform_OKR_Squad.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Product Platform OKR Squad/Product_Platform_OKR_Squad_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Product Platform OKR Squad/Prod_Plat_OKR_Sqd_Support.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Product Roadmap/Product_Roadmap.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Product Roadmap/Prod_Roadmap.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Product Roadmap/Product_Roadmap_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Product Roadmap/Prod_Roadmap_Support.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Product Squad Role/Product_Squad_Role.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Product Squad Role/Prod_Sqd_Role.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Product Squad Role/Product_Squad_Role_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Product Squad Role/Prod_Sqd_Role_Support.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Strategic Outcome/Strategic_Outcome.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Strategic Outcome/Stratg_Outcome.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testcase/Strategic Outcome/Strategic_Outcome_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Strategic Outcome/Stratg_Outcome_Support.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +68,7 @@
     "Robot Framework.run current file.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Roadmap",
+    "git-widget-placeholder": "Merging Roadmap",
     "last_opened_file_path": "C:/Productor/Testcase/Custom fields",
     "settings.editor.selected.configurable": "advanced.settings"
   }

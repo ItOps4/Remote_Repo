@@ -16,8 +16,8 @@ BTN_UPDATE = '//p[text()="Update"]/parent::button'
 # Portfolio_Management
 BTN_Create_Portfolio = '//button[@id="portfolio-create-btn"]'
 Input_Portfolio = '//input[@id="portfolio-management-portfolio-name"]'
-Input_error_name  = '//p[@id="Name-input-box-name-field-err-msg"]'
-Input_error_description    =  '//div[text()="Description is required"]'
+Input_error_name = '//p[@id="Name-input-box-name-field-err-msg"]'
+Input_error_description = '//div[text()="Description is required"]'
 Input_Portfolio_Description = '//textarea[@id="portfolio-management-portfolio-description"]'
 BTN_Portfolio_Man_Menu='//span[@id="icon-Portfolio Management"]/ancestor::a'    
 Input_Portfolio_Manager = '//div[@id="portfolio-management-manager"]'
@@ -58,7 +58,7 @@ Recycle_bin_btn = '//div[@id="system-settings-recycle-bin"]'
 Restore_btn = '//button[@id="recycle-bin-restore"]'
 Restore_cancel_btn = '//button[@id="recycbin-restore-cancel-btn"]'
 Restore_confirm_btn = '//button[@id="recycbin-restore-confirm-btn"]'
-name_profile ='//td[@id="custom-id-gayathri  portfolio"]'
+name_profile = '//td[@id="custom-id-gayathri  portfolio"]'
 
 # Product_Squad_Role
 TAB_Product_Squad_Role = '//div[@id="system-settings-product-squad-roles"]'
@@ -88,8 +88,8 @@ BTN_more_OKR = '//div[@id="okr-more-btn-{name}"]'
 BTN_EDIT_OKR = '//li[@id="okr-edit-{name}"]'
 BTN_DELETE_OKR = '//li[@id="okr-delete-{name}"]'
 INPUT_key_result_name = '//input[@id="keyresult-key-result"]'
-INPUT_Key_result_description ='//textarea[@id="keyresult-description"]'
-INPUT_baseline ='//input[@id="keyresult-basline"]'
+INPUT_Key_result_description = '//textarea[@id="keyresult-description"]'
+INPUT_baseline = '//input[@id="keyresult-basline"]'
 INPUT_unit_of_measure = '//input[@id="keyresult-uom"]'
 INPUT_ASSign_TO_key = '//div[@id="keyresult-assign-to"]'
 BTN_more_keyresult = '//div[@id="keyresult-more-btn-{name}"]'
@@ -99,7 +99,7 @@ BTN_BACKARROW_KEY_OVERVIEW = '//i[@id="back-to-result-undefined"]'
 BTN_DELETE_result= '//li[@id="keyresult-delete-{name}"]'
 BTN_BACKARROW_OKR = '//i[@id="back-to-okr-{name}"]'
 TAB_squad = '//div[@id="product-squad"]'
-BTN_ADD_SQUAD ='//button[@id="add-squad-btn"]'
+BTN_ADD_SQUAD = '//button[@id="add-squad-btn"]'
 INPUT_SQUAD = '//input[@id="squad-name"]'
 INPUT_SQUAD_LEAD = '//div[@id="squad-lead"]'
 BTN_NEXT = '//button[@id="create-squad-next"]'
@@ -114,9 +114,9 @@ BTN_more_squad_details = '//div[@id="product-squad-details-more-btn-{name}"]'
 BTN_EDIT_squad_details = '//li[@id="{name}-product-squad-details-edit"]'
 INPUT_ALLOCATION = '//input[@id="product-edit-squad-allocation"]'
 INPUT_SELECT_ROLE = '//div[@id="product-edit-squad-role"]'
-select_role_data ='//li[@id="deveops squad"]'
+select_role_data = '//li[@id="deveops squad"]'
 BTN_BACKARROW_squad = '//div[@id="back-to-squad"]'
-INPUT_SEARCH_SQUAD ='//input[@id="ppg-product-squad-input-search"]'
+INPUT_SEARCH_SQUAD = '//input[@id="ppg-product-squad-input-search"]'
 BTN_MORE_product_squad = '//div[@id="product-squad-more-btn-{name}"]'
 BTN_EDIT_product_squad = '//li[@id="product-squad-edit-{name}"]'
 TAB_product_member = '//div[@id="product-member"]'
@@ -128,7 +128,7 @@ BTN_more_product_member = '//div[@id="more-btn-Iyyappan"]'
 BTN_EDIT_product_member = '//li[@id="{name}-product-squad-member-edit"]'
 BTN_DELETE_SQUAD_MEMBER = '//li[@id="{name}-product-squad-member-delete"]'
 BTN_DELETE_SQUAD_PRODUCT = '//li[@id="product-squad-delete-{name}"]'
-TAB_SQUAD1 ='(//div[@id="product-squad"])[2]'
+TAB_SQUAD1 = '(//div[@id="product-squad"])[2]'
 
 # PPG
 TAB_PPG = '//a[@id="PPG-tabs"]'
@@ -224,13 +224,13 @@ Drop_Down_Edit_Assign_To = "//div[@id='strategy-outcome-assign-to']"
 Drop_Down_INPUT_Edit_Search_Member = "//input[@id='search-field']"
 BTN_OKR_Delete = "//p[contains(text(),'Delete')]"
 BTN_Strategic_Delete_Cancel = "//button[@id='common-delete-cancel-btn']"
-BTN_Strategic_Delete_Confirm ="//button[@id='common-delete-confirm-btn']"
+BTN_Strategic_Delete_Confirm = "//button[@id='common-delete-confirm-btn']"
 BTN_Create_OKR = "//button[@id='so-okr-add-okr-btn']"
 BTN_OKR_Expand = "//tbody/tr[1]/td[1]/span[1]/button[1]/*[1]" #id required
 BTN_Add_Result = "//button[@id='okr-add-result-{name}']"
 BTN_Add_Key_Results = "//button[@id='create-sc-keyResultNullState-btn']"
 INPUT_Search_Key_Results = "//input[@id='keyresult-search-input']"
-BTN_More_Key_Results ="//div[@id='keyresult-more-btn-{name}']"
+BTN_More_Key_Results = "//div[@id='keyresult-more-btn-{name}']"
 INPUT_Search_OKR = "//input[@id='okr-search-input']"
 INPUT_Key_Result_Name = "//input[@id='keyresult-key-result']"
 INPUT_Key_Result_Description = "//textarea[@id='keyresult-description']"
@@ -273,7 +273,7 @@ INPUT_EK_Actual = "//input[@id='keyresult-details-actual_0']"
 Settings_Tab = '//a[@id="Settings-tabs"]'
 User_Access_Tab = "//p[@id='tabs-name-User Access']"
 BTN_Add_User = "//button[@id=' Portfolio-setting-add-user-access']"
-INPUT_Search_Add_User= "//input[@id='search-field']"
+INPUT_Search_Add_User = "//input[@id='search-field']"
 INPUT_Search_User_Access = "//input[@id=' Portfolio-user-access-input-search']"
 Drop_Down_Select_Name = "//li[@id='label-iyyappan']"
 Drop_Down_Search_Add_user = "//input[@id='checkbox-{name}']"
@@ -324,13 +324,13 @@ Breadcrums_Portfolio_Management = "//p[@id='breadcrums-Portfolio Management']"
 Mouse_over_category = '//p[@id="roadmap-category-{name}"]'
 BTN_Kebab_Roadmap = "//div[@id='roadmap-action-{name}']"
 BTN_More_Edit_Roadmap = '//li[@id="roadmap-edit-{name}"]'
-BTN_More_Delete_Roadmap ='//li[@id="roadmap-delete-{name}"]' 
+BTN_More_Delete_Roadmap = '//li[@id="roadmap-delete-{name}"]'
 # roadmap
 BTN_ROADMAP_ADD_CATEGORY = '//button[@id="roadmap-add-category"]'
 BTN_ROADMAP_EDIT_CATEGORY = '//div[@id="road-map-tg-cat-group-edit-{name1}"]'
 BTN_ROADMAP_ADD = '//div[@id="road-map-tg-cat-group-add-{name}"]'
 BTN_ROADMAP_EDIT_TASK = '//div[@id="roadmap-items-task-{name2}"]'
-BTN_ROADMAP_DELETE ='//div[@id="road-map-tg-cat-group-delete-{name}"]'
+BTN_ROADMAP_DELETE = '//div[@id="road-map-tg-cat-group-delete-{name}"]'
 INPUT_CATEGORY_NAME = '//input[@id="road-map-tg-add-category-name"]'
 INPUT_CHOOSE_COLOR = '//div[@id="road-map-tg-tl-add-category-color-{color}"]'
 INPUT_TASK_NAME = '//input[@id="road-sc-task-roadmap-name"]'
@@ -355,7 +355,7 @@ BTN_Financial_Area_Detele = '//li[@id="portfolio-finance-area-delete-{name} - Ca
 Search_Financial_Area = '//input[@id="portfolio-settings-finance-area-search"]'
 # PPG Finance
 Navigate_PPG = '//td[@id="custom-id-{name}"]'
-TAB_PPG_Finance  = '//a[@id="Finance-tabs"]'
+TAB_PPG_Finance = '//a[@id="Finance-tabs"]'
 BTN_Add_Schedule_PPG = '//button[@id="create-ppg-finace-null-state"]'
 Input_Schedule_PPG = '//input[@id="ppg-finance-schedule-name"]'
 Input_Sch_Des_PPG = '//input[@id="ppg-finance-schedule-description"]'
@@ -378,7 +378,7 @@ TAB_Product_Finance = '//div[@id="product-finance"]'
 BTN_Add_Schedule_Product = '//button[@id="product-finance-nullstate-addnewdata"]'
 Input_Schedule_Product = '//input[@id="ppg-product-finance-schedule-name"]'
 Input_Sch_Des_Product = '//input[@id="ppg-product-finance-schedule-description"]'
-BTN_Add_Data_Product_Sch  = '//button[@id="product-finance-add-data"]'
+BTN_Add_Data_Product_Sch = '//button[@id="product-finance-add-data"]'
 Input_Des_AD_Sch_Product = '//input[@id="ppg-product-finance-add-data-description"]'
 DD_FA_AD_Sch_Product = '//div[@id="ppg-product-finance-add-data-financial-area"]'
 DD_Build_run_Product = '//div[@id="ppg-product-finance-add-data-build"]'
