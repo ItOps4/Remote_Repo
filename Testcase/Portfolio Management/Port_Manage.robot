@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Portfolio Management - Portfolio   
 Resource    Port_Manage_Support.robot
-Force Tags      Portfolio_Managament    Test    Name:Gayathri
+Force Tags      Portfolio_Managament    Test    Name:Gayathri    PROD-0001
 Variables    ../../Data/data.py
 
 

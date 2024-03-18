@@ -6,6 +6,8 @@ Variables    ../../Data/xpath.py
 
 
 *** Keywords ***
+Delete Portfolio API_suitesetup
+    Delete Portfolio    ${PPOS_Portfolio}
 Given Login into Productor Application
     [Arguments]    ${username}
     Verify if user should be able to login successfully    ${username}

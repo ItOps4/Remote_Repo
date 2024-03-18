@@ -3,6 +3,8 @@ Documentation    Product/platform OKR and squad
 Resource    Prod_Plat_OKR_Sqd_Support.robot
 Force Tags      Product_Platform_OKR_Squad    #Test    Name:Gayathri
 Variables    ../../Data/data.py
+Suite Setup    Delete Portfolio API_suitesetup
+Suite Teardown    Delete Portfolio API_suitesetup
 
 
 *** Test Cases ***
