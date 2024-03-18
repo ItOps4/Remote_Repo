@@ -831,7 +831,7 @@ Navigate to PPG Schedule
     ${Navigate}    Format String    ${Navigate_Schedule}    name=${name}
     Wait Until Element is present then click the element    ${Navigate}
 
-Add data to PPG Schedule 
+Add data to PPG Schedule for Finance Settings 
     [Documentation]    Using this keywork we can Add data to PPG Schedule
     [Arguments]    ${description}    ${name}    ${name1}    ${name3}    ${name5}
     Wait Until Element is present then click the element    ${BTN_Add_Data_Sch_PPG}
@@ -863,9 +863,9 @@ Add Schedule to Product Finance
     Input Text    ${Input_Sch_Des_Product}    ${description}
     Press Keys    ${Input_Sch_Date_PPG}    ${year}
 
-Add data to Product Schedule 
+Add data to Product Schedule for Finance Settings 
     [Documentation]    Using this keywork we can Add data to Product Schedule
-    [Arguments]    ${description}    ${name}    ${name1}    ${name3}    ${name4}    ${name5}
+    [Arguments]    ${description}    ${name}    ${name1}    ${name3}    ${name5}
     Wait Until Element is present then click the element    ${BTN_Add_Data_Product_Sch}
     Input Text    ${Input_Des_AD_Sch_Product}    ${description}
     Wait Until Element is present then click the element    ${DD_FA_AD_Sch_Product}
@@ -877,9 +877,6 @@ Add data to Product Schedule
     Wait Until Element is present then click the element    ${DD_Category_AD_Sch_Product}
     ${Category}    Format String    ${Select_Category_AD_Sch}    name=${name3}
     Wait Until Element is present then click the element    ${Category}
-    Wait Until Element is present then click the element    ${DD_Squad_AD_Sch_Product}
-    ${sqaud}    Format String    ${Select_Squad_AD_Sch_Product}    name=${name4}
-    Wait Until Element is present then click the element    ${sqaud}
     Wait Until Element is present then click the element    ${DD_Spend_Type_AD_Sch_Product}
     ${spend}    Format String    ${Select_Spend_Type_AD_Sch}    name=${name5}
     Wait Until Element is present then click the element    ${spend}
@@ -891,6 +888,8 @@ Verify Deteletd Financial Area should not Display in PPG and Product Finanace
     Wait Until Element is present then click the element    ${Verify}
     Double Click Element    ${element2}
     Double Click Element    ${element3}
+
+
 
 
 

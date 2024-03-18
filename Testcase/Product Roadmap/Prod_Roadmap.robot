@@ -1,21 +1,20 @@
 *** Settings ***
-Documentation    Create,edit,delete roadmap   
-Resource    Product_Roadmap_Support.robot
-Force Tags    Product_Roadmap    #Test    Name:Naresh
+Documentation    Product Roadmap - Roadmap  
+Resource    Prod_Roadmap_Support.robot
+Force Tags    Product_Roadmap    Test    Name:Naresh
 Variables    ../../Data/data.py
 
 *** Test Cases ***
-
 Roadmap
-    [Documentation]    Create,Search,Edit and Delete PPG and Product/Platform
+    [Documentation]    Roadmap Create,Search,Edit and Delete
     Given Login into application    ${username001} 
     When Click on Portfolio Management tab and navigate to Portfolio
-    Then Then click on PPG Tab and navigate to PPG
-    Then Then click on product/platform tab and nagivate to Product
-    Then Then Click on Roadmap tab
+    Then click on PPG Tab and navigate to PPG
+    Then click on product/platform tab and nagivate to Product
+    Then Click on Roadmap tab
     Then Click on Add RoadMap Button,Select Create new roadmap and don't enter mandatory fields and click on Cancel button
-    Then Then Click on Add RoadMap Button,Select Create new roadmap and enter mandatory fields and click on Save button	
-    Then Then Navigate to Roadmap
+    Then Click on Add RoadMap Button,Select Create new roadmap and enter mandatory fields and click on Save button
+    Then navigate to Roadmap
     Then click on Add Category button and don't enter mandatory fields and click on cancel button
     Then click on Add Category button and enter mandatory fields and click on Save button
     Then click on Add Milestone button,don't enter mandatory Fields and click on cancel button

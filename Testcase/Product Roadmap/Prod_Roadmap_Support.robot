@@ -24,7 +24,8 @@ Then Click on Add RoadMap Button,Select Create new roadmap and don't enter manda
     verify a roadmap should not be created
 Then Click on Add RoadMap Button,Select Create new roadmap and enter mandatory fields and click on Save button	
     Verify a roadmap should be created
-Then Navigate to Roadmap
+
+Then navigate to Roadmap
 	verify a Road-Map page should be display
 
 Then click on Add Category button and don't enter mandatory fields and click on cancel button

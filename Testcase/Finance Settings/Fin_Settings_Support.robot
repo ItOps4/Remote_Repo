@@ -148,7 +148,7 @@ Verify Schedule page should display
     Wait Until Element is present then click the element    ${Navigate_Schedule}
 
 Verify Finance area and Category dropdown should display. Finance should be created
-    Add data to PPG Schedule    ${FS_PPG_Schedule}    ${FS_Finance_Budget}    ${FS_AD_Build_or_run}    ${FS_Category}    ${FS_Spend_Type}
+    Add data to PPG Schedule for Finance Settings    ${FS_PPG_Schedule}    ${FS_Finance_Budget}    ${FS_AD_Build_or_run}    ${FS_Category}    ${FS_Spend_Type}
     Wait Until Element is present then click the element    ${BTN_Save}
 
 Verify Schedule page should display with Add button 
@@ -163,7 +163,7 @@ Verify Schedule page should display with Add button
     Wait Until Element is present then click the element    ${Navigate_Schedule}
 
 Verify Finance area,Category dropdown should display and Product Finance should be created 
-    Add data to Product Schedule    ${FS_PPG_Schedule}    ${FS_Finance_Budget}    ${FS_AD_Build_or_run}    ${FS_Category}    ${FS_Product_Squad}    ${FS_Spend_Type}
+    Add data to Product Schedule for Finance Settings    ${FS_PPG_Schedule}    ${FS_Finance_Budget}    ${FS_AD_Build_or_run}    ${FS_Category}    ${FS_Spend_Type}
     Wait Until Element is present then click the element    ${BTN_Save}
 
 Verify Financial Area Should not be deleted  

@@ -8,7 +8,7 @@ TXT_NO_Record_Data = 'No records to display'
 
 # Portfolio management
 TXT_manager_Iyyappan = 'Iyyappan'
-PM_Portfolio = 'Create Porfolio'
+PM_Portfolio = 'Create Porfolio 96'
 PM_Portfolio_Update = 'Update Porfolio'
 PM_Portfolio_Description ='Portfolio description'
 PM_Portfolio_Description_Update ='Portfolio description Update'
@@ -36,7 +36,7 @@ PSR_Product_Squad_Role_Description_Update = 'Product Squad Description Update'
 # Product_Platform_OKR_Squad
 PPOS_Portfolio = 'OKR Squad portfolio'
 PPOS_description =  'OKR Squad portfolio description'
-PPOS_PPG = 'OKR Squad ppg '
+PPOS_PPG = 'OKR Squad ppg'
 PPOS_pp = 'OKR Squad pp '
 PPOS_OKR = 'OKR '
 PPOS_OKR_UPDATE= 'OKR_Update'
@@ -121,7 +121,7 @@ RM_Owner = 'Tom Parthi'
 RM_PPG_Update = 'RM_PPG_Update'
 RM_Portfolio_Description_Update = 'RM_Portfolio_Description_Update'
 RM_PPG_Invalid = 'RM_PPG_Invalid'
-#ROADMAP Product/Platform
+# ROADMAP Product/Platform
 RM_Product_Platform = 'RM_Product_Platform'
 RM_Product_Platform_description = 'RM_Product_Platform_description'
 RM_Product_Platform_Invalid = 'RM_Product_Platform_Invalid'
@@ -129,7 +129,7 @@ choose_color1 = '#E8E8E8'
 choose_color2 = '#FFB7B7'
 choose_color3 = '#ECA9A5'
 edit_task_name = 'bag'
-#ROADMAP
+# ROADMAP
 RM_Roadmap = "RM_Roadmap"
 RM_Edit_Roadmap = "RM_Edit_Roadmap"
 RM_Roadmap_Invalid = "RM_Roadmap_invalid"
@@ -141,9 +141,9 @@ RM_milestone = "RM_Milestone_Name"
 RM_Edit_milestone = "RM_Edit_Milestone_Name"
 
 # Portfolio-Settings-Finance Settings
-FS_Category = 'FS_Category'
-FS_Category_01 = 'FS_Category01'
-FS_Finance_Budget = 'FS Budget'
+FS_Category = 'FS_Category 97'
+FS_Category_01 = 'FS_Category097'
+FS_Finance_Budget = 'FS Budget97'
 FS_Portfolio = 'FS FA Portfolio'
 FS_Finance_Area_Des = 'Finance area Description'
 FS_FA_Des_Update = 'Finance area Description Update'

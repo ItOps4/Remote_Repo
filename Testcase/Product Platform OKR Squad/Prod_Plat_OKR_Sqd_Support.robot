@@ -4,6 +4,7 @@ Resource    ../../Resources/Login.robot
 Variables    ../../Data/data.py
 Variables    ../../Data/xpath.py
 
+
 *** Keywords ***
 Given Login into Productor Application
     [Arguments]    ${username}

@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Finance Configuration - Category    
-Resource    Fin_Configuration_Support.robot
+Resource    Fin_Config_Support.robot
 Force Tags    Finance_Configuration    Test    Name:Amritha
 Variables    ../../Data/data.py
 

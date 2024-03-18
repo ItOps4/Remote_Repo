@@ -1,12 +1,13 @@
 *** Settings ***
 Documentation    Product/platform OKR and squad    
-Resource    Product_Platform_OKR_Squad_Support.robot
+Resource    Prod_Plat_OKR_Sqd_Support.robot
 Force Tags      Product_Platform_OKR_Squad    #Test    Name:Gayathri
 Variables    ../../Data/data.py
 
 
 *** Test Cases ***
 Product / platform OKR and Squad 
+    [Documentation]    Product/platform OKR and squad Create,Edit,Search,Delete    
     Given Login into Productor Application    ${username001}
     When navigate to portfolio and click on ppg menu and navigate to ppg
     Then navigate to platform and click on OKR tab
