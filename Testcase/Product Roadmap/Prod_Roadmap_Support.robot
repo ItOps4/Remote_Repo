@@ -89,7 +89,7 @@ Verify an application should be opened
 
 verify it should display portfolio
     Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
-    Create Portfolio    ${RM_Portfolio}    ${RM_Portfolio_Description}    ${BTN_Save}
+    Create Portfolio    ${RM_Portfolio}    ${RM_Portfolio_Description}    ${PM_Manager}    ${BTN_Save}
     Search Data    ${Input_Portfolio_Search}    ${RM_Portfolio}
 
 verify a ppg should display

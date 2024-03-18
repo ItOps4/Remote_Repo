@@ -93,7 +93,7 @@ Verify an application should be opened
 
 Verify it should display the user access tab as default 
     Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
-    Create Portfolio    ${FS_Portfolio}    ${FS_Portfolio}    ${BTN_Save}
+    Create Portfolio    ${FS_Portfolio}    ${FS_Portfolio}    ${PM_Manager}    ${BTN_Save}
     Search Data    ${Input_Portfolio_Search}    ${FS_Portfolio}
     Navigate to portfolio data    ${FS_Portfolio}
     Wait Until Element is present then click the element    ${Settings_Tab}
@@ -155,8 +155,6 @@ Verify Schedule page should display with Add button
     Wait Until Element is present then click the element    ${TAB_Product_Platform}
     Create Product/Platform    ${FS_Product_Platform}    ${FS_Product_Platform}    ${PPGPP_Owner}    ${Input_Type_Product}    ${BTN_Save}
     Navigate to Product/Platform    ${FS_Product_Platform}
-    Wait Until Element is present then click the element    ${TAB_squad}
-    Create Squad    ${FS_Product_Squad}    ${TXT_manager_Iyyappan}    ${BTN_NEXT}    ${BTN_Save}
     Wait Until Element is present then click the element    ${TAB_Product_Finance}
     Add Schedule to Product Finance    ${FS_Product_Schedule}    ${FS_Product_Schedule}    ${FS_Schedule_Date}
     Wait Until Element is present then click the element    ${BTN_Save}

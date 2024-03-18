@@ -61,10 +61,10 @@ Verify a Portfolio Managment Menu should be displayed
     Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
 
 Verify a Save button should be disabled by default and Portfolio shouldn't be created.
-    Create Portfolio    ${PM_Portfolio}     ${PM_Portfolio_Description}    ${BTN_Cancel}
+    Create Portfolio    ${PM_Portfolio}     ${PM_Portfolio_Description}    ${PM_Manager}    ${BTN_Cancel}
 
 Verify a mandatory fields should be entered, a Save should be enabled, a Portfolio should be created
-    Create Portfolio    ${PM_Portfolio}     ${PM_Portfolio_Description}    ${BTN_Save}
+    Create Portfolio    ${PM_Portfolio}     ${PM_Portfolio_Description}    ${PM_Manager}    ${BTN_Save}
 
 
 verify if it should not display any result , it display message as " No records to display "    

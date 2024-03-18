@@ -1,0 +1,24 @@
+==============================================================================
+Productor                                                                     
+==============================================================================
+Productor.Testcase                                                            
+==============================================================================
+Productor.Testcase.Portfolio Management                                       
+==============================================================================
+Productor.Testcase.Portfolio Management.Port Manage :: Portfolio Management...
+==============================================================================
+Portfolio Management :: Portfolio Create,Edit,Search,Delete           | PASS |
+------------------------------------------------------------------------------
+Productor.Testcase.Portfolio Management.Port Manage :: Portfolio M... | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Productor.Testcase.Portfolio Management                               | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Productor.Testcase                                                    | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Productor                                                             | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Productor\output\pabot_results\0\output.xml
