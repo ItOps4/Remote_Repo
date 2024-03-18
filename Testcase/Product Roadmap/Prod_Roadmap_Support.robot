@@ -205,11 +205,11 @@ Verify a Roadmap Should be deleted in Roadmap
 Verify it should delete Product, PPG,Portfolio
     Click Breadcrums    ${RM_Product_Platform}
     Click the Kebab button     ${RM_Product_Platform }    ${BTN_Product_Platform_Kebab}
-    Delete Created data    ${RM_Product_Platform }    ${BTN_Product_Platform_Delete}    ${BTN_Confirm}
+    Delete Created data    ${BTN_Product_Platform_Delete}    ${RM_Product_Platform}    ${BTN_Confirm}
     Click Breadcrums    ${RM_PPG}
     Search Data    ${Input_Search_PPG}    ${RM_PPG}
     Click the Kebab button     ${RM_PPG}    ${BTN_PPG_Kebab}
-    Delete Created data    ${RM_PPG}    ${BTN_PPG_Delete}    ${BTN_Confirm}
+    Delete Created data    ${BTN_PPG_Delete}    ${RM_PPG}    ${BTN_Confirm}
     Wait Until Element is present then click the element    ${BreadCrums_Portfolio}
     Search Data    ${Input_Portfolio_Search}    ${RM_Portfolio}
     Click the Kebab button on portfolio    ${RM_Portfolio}

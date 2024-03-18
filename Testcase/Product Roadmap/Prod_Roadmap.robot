@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Product Roadmap - Roadmap  
 Resource    Prod_Roadmap_Support.robot
-Force Tags    Product_Roadmap    Test    Name:Naresh
+Force Tags    Product_Roadmap    #Test    Name:Naresh
 Variables    ../../Data/data.py
 
 *** Test Cases ***

@@ -171,11 +171,11 @@ Verify Financial Area Should not be deleted
     Wait Until Element is present then click the element    ${Settings_Tab}
     Wait Until Element is present then click the element    ${TAB_Finance_Settings}
     Click the Kebab button    ${FS_Finance_Budget}    ${Kebab_Financial_Area}
-    Delete Created data    ${FS_Finance_Budget}    ${BTN_Financial_Area_Detele}    ${BTN_Cancel}
+    Delete Created data    ${BTN_Financial_Area_Detele}    ${FS_Finance_Budget}    ${BTN_Cancel}
 
 Verify Financial Area Should be deleted  
     Click the Kebab button    ${FS_Finance_Budget}    ${Kebab_Financial_Area}
-    Delete Created data    ${FS_Finance_Budget}    ${BTN_Financial_Area_Detele}    ${BTN_Confirm}
+    Delete Created data    ${BTN_Financial_Area_Detele}    ${FS_Finance_Budget}    ${BTN_Confirm}
 
 Verify Finance area,Category dropdown should not display
     Wait Until Element is present then click the element    ${TAB_PPG}
@@ -200,10 +200,10 @@ Verify Finance area and Category dropdown should not be displayed
 Verify Application should be Close
     Click Breadcrums    ${FS_Product_Platform}
     Click the Kebab button    ${FS_Product_Platform}    ${BTN_Product_Platform_Kebab}
-    Delete Created data    ${FS_Product_Platform}    ${BTN_Product_Platform_Delete}    ${BTN_Confirm}
+    Delete Created data    ${BTN_Product_Platform_Delete}    ${FS_Product_Platform}    ${BTN_Confirm}
     Click Breadcrums    ${FS_PPG}
     Click the Kebab button     ${FS_PPG}    ${BTN_PPG_Kebab}
-    Delete Created data    ${FS_PPG}    ${BTN_PPG_Delete}    ${BTN_Confirm}
+    Delete Created data    ${BTN_PPG_Delete}    ${FS_PPG}    ${BTN_Confirm}
     Wait Until Element is present then click the element    ${BreadCrums_Portfolio}
     Search Data    ${Input_Portfolio_Search}    ${FS_Portfolio}
     Click the Kebab button on portfolio    ${FS_Portfolio}

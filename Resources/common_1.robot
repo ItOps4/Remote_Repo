@@ -318,7 +318,7 @@ Edit Product/Platform
 
 Delete Created data
     [Documentation]    Using this keyword we can click delete  
-    [Arguments]    ${name}    ${Element}    ${Element2}    
+    [Arguments]    ${Element}    ${name}    ${Element2}    
     ${Delete}    Format String    ${Element}    name=${name}
     Wait Until Element is present then click the element    ${Delete}
     Wait Until Element is present then click the element    ${Element2}

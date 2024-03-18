@@ -39,8 +39,19 @@ Then Click on More icon in Portfolio name, click on Delete Button and Click on C
 Then Click on More icon in Portfolio name, click on Delete Button and Click on Confirm button    
     verify if it display edit and delete button as dropdown,it Deleted Portfolio should not display in the portfolio page
 
+Then Click on System Settings icon,then click on Recycle Bin tab, and search for the deleted portfolio
+    Verify deleted portfolio should be display in recycle bin 
+
+Then Click on Delete Button and Click on confirm Button
+    Verify deleted portfolio should be deleted in recycle bin
+
 Then Close the Browser 
     Verify an Application should be closed
+
+
+
+
+
 
 Verify an application should be opened
     [Arguments]    ${username}
@@ -83,5 +94,16 @@ verify if it display edit and delete button as dropdown,it Deleted Portfolio sho
     Click the Kebab button on portfolio    ${PM_Portfolio_Update}
     Delete Potfolio   ${PM_Portfolio_Update}    ${BTN_Confirm}
 
+Verify deleted portfolio should be display in recycle bin 
+    Wait Until Element is present then click the element    ${Icon_SystemSettings}
+    Wait Until Element is present then click the element    ${Icon_Recycle_Bin}
+    Search Data    ${Input_Search_RB}    ${PM_Portfolio_Update}
+    Verify a Created Data is displayed    ${PM_Portfolio_Update}
+
+Verify deleted portfolio should be deleted in recycle bin
+    Delete Created data    ${BTN_Delete_RB}    ${PM_Portfolio_Update}    ${BTN_Confirm}
+    Check text is present    ${TXT_NO_Record_Data}
+    Press Keys    ${Input_Search_RB}    CTRL+A+BACKSPACE
+    
 Verify an Application should be closed
     "Close the Browser"

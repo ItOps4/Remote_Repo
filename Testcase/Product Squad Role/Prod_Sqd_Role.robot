@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Product Squad Role - Role    
 Resource    Prod_Sqd_Role_Support.robot
-Force Tags    Product_Squad_Role    Test    Name:Amritha
+Force Tags    Product_Squad_Role    #Test    Name:Amritha
 Variables    ../../Data/data.py
 
 *** Test Cases ***

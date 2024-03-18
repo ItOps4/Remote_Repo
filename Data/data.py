@@ -8,13 +8,13 @@ TXT_NO_Record_Data = 'No records to display'
 
 # Portfolio management
 TXT_manager_Iyyappan = 'Iyyappan'
-PM_Portfolio = 'Create Porfolio 96'
-PM_Portfolio_Update = 'Update Porfolio'
+PM_Portfolio = 'Create Porfolio PROD-006'
+PM_Portfolio_Update = 'Update Porfolio PROD-006'
 PM_Portfolio_Description ='Portfolio description'
 PM_Portfolio_Description_Update ='Portfolio description Update'
 
 # Finance Configuration
-FC_Category = 'Create Category 96'
+FC_Category = 'Create Category'
 FC_Category_Description = 'Category description'
 FC_Invalid_Category = 'Category Invalid'
 FC_Category_Update = 'Update Category'

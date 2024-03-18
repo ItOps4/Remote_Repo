@@ -146,16 +146,16 @@ Verify if the Platform should be Filtered and Displayed
 
 Verify a Platform and Product PPG Should be deleted
     Click the Kebab button     ${PPGPP_Product_Platform}    ${BTN_Product_Platform_Kebab}
-    Delete Created data    ${PPGPP_Product_Platform}    ${BTN_Product_Platform_Delete}    ${BTN_Cancel}
+    Delete Created data    ${BTN_Product_Platform_Delete}    ${PPGPP_Product_Platform}    ${BTN_Cancel}
     Click the Kebab button     ${PPGPP_Product_Platform}    ${BTN_Product_Platform_Kebab}
-    Delete Created data    ${PPGPP_Product_Platform}    ${BTN_Product_Platform_Delete}    ${BTN_Confirm}
+    Delete Created data    ${BTN_Product_Platform_Delete}    ${PPGPP_Product_Platform}    ${BTN_Confirm}
     Press Keys    ${Input_Search_Product_Platform}    CTRL+A+BACKSPACE
     Click Breadcrums    ${PPGPP_PPG}
     Search Data    ${Input_Search_PPG}    ${PPGPP_PPG}
     Click the Kebab button     ${PPGPP_PPG}    ${BTN_PPG_Kebab}
-    Delete Created data    ${PPGPP_PPG}    ${BTN_PPG_Delete}    ${BTN_Cancel}
+    Delete Created data    ${BTN_PPG_Delete}    ${PPGPP_PPG}    ${BTN_Cancel}
     Click the Kebab button     ${PPGPP_PPG}    ${BTN_PPG_Kebab}
-    Delete Created data    ${PPGPP_PPG}    ${BTN_PPG_Delete}    ${BTN_Confirm}
+    Delete Created data    ${BTN_PPG_Delete}    ${PPGPP_PPG}    ${BTN_Confirm}
 
 
 Verify a Product/Platform(for Platform) Page should be Displayed
@@ -177,12 +177,12 @@ Verify if the Product should be Filtered and Displayed
 
 Verify a Product and Platform PPG Should be deleted
     Click the Kebab button     ${PPGPP_Product_Platform}    ${BTN_Product_Platform_Kebab}
-    Delete Created data    ${PPGPP_Product_Platform}    ${BTN_Product_Platform_Delete}    ${BTN_Confirm}
+    Delete Created data    ${BTN_Product_Platform_Delete}    ${PPGPP_Product_Platform}    ${BTN_Confirm}
     Press Keys    ${Input_Search_Product_Platform}    CTRL+A+BACKSPACE
     Click Breadcrums    ${PPGPP_PPG_Update}
     Search Data    ${Input_Search_PPG}    ${PPGPP_PPG_Update}
     Click the Kebab button     ${PPGPP_PPG_Update}    ${BTN_PPG_Kebab}
-    Delete Created data    ${PPGPP_PPG_Update}    ${BTN_PPG_Delete}    ${BTN_Confirm}
+    Delete Created data    ${BTN_PPG_Delete}    ${PPGPP_PPG_Update}    ${BTN_Confirm}
     Press Keys    ${Input_Search_PPG}    CTRL+A+BACKSPACE
     Wait Until Element is present then click the element    ${BreadCrums_Portfolio}
     Search Data    ${Input_Portfolio_Search}    ${PPGPP_Portfolio}
