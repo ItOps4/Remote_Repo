@@ -8,7 +8,7 @@ Timeout 2
 
 MKDIR "output"
 
-Set Tags=Portfolio_Managament
+Set Tags=PPG_Product_Platform
 
 Set Thread=5
 

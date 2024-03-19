@@ -543,7 +543,7 @@ delete product squad
 # Strategic Outcome
 create,edit strategic outcome
     [Documentation]    Using this keyword we can create strategic outcome
-    [Arguments]    ${name}    ${description}    ${Element}
+    [Arguments]    ${name}    ${description}    ${Manager}    ${Element}
     Press Keys    ${INPUT_Strategic_Outcome_Name}    CTRL+A+BACKSPACE
     Input Text    ${INPUT_Strategic_Outcome_Name}    ${name}
     Press Keys    ${INPUT_Strategic_Outcome_Description}    CTRL+A+BACKSPACE
@@ -555,7 +555,7 @@ create,edit strategic outcome
     Press Keys    ${INPUT_SO_End_Date}    CTRL+A+BACKSPACE
     Press Keys    ${INPUT_SO_End_Date}    ${current_date}
     Wait Until Element is present then click the element    ${Drop_Down_Select_Manager}
-    Press Keys    ${Drop_Down_Input_Select_Manager}    ${TXT_manager_Iyyappan}
+    Press Keys    ${Drop_Down_Input_Select_Manager}    ${Manager}
     Wait Until Element is present then click the element    ${Drop_Down_LI_Iyyappan}
     Wait Until Element is present then click the element    ${Element}
     

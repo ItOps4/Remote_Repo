@@ -36,7 +36,7 @@ PSR_Produt_Squad_Role_Update = 'PROD-0004_Update_Product_Squad_Role'
 PSR_Product_Squad_Role_Description_Update = 'PROD-0004_Product Squad Description Update'
 
 # Product_Platform_OKR_Squad
-PPOS_Portfolio = 'PROD-0005_OKR_Squad_portfolio1 '
+PPOS_Portfolio = 'PROD-0005_OKR_Squad_portfolio '
 PPOS_description =  'PROD-0005_OKR_Squad_portfolio_description'
 PPOS_PPG = 'PROD-0005_OKR_Squad_ppg'
 PPOS_pp = 'PROD-0005_OKR_Squad_pp '

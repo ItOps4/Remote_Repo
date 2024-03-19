@@ -137,11 +137,11 @@ Verify a Strategic outcome Page should be displayed
 
 Verify cancel Button should be enabled and Category shouldn't be created
     click portfolio and navigate to Next page    ${Strategic_outcome_Tab}    ${SO_Portfolio}    ${BTN_Add_Strategic_outcome}
-    create,edit strategic outcome    ${SO_Strategic_outcome}    ${SO_Strategic_outcome_Description}    ${BTN_Cancel}  
+    create,edit strategic outcome    ${SO_Strategic_outcome}    ${SO_Strategic_outcome_Description}    ${TXT_manager_Iyyappan}    ${BTN_Cancel}  
     
 Verify Save button should be enabled and Category should be created
     Wait Until Element is present then click the element    ${BTN_Add_Strategic_outcome}
-    Create,edit Strategic Outcome    ${SO_Strategic_outcome}    ${SO_Strategic_outcome_Description}    ${BTN_Save}
+    Create,edit Strategic Outcome    ${SO_Strategic_outcome}    ${SO_Strategic_outcome_Description}    ${TXT_manager_Iyyappan}    ${BTN_Save}
 
 Verify an error message shouble be display as " No results found" and Verify if Category Record should be Filtered and Displayed in strategic outcome
     Search Data    ${INPUT_Search_Strategic_Outcome}    ${SO_Invalid}
@@ -233,12 +233,12 @@ Verify it should move on previous page - OKR
 Verify if category Fields should not be changed in strategic outcome
     Click the Kebab button on Strategic Outcome    ${SO_Strategic_Outcome}
     Wait Until Element is present then click the element    ${BTN_Strategic_Outcome_more_Edit}
-    create,edit strategic outcome    ${SO_Strategic_Outcome_Update}    ${SO_Strategic_Outcome_Update_description}    ${BTN_Edit_Strategic_Cancel}    
+    create,edit strategic outcome    ${SO_Strategic_Outcome_Update}    ${SO_Strategic_Outcome_Update_description}    ${TXT_manager_Iyyappan}    ${BTN_Edit_Strategic_Cancel}    
 
 Verify if category Fields should be changed in strategic outcome
     Click the Kebab button on Strategic Outcome    ${SO_Strategic_Outcome}
     Wait Until Element is present then click the element    ${BTN_Strategic_Outcome_more_Edit}
-    create,edit strategic outcome    ${SO_Strategic_Outcome_Update}    ${SO_Strategic_Outcome_Update_description}    ${BTN_Edit_Strategic_Save}   
+    create,edit strategic outcome    ${SO_Strategic_Outcome_Update}    ${SO_Strategic_Outcome_Update_description}    ${TXT_manager_Iyyappan}    ${BTN_Edit_Strategic_Save}   
 
 Verify a Category name Should not be deleted in strategic outcome
     Click the Kebab button on Strategic Outcome    ${SO_Strategic_Outcome_Update}
