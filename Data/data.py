@@ -64,18 +64,18 @@ INPUT_VALUE_2 = '40'
 PPOS_SQUAD_2 = 'Product SQUAD'
 
 # PPG_Product_Platform
-PPGPP_Portfolio = 'PPG Create'
-PPGPP_Portfolio_Description = 'Portfolio PPG Create Description'
-PPGPP_PPG = 'Create PPG'
-PPGPP_PPG_Description = 'PPG Create Description'
+PPGPP_Portfolio = 'PROD_0006_PPG_Create'
+PPGPP_Portfolio_Description = 'PROD_0006_Portfolio_PPG_Create_Description'
+PPGPP_PPG = 'PROD_0006_Create_PPG'
+PPGPP_PPG_Description = 'PROD_0006_PPG_Create_Description'
 PPGPP_Owner = 'Tom Parthi'
-PPGPP_PPG_Update = 'Create PPG Update'
-PPGPP_Portfolio_Description_Update = 'PPG Create Description Update'
+PPGPP_PPG_Update = 'PROD_0006_Create_PPG_Update'
+PPGPP_Portfolio_Description_Update = 'PROD_0006_PPG_Create_Description_Update'
 PPGPP_PPG_Invalid = 'PPG Invalid'
 # Product/Platform
-PPGPP_Product_Platform = 'Create Product Platform'
-PPGPP_Product_Platform_description = 'Product Platform description'
-PPGPP_Product_Platform_Invalid = 'Product Platform Invalid'
+PPGPP_Product_Platform = 'PROD_0006_Create Product Platform'
+PPGPP_Product_Platform_description = 'PROD_0006_Product Platform description'
+PPGPP_Product_Platform_Invalid = 'PROD_0006_Product Platform Invalid'
 
 # Strategic outcome
 SO_Portfolio = 'Strategic outcome Portfolio'
@@ -115,53 +115,53 @@ PUA_Portfolio = 'User Access create '
 PUA_Portfolio_Description = 'Portfolio User Access Description'
 
 # ROADMAP PPG-Product/Platform
-RM_Portfolio = 'RM_Portfolio'
-RM_Portfolio_Description = 'RM_Portfolio_Description'
-RM_PPG = 'RM_PPG'
-RM_PPG_Description = 'RM_PPG_Description'
+RM_Portfolio = 'PROD_0006_RM_Portfolio'
+RM_Portfolio_Description = 'PROD_0006_RM_Portfolio_Description'
+RM_PPG = 'PROD_0006_RM_PPG'
+RM_PPG_Description = 'PROD_0006_RM_PPG_Description'
 RM_Owner = 'Tom Parthi'
-RM_PPG_Update = 'RM_PPG_Update'
-RM_Portfolio_Description_Update = 'RM_Portfolio_Description_Update'
-RM_PPG_Invalid = 'RM_PPG_Invalid'
+RM_PPG_Update = 'PROD_0006_RM_PPG_Update'
+RM_Portfolio_Description_Update = 'PROD_0006_RM_Portfolio_Description_Update'
+RM_PPG_Invalid = 'PROD_0006_RM_PPG_Invalid'
 # ROADMAP Product/Platform
-RM_Product_Platform = 'RM_Product_Platform'
-RM_Product_Platform_description = 'RM_Product_Platform_description'
-RM_Product_Platform_Invalid = 'RM_Product_Platform_Invalid'
+RM_Product_Platform = 'PROD_0006_RM_Product_Platform'
+RM_Product_Platform_description = 'PROD_0006_RM_Product_Platform_description'
+RM_Product_Platform_Invalid = 'PROD_0006_RM_Product_Platform_Invalid'
 choose_color1 = '#E8E8E8'
 choose_color2 = '#FFB7B7'
 choose_color3 = '#ECA9A5'
 edit_task_name = 'bag'
 # ROADMAP
-RM_Roadmap = "RM_Roadmap"
-RM_Edit_Roadmap = "RM_Edit_Roadmap"
-RM_Roadmap_Invalid = "RM_Roadmap_invalid"
-RM_Category = "RM_Category_bag"
-RM_Edit_Category = "RM_Edit_Category_laptop"
-RM_task = "RM_New_task"
-RM_Edit_Task = "RM_Edit_Task"
-RM_milestone = "RM_Milestone_Name"
-RM_Edit_milestone = "RM_Edit_Milestone_Name"
+RM_Roadmap = "PROD_0006_RM_Roadmap"
+RM_Edit_Roadmap = "PROD_0006_RM_Edit_Roadmap"
+RM_Roadmap_Invalid = "PROD_0006_RM_Roadmap_invalid"
+RM_Category = "PROD_0006_RM_Category_bag"
+RM_Edit_Category = "PROD_0006_RM_Edit_Category_laptop"
+RM_task = "PROD_0006_RM_New_task"
+RM_Edit_Task = "PROD_0006_RM_Edit_Task"
+RM_milestone = "PROD_0006_RM_Milestone_Name"
+RM_Edit_milestone = "PROD_0006_RM_Edit_Milestone_Name"
 
 # Portfolio-Settings-Finance Settings
-FS_Category = 'FS_Category'
-FS_Category_01 = 'FS_Category01'
-FS_Finance_Budget = 'FS Budget'
-FS_Portfolio = 'FS FA Portfolio'
-FS_Finance_Area_Des = 'Finance area Description'
-FS_FA_Des_Update = 'Finance area Description Update'
-FS_PPG = 'FS FA PPG'
-FS_PPG_Schedule = 'FS PPG Schedule'
+FS_Category = 'PROD_0006_FS_Category'
+FS_Category_01 = 'PROD_0006_FS_Category01'
+FS_Finance_Budget = 'PROD_0006_FS_Budget'
+FS_Portfolio = 'PROD_0006_FS_FA_Portfolio'
+FS_Finance_Area_Des = 'PROD_0006_Finance_area_Description'
+FS_FA_Des_Update = 'PROD_0006_Finance_area_Description_Update'
+FS_PPG = 'PROD_0006_FS_FA_PPG'
+FS_PPG_Schedule = 'PROD_0006_FS_PPG_Schedule'
 FS_Schedule_Date = '2024'
 FS_AD_Build_or_run = 'Build'
 FS_Spend_Type = 'Charge In / Charge Out'
-FS_Product_Platform = 'FS Product_Platform'
-FS_Product_Schedule = 'FS Product_Schedule'
-FS_Product_Squad = 'FS Squad'
+FS_Product_Platform = 'PROD_0006_FS_Product_Platform'
+FS_Product_Schedule = 'PROD_0006_FS_Product_Schedule'
+FS_Product_Squad = 'PROD_0006_FS_Squad'
 FS_Search_Invalid = 'Invalid'
 
 
 
-### Roadmap Link and Attachment
+# Roadmap Link and Attachment
 Roadmap_Link = 'Roadmap_Link'
 Roadmap_Attachment = 'Roadmap_Attachement'
 PROD_21_Portfolio = 'PROD_21_Portfolio'

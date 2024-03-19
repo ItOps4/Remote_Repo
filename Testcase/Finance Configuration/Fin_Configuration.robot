@@ -3,7 +3,8 @@ Documentation    Finance Configuration - Category
 Resource    Fin_Configuration_Support.robot
 Force Tags    Finance_Configuration    Test    Name:Amritha
 Variables    ../../Data/data.py
-
+Suite Setup  Portfolio Delete API
+Suite Teardown
 
 
 *** Test Cases ***

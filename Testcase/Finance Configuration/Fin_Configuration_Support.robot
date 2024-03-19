@@ -5,6 +5,8 @@ Variables    ../../Data/data.py
 
 
 *** Keywords ***
+Portfolio Delete API
+    Delete Portfolio    ${FC_Category}
 Given Login into application
     [Arguments]    ${username}
     Verify an application should be opened    ${username}
