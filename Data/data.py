@@ -9,42 +9,6 @@ TXT_NO_Record_Data = 'No records to display'
 
 # Portfolio management
 TXT_manager_Iyyappan = 'Iyyappan'
-<<<<<<< HEAD
-PM_Portfolio = 'Create Porfolio 90'
-PM_Portfolio_Update = 'Update Porfolio 90'
-PM_Portfolio_Description = 'Portfolio description'
-PM_Portfolio_Description_Update = 'Portfolio description Update'
-
-# Finance Configuration
-FC_Category = 'Create Category 90'
-FC_Category_Description = 'Category description'
-FC_Invalid_Category = 'Category Invalid'
-FC_Category_Update = 'Update Category 90'
-FC_Category_Description_Update = 'Category description Update'
-
-# Finance Customize Budget
-FCB_budget = 'Create Custom Budget 90'
-FCB_budget_description = 'Custom Budget description'
-FCB_budget_update = 'Update Custom Budget 75'
-FCB_budget_description_update = 'Custom Budget description Update'
-
-# Product Squad Role 
-PSR_Product_Squad_Role = 'Create Produt Squad Role 90'
-PSR_Produt_Squad_Role_Description = 'Produt Squad Role description'
-PSR_Product_Squad_Role_Invalid = 'Product Squad Invalid'
-PSR_Produt_Squad_Role_Update = 'Update Product Squad Role 90'
-PSR_Product_Squad_Role_Description_Update = 'Product Squad Description Update'
-
-# Product_Platform_OKR_Squad
-PPOS_Portfolio = 'OKR Squad portfolio 7'
-PPOS_description = 'OKR Squad portfolio description'
-PPOS_PPG = 'OKR Squad ppg 7 '
-PPOS_pp = 'OKR Squad pp 7'
-PPOS_OKR = 'OKR '
-PPOS_OKR_UPDATE = 'OKR_Update'
-PPOS_SO = 'OKR Squad So '
-PPOS_SO_Description = 'OKR Squad SO Description'
-=======
 PM_Portfolio = 'PROD_0001_Porfolio'
 PM_Portfolio_Update = 'PROD-0001_Update_Porfolio'
 PM_Portfolio_Description ='PROD-0001_Portfolio_description'
@@ -80,7 +44,6 @@ PPOS_OKR = 'PROD-0005_OKR '
 PPOS_OKR_UPDATE= 'PROD-0005_OKR_Update'
 PPOS_SO = 'PROD-0005_OKR_Squad_SO '
 PPOS_SO_Description = 'PROD-0005_OKR_Squad_SO_Description'
->>>>>>> c2402fb45d3c10ac5f16c0fa131a14a9b371e464
 INPUT_DATA = 'L'
 PPOS_Keyresult = 'PROD-0005_OKR_keyresult'
 PPOS_keyresult_descript = 'PROD-0005_OKR_keyresult_descript'
@@ -157,7 +120,6 @@ RM_Portfolio_Description = 'PROD_0006_RM_Portfolio_Description'
 RM_PPG = 'PROD_0006_RM_PPG'
 RM_PPG_Description = 'PROD_0006_RM_PPG_Description'
 RM_Owner = 'Tom Parthi'
-<<<<<<< HEAD
 RM_PPG_Update = 'PROD_0006_RM_PPG_Update'
 RM_Portfolio_Description_Update = 'PROD_0006_RM_Portfolio_Description_Update'
 RM_PPG_Invalid = 'PROD_0006_RM_PPG_Invalid'
@@ -165,21 +127,11 @@ RM_PPG_Invalid = 'PROD_0006_RM_PPG_Invalid'
 RM_Product_Platform = 'PROD_0006_RM_Product_Platform'
 RM_Product_Platform_description = 'PROD_0006_RM_Product_Platform_description'
 RM_Product_Platform_Invalid = 'PROD_0006_RM_Product_Platform_Invalid'
-=======
-RM_PPG_Update = 'RM_PPG_Update'
-RM_Portfolio_Description_Update = 'RM_Portfolio_Description_Update'
-RM_PPG_Invalid = 'RM_PPG_Invalid'
-# ROADMAP Product/Platform
-RM_Product_Platform = 'RM_Product_Platform'
-RM_Product_Platform_description = 'RM_Product_Platform_description'
-RM_Product_Platform_Invalid = 'RM_Product_Platform_Invalid'
->>>>>>> c2402fb45d3c10ac5f16c0fa131a14a9b371e464
 choose_color1 = '#E8E8E8'
 choose_color2 = '#FFB7B7'
 choose_color3 = '#ECA9A5'
 edit_task_name = 'bag'
 # ROADMAP
-<<<<<<< HEAD
 RM_Roadmap = "PROD_0006_RM_Roadmap"
 RM_Edit_Roadmap = "PROD_0006_RM_Edit_Roadmap"
 RM_Roadmap_Invalid = "PROD_0006_RM_Roadmap_invalid"
@@ -199,27 +151,6 @@ FS_Finance_Area_Des = 'PROD_0006_Finance_area_Description'
 FS_FA_Des_Update = 'PROD_0006_Finance_area_Description_Update'
 FS_PPG = 'PROD_0006_FS_FA_PPG'
 FS_PPG_Schedule = 'PROD_0006_FS_PPG_Schedule'
-=======
-RM_Roadmap = "RM_Roadmap"
-RM_Edit_Roadmap = "RM_Edit_Roadmap"
-RM_Roadmap_Invalid = "RM_Roadmap_invalid"
-RM_Category = "RM_Category_bag"
-RM_Edit_Category = "RM_Edit_Category_laptop"
-RM_task = "RM_New_task"
-RM_Edit_Task = "RM_Edit_Task"
-RM_milestone = "RM_Milestone_Name"
-RM_Edit_milestone = "RM_Edit_Milestone_Name"
-
-# Portfolio-Settings-Finance Settings
-FS_Category = 'FS_Category 97'
-FS_Category_01 = 'FS_Category097'
-FS_Finance_Budget = 'FS Budget97'
-FS_Portfolio = 'FS FA Portfolio'
-FS_Finance_Area_Des = 'Finance area Description'
-FS_FA_Des_Update = 'Finance area Description Update'
-FS_PPG = 'FS FA PPG'
-FS_PPG_Schedule = 'FS PPG Schedule'
->>>>>>> c2402fb45d3c10ac5f16c0fa131a14a9b371e464
 FS_Schedule_Date = '2024'
 FS_AD_Build_or_run = 'Build'
 FS_Spend_Type = 'Charge In / Charge Out'
