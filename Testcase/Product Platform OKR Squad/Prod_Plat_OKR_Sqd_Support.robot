@@ -4,7 +4,10 @@ Resource    ../../Resources/Login.robot
 Variables    ../../Data/data.py
 Variables    ../../Data/xpath.py
 
+
 *** Keywords ***
+Delete Portfolio API_suitesetup
+    Delete Portfolio    ${PPOS_Portfolio}
 Given Login into Productor Application
     [Arguments]    ${username}
     Verify if user should be able to login successfully    ${username}
@@ -154,7 +157,7 @@ Verify if user should be able to login successfully
 
 verify it should display ppg page
     Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
-    Create Portfolio    ${PPOS_Portfolio}    ${PPOS_description}    ${BTN_Save}
+    Create Portfolio    ${PPOS_Portfolio}    ${PPOS_description}    ${PM_Manager}    ${BTN_Save}
     Search Data    ${Input_Portfolio_Search}    ${PPOS_Portfolio}
     Navigate to portfolio data    ${PPOS_Portfolio}
     Wait Until Element is present then click the element    ${Strategic_outcome_Tab}

@@ -1,13 +1,13 @@
 *** Settings ***
-Documentation    Portfolio - Settings - User Access   
-Resource    Portfolio_User_Access_Support.robot
+Documentation    User Access - User   
+Resource    User_Access_Support.robot
 Force Tags    Portfolio_User_Access    #Test    name:Naresh  
 Variables    ../../Data/data.py
 
 
 *** Test Cases ***
 Portfolio - Settings - User Access
-    [Documentation]    Portfolio - User Access
+    [Documentation]    User Access Create,Edit,Search,Delete
     Given Login into application    ${username001}
     When When Navigate to Portfolio Management Menu
     Then Then Navigate to Portfolio, Click on Settings Tab

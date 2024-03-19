@@ -1,12 +1,19 @@
 *** Settings ***
+<<<<<<< HEAD:Testcase/Portfolio Finance Settings/Portfolio_Finance_Settings.robot
 Documentation    Create,Search,Edit and Delete Financial Area     
 Resource    Portfolio_Finance_Settings_Support.robot
 Force Tags    Portfolio_Finance_Settings   Test    Name:Amritha
+=======
+Documentation    Finance Settings - Finance Area      
+Resource    Fin_Settings_Support.robot
+Force Tags    Portfolio_Finance_Settings    #Test    Name:Amritha
+>>>>>>> c2402fb45d3c10ac5f16c0fa131a14a9b371e464:Testcase/Finance Settings/Fin_Settings.robot
 Variables    ../../Data/data.py
 
 
 *** Test Cases ***
 Finance Area 
+    [Documentation]    Finance Area Create, edit, Search and delete
     Given Login into application    ${username001}
     When Click on Portfolio Management Icon, Navigate to portfolio and Click on Settings tab
     Then Click on Finance settings tab

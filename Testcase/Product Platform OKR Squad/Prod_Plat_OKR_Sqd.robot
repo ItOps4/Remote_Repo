@@ -1,12 +1,20 @@
 *** Settings ***
 Documentation    Product/platform OKR and squad    
+<<<<<<< HEAD:Testcase/Product Platform OKR Squad/Product_Platform_OKR_Squad.robot
 Resource    Product_Platform_OKR_Squad_Support.robot
 Force Tags      Product_Platform_OKR_Squad    Test    Name:Gayathri
+=======
+Resource    Prod_Plat_OKR_Sqd_Support.robot
+Force Tags      Product_Platform_OKR_Squad    #Test    Name:Gayathri
+>>>>>>> c2402fb45d3c10ac5f16c0fa131a14a9b371e464:Testcase/Product Platform OKR Squad/Prod_Plat_OKR_Sqd.robot
 Variables    ../../Data/data.py
+Suite Setup    Delete Portfolio API_suitesetup
+Suite Teardown    Delete Portfolio API_suitesetup
 
 
 *** Test Cases ***
 Product / platform OKR and Squad 
+    [Documentation]    Product/platform OKR and squad Create,Edit,Search,Delete    
     Given Login into Productor Application    ${username001}
     When navigate to portfolio and click on ppg menu and navigate to ppg
 #    Then navigate to platform and click on OKR tab

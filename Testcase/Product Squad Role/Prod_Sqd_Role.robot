@@ -1,13 +1,13 @@
 *** Settings ***
-Documentation    Create,Search,Edit and Delete Product Sqad Role   
-Resource    Product_Squad_Role_Support.robot
-Force Tags    Product_Squad_Role    Test    Name:Amritha
+Documentation    Product Squad Role - Role    
+Resource    Prod_Sqd_Role_Support.robot
+Force Tags    Product_Squad_Role    Test    Name:Amritha    PROD-0004
 Variables    ../../Data/data.py
 
 *** Test Cases ***
 Product Squad Role 
     
-    [Documentation]    Product Squad Role Create,Search,Edit and Delete
+    [Documentation]    Role Create,Search,Edit and Delete
     Given Login into application    ${username001}
     Then Click on System Settings Icon and Click on Product Squad Role Tab
     Then Click on Add Role button, Don't enter Mandatory fields and Click on cancel button

@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f8e01f5-7764-47a0-8e7a-889b6c2d6dcd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/Finance Configuration/Fin_Configuration.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Finance Configuration/Fin_Configuration.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/Finance Configuration/Fin_Configuration_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Finance Configuration/Fin_Configuration_Support.robot" afterDir="false" />
-    </list>
+    <list default="true" id="1f8e01f5-7764-47a0-8e7a-889b6c2d6dcd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,28 +25,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.data.executor": "Debug",
-    "Robot Framework.run [Category].executor": "Run",
-    "Robot Framework.run [Create Dictionary Example].executor": "Run",
-    "Robot Framework.run [Currency settings].executor": "Run",
-    "Robot Framework.run [Custom fields].executor": "Run",
-    "Robot Framework.run [Finance Customize Budget].executor": "Run",
-    "Robot Framework.run [PPG and Product/Platform].executor": "Run",
-    "Robot Framework.run [Portfolio - Settings - User Access].executor": "Run",
-    "Robot Framework.run [Portfolio Management-Strategic Outcome].executor": "Run",
-    "Robot Framework.run [Portfolio Management].executor": "Run",
-    "Robot Framework.run [Product Sqad Role].executor": "Run",
-    "Robot Framework.run [Roadmap].executor": "Run",
-    "Robot Framework.run current file.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Roadmap",
-    "last_opened_file_path": "C:/Productor/Testcase/Custom fields",
-    "settings.editor.selected.configurable": "advanced.settings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.data.executor&quot;: &quot;Debug&quot;,
+    &quot;Robot Framework.run [Category].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Create Dictionary Example].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Currency settings].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Custom fields].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Finance Customize Budget].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [PPG and Product/Platform].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Portfolio - Settings - User Access].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Portfolio Management-Strategic Outcome].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Portfolio Management].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Product Sqad Role].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Roadmap].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run current file.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Roadmap&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Productor/Testcase/Custom fields&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Productor\Testcase\Custom fields" />

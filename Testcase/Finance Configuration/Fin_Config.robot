@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Finance Configuration - Category    
-Resource    Fin_Configuration_Support.robot
-Force Tags    Finance_Configuration    Test    Name:Amritha
+Resource    Fin_Config_Support.robot
+Force Tags    Finance_Configuration    Test    Name:Amritha    PROD-0002
 Variables    ../../Data/data.py
 Suite Setup  Portfolio Delete API
 Suite Teardown

@@ -6,6 +6,8 @@ Variables    ../../Data/xpath.py
 
 
 *** Keywords ***
+Delete Portfolio API
+    Delete Portfolio    ${RM_Portfolio}
 Given Login into application
     [Arguments]    ${username}
     Verify an application should be opened    ${username}
@@ -24,7 +26,8 @@ Then Click on Add RoadMap Button,Select Create new roadmap and don't enter manda
     verify a roadmap should not be created
 Then Click on Add RoadMap Button,Select Create new roadmap and enter mandatory fields and click on Save button	
     Verify a roadmap should be created
-Then Navigate to Roadmap
+
+Then Navigate to Roadmap Created
 	verify a Road-Map page should be display
 
 Then click on Add Category button and don't enter mandatory fields and click on cancel button
@@ -89,7 +92,7 @@ Verify an application should be opened
 
 verify it should display portfolio
     Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
-    Create Portfolio    ${RM_Portfolio}    ${RM_Portfolio_Description}    ${BTN_Save}
+    Create Portfolio    ${RM_Portfolio}    ${RM_Portfolio_Description}    ${PM_Manager}    ${BTN_Save}
     Search Data    ${Input_Portfolio_Search}    ${RM_Portfolio}
 
 verify a ppg should display
@@ -205,11 +208,11 @@ Verify a Roadmap Should be deleted in Roadmap
 Verify it should delete Product, PPG,Portfolio
     Click Breadcrums    ${RM_Product_Platform}
     Click the Kebab button     ${RM_Product_Platform }    ${BTN_Product_Platform_Kebab}
-    Delete Created data    ${RM_Product_Platform }    ${BTN_Product_Platform_Delete}    ${BTN_Confirm}
+    Delete Created data    ${BTN_Product_Platform_Delete}    ${RM_Product_Platform}    ${BTN_Confirm}
     Click Breadcrums    ${RM_PPG}
     Search Data    ${Input_Search_PPG}    ${RM_PPG}
     Click the Kebab button     ${RM_PPG}    ${BTN_PPG_Kebab}
-    Delete Created data    ${RM_PPG}    ${BTN_PPG_Delete}    ${BTN_Confirm}
+    Delete Created data    ${BTN_PPG_Delete}    ${RM_PPG}    ${BTN_Confirm}
     Wait Until Element is present then click the element    ${BreadCrums_Portfolio}
     Search Data    ${Input_Portfolio_Search}    ${RM_Portfolio}
     Click the Kebab button on portfolio    ${RM_Portfolio}

@@ -1,12 +1,13 @@
 *** Settings ***
-Documentation    Create,Search,Edit and Delete PPG and Product/Platform    
-Resource    PPG_Product_Platform_Support.robot
+Documentation    PPG and Product/Platform    
+Resource    PPG_Prod_Plat_Support.robot
 Force Tags    PPG_Product_Platform    #Test    Name:Amritha
 Variables    ../../Data/data.py
-
+Suite Setup    Delete Portfolio API
+Suite Teardown    Delete Portfolio API
 *** Test Cases ***
 PPG and Product/Platform
-    [Documentation]    Create,Search,Edit and Delete PPG and Product/Platform
+    [Documentation]    PPG and Product/Platform Create,Search,Edit and Delete
     Given Login into application    ${username001}    
     Then Navigate to Portfolio, Click on PPG Tab
     Then Click on Add PPG button. Enter data, select type as Platform and Click on Cancel button
