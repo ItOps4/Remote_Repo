@@ -5,6 +5,7 @@ Force Tags    PPG_Product_Platform    #Test    Name:Amritha    PROD_0006
 Variables    ../../Data/data.py
 Suite Setup    PROD_0006_Delete_API_Suitesetup
 Suite Teardown    PROD_0006_Delete_API_Suitteardown
+
 *** Test Cases ***
 PPG and Product/Platform
     [Documentation]    PPG and Product/Platform Create,Search,Edit and Delete
