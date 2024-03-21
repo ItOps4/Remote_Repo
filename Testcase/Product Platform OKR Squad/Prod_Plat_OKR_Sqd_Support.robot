@@ -6,8 +6,12 @@ Variables    ../../Data/xpath.py
 
 
 *** Keywords ***
-Delete Portfolio API_suitesetup
+PROD_0005_Delete_API_Suitesetup
     Delete Portfolio    ${PPOS_Portfolio}
+
+PROD_0005_Delete_API_Suitteardown
+    Delete Portfolio    ${PPOS_Portfolio}
+
 Given Login into Productor Application
     [Arguments]    ${username}
     Verify if user should be able to login successfully    ${username}
@@ -162,7 +166,7 @@ verify it should display ppg page
     Navigate to portfolio data    ${PPOS_Portfolio}
     Wait Until Element is present then click the element    ${Strategic_outcome_Tab}
     Wait Until Element is present then click the element    ${BTN_Add_Strategic_outcome}
-    Create,edit Strategic Outcome    ${PPOS_SO}    ${PPOS_SO_Description}    ${BTN_Save}
+    Create,edit Strategic Outcome    ${PPOS_SO}    ${PPOS_SO_Description}`    ${TXT_manager_Iyyappan}    ${BTN_Save}
     Wait Until Element is present then click the element    ${TAB_PPG}
     Create PPG    ${PPOS_PPG}    ${PPOS_description}    ${TXT_manager_Iyyappan}    ${Input_Type_Platform}    ${BTN_SAVE}
     Navigate to portfolio data    ${PPOS_PPG}
@@ -240,6 +244,17 @@ verify a OKR shouldn't be delete
 verify a OKR should be delete
     click on okr kebab button    ${PPOS_OKR_UPDATE}
     Delete platform OKR    ${PPOS_OKR_UPDATE}    ${BTN_Confirm}
+    Click Breadcrums    ${PPOS_PP_product}
+    Search Data    ${Input_Search_PPG}    ${PPOS_PP_product}
+    Click the Kebab button     ${PPOS_PP_product}    ${BTN_PPG_Kebab}
+    Delete Created data    ${BTN_PPG_Delete}    ${PPOS_PP_product}    ${BTN_Confirm}
+    Click Breadcrums    ${PPOS_PPG}
+    Search Data    ${Input_Search_PPG}    ${PPOS_PPG}
+    Click the Kebab button     ${PPOS_PPG}    ${BTN_PPG_Kebab}
+    Delete Created data    ${BTN_PPG_Delete}    ${PPOS_PPG}    ${BTN_Confirm}
+    Wait Until Element is present then click the element    ${BreadCrums_Portfolio}
+
+
 
 
 Verify it should display ppg 
@@ -359,3 +374,4 @@ Verify a product squad member shouldn't be deleted in product squad
 Verify a product squad member should be deleted in product squad 
     click squad member kebab button    ${PPOS_SQUAD_2}    ${BTN_MORE_product_squad}
     delete product squad    ${PPOS_SQUAD_2}    ${BTN_DELETE_SQUAD_PRODUCT}    ${BTN_Confirm}
+    

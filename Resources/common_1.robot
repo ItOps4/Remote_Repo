@@ -25,7 +25,7 @@ Delete Portfolio
     ${Portfolio_Json}    Evaluate    json.loads($Portfolio_Get.content)    json
     ${status}    Run Keyword And Return Status    Set Variable    ${Portfolio_Json["data"][0]["name"]}
     IF    ${status} == True
-        ${Json_Response}    Get Value From Json    ${Portfolio_Json}    data
+        ${Json_Response}    JSONLibrary.Get Value From Json    ${Portfolio_Json}    data
         FOR    ${jsArray}    IN    @{Json_Response}
             FOR    ${element}    IN    @{jsArray}
                 IF    "${element['name']}" == "${data}"

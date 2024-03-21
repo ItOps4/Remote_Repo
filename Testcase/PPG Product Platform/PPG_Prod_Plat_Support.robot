@@ -5,8 +5,12 @@ Variables    ../../Data/data.py
 Variables    ../../Data/xpath.py
 
 *** Keywords ***
-Delete Portfolio API
+PROD_0006_Delete_API_Suitesetup
     Delete Portfolio    ${PPGPP_Portfolio}
+
+PROD_0006_Delete_API_Suitteardown
+    Delete Portfolio    ${PPGPP_Portfolio}    
+    
 Given Login into application
     [Arguments]    ${username}
     Verify an application should be opened    ${username}

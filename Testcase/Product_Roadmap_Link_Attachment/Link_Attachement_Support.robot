@@ -36,7 +36,7 @@ Verify an application should be opened
 
 Verify Portfolio Menu and selected Portfolio Page should be displayed 
     Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
-    Create Portfolio    ${PROD_21_Portfolio}    ${PROD_21_Portfolio}    ${BTN_Save}
+    Create Portfolio    ${PROD_21_Portfolio}    ${PROD_21_Portfolio}    ${TXT_manager_Iyyappan}    ${BTN_Save}
     Search Data    ${Input_Portfolio_Search}    ${Roadmap_Link}
 
 Verify PPG Menu and Selected Portfolio should be displayed

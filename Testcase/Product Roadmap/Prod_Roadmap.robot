@@ -1,10 +1,10 @@
 *** Settings ***
 Documentation    Product Roadmap - Roadmap  
 Resource    Prod_Roadmap_Support.robot
-Force Tags    Product_Roadmap    #Test    Name:Naresh
+Force Tags    Product_Roadmap    #Test    Name:Naresh    PROD_0007
 Variables    ../../Data/data.py
-Suite Setup    Delete Portfolio API    
-Suite Teardown    Delete Portfolio API
+Suite Setup    PROD_0007_Delete_API_Suitesetup   
+Suite Teardown    PROD_0007_Delete_API_Suitteardown
 
 
 *** Test Cases ***

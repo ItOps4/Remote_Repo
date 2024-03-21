@@ -1,14 +1,10 @@
 *** Settings ***
-<<<<<<< HEAD:Testcase/Portfolio Finance Settings/Portfolio_Finance_Settings.robot
-Documentation    Create,Search,Edit and Delete Financial Area     
-Resource    Portfolio_Finance_Settings_Support.robot
-Force Tags    Portfolio_Finance_Settings   Test    Name:Amritha
-=======
 Documentation    Finance Settings - Finance Area      
 Resource    Fin_Settings_Support.robot
-Force Tags    Portfolio_Finance_Settings    #Test    Name:Amritha
->>>>>>> c2402fb45d3c10ac5f16c0fa131a14a9b371e464:Testcase/Finance Settings/Fin_Settings.robot
+Force Tags    Portfolio_Finance_Settings    #Test    Name:Amritha    PROD_0008
 Variables    ../../Data/data.py
+Suite Setup    PROD_0008_Delete_API_Suitesetup
+Suite Teardown    PROD_0008_Delete_API_Suitteardown
 
 
 *** Test Cases ***

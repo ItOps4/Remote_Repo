@@ -6,7 +6,10 @@ Variables    ../../Data/xpath.py
 
 
 *** Keywords ***
-Delete Portfolio API
+PROD_0007_Delete_API_Suitesetup
+    Delete Portfolio    ${RM_Portfolio}
+    
+PROD_0007_Delete_API_Suitteardown
     Delete Portfolio    ${RM_Portfolio}
 Given Login into application
     [Arguments]    ${username}

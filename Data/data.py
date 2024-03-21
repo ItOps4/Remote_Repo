@@ -1,7 +1,6 @@
 public_key = '58m6kWLkFLw0srrHpI1s_5iNeoD3sGccNsFExGu0zig='
 
 Authorization = ''
-username001 = 'Tparthi@valuefactors.io'
 username002 = 'neeraj@codebyte.solutions'
 
 # Common
@@ -115,48 +114,48 @@ PUA_Portfolio = 'User Access create '
 PUA_Portfolio_Description = 'Portfolio User Access Description'
 
 # ROADMAP PPG-Product/Platform
-RM_Portfolio = 'PROD_0006_RM_Portfolio'
-RM_Portfolio_Description = 'PROD_0006_RM_Portfolio_Description'
-RM_PPG = 'PROD_0006_RM_PPG'
-RM_PPG_Description = 'PROD_0006_RM_PPG_Description'
+RM_Portfolio = 'PROD_0007_RM_Portfolio'
+RM_Portfolio_Description = 'PROD_0007_RM_Portfolio_Description'
+RM_PPG = 'PROD_0007_RM_PPG'
+RM_PPG_Description = 'PROD_0007_RM_PPG_Description'
 RM_Owner = 'Tom Parthi'
-RM_PPG_Update = 'PROD_0006_RM_PPG_Update'
-RM_Portfolio_Description_Update = 'PROD_0006_RM_Portfolio_Description_Update'
-RM_PPG_Invalid = 'PROD_0006_RM_PPG_Invalid'
+RM_PPG_Update = 'PROD_0007_RM_PPG_Update'
+RM_Portfolio_Description_Update = 'PROD_0007_RM_Portfolio_Description_Update'
+RM_PPG_Invalid = 'PROD_0007_RM_PPG_Invalid'
 # ROADMAP Product/Platform
-RM_Product_Platform = 'PROD_0006_RM_Product_Platform'
-RM_Product_Platform_description = 'PROD_0006_RM_Product_Platform_description'
+RM_Product_Platform = 'PROD_0007_RM_Product_Platform'
+RM_Product_Platform_description = 'PROD_0007_RM_Product_Platform_description'
 RM_Product_Platform_Invalid = 'PROD_0006_RM_Product_Platform_Invalid'
 choose_color1 = '#E8E8E8'
 choose_color2 = '#FFB7B7'
 choose_color3 = '#ECA9A5'
 edit_task_name = 'bag'
 # ROADMAP
-RM_Roadmap = "PROD_0006_RM_Roadmap"
-RM_Edit_Roadmap = "PROD_0006_RM_Edit_Roadmap"
-RM_Roadmap_Invalid = "PROD_0006_RM_Roadmap_invalid"
-RM_Category = "PROD_0006_RM_Category_bag"
-RM_Edit_Category = "PROD_0006_RM_Edit_Category_laptop"
-RM_task = "PROD_0006_RM_New_task"
-RM_Edit_Task = "PROD_0006_RM_Edit_Task"
-RM_milestone = "PROD_0006_RM_Milestone_Name"
-RM_Edit_milestone = "PROD_0006_RM_Edit_Milestone_Name"
+RM_Roadmap = "PROD_0007_RM_Roadmap"
+RM_Edit_Roadmap = "PROD_0007_RM_Edit_Roadmap"
+RM_Roadmap_Invalid = "PROD_0007_RM_Roadmap_invalid"
+RM_Category = "PROD_0007_RM_Category_bag"
+RM_Edit_Category = "PROD_0007_RM_Edit_Category_laptop"
+RM_task = "PROD_0007_RM_New_task"
+RM_Edit_Task = "PROD_0007_RM_Edit_Task"
+RM_milestone = "PROD_0007_RM_Milestone_Name"
+RM_Edit_milestone = "PROD_0007_RM_Edit_Milestone_Name"
 
 # Portfolio-Settings-Finance Settings
-FS_Category = 'PROD_0006_FS_Category'
-FS_Category_01 = 'PROD_0006_FS_Category01'
-FS_Finance_Budget = 'PROD_0006_FS_Budget'
-FS_Portfolio = 'PROD_0006_FS_FA_Portfolio'
-FS_Finance_Area_Des = 'PROD_0006_Finance_area_Description'
-FS_FA_Des_Update = 'PROD_0006_Finance_area_Description_Update'
-FS_PPG = 'PROD_0006_FS_FA_PPG'
-FS_PPG_Schedule = 'PROD_0006_FS_PPG_Schedule'
+FS_Category = 'PROD_0008_FS_Category'
+FS_Category_01 = 'PROD_0008_FS_Category01'
+FS_Finance_Budget = 'PROD_0008_FS_Budget'
+FS_Portfolio = 'PROD_0008_FS_FA_Portfolio'
+FS_Finance_Area_Des = 'PROD_0008_Finance_area_Description'
+FS_FA_Des_Update = 'PROD_0008_Finance_area_Description_Update'
+FS_PPG = 'PROD_0008_FS_FA_PPG'
+FS_PPG_Schedule = 'PROD_0008_FS_PPG_Schedule'
 FS_Schedule_Date = '2024'
 FS_AD_Build_or_run = 'Build'
 FS_Spend_Type = 'Charge In / Charge Out'
-FS_Product_Platform = 'PROD_0006_FS_Product_Platform'
-FS_Product_Schedule = 'PROD_0006_FS_Product_Schedule'
-FS_Product_Squad = 'PROD_0006_FS_Squad'
+FS_Product_Platform = 'PROD_0008_FS_Product_Platform'
+FS_Product_Schedule = 'PROD_0008_FS_Product_Schedule'
+FS_Product_Squad = 'PROD_0008_FS_Squad'
 FS_Search_Invalid = 'Invalid'
 
 
