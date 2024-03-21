@@ -4,49 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f8e01f5-7764-47a0-8e7a-889b6c2d6dcd" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.pabotsuitenames" beforeDir="false" afterPath="$PROJECT_DIR$/.pabotsuitenames" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Auto.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/xpath.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/xpath.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/common_1.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/common_1.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/Custom fields/PROD-17.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Custom fields/PROD-17.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/Custom fields/PROD-17_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Custom fields/PROD-17_Support.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PPG Product Platform/PPG_Product_Platform.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/PPG Product Platform/PPG_Product_Platform.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/PPG Product Platform/PPG_Product_Platform_Support.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/PPG Product Platform/PPG_Product_Platform_Support.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/Portfolio Management/Portfolio_Management.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Portfolio Management/Portfolio_Management.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/Product Platform OKR Squad/Product_Platform_OKR_Squad.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Product Platform OKR Squad/Product_Platform_OKR_Squad.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/Product Roadmap/Product_Roadmap.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Product Roadmap/Product_Roadmap.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testcase/Product Squad Role/Product_Squad_Role.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Testcase/Product Squad Role/Product_Squad_Role.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/log/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/log/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/0/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/0/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/0/robot_stderr.out" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/0/robot_stderr.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/0/robot_stdout.out" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/0/robot_stdout.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/1/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/1/robot_stderr.out" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/1/robot_stderr.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/1/robot_stdout.out" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/1/robot_stdout.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/2/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/2/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/2/robot_stderr.out" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/2/robot_stderr.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/2/robot_stdout.out" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/2/robot_stdout.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/3/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/3/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/3/robot_stderr.out" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/3/robot_stderr.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/3/robot_stdout.out" beforeDir="false" afterPath="$PROJECT_DIR$/output/pabot_results/3/robot_stdout.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/4/output.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/4/robot_stderr.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/4/robot_stdout.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/5/output.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/5/robot_stderr.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/5/robot_stdout.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/6/output.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/6/robot_stderr.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/pabot_results/6/robot_stdout.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/output/report.html" afterDir="false" />
-    </list>
+    <list default="true" id="1f8e01f5-7764-47a0-8e7a-889b6c2d6dcd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,27 +25,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.data.executor": "Debug",
-    "Robot Framework.run [Category].executor": "Run",
-    "Robot Framework.run [Create Dictionary Example].executor": "Run",
-    "Robot Framework.run [Currency settings].executor": "Run",
-    "Robot Framework.run [Custom fields].executor": "Run",
-    "Robot Framework.run [Finance Customize Budget].executor": "Run",
-    "Robot Framework.run [PPG and Product/Platform].executor": "Run",
-    "Robot Framework.run [Portfolio - Settings - User Access].executor": "Run",
-    "Robot Framework.run [Portfolio Management-Strategic Outcome].executor": "Run",
-    "Robot Framework.run [Portfolio Management].executor": "Run",
-    "Robot Framework.run [Product Sqad Role].executor": "Run",
-    "Robot Framework.run current file.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Setting__Custom__Field",
-    "last_opened_file_path": "C:/Productor/Testcase/Custom fields",
-    "settings.editor.selected.configurable": "advanced.settings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.data.executor&quot;: &quot;Debug&quot;,
+    &quot;Robot Framework.run [Category].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Create Dictionary Example].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Currency settings].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Custom fields].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Finance Customize Budget].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [PPG and Product/Platform].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Portfolio - Settings - User Access].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Portfolio Management-Strategic Outcome].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Portfolio Management].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [Product Sqad Role].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run current file.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Setting__Custom__Field&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Productor/Testcase/Custom fields&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Productor\Testcase\Custom fields" />

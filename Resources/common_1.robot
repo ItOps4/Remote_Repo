@@ -923,8 +923,8 @@ Create Custom fields for Text area
     [Documentation]     Using this keyword we can create Custom fields for Text area type
     [Arguments]     ${name}       ${search}        ${Tooltip}    ${type}    ${mand}     ${visi}
     Wait Until Element is present then click the element    ${BTN_Create_Custom_Fields}
-    Input Text    ${name}    ${CF_Name}
-    Input Text    ${Tooltip}     ${CF_Tooltip}
+    Input Text   ${Input_custom_field_name}   ${name}
+    Input Text   ${Input_CF_Tooltip}     ${Tooltip}
     @{list}    Create List    Finance   Strategic Outcome   Key Results     Product     Squad   Product group   OKR
     FOR    ${element}    IN    @{list}
         Press Keys    ${Search_CF_Addto}    CTRL+A+BACKSPACE
@@ -933,7 +933,6 @@ Create Custom fields for Text area
         Wait Until Element is present then click the element    ${dropdown}
         Press Keys    ${Select_CF_Addto}     TAB
     END
-#    Click Element   ${Custom_text}
     Wait Until Element is present then click the element    ${Dropdown_CF_add_type}
     ${add_type_area}     Format String   ${Select_CF_add_type_text}    name=${type}
     Wait Until Element is present then click the element   ${add_type_area}
@@ -946,8 +945,8 @@ Create Custom fields for Radio button
     [Documentation]     Using this keyword we can create Custom fields for Radio button type
     [Arguments]     ${name}       ${search}        ${Tooltip}    ${type}    ${radio1}   ${radio2}   ${mand}     ${visi}
     Wait Until Element is present then click the element    ${Input_custom_field_name}
-    Input Text    ${name}    ${CF_Name}
-    Input Text    ${Tooltip}     ${CF_Tooltip}
+    Input Text   ${Input_custom_field_name}   ${name}
+    Input Text   ${Input_CF_Tooltip}     ${Tooltip}
     @{list}    Create List    Finance   Strategic Outcome   Key Results     Product     Squad   Product group   OKR
     FOR    ${element}    IN    @{list}
         Press Keys    ${Search_CF_Addto}    CTRL+A+BACKSPACE
@@ -971,8 +970,8 @@ Create Custom fields for Check box
     [Documentation]     Using this keyword we can create Custom fields for checkbox type
     [Arguments]     ${name}       ${search}        ${Tooltip}    ${type}    ${checkbox1}    ${checkbox2}    ${mand}     ${visi}
     Wait Until Element is present then click the element    ${Input_custom_field_name}
-    Input Text    ${name}    ${CF_Name}
-    Input Text    ${Tooltip}     ${CF_Tooltip}
+    Input Text   ${Input_custom_field_name}   ${name}
+    Input Text   ${Input_CF_Tooltip}     ${Tooltip}
     @{list}    Create List    Finance   Strategic Outcome   Key Results     Product     Squad   Product group   OKR
     FOR    ${element}    IN    @{list}
         Press Keys    ${Search_CF_Addto}    CTRL+A+BACKSPACE
@@ -981,7 +980,6 @@ Create Custom fields for Check box
         Wait Until Element is present then click the element    ${dropdown}
         Press Keys    ${Select_CF_Addto}     TAB
     END
-#    Click Element   ${Custom_text}
     Wait Until Element is present then click the element    ${Dropdown_CF_add_type}
     ${add_type_Checkbox}     Format String   ${Select_CF_add_type_text}    name=${type}
     Wait Until Element is present then click the element    ${add_type_Checkbox}
@@ -997,8 +995,8 @@ Create Custom fields for Number
     [Documentation]     Using this keyword we can create Custom fields for Number type
     [Arguments]     ${name}       ${search}        ${Tooltip}    ${type}    ${mand}     ${visi}
     Wait Until Element is present then click the element    ${Input_custom_field_name}
-    Input Text    ${name}    ${CF_Name}
-    Input Text    ${Tooltip}     ${CF_Tooltip}
+    Input Text   ${Input_custom_field_name}   ${name}
+    Input Text   ${Input_CF_Tooltip}     ${Tooltip}
     @{list}    Create List    Finance   Strategic Outcome   Key Results     Product     Squad   Product group   OKR
     FOR    ${element}    IN    @{list}
         Press Keys    ${Search_CF_Addto}    CTRL+A+BACKSPACE
@@ -1007,7 +1005,6 @@ Create Custom fields for Number
         Wait Until Element is present then click the element    ${dropdown}
         Press Keys    ${Select_CF_Addto}     TAB
     END
-#    Click Element   ${Custom_text}
     Wait Until Element is present then click the element    ${Dropdown_CF_add_type}
     ${add_type_Number}     Format String   ${Select_CF_add_type_text}    name=${type}
     Wait Until Element is present then click the element   ${add_type_Number}
@@ -1022,8 +1019,8 @@ Create Custom fields for Select
     [Documentation]     Using this keyword we can create Custom fields for Select type
     [Arguments]     ${name}       ${search}        ${Tooltip}    ${type}    ${Select1}    ${Select2}    ${mand}     ${visi}
     Wait Until Element is present then click the element    ${Input_custom_field_name}
-    Input Text    ${name}    ${CF_Name}
-    Input Text    ${Tooltip}     ${CF_Tooltip}
+    Input Text   ${Input_custom_field_name}   ${name}
+    Input Text   ${Input_CF_Tooltip}     ${Tooltip}
     @{list}    Create List    Finance   Strategic Outcome   Key Results     Product     Squad   Product group   OKR
     FOR    ${element}    IN    @{list}
         Press Keys    ${Search_CF_Addto}    CTRL+A+BACKSPACE
@@ -1032,7 +1029,6 @@ Create Custom fields for Select
         Wait Until Element is present then click the element    ${dropdown}
         Press Keys    ${Select_CF_Addto}     TAB
     END
-#    Click Element   ${Custom_text}
     Wait Until Element is present then click the element    ${Dropdown_CF_add_type}
     ${add_type_Select}     Format String   ${Select_CF_add_type_text}    name=${type}
     Wait Until Element is present then click the element   ${add_type_Select}
@@ -1050,8 +1046,8 @@ Create Custom fields for Multiselect
     [Documentation]     Using this keyword we can create Custom fields for checkbox type
     [Arguments]     ${name}       ${search}        ${Tooltip}    ${type}    ${M.Select1}    ${M.Select2}    ${M.Select3}      ${M.Select4}    ${mand}     ${visi}
     Wait Until Element is present then click the element    ${Input_custom_field_name}
-    Input Text    ${name}    ${CF_Name}
-    Input Text    ${Tooltip}     ${CF_Tooltip}
+    Input Text   ${Input_custom_field_name}   ${name}
+    Input Text   ${Input_CF_Tooltip}     ${Tooltip}
     @{list}    Create List    Finance   Strategic Outcome   Key Results     Product     Squad   Product group   OKR
     FOR    ${element}    IN    @{list}
         Press Keys    ${Search_CF_Addto}    CTRL+A+BACKSPACE
@@ -1060,7 +1056,6 @@ Create Custom fields for Multiselect
         Wait Until Element is present then click the element    ${dropdown}
         Press Keys    ${Select_CF_Addto}     TAB
     END
-#    Click Element   ${Custom_text}
     Wait Until Element is present then click the element    ${Dropdown_CF_add_type}
     ${add_type_Checkbox}     Format String   ${Select_CF_add_type_text}    name=${type}
     Wait Until Element is present then click the element    ${add_type_Checkbox}
