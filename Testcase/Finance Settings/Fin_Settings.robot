@@ -1,8 +1,10 @@
 *** Settings ***
 Documentation    Finance Settings - Finance Area      
 Resource    Fin_Settings_Support.robot
-Force Tags    Portfolio_Finance_Settings    #Test    Name:Amritha
+Force Tags    Portfolio_Finance_Settings    Test    Name:Amritha    PROD_009
 Variables    ../../Data/data.py
+Suite Setup    PROD_009_Delete_API_Suitesetup
+Suite Teardown    PROD_009_Delete_API_Suitteardown
 
 
 *** Test Cases ***
@@ -25,8 +27,6 @@ Finance Area
     Then Click on Add Data Button in product schedule ,Select Finance Area and Categories and Click on Save button
     Then Click on Delete button in Financial area's Kebab menu and Click on Cancel Button 
     Then Click on Delete button in Financial area's Kebab menu and Click on Confirm Button 
-    Then Navigate to PPG Schedule, click on Add Data, select Finance Area and Category, then click on Cancel button
-    Then Navigate to Product/Platform Schedule, click on Add Data, select Finance Area and Category, then click on Cancel button
     And Close the Browser
     
 

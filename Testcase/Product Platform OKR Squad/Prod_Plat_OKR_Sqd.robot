@@ -1,8 +1,10 @@
 *** Settings ***
 Documentation    Product/platform OKR and squad    
 Resource    Prod_Plat_OKR_Sqd_Support.robot
-Force Tags      Product_Platform_OKR_Squad    #Test    Name:Gayathri
+Force Tags      Product_Platform_OKR_Squad    Test    Name:Gayathri    PROD_005
 Variables    ../../Data/data.py
+Suite Setup    PROD_005_Delete_API_Suitesetup
+Suite Teardown    PROD_005_Delete_API_Suitteardown
 
 
 *** Test Cases ***

@@ -50,38 +50,38 @@ Verify an application should be opened
     Login Application    ${username}
 
 Verify it should display Finance Configuration Tab by Default
-    Wait Until Element is present then click the element    ${Icon_SystemSettings}
+    Wait Until Element is present then click the element    ${Icon_System_Settings}
 
 Verify Save Button should be disabled and Category shouldn't be created 
-    Add Category    ${FC_Category}    ${FC_Category_Description}    ${BTN_Cancel}
+    Add Category    ${FC_Category}    ${FC_Category}    ${BTN_Cancel}
 
 Verify Save button should be enabled and Category should be created
-    Add Category    ${FC_Category}    ${FC_Category_Description}    ${BTN_Save}
+    Add Category    ${FC_Category}    ${FC_Category}    ${BTN_Save}
 
 Verify an error message shouble be display as " No results found".
-    Search Data    ${Input_Search_FinanceConfiguration}    ${FC_Invalid_Category}
+    Search Data    ${Input_Search_FinanceConfiguration}    ${TXT_Invalid}
     Check element is present    ${TXT_NO_DATA}
 
 Verify if Category Record should be Filtered and Displayed
     Search Data    ${Input_Search_FinanceConfiguration}    ${FC_Category}
-    Verify a Category is displayed    ${FC_Category}
+    Verify the created data is displayed    ${FC_Category}
 
 Verify if category Fields should not be changed
-    Click the Kebab button Category    ${FC_Category} 
-    Edit Category    ${FC_Category}    ${FC_Category_Update}    ${FC_Category_Description_Update}    ${BTN_Cancel} 
+    Click the Kebab button    ${BTN_Category_Kebab}    ${FC_Category} 
+    Edit Category    ${FC_Category}    ${FC_Category_Update}    ${FC_Category_Update}    ${BTN_Cancel} 
 
 verify if category Fields should be changed
-    Click the Kebab button Category    ${FC_Category} 
-    Edit Category    ${FC_Category}    ${FC_Category_Update}    ${FC_Category_Description_Update}     ${BTN_Save}
+    Click the Kebab button    ${BTN_Category_Kebab}    ${FC_Category} 
+    Edit Category    ${FC_Category}    ${FC_Category_Update}    ${FC_Category_Update}     ${BTN_Save}
 
 Verify a Category name Should not be deleted
     Search Data    ${Input_Search_FinanceConfiguration}    ${FC_Category_Update}
-    Click the Kebab button Category    ${FC_Category_Update}  
-    Delete Category    ${FC_Category_Update}    ${BTN_Cancel}  
+    Click the Kebab button    ${BTN_Category_Kebab}    ${FC_Category_Update}  
+    Delete the Created data    ${BTN_Category_Delete}    ${FC_Category_Update}    ${BTN_Cancel}  
 
 Verify a Category name Should be deleted
-    Click the Kebab button Category    ${FC_Category_Update}  
-    Delete Category    ${FC_Category_Update}    ${BTN_Confirm} 
+    Click the Kebab button    ${BTN_Category_Kebab}    ${FC_Category_Update}  
+    Delete the Created data    ${BTN_Category_Delete}    ${FC_Category_Update}    ${BTN_Confirm} 
 
 Verify Application should be Close
     "Close the Browser"

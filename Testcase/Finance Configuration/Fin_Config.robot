@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Finance Configuration - Category    
 Resource    Fin_Config_Support.robot
-Force Tags    Finance_Configuration    #Test    Name:Amritha
+Force Tags    Finance_Configuration    Test    Name:Amritha    PROD_002
 Variables    ../../Data/data.py
 
 

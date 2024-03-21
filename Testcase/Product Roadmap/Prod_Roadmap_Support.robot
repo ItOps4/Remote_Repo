@@ -6,6 +6,12 @@ Variables    ../../Data/xpath.py
 
 
 *** Keywords ***
+PROD_008_Delete_API_Suitesetup
+    Delete Portfolio    ${RM_Portfolio}
+    
+PROD_008_Delete_API_Suitteardown
+    Delete Portfolio    ${RM_Portfolio}
+
 Given Login into application
     [Arguments]    ${username}
     Verify an application should be opened    ${username}
@@ -83,24 +89,28 @@ And Close the Browser
 
 
 
+
 Verify an application should be opened
     [Arguments]    ${username}
     Login Application    ${username}
 
 verify it should display portfolio
-    Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
-    Create Portfolio    ${RM_Portfolio}    ${RM_Portfolio_Description}    ${PM_Manager}    ${BTN_Save}
+    Wait Until Element is present then click the element    ${Icon_Portfolio_Management}
+    Create Portfolio    ${RM_Portfolio}    ${RM_Portfolio}    ${TXT_manager}    ${BTN_Save}
     Search Data    ${Input_Portfolio_Search}    ${RM_Portfolio}
 
 verify a ppg should display
-    Navigate to Portfolio and Click on PPG tab    ${RM_Portfolio}    ${TAB_PPG}
-    Create PPG    ${RM_PPG}    ${RM_PPG_Description}    ${RM_Owner}    ${Input_Type_Product}    ${BTN_Save}
+    Navigate to Created data    ${Navigate_Data}    ${RM_Portfolio}
+    Wait Until Element is present then click the element    ${TAB_PPG}
+    Create PPG    ${RM_PPG}    ${RM_PPG}    ${TXT_Owner}    ${PPGPP_Type_Product}    ${BTN_Save}
 
 Verify a Product/Platform should display
-    Navigate to PPG and Click on Product/Platform Tab   ${RM_PPG}    ${TAB_Product_Platform}
-    Create Product/Platform    ${RM_Product_Platform_}    ${RM_Product_Platform_description}    ${RM_Owner}    ${Input_Type_Product}    ${BTN_Save}
+    Navigate to Created data    ${Navigate_Data}   ${RM_PPG}
+    Wait Until Element is present then click the element    ${TAB_Product_Platform}
+    Create Product/Platform    ${RM_Product_Platform}    ${RM_Product_Platform}    ${TXT_Owner}    ${PPGPP_Type_Product}    ${BTN_Save}
 Verify a Roadmap should be display
-    Navigate to Product/Platform and Click on Roadmap Tab    ${RM_Product_Platform_}    ${Roadmap_Tab}
+    Navigate to Created data    ${Navigate_Data}    ${RM_Product_Platform}
+    Wait Until Element is present then click the element    ${TAB_Roadmap}
 
 verify a roadmap should not be created
     Create roadmap    ${RM_Roadmap}    ${BTN_Cancel}
@@ -109,7 +119,7 @@ verify a roadmap should be created
     Create roadmap    ${RM_Roadmap}    ${BTN_Save}    
 
 verify a Road-Map page should be display
-    navigate to roadmap    ${RM_Roadmap}    
+    Navigate to Created data    ${Navigate_Data}    ${RM_Roadmap}    
 
 Verify category should not be created
     Wait Until Element is present then click the element    ${BTN_Add_Category_Roadmap}
@@ -138,7 +148,6 @@ Verify it should be change as per respective Year,Quarter,Month,Week and Days
     Wait Until Element is present then click the element    ${Dropdown_Weekly}  
     Wait Until Element is present then click the element    ${Dropdown_default_Daily}    
     Wait Until Element is present then click the element    ${Dropdown_Daily}    
-
 Verify milestone should not be changed
     click milestone icon    ${RM_milestone}
     Add and edit milestone    ${RM_Edit_milestone}    ${Dropdown_Major_Release}    ${BTN_Cancel}
@@ -181,11 +190,12 @@ Verify it should move on Product page
     Wait Until Element is present then click the element    ${BTN_Roadmap_Back_btn}
 
 Verify an error message should be display as " No results found" in Roadmap
-    Search Data    ${INPUT_Search_Roadmap}    ${RM_Roadmap_Invalid}
+    Search Data    ${INPUT_Search_Roadmap}    ${TXT_Invalid}
     Check element is present    ${TXT_NO_Data}
 
 Verify Roadmap Record should be Filtered and Displayed in Roadmap
     Search Data    ${INPUT_Search_Roadmap}    ${RM_Roadmap}
+    Verify the created data is displayed    ${RM_Roadmap}    
     Press Keys    ${INPUT_Search_Roadmap}    CTRL+A+BACKSPACE
 
 Verify Roadmap should not be changed in Roadmap
@@ -194,26 +204,26 @@ Verify Roadmap should not be changed in Roadmap
 Verify Roadmap should be changed in Roadmap
     Edit Roadmap    ${RM_Roadmap}    ${RM_Edit_Roadmap}    ${BTN_Save}
 
-Verify a Roadmap Should not be deleted in Roadmap  
-    Delete Roadmap    ${RM_Edit_Roadmap}    ${BTN_Cancel}
+Verify a Roadmap Should not be deleted in Roadmap
+    Click the Kebab button    ${BTN_Kebab_Roadmap}    ${RM_Edit_Roadmap}
+    Delete the Created data    ${BTN_More_Delete_Roadmap}    ${RM_Edit_Roadmap}    ${BTN_Cancel}  
 
-Verify a Roadmap Should be deleted in Roadmap  
-    Delete Roadmap    ${RM_Edit_Roadmap}    ${BTN_Confirm}
-
+Verify a Roadmap Should be deleted in Roadmap 
+    Click the Kebab button    ${BTN_Kebab_Roadmap}    ${RM_Edit_Roadmap}
+    Delete the Created data    ${BTN_More_Delete_Roadmap}    ${RM_Edit_Roadmap}    ${BTN_Confirm} 
    
-
 Verify it should delete Product, PPG,Portfolio
     Click Breadcrums    ${RM_Product_Platform}
-    Click the Kebab button     ${RM_Product_Platform }    ${BTN_Product_Platform_Kebab}
-    Delete Created data    ${BTN_Product_Platform_Delete}    ${RM_Product_Platform}    ${BTN_Confirm}
+    Click the Kebab button    ${BTN_Product_Platform_Kebab}     ${RM_Product_Platform }    
+    Delete the Created data    ${BTN_Product_Platform_Delete}    ${RM_Product_Platform}    ${BTN_Confirm}
     Click Breadcrums    ${RM_PPG}
     Search Data    ${Input_Search_PPG}    ${RM_PPG}
-    Click the Kebab button     ${RM_PPG}    ${BTN_PPG_Kebab}
-    Delete Created data    ${BTN_PPG_Delete}    ${RM_PPG}    ${BTN_Confirm}
-    Wait Until Element is present then click the element    ${BreadCrums_Portfolio}
+    Click the Kebab button    ${BTN_PPG_Kebab}     ${RM_PPG}
+    Delete the Created data    ${BTN_PPG_Delete}    ${RM_PPG}    ${BTN_Confirm}
+    Wait Until Element is present then click the element    ${Breadcrums_Portfolio_Management}
     Search Data    ${Input_Portfolio_Search}    ${RM_Portfolio}
-    Click the Kebab button on portfolio    ${RM_Portfolio}
-    Delete Potfolio    ${RM_Portfolio}    ${BTN_Confirm}
+    Click the Kebab button    ${BTN_Portfolio_Kebab}    ${RM_Portfolio}
+    Delete the Created data    ${BTN_Portfolio_delete}    ${RM_Portfolio}    ${BTN_Confirm}
     Press Keys    ${Input_Portfolio_Search}    CTRL+A+BACKSPACE
     
 Verify Application should be Close

@@ -1,8 +1,10 @@
 *** Settings ***
 Documentation    Strategic Outcome   
 Resource    Stratg_Outcome_Support.robot
-Force Tags    Strategic_Outcome    #Test    name:Naresh  
+Force Tags    Strategic_Outcome    Test    name:Naresh    PROD_007  
 Variables    ../../Data/data.py
+Suite Setup    PROD_007_Delete_API_Suitesetup
+Suite Teardown    PROD_007_Delete_API_Suitteardown
 
 *** Test Cases ***
 Portfolio Management-Strategic Outcome
@@ -35,9 +37,7 @@ Portfolio Management-Strategic Outcome
     Then Click on Edit button,Edit Mandatory Fields and Click on Save Button in Strategic Outcome
     Then Click on Delete button in the More icon and Click on Cancel Button in Strategic Outcome
     Then Click on Delete button in the More icon and Click on Confirm Button in Strategic Outcome
-    Then Click on Edit button in the More icon and Click on Cancel Button in Portfolio
-    Then Click on Edit button,Edit Mandatory Fields and Click on Save Button in Portfolio
-    Then Click on Delete button in the More icon and Click on Cancel Button in Portfolio
     Then Click on Delete button in the More icon and Click on Confirm Button in Portfolio
     And Close the Browser
+
 

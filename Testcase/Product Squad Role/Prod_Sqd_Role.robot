@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Product Squad Role - Role    
 Resource    Prod_Sqd_Role_Support.robot
-Force Tags    Product_Squad_Role    #Test    Name:Amritha
+Force Tags    Product_Squad_Role    Test    Name:Amritha    PROD_004
 Variables    ../../Data/data.py
 
 *** Test Cases ***
@@ -17,5 +17,6 @@ Product Squad Role
     Then Click on Edit button in Kebab button,Enter the data and Click on Cancel button 
     Then Click on Edit button in Kebab button, Enter the data and Click on Save button
     Then Click on Delete Button in Kebab button and Click on Cancel Button
-    Then Click on Delete Button in Kebab button and Click on Save Button
+    Then Click on Delete Button in Kebab button and Click on confirm Button
     And Close the Browser
+    

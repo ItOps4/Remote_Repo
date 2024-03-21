@@ -5,6 +5,13 @@ Variables    ../../Data/data.py
 
 
 *** Keywords ***
+
+PROD_Suite_Setup
+    Delete Portfolio    ${PROD_21_Portfolio}
+
+PROD_Suite_Teardown
+    Delete Portfolio    ${PROD_21_Portfolio}
+
 Given Login into application
     [Arguments]    ${username}
     Delete Portfolio    ${username}
@@ -22,12 +29,6 @@ Navigate to Roadmap tab
     Verify a Roadmap Page should be displayed.
 
 
-PROD1234_SuiteSetup
-    Delete Portfolio   avbchhcchdhahd
-
-PROD1234_SuiteTeardown
-    Delete Portfolio    csddjcksj
-
 
 
 Verify an application should be opened
@@ -35,13 +36,14 @@ Verify an application should be opened
     Login Application    ${username}    
 
 Verify Portfolio Menu and selected Portfolio Page should be displayed 
-    Wait Until Element is present then click the element    ${BTN_Portfolio_Man_Menu}
-    Create Portfolio    ${PROD_21_Portfolio}    ${PROD_21_Portfolio}    ${BTN_Save}
+    Wait Until Element is present then click the element    ${Icon_Portfolio_Management}
+    Create Portfolio    ${PROD_21_Portfolio}    ${PROD_21_Portfolio}    ${TXT_manager}    ${BTN_Save}
     Search Data    ${Input_Portfolio_Search}    ${Roadmap_Link}
 
 Verify PPG Menu and Selected Portfolio should be displayed
-    Navigate to Portfolio and Click on PPG tab    ${RM_Portfolio}    ${TAB_PPG}
-    Create PPG    ${RM_PPG}    ${RM_PPG_Description}    ${RM_Owner}    ${Input_Type_Product}    ${BTN_Save}
+    Navigate to portfolio data    ${RM_Portfolio}
+    Wait Until Element is present then click the element    ${TAB_PPG}
+    Create PPG    ${RM_PPG}    ${RM_PPG}    ${TXT_Owner}    ${PPGPP_Type_Product}    ${BTN_Save}
 
 
 

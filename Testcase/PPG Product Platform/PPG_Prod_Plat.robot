@@ -1,8 +1,11 @@
 *** Settings ***
 Documentation    PPG and Product/Platform    
 Resource    PPG_Prod_Plat_Support.robot
-Force Tags    PPG_Product_Platform    #Test    Name:Amritha
+Force Tags    PPG_Product_Platform    Test    Name:Amritha    PROD_006
 Variables    ../../Data/data.py
+Suite Setup    PROD_006_Delete_API_Suitesetup
+Suite Teardown    PROD_006_Delete_API_Suitteardown
+
 
 *** Test Cases ***
 PPG and Product/Platform
