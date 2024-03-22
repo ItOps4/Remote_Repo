@@ -320,9 +320,10 @@ Create Squad
     Wait Until Element is present then click the element    ${Assign}
     Wait Until Element is present then click the element    ${element} 
     Press Keys    ${Input_Search_Manager}    ${DATA}
-    ${Assign}    Format String    ${Label_1}    name=${lead}
+    ${Assign}    Format String    ${Label_1}    name=${DATA}
     Wait Until Element is present then click the element    ${Assign}
-    Wait Until Element is present then click the element    ${TXT_create_new_squad}
+    Press Keys    ${Input_Search_Manager}    TAB
+    # Wait Until Element is present then click the element    ${TXT_create_new_squad}
     Wait Until Element is present then click the element    ${element1}
     # Wait Until Element is present then click the element    ${BTN_squad_CANCEL}
 

@@ -190,11 +190,14 @@ Verify Application should be Close
     Delete the Created data    ${BTN_Portfolio_delete}    ${FS_Portfolio}    ${BTN_Confirm}
     Press Keys    ${Input_Portfolio_Search}    CTRL+A+BACKSPACE
     Wait Until Element is present then click the element    ${Icon_System_Settings}
+    Search Data    ${Input_Search_FinanceConfiguration}    ${FS_Category}
     Click the Kebab button    ${BTN_Category_Kebab}    ${FS_Category}
     Delete the Created data    ${BTN_Category_Delete}    ${FS_Category}    ${BTN_Confirm}
+    Search Data    ${Input_Search_FinanceConfiguration}    ${FS_Category_01}
     Click the Kebab button    ${BTN_Category_Kebab}    ${FS_Category_01}
     Delete the Created data    ${BTN_Category_Delete}    ${FS_Category_01}    ${BTN_Confirm}
     Wait Until Element is present then click the element     ${BTN_Finance_custom_budget}
+    Search Data    ${INPUT_budget_search}    ${FS_Finance_Budget}
     Click the Kebab button    ${BTN_Budget_more_icon}    ${FS_Finance_Budget}
     Delete the Created data    ${BTN_Delete_budget}    ${FS_Finance_Budget}    ${BTN_Confirm} 
     "Close the Browser"

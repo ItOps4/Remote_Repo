@@ -208,11 +208,11 @@ Verify it should displays OKR key result page
 
 Verify a key result data can not be changed
     click the kebab button    ${BTN_more_keyresult}    ${PPOS_Keyresult}
-    edit key result    ${PPOS_Keyresult}    ${PPOS_KEY_RESULT_UPDATE}    ${PPOS_keyDescription_UPDATE}    ${PPOS_BASELINE}    ${PPOS_UOM}    ${BTN_Cancel}
+    edit key result    ${PPOS_Keyresult}    ${PPOS_KEY_RESULT_UPDATE}    ${PPOS_KEY_RESULT_UPDATE}    ${PPOS_BASELINE}    ${PPOS_UOM}    ${BTN_Cancel}
 
 Verify a key result can be changed
     click the kebab button    ${BTN_more_keyresult}    ${PPOS_Keyresult}
-    edit key result    ${PPOS_Keyresult}    ${PPOS_KEY_RESULT_UPDATE}    ${PPOS_keyDescription_UPDATE}    ${PPOS_BASELINE}    ${PPOS_UOM}    ${BTN_Save}    
+    edit key result    ${PPOS_Keyresult}    ${PPOS_KEY_RESULT_UPDATE}    ${PPOS_KEY_RESULT_UPDATE}    ${PPOS_BASELINE}    ${PPOS_UOM}    ${BTN_Save}    
 
  Verify it should displays Key result overview page and contains edit button
     Navigate to Created data    ${Navigate_Data}    ${PPOS_KEY_RESULT_UPDATE}

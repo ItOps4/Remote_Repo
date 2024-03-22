@@ -184,6 +184,7 @@ Verify if Key Results Fields should not be changed in Key Results
     Click the Button or Navigate Back    ${BTN_Key_Result_Edit}    ${SO_Key_Result}
     Edit Key Results    ${SO_Key_Result_Update}    ${SO_Key_Result_Update}    ${SO_Key_Edit_Baseline}    ${SO_Key_Edit_UOM}    ${TXT_manager}    
     Wait Until Element is present then click the element    ${BTN_Cancel} 
+
 verify if Key Results Fields should be changed in Key Results
     Click the Kebab button    ${BTN_More_Key_Results}    ${SO_Key_Result}     
     Click the Button or Navigate Back    ${BTN_Key_Result_Edit}    ${SO_Key_Result}
@@ -191,6 +192,7 @@ verify if Key Results Fields should be changed in Key Results
     Wait Until Element is present then click the element    ${BTN_Save}
 
  Verify a Key Results name Should not be deleted in Key Results
+    Search Data    ${INPUT_Search_Key_Results}    ${SO_Key_Result_Update}
     Click the Kebab button    ${BTN_More_Key_Results}    ${SO_Key_Result_Update}  
     Delete the Created data    ${BTN_Key_Result_Delete}    ${SO_Key_Result_Update}    ${BTN_Cancel}  
 
@@ -237,10 +239,12 @@ Verify a strategic outcome name Should not be deleted in strategic outcome
 
 Verify a strategic outcome name Should be deleted in strategic outcome
     Click the Kebab button    ${BTN_More_SO}    ${SO_Strategic_Outcome_Update}
-    Delete the Created data    ${BTN_SO_Delete}    ${SO_Strategic_Outcome_Update}    ${BTN_Confirm} 
-    Wait Until Element is present then click the element    ${Breadcrums_Portfolio_Management}     
+    Delete the Created data    ${BTN_SO_Delete}    ${SO_Strategic_Outcome_Update}    ${BTN_Confirm}      
 
 Verify a portfolio name Should be deleted in portfolio
+    Wait Until Element is present then click the element    ${TAB_PPG}
+    Search Data    ${Input_Search_PPG}    ${SO_PPG}
+    Wait Until Element is present then click the element    ${Breadcrums_Portfolio_Management}
     Click the Kebab button     ${BTN_Portfolio_Kebab}   ${SO_Portfolio}
     Delete the Created data    ${BTN_Portfolio_delete}    ${SO_Portfolio}    ${BTN_Cancel}
 

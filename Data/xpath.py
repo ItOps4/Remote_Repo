@@ -135,9 +135,8 @@ BTN_PPG_Kebab = '//div[@id="ppg-more-btn-{name}"]'
 BTN_PPG_Edit = '//li[@id="ppg-edit-{name}"]'
 BTN_PPG_Delete = '//li[@id="ppg-delete-{name}"]'
 Input_Search_PPG = '//input[@id="ppg-product/platform-search-input"]'
-Navigate_PPG = '//td[@id="custom-id-{name}"]'
-TAB_Product_Platform = '//a[@id="Products/Platforms-tabs"]'
 # Product/Platform
+TAB_Product_Platform = '//a[@id="Products/Platforms-tabs"]'
 BTN_Add_Product_Platform = '//button[@id="add-product-platform"]'
 Input_Product_Platform = '//input[@id="product-platform-name"]'
 Input_Product_Platform_Description = '//textarea[@id="product-platform-description"]'
@@ -180,7 +179,7 @@ BTN_More_OKR = "//div[@id='okr-more-btn-{name}']"
 BTN_Okr_Edit = '//li[@id="okr-edit-{name}"]'
 BTN_Okr_Delete = '//li[@id="okr-delete-{name}"]'
 # SO Key Results
-BTN_Add_Result = '//button[@id="okr-create-result-{name}"]'
+BTN_Add_Result = '//button[@id="okr-add-result-{name}"]'
 BTN_Add_Key_Results = "//button[@id='create-sc-keyResultNullState-btn']"
 INPUT_Search_Key_Results = "//input[@id='keyresult-search-input']"
 BTN_More_Key_Results ="//div[@id='keyresult-more-btn-{name}']"
